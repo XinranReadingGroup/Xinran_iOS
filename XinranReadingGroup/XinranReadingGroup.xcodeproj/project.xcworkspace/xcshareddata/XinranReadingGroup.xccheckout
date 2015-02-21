@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2AB8E724-0B7B-477E-AE90-EB7AC4D6BC90</string>
+	<key>IDESourceControlProjectName</key>
+	<string>XinranReadingGroup</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>22857529A87D8EFE1958C2804A02BA7B0259E9C8</key>
+		<string>github.com:XinranReadingGroup/Xinran_iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XinranReadingGroup/XinranReadingGroup.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>22857529A87D8EFE1958C2804A02BA7B0259E9C8</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:XinranReadingGroup/Xinran_iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>22857529A87D8EFE1958C2804A02BA7B0259E9C8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>22857529A87D8EFE1958C2804A02BA7B0259E9C8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Xinran_iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
