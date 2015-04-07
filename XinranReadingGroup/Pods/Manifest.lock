@@ -1,0 +1,14 @@
+PODS:
+  - ZYCoreFramework (1.0)
+
+DEPENDENCIES:
+  - ZYCoreFramework (from `~/Developer/Code/ZengYun/iOS/ZYCoreFramework`)
+
+EXTERNAL SOURCES:
+  ZYCoreFramework:
+    :path: ~/Developer/Code/ZengYun/iOS/ZYCoreFramework
+
+SPEC CHECKSUMS:
+  ZYCoreFramework: 4a1a186f5af67ea29073bef166a36e25db77e8db
+
+COCOAPODS: 0.35.0

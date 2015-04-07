@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CB5B5E67-4420-444D-BA5A-8341F574E026</string>
+	<key>IDESourceControlProjectName</key>
+	<string>XinranReadingGroup</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>22857529A87D8EFE1958C2804A02BA7B0259E9C8</key>
+		<string>github.com:XinranReadingGroup/Xinran_iOS.git</string>
+		<key>DCD808317C1CD14A96A3A1C0E0727A42C0BF84CB</key>
+		<string>bitbucket.org:yun_zeng/zycoreframework.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XinranReadingGroup/XinranReadingGroup.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>22857529A87D8EFE1958C2804A02BA7B0259E9C8</key>
+		<string>../..</string>
+		<key>DCD808317C1CD14A96A3A1C0E0727A42C0BF84CB</key>
+		<string>../../../zycoreframework</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:XinranReadingGroup/Xinran_iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>22857529A87D8EFE1958C2804A02BA7B0259E9C8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>22857529A87D8EFE1958C2804A02BA7B0259E9C8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Xinran_iOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DCD808317C1CD14A96A3A1C0E0727A42C0BF84CB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>zycoreframework</string>
+		</dict>
+	</array>
+</dict>
+</plist>

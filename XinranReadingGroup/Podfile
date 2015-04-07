@@ -1,0 +1,2 @@
+#pod 'ZYCoreFramework',:git=>'git@bitbucket.org:yun_zeng/zycoreframework.git'
+pod 'ZYCoreFramework',:path=>'~/Developer/Code/ZengYun/iOS/ZYCoreFramework'
