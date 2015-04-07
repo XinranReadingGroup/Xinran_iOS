@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD1AD3C71A98398F009CD8EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3C61A98398F009CD8EF /* main.m */; };
-		BD1AD3CA1A98398F009CD8EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3C91A98398F009CD8EF /* AppDelegate.m */; };
-		BD1AD3D31A98398F009CD8EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D11A98398F009CD8EF /* Main.storyboard */; };
+		09DC13311AD39BB500CE8277 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */; };
+		09DC13321AD39BB500CE8277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DC13301AD39BB500CE8277 /* Main.storyboard */; };
+		09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13351AD39D7700CE8277 /* AppDelegate.m */; };
+		09DC13391AD39D7700CE8277 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09DC13361AD39D7700CE8277 /* Info.plist */; };
+		09DC133A1AD39D7700CE8277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13371AD39D7700CE8277 /* main.m */; };
+		09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC133C1AD39E4100CE8277 /* XRLoginWelcomeViewController.m */; };
+		09DC13401AD39F3600CE8277 /* XRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */; };
+		09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */; };
 		BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D41A98398F009CD8EF /* Images.xcassets */; };
-		BD1AD3D81A98398F009CD8EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D61A98398F009CD8EF /* LaunchScreen.xib */; };
 		BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */; };
 /* End PBXBuildFile section */
 
@@ -26,14 +30,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		09DC13301AD39BB500CE8277 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		09DC13341AD39D7700CE8277 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		09DC13351AD39D7700CE8277 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		09DC13361AD39D7700CE8277 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09DC13371AD39D7700CE8277 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09DC133B1AD39E4100CE8277 /* XRLoginWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRLoginWelcomeViewController.h; sourceTree = "<group>"; };
+		09DC133C1AD39E4100CE8277 /* XRLoginWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRLoginWelcomeViewController.m; sourceTree = "<group>"; };
+		09DC133E1AD39F3600CE8277 /* XRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRLoginViewController.h; sourceTree = "<group>"; };
+		09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRLoginViewController.m; sourceTree = "<group>"; };
+		09DC13411AD39F4A00CE8277 /* XRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRegisterViewController.h; sourceTree = "<group>"; };
+		09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRegisterViewController.m; sourceTree = "<group>"; };
 		BD1AD3C11A98398F009CD8EF /* XinranReadingGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XinranReadingGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD1AD3C51A98398F009CD8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD1AD3C61A98398F009CD8EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BD1AD3C81A98398F009CD8EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BD1AD3C91A98398F009CD8EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BD1AD3D21A98398F009CD8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD1AD3D41A98398F009CD8EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BD1AD3D71A98398F009CD8EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BD1AD3DD1A98398F009CD8EF /* XinranReadingGroupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XinranReadingGroupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1AD3E21A98398F009CD8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinranReadingGroupTests.m; sourceTree = "<group>"; };
@@ -57,6 +67,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09DC13271AD39B7100CE8277 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		09DC13281AD39B7100CE8277 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				09DC133B1AD39E4100CE8277 /* XRLoginWelcomeViewController.h */,
+				09DC133C1AD39E4100CE8277 /* XRLoginWelcomeViewController.m */,
+				09DC133E1AD39F3600CE8277 /* XRLoginViewController.h */,
+				09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */,
+				09DC13411AD39F4A00CE8277 /* XRRegisterViewController.h */,
+				09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		09DC13291AD39B7100CE8277 /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		09DC132A1AD39B7100CE8277 /* My */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		09DC132E1AD39BB500CE8277 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */,
+				09DC13301AD39BB500CE8277 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		09DC13331AD39D7700CE8277 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09DC13341AD39D7700CE8277 /* AppDelegate.h */,
+				09DC13351AD39D7700CE8277 /* AppDelegate.m */,
+				09DC13361AD39D7700CE8277 /* Info.plist */,
+				09DC13371AD39D7700CE8277 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09DC13441AD39FBA00CE8277 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		BD1AD3B81A98398F009CD8EF = {
 			isa = PBXGroup;
 			children = (
@@ -78,23 +149,16 @@
 		BD1AD3C31A98398F009CD8EF /* XinranReadingGroup */ = {
 			isa = PBXGroup;
 			children = (
-				BD1AD3C81A98398F009CD8EF /* AppDelegate.h */,
-				BD1AD3C91A98398F009CD8EF /* AppDelegate.m */,
-				BD1AD3D11A98398F009CD8EF /* Main.storyboard */,
+				09DC13441AD39FBA00CE8277 /* Tabbar */,
+				09DC13271AD39B7100CE8277 /* Home */,
+				09DC13281AD39B7100CE8277 /* Login */,
+				09DC13291AD39B7100CE8277 /* More */,
+				09DC132A1AD39B7100CE8277 /* My */,
+				09DC132E1AD39BB500CE8277 /* Storyboard */,
+				09DC13331AD39D7700CE8277 /* Supporting Files */,
 				BD1AD3D41A98398F009CD8EF /* Images.xcassets */,
-				BD1AD3D61A98398F009CD8EF /* LaunchScreen.xib */,
-				BD1AD3C41A98398F009CD8EF /* Supporting Files */,
 			);
 			path = XinranReadingGroup;
-			sourceTree = "<group>";
-		};
-		BD1AD3C41A98398F009CD8EF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BD1AD3C51A98398F009CD8EF /* Info.plist */,
-				BD1AD3C61A98398F009CD8EF /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BD1AD3E01A98398F009CD8EF /* XinranReadingGroupTests */ = {
@@ -158,6 +222,7 @@
 		BD1AD3B91A98398F009CD8EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XR;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = SnowWolf;
 				TargetAttributes = {
@@ -194,9 +259,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD1AD3D31A98398F009CD8EF /* Main.storyboard in Resources */,
-				BD1AD3D81A98398F009CD8EF /* LaunchScreen.xib in Resources */,
+				09DC13391AD39D7700CE8277 /* Info.plist in Resources */,
+				09DC13311AD39BB500CE8277 /* LaunchScreen.xib in Resources */,
 				BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */,
+				09DC13321AD39BB500CE8277 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD1AD3CA1A98398F009CD8EF /* AppDelegate.m in Sources */,
-				BD1AD3C71A98398F009CD8EF /* main.m in Sources */,
+				09DC13401AD39F3600CE8277 /* XRLoginViewController.m in Sources */,
+				09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */,
+				09DC133A1AD39D7700CE8277 /* main.m in Sources */,
+				09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */,
+				09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,25 +305,6 @@
 			targetProxy = BD1AD3DE1A98398F009CD8EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BD1AD3D11A98398F009CD8EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD1AD3D21A98398F009CD8EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BD1AD3D61A98398F009CD8EF /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD1AD3D71A98398F009CD8EF /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BD1AD3E51A98398F009CD8EF /* Debug */ = {
@@ -406,6 +456,7 @@
 				BD1AD3E91A98398F009CD8EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD1AD3EA1A98398F009CD8EF /* Build configuration list for PBXNativeTarget "XinranReadingGroupTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +465,7 @@
 				BD1AD3EC1A98398F009CD8EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
