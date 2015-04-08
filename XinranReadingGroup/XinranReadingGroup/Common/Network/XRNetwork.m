@@ -8,6 +8,8 @@
 
 #import "XRNetwork.h"
 
+static const 
+
 @implementation XRNetwork
 
 @end

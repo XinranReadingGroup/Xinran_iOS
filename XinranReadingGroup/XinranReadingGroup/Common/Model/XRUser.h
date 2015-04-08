@@ -10,4 +10,7 @@
 
 @interface XRUser : NSObject
 
+@property (nonatomic) BOOL isLogin;
+@property (nonatomic, strong) NSString *userName;
+
 @end

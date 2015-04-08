@@ -15,8 +15,12 @@
 		09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC133C1AD39E4100CE8277 /* XRLoginWelcomeViewController.m */; };
 		09DC13401AD39F3600CE8277 /* XRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */; };
 		09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */; };
+		6F34F267973D11B9B8664098 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E15F82D97BF4D76A946888F /* libPods.a */; };
 		BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D41A98398F009CD8EF /* Images.xcassets */; };
 		BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */; };
+		BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F01AD4173C00F5E5AB /* XRLoginService.m */; };
+		BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F51AD4A9FF00F5E5AB /* XRUser.m */; };
+		BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +46,20 @@
 		09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRLoginViewController.m; sourceTree = "<group>"; };
 		09DC13411AD39F4A00CE8277 /* XRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRegisterViewController.h; sourceTree = "<group>"; };
 		09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRegisterViewController.m; sourceTree = "<group>"; };
+		1E15F82D97BF4D76A946888F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D6BDAE75C27E1F589481796 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BD1AD3C11A98398F009CD8EF /* XinranReadingGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XinranReadingGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1AD3D41A98398F009CD8EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD1AD3DD1A98398F009CD8EF /* XinranReadingGroupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XinranReadingGroupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1AD3E21A98398F009CD8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinranReadingGroupTests.m; sourceTree = "<group>"; };
+		BDE691EF1AD4173C00F5E5AB /* XRLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRLoginService.h; sourceTree = "<group>"; };
+		BDE691F01AD4173C00F5E5AB /* XRLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRLoginService.m; sourceTree = "<group>"; };
+		BDE691F41AD4A9FF00F5E5AB /* XRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRUser.h; sourceTree = "<group>"; };
+		BDE691F51AD4A9FF00F5E5AB /* XRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRUser.m; sourceTree = "<group>"; };
+		BDE691F81AD4B12A00F5E5AB /* XRNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRNetwork.h; sourceTree = "<group>"; };
+		BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNetwork.m; sourceTree = "<group>"; };
+		C7993233968FA305405A98AE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F34F267973D11B9B8664098 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +91,9 @@
 		09DC13281AD39B7100CE8277 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				09DC133B1AD39E4100CE8277 /* XRLoginWelcomeViewController.h */,
-				09DC133C1AD39E4100CE8277 /* XRLoginWelcomeViewController.m */,
-				09DC133E1AD39F3600CE8277 /* XRLoginViewController.h */,
-				09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */,
-				09DC13411AD39F4A00CE8277 /* XRRegisterViewController.h */,
-				09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */,
+				BDE691EE1AD4172D00F5E5AB /* Service */,
+				BDE691ED1AD4172100F5E5AB /* Biz */,
+				BDE691EC1AD4170A00F5E5AB /* ViewController */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -128,12 +139,22 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
+		7A6AAC1FE59086D8F8088ECA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E15F82D97BF4D76A946888F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD1AD3B81A98398F009CD8EF = {
 			isa = PBXGroup;
 			children = (
 				BD1AD3C31A98398F009CD8EF /* XinranReadingGroup */,
 				BD1AD3E01A98398F009CD8EF /* XinranReadingGroupTests */,
 				BD1AD3C21A98398F009CD8EF /* Products */,
+				EC76E7D9C68F75EC3D741F22 /* Pods */,
+				7A6AAC1FE59086D8F8088ECA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +175,7 @@
 				09DC13281AD39B7100CE8277 /* Login */,
 				09DC13291AD39B7100CE8277 /* More */,
 				09DC132A1AD39B7100CE8277 /* My */,
+				BDE691F21AD4A99A00F5E5AB /* Common */,
 				09DC132E1AD39BB500CE8277 /* Storyboard */,
 				09DC13331AD39D7700CE8277 /* Supporting Files */,
 				BD1AD3D41A98398F009CD8EF /* Images.xcassets */,
@@ -178,6 +200,71 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BDE691EC1AD4170A00F5E5AB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09DC133B1AD39E4100CE8277 /* XRLoginWelcomeViewController.h */,
+				09DC133C1AD39E4100CE8277 /* XRLoginWelcomeViewController.m */,
+				09DC133E1AD39F3600CE8277 /* XRLoginViewController.h */,
+				09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */,
+				09DC13411AD39F4A00CE8277 /* XRRegisterViewController.h */,
+				09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		BDE691ED1AD4172100F5E5AB /* Biz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Biz;
+			sourceTree = "<group>";
+		};
+		BDE691EE1AD4172D00F5E5AB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BDE691EF1AD4173C00F5E5AB /* XRLoginService.h */,
+				BDE691F01AD4173C00F5E5AB /* XRLoginService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		BDE691F21AD4A99A00F5E5AB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BDE691F71AD4AB2B00F5E5AB /* Network */,
+				BDE691F31AD4A99A00F5E5AB /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BDE691F31AD4A99A00F5E5AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BDE691F41AD4A9FF00F5E5AB /* XRUser.h */,
+				BDE691F51AD4A9FF00F5E5AB /* XRUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDE691F71AD4AB2B00F5E5AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BDE691F81AD4B12A00F5E5AB /* XRNetwork.h */,
+				BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EC76E7D9C68F75EC3D741F22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D6BDAE75C27E1F589481796 /* Pods.debug.xcconfig */,
+				C7993233968FA305405A98AE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD1AD3E71A98398F009CD8EF /* Build configuration list for PBXNativeTarget "XinranReadingGroup" */;
 			buildPhases = (
+				9B3AB1DE7BBF10EA00CC9233 /* Check Pods Manifest.lock */,
 				BD1AD3BD1A98398F009CD8EF /* Sources */,
 				BD1AD3BE1A98398F009CD8EF /* Frameworks */,
 				BD1AD3BF1A98398F009CD8EF /* Resources */,
+				86616BA05D6EF0A13E4F9827 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,14 +364,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		86616BA05D6EF0A13E4F9827 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B3AB1DE7BBF10EA00CC9233 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD1AD3BD1A98398F009CD8EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */,
 				09DC13401AD39F3600CE8277 /* XRLoginViewController.m in Sources */,
+				BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */,
 				09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */,
 				09DC133A1AD39D7700CE8277 /* main.m in Sources */,
+				BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */,
 				09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */,
 				09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */,
 			);
@@ -385,9 +510,10 @@
 		};
 		BD1AD3E81A98398F009CD8EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6BDAE75C27E1F589481796 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = XinranReadingGroup/Info.plist;
+				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -395,9 +521,10 @@
 		};
 		BD1AD3E91A98398F009CD8EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7993233968FA305405A98AE /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = XinranReadingGroup/Info.plist;
+				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

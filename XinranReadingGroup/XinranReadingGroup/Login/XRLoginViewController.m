@@ -10,6 +10,9 @@
 
 @interface XRLoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *userName;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+
 @end
 
 @implementation XRLoginViewController
@@ -22,6 +25,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+/**
+ *  点击登录按钮
+ *
+ *  @param sender 登录按钮
+ */
+- (IBAction)loginButtonTapped:(UIButton *)sender {
+    NSString *userNameStr = self.userName.text;
+    NSString *passwordStr = self.password.text;
 }
 
 /*
