@@ -21,6 +21,12 @@
 		BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F01AD4173C00F5E5AB /* XRLoginService.m */; };
 		BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F51AD4A9FF00F5E5AB /* XRUser.m */; };
 		BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */; };
+		BDE691FD1AD8F65400F5E5AB /* XRLoginBiz.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691FC1AD8F65400F5E5AB /* XRLoginBiz.m */; };
+		BDE692031AD8FFA900F5E5AB /* XRTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692021AD8FFA900F5E5AB /* XRTabbarController.m */; };
+		BDE692091AD907E700F5E5AB /* XRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692081AD907E700F5E5AB /* XRHomeViewController.m */; };
+		BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6920B1AD92B6B00F5E5AB /* XREntity.m */; };
+		BDE6920F1AD92B8500F5E5AB /* XRBookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6920E1AD92B8500F5E5AB /* XRBookEntity.m */; };
+		BDE692151AD953E400F5E5AB /* XRBookService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692141AD953E400F5E5AB /* XRBookService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,18 @@
 		BDE691F51AD4A9FF00F5E5AB /* XRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRUser.m; sourceTree = "<group>"; };
 		BDE691F81AD4B12A00F5E5AB /* XRNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRNetwork.h; sourceTree = "<group>"; };
 		BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNetwork.m; sourceTree = "<group>"; };
+		BDE691FB1AD8F65400F5E5AB /* XRLoginBiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRLoginBiz.h; sourceTree = "<group>"; };
+		BDE691FC1AD8F65400F5E5AB /* XRLoginBiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRLoginBiz.m; sourceTree = "<group>"; };
+		BDE692011AD8FFA900F5E5AB /* XRTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRTabbarController.h; sourceTree = "<group>"; };
+		BDE692021AD8FFA900F5E5AB /* XRTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRTabbarController.m; sourceTree = "<group>"; };
+		BDE692071AD907E700F5E5AB /* XRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRHomeViewController.h; sourceTree = "<group>"; };
+		BDE692081AD907E700F5E5AB /* XRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRHomeViewController.m; sourceTree = "<group>"; };
+		BDE6920A1AD92B6B00F5E5AB /* XREntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XREntity.h; sourceTree = "<group>"; };
+		BDE6920B1AD92B6B00F5E5AB /* XREntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XREntity.m; sourceTree = "<group>"; };
+		BDE6920D1AD92B8500F5E5AB /* XRBookEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookEntity.h; sourceTree = "<group>"; };
+		BDE6920E1AD92B8500F5E5AB /* XRBookEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookEntity.m; sourceTree = "<group>"; };
+		BDE692131AD953E400F5E5AB /* XRBookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookService.h; sourceTree = "<group>"; };
+		BDE692141AD953E400F5E5AB /* XRBookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookService.m; sourceTree = "<group>"; };
 		C7993233968FA305405A98AE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +102,9 @@
 		09DC13271AD39B7100CE8277 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BDE692121AD953CF00F5E5AB /* Network */,
+				BDE692111AD953BB00F5E5AB /* Biz */,
+				BDE692101AD953B200F5E5AB /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -135,6 +156,8 @@
 		09DC13441AD39FBA00CE8277 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				BDE692011AD8FFA900F5E5AB /* XRTabbarController.h */,
+				BDE692021AD8FFA900F5E5AB /* XRTabbarController.m */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -216,6 +239,8 @@
 		BDE691ED1AD4172100F5E5AB /* Biz */ = {
 			isa = PBXGroup;
 			children = (
+				BDE691FB1AD8F65400F5E5AB /* XRLoginBiz.h */,
+				BDE691FC1AD8F65400F5E5AB /* XRLoginBiz.m */,
 			);
 			name = Biz;
 			sourceTree = "<group>";
@@ -243,6 +268,10 @@
 			children = (
 				BDE691F41AD4A9FF00F5E5AB /* XRUser.h */,
 				BDE691F51AD4A9FF00F5E5AB /* XRUser.m */,
+				BDE6920A1AD92B6B00F5E5AB /* XREntity.h */,
+				BDE6920B1AD92B6B00F5E5AB /* XREntity.m */,
+				BDE6920D1AD92B8500F5E5AB /* XRBookEntity.h */,
+				BDE6920E1AD92B8500F5E5AB /* XRBookEntity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +283,31 @@
 				BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BDE692101AD953B200F5E5AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDE692071AD907E700F5E5AB /* XRHomeViewController.h */,
+				BDE692081AD907E700F5E5AB /* XRHomeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BDE692111AD953BB00F5E5AB /* Biz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Biz;
+			sourceTree = "<group>";
+		};
+		BDE692121AD953CF00F5E5AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BDE692131AD953E400F5E5AB /* XRBookService.h */,
+				BDE692141AD953E400F5E5AB /* XRBookService.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		EC76E7D9C68F75EC3D741F22 /* Pods */ = {
@@ -402,11 +456,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */,
 				BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */,
+				BDE6920F1AD92B8500F5E5AB /* XRBookEntity.m in Sources */,
+				BDE692031AD8FFA900F5E5AB /* XRTabbarController.m in Sources */,
 				09DC13401AD39F3600CE8277 /* XRLoginViewController.m in Sources */,
+				BDE692091AD907E700F5E5AB /* XRHomeViewController.m in Sources */,
 				BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */,
+				BDE691FD1AD8F65400F5E5AB /* XRLoginBiz.m in Sources */,
 				09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */,
 				09DC133A1AD39D7700CE8277 /* main.m in Sources */,
+				BDE692151AD953E400F5E5AB /* XRBookService.m in Sources */,
 				BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */,
 				09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */,
 				09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */,
