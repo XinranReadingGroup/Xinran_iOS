@@ -7,11 +7,15 @@
 //
 
 #import "XRLoginViewController.h"
+#import "XRLoginBiz.h"
+#import <ZYCoreDefine.h>
+#import <UIViewController+ZYCore.h>
 
 @interface XRLoginViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 @end
 
@@ -33,8 +37,20 @@
  *  @param sender 登录按钮
  */
 - (IBAction)loginButtonTapped:(UIButton *)sender {
+    self.loginButton.enabled = NO;
     NSString *userNameStr = self.userName.text;
     NSString *passwordStr = self.password.text;
+    [XRLoginBiz login:userNameStr password:passwordStr success:^{
+        self.loginButton.enabled = YES;
+        //跳转到主页
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewControllerWithStoryboardName:@"main" viewController:@"XRTabbarController" animation:NO completion:nil];
+        });
+    } failure:^(NSError *error) {
+        self.loginButton.enabled = YES;
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:LOCALSTRING(@"啊哦，登录失败了，再试一下吧") message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+        [alertView show];
+    }];
 }
 
 /*
