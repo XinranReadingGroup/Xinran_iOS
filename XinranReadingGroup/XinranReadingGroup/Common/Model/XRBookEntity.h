@@ -24,7 +24,7 @@ typedef enum {
 @property (nonatomic, strong) NSString *title;          //书名
 @property (nonatomic, strong) NSString *author;         //作者
 @property (nonatomic, strong) NSString *press;          //出版社
-@property (nonatomic, strong) NSString *intro;          //简介
+@property (nonatomic, strong) NSString *summary;          //简介
 @property (nonatomic, strong) NSString *imgUrl;         //封面图
 @property (nonatomic) NSInteger *createAt;              //创建时间
 @property (nonatomic, strong) NSString *ISBN;           //书籍的ISBN号
@@ -33,6 +33,5 @@ typedef enum {
 @property (nonatomic, strong) NSString *bookcase;       //书架
 @property (nonatomic) BookStatus bookStatus;                //书的状态：可借，已借
 @property (nonatomic) BookType type;                    //书的类型，借阅书或者分享书
-@property (nonatomic, strong) NSString *memo;           //
 
 @end
