@@ -9,27 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ISO8601DateFormatterValueTransformer.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-RKValueTransformers.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-RestKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SOCKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-TransitionKit.xcscheme</key>
+		<key>Pods-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>324CE57FEFED3FC16FCD6448</key>
+		<key>1859BCB7DD986A68B9FA0222</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E53E316990731871B2AEC14</key>
+		<key>267FEF4E7D664A22F51A5CBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>80F5E2DE2EF758FD815953D0</key>
+		<key>37F9F038ED600B0595DAB629</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEBC310E08C3CCB958C39B16</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B1FEEB3BF3195DE413686204</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CAB6C16C5C21D69E0E055CDB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F08779FB150DFC58C92B2DB8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FF42ADFF3ED97ADF7EA344E8</key>
+		<key>A553ACFA27BA50F32585EFF8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

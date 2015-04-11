@@ -1,3 +1,4 @@
 #pod 'ZYCoreFramework',:git=>'git@bitbucket.org:yun_zeng/zycoreframework.git'
 pod 'ZYCoreFramework',:path=>'~/Developer/Code/ZengYun/iOS/ZYCoreFramework'
-pod 'RestKit','0.24.0'
+pod 'AFNetworking','2.5.2'
+pod 'JsonModel','1.0.2'
