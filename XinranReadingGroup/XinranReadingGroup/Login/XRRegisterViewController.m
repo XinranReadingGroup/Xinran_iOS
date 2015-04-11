@@ -7,8 +7,17 @@
 //
 
 #import "XRRegisterViewController.h"
+#import "XRLoginBiz.h"
+#import <ZYCoreDefine.h>
+#import <UIViewController+ZYCore.h>
+#import <ZYCoreHintAssistant.h>
 
 @interface XRRegisterViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *userName;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UITextField *confirmPassword;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
 
 @end
 
@@ -22,6 +31,27 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)registerButtonTapped:(UIButton *)sender {
+    self.registerButton.enabled = NO;
+    
+    if ([self.password.text isEqualToString:self.confirmPassword.text]) {
+        [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"确认密码的内容与密码不一致哟")];
+        return;
+    }
+    
+    [XRLoginBiz registerUser:self.userName.text password:self.password.text success:^{
+        //跳到主页
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self presentViewControllerWithStoryboardName:@"main" viewController:@"XRTabbarController" animation:NO completion:nil];
+        });
+    } failure:^(NSError *error) {
+        DLog(@"注册失败，失败原因：%@",error.description);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"注册失败啦")];
+        });
+    }];
 }
 
 /*
