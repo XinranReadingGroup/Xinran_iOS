@@ -18,6 +18,8 @@
 		6F34F267973D11B9B8664098 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E15F82D97BF4D76A946888F /* libPods.a */; };
 		BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D41A98398F009CD8EF /* Images.xcassets */; };
 		BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */; };
+		BDBDB7D11AD967A800977A37 /* XRBookListItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */; };
+		BDBDB7D41AD97FFA00977A37 /* XRBookListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */; };
 		BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F01AD4173C00F5E5AB /* XRLoginService.m */; };
 		BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F51AD4A9FF00F5E5AB /* XRUser.m */; };
 		BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */; };
@@ -27,6 +29,7 @@
 		BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6920B1AD92B6B00F5E5AB /* XREntity.m */; };
 		BDE6920F1AD92B8500F5E5AB /* XRBookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6920E1AD92B8500F5E5AB /* XRBookEntity.m */; };
 		BDE692151AD953E400F5E5AB /* XRBookService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692141AD953E400F5E5AB /* XRBookService.m */; };
+		BDE692181AD963DF00F5E5AB /* XRSearchBiz.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692171AD963DF00F5E5AB /* XRSearchBiz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,10 @@
 		BD1AD3DD1A98398F009CD8EF /* XinranReadingGroupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XinranReadingGroupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1AD3E21A98398F009CD8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinranReadingGroupTests.m; sourceTree = "<group>"; };
+		BDBDB7CF1AD967A800977A37 /* XRBookListItemEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookListItemEntity.h; sourceTree = "<group>"; };
+		BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookListItemEntity.m; sourceTree = "<group>"; };
+		BDBDB7D21AD97FFA00977A37 /* XRBookListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookListEntity.h; sourceTree = "<group>"; };
+		BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookListEntity.m; sourceTree = "<group>"; };
 		BDE691EF1AD4173C00F5E5AB /* XRLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRLoginService.h; sourceTree = "<group>"; };
 		BDE691F01AD4173C00F5E5AB /* XRLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRLoginService.m; sourceTree = "<group>"; };
 		BDE691F41AD4A9FF00F5E5AB /* XRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRUser.h; sourceTree = "<group>"; };
@@ -77,6 +84,8 @@
 		BDE6920E1AD92B8500F5E5AB /* XRBookEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookEntity.m; sourceTree = "<group>"; };
 		BDE692131AD953E400F5E5AB /* XRBookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookService.h; sourceTree = "<group>"; };
 		BDE692141AD953E400F5E5AB /* XRBookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookService.m; sourceTree = "<group>"; };
+		BDE692161AD963DF00F5E5AB /* XRSearchBiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSearchBiz.h; sourceTree = "<group>"; };
+		BDE692171AD963DF00F5E5AB /* XRSearchBiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSearchBiz.m; sourceTree = "<group>"; };
 		C7993233968FA305405A98AE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +281,10 @@
 				BDE6920B1AD92B6B00F5E5AB /* XREntity.m */,
 				BDE6920D1AD92B8500F5E5AB /* XRBookEntity.h */,
 				BDE6920E1AD92B8500F5E5AB /* XRBookEntity.m */,
+				BDBDB7CF1AD967A800977A37 /* XRBookListItemEntity.h */,
+				BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */,
+				BDBDB7D21AD97FFA00977A37 /* XRBookListEntity.h */,
+				BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +310,8 @@
 		BDE692111AD953BB00F5E5AB /* Biz */ = {
 			isa = PBXGroup;
 			children = (
+				BDE692161AD963DF00F5E5AB /* XRSearchBiz.h */,
+				BDE692171AD963DF00F5E5AB /* XRSearchBiz.m */,
 			);
 			name = Biz;
 			sourceTree = "<group>";
@@ -464,8 +479,11 @@
 				BDE692091AD907E700F5E5AB /* XRHomeViewController.m in Sources */,
 				BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */,
 				BDE691FD1AD8F65400F5E5AB /* XRLoginBiz.m in Sources */,
+				BDE692181AD963DF00F5E5AB /* XRSearchBiz.m in Sources */,
 				09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */,
+				BDBDB7D41AD97FFA00977A37 /* XRBookListEntity.m in Sources */,
 				09DC133A1AD39D7700CE8277 /* main.m in Sources */,
+				BDBDB7D11AD967A800977A37 /* XRBookListItemEntity.m in Sources */,
 				BDE692151AD953E400F5E5AB /* XRBookService.m in Sources */,
 				BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */,
 				09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */,
