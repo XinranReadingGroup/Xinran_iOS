@@ -9,14 +9,15 @@
 #import "XRBookService.h"
 #import "XRNetwork.h"
 #import "XRBookEntity.h"
+#import "XRBookListEntity.h"
 
 @implementation XRBookService
 
-+ (void)fetchSearchResult:(NSString *)keyword success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure {
++ (void)fetchSearchResult:(NSString *)keyword startPage:(NSInteger)startPage pageSize:(NSInteger)pageSize success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     if (!keyword) {
         failure(nil);
     }
-    [[XRNetwork sharedXRNetwork] GET:@"search" param:@{@"q":keyword} success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GET:@"search" param:@{@"q":keyword,@"startPage":[NSNumber numberWithInteger:startPage],@"pageSize":[NSNumber numberWithInteger:pageSize]} withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
         if (success) {
             success(param);
         }
@@ -27,19 +28,19 @@
     }];
 }
 
-+ (void)donateBook:(NSString *)ISBN success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure {
++ (void)donateBook:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     [[self class] uploadBook:ISBN type:kBookTypeBorrow success:success failure:failure];
 }
 
-+ (void)shareBook:(NSString *)ISBN success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure {
++ (void)shareBook:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     [[self class] uploadBook:ISBN type:kBookTypeShare success:success failure:failure];
 }
 
-+ (void)uploadBook:(NSString *)ISBN type:(BookType)type success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure {
++ (void)uploadBook:(NSString *)ISBN type:(BookType)type success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     if (!ISBN) {
         failure(nil);
     }
-    [[XRNetwork sharedXRNetwork] GET:@"book" param:@{@"isbn":ISBN,@"type":[NSNumber numberWithInt:type]} success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GET:@"book" param:@{@"isbn":ISBN,@"type":[NSNumber numberWithInt:type]} withEntityName:NSStringFromClass([XRBookEntity class]) success:^(id param) {
         if (success) {
             success(param);
         }

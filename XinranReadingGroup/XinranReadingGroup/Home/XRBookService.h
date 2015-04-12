@@ -18,28 +18,28 @@
  *  搜索书籍
  *
  *  @param keyword 书籍的ISBN或关键字
- *  @param success 搜索成功返回书籍列表的json
+ *  @param success 搜索成功返回书籍列表的entity
  *  @param failure 搜索失败返回error
  */
-+ (void)fetchSearchResult:(NSString *)keyword success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure;
++ (void)fetchSearchResult:(NSString *)keyword startPage:(NSInteger)startPage pageSize:(NSInteger)pageSize success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  捐赠书籍
  *
  *  @param ISBN    书籍的ISBN号
- *  @param success 捐赠成功返回书籍信息
+ *  @param success 捐赠成功返回书籍信息的entity
  *  @param failure 捐赠失败返回error
  */
-+ (void)donateBook:(NSString *)ISBN success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure;
++ (void)donateBook:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  分享书籍
  *
  *  @param ISBN    书籍的ISBN号
- *  @param success 分享成功返回书籍信息
+ *  @param success 分享成功返回书籍信息的entity
  *  @param failure 分享失败返回error
  */
-+ (void)shareBook:(NSString *)ISBN success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure;
++ (void)shareBook:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  借阅书籍
