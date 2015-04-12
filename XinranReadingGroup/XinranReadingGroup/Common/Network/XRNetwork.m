@@ -9,6 +9,7 @@
 #import "XRNetwork.h"
 #import <ZYCoreDefine.h>
 #import <AFNetworking.h>
+#import "XREntity.h"
 
 static NSString * const defaultXRBaseURL = @"http://www.xinrandushuba.com/mobile";
 static NSString * const defaultDoubanBaseURL = @"";
@@ -46,6 +47,21 @@ static NSString * const defaultDoubanBaseURL = @"";
         methodName = [NSString stringWithFormat:@"/%@",methodName];
     }
     return [NSString stringWithFormat:@"%@%@",self.baseURL,methodName];
+}
+
+- (void)GET:(NSString *)methodName param:(NSDictionary *)param withEntityName:(NSString *)entityName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [self GET:methodName param:param success:^(id param) {
+        NSError *error;
+        XREntity *entity = [[NSClassFromString(entityName) alloc] initWithDictionary:param error:&error];
+        if (!error) {
+            if (success) {
+                success(entity);
+            }
+        }
+        else {
+            failure(nil);
+        }
+    } failure:failure];
 }
 
 - (void)GET:(NSString *)methodName param:(NSDictionary *)param success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
