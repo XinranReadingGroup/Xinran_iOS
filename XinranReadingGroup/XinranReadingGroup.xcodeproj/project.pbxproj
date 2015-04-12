@@ -20,6 +20,14 @@
 		BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */; };
 		BDBDB7D11AD967A800977A37 /* XRBookListItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */; };
 		BDBDB7D41AD97FFA00977A37 /* XRBookListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */; };
+		BDBDB7D61ADA254600977A37 /* XRInterfaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D51ADA254600977A37 /* XRInterfaceTest.m */; };
+		BDBDB7D71ADA257700977A37 /* XRSearchBiz.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692171AD963DF00F5E5AB /* XRSearchBiz.m */; };
+		BDBDB7D81ADA298D00977A37 /* XRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F51AD4A9FF00F5E5AB /* XRUser.m */; };
+		BDBDB7D91ADA298D00977A37 /* XREntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6920B1AD92B6B00F5E5AB /* XREntity.m */; };
+		BDBDB7DA1ADA298D00977A37 /* XRBookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6920E1AD92B8500F5E5AB /* XRBookEntity.m */; };
+		BDBDB7DB1ADA298D00977A37 /* XRBookListItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */; };
+		BDBDB7DC1ADA298D00977A37 /* XRBookListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */; };
+		BDBDB7DD1ADA2A6F00977A37 /* XRBookService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692141AD953E400F5E5AB /* XRBookService.m */; };
 		BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F01AD4173C00F5E5AB /* XRLoginService.m */; };
 		BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F51AD4A9FF00F5E5AB /* XRUser.m */; };
 		BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */; };
@@ -66,6 +74,7 @@
 		BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookListItemEntity.m; sourceTree = "<group>"; };
 		BDBDB7D21AD97FFA00977A37 /* XRBookListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookListEntity.h; sourceTree = "<group>"; };
 		BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookListEntity.m; sourceTree = "<group>"; };
+		BDBDB7D51ADA254600977A37 /* XRInterfaceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRInterfaceTest.m; sourceTree = "<group>"; };
 		BDE691EF1AD4173C00F5E5AB /* XRLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRLoginService.h; sourceTree = "<group>"; };
 		BDE691F01AD4173C00F5E5AB /* XRLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRLoginService.m; sourceTree = "<group>"; };
 		BDE691F41AD4A9FF00F5E5AB /* XRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRUser.h; sourceTree = "<group>"; };
@@ -218,6 +227,7 @@
 		BD1AD3E01A98398F009CD8EF /* XinranReadingGroupTests */ = {
 			isa = PBXGroup;
 			children = (
+				BDBDB7D51ADA254600977A37 /* XRInterfaceTest.m */,
 				BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */,
 				BD1AD3E11A98398F009CD8EF /* Supporting Files */,
 			);
@@ -495,7 +505,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBDB7DB1ADA298D00977A37 /* XRBookListItemEntity.m in Sources */,
+				BDBDB7D81ADA298D00977A37 /* XRUser.m in Sources */,
 				BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */,
+				BDBDB7DC1ADA298D00977A37 /* XRBookListEntity.m in Sources */,
+				BDBDB7DD1ADA2A6F00977A37 /* XRBookService.m in Sources */,
+				BDBDB7D61ADA254600977A37 /* XRInterfaceTest.m in Sources */,
+				BDBDB7DA1ADA298D00977A37 /* XRBookEntity.m in Sources */,
+				BDBDB7D71ADA257700977A37 /* XRSearchBiz.m in Sources */,
+				BDBDB7D91ADA298D00977A37 /* XREntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +628,7 @@
 		};
 		BD1AD3EB1A98398F009CD8EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6BDAE75C27E1F589481796 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
