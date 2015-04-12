@@ -18,6 +18,10 @@ typedef enum {
     kBookTypeShare,                 //分享书，不捐但是可以借给人家的书
 }BookType;
 
+@protocol XRBookEntity <NSObject>
+
+@end
+
 @interface XRBookEntity : XREntity
 
 @property (nonatomic, strong) NSString *bookID;
