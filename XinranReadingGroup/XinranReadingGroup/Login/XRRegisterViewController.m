@@ -34,17 +34,16 @@
 }
 
 - (IBAction)registerButtonTapped:(UIButton *)sender {
-    self.registerButton.enabled = NO;
-    
-    if ([self.password.text isEqualToString:self.confirmPassword.text]) {
+    if (![self.password.text isEqualToString:self.confirmPassword.text]) {
         [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"确认密码的内容与密码不一致哟")];
         return;
     }
     
+    self.registerButton.enabled = NO;
     [XRLoginBiz registerUser:self.userName.text password:self.password.text success:^{
         //跳到主页
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentViewControllerWithStoryboardName:@"main" viewController:@"XRTabbarController" animation:NO completion:nil];
+            [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:nil];
         });
     } failure:^(NSError *error) {
         DLog(@"注册失败，失败原因：%@",error.description);

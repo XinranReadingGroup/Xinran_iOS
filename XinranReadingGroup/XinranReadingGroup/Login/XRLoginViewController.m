@@ -44,7 +44,7 @@
         self.loginButton.enabled = YES;
         //跳转到主页
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentViewControllerWithStoryboardName:@"main" viewController:@"XRTabbarController" animation:NO completion:nil];
+            [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:nil];
         });
     } failure:^(NSError *error) {
         self.loginButton.enabled = YES;

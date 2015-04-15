@@ -18,7 +18,7 @@
         }
     }
     NSDictionary *param = @{@"userIdentifier":userName,@"password":password};
-    [[XRNetwork sharedXRNetwork] POST:@"signIn" param:param success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GET:@"user/signIn" param:param success:^(id param) {
         if (success) {
             success(param);
         }
@@ -33,7 +33,7 @@
     if (!accessToken) {
         failure(nil);
     }
-    [[XRNetwork sharedXRNetwork] POST:@"signOut" param:@{@"accessToken":accessToken} success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GET:@"user/signOut" param:@{@"accessToken":accessToken} success:^(id param) {
         if (success) {
             success();
         }
@@ -51,7 +51,7 @@
         }
     }
     NSDictionary *param = @{@"userIdentifier":userName,@"password":password};
-    [[XRNetwork sharedXRNetwork] POST:@"register" param:param success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GET:@"user/signUp" param:param success:^(id param) {
         if (success) {
             success(param);
         }

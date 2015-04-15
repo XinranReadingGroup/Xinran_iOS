@@ -11,8 +11,10 @@
 #import <AFNetworking.h>
 #import "XREntity.h"
 
-static NSString * const defaultXRBaseURL = @"http://www.xinrandushuba.com/mobile";
+static NSString * const defaultXRBaseURL = @"http://www.xinrandushuba.com:8080/mobile";
+static NSString * const defaultTestBaseURL= @"http://10.16.225.38:8080/mobile";
 static NSString * const defaultDoubanBaseURL = @"";
+static BOOL const isTest = YES;
 
 @implementation XRNetwork
 
@@ -22,7 +24,7 @@ static NSString * const defaultDoubanBaseURL = @"";
     dispatch_once(&onceToken, ^{
         sharedXRNetwork = [[XRNetwork alloc] init];
         if (sharedXRNetwork) {
-            sharedXRNetwork.baseURL = defaultXRBaseURL;
+            sharedXRNetwork.baseURL = isTest ? defaultTestBaseURL : defaultXRBaseURL;
         }
     });
     
@@ -52,7 +54,7 @@ static NSString * const defaultDoubanBaseURL = @"";
 - (void)GET:(NSString *)methodName param:(NSDictionary *)param withEntityName:(NSString *)entityName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     [self GET:methodName param:param success:^(id param) {
         NSError *error;
-        XREntity *entity = [[NSClassFromString(entityName) alloc] initWithDictionary:param error:&error];
+        XREntity *entity = [[NSClassFromString(entityName) alloc] initWithDictionary:[param objectForKey:@"data"] error:&error];
         if (!error) {
             if (success) {
                 success(entity);

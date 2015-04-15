@@ -17,9 +17,9 @@
 #import "XRBookEntity.h"
 
 //测试数据
-static NSString * const ISBN = @"";
+static NSString * const ISBN = @"9787550244146";
 static NSString * const keyword = @"";
-static NSString * const bookId = @"";
+static NSString * const bookId = @"9787550244146";
 
 @interface XRInterfaceTest : XCTestCase
 
@@ -87,7 +87,7 @@ static NSString * const bookId = @"";
 
 - (void)testDonate {
     XCTestExpectation *expectation = [self expectationWithDescription:@"donate test"];
-    [XRBookService donateBook:ISBN success:^(id param) {
+    [XRBookService donateBook:bookId success:^(id param) {
         if ([param isKindOfClass:[XRBookEntity class]]) {
             XRBookEntity *book = param;
             if (book.bookID) {
@@ -107,6 +107,7 @@ static NSString * const bookId = @"";
         XCTFail(@"donate fail with error %@",error);
         [expectation fulfill];
     }];
+    
     [self waitForExpectationsWithTimeout:5. handler:^(NSError *error) {
         if (error) {
             XCTFail(@"donate fail with error %@",error);
@@ -116,7 +117,7 @@ static NSString * const bookId = @"";
 
 - (void)testShare {
     XCTestExpectation *expectation = [self expectationWithDescription:@"share test"];
-    [XRBookService shareBook:ISBN success:^(id param) {
+    [XRBookService shareBook:bookId success:^(id param) {
         if ([param isKindOfClass:[XRBookEntity class]]) {
             XRBookEntity *book = param;
             if (book.bookID) {
@@ -138,6 +139,22 @@ static NSString * const bookId = @"";
     [self waitForExpectationsWithTimeout:5. handler:^(NSError *error) {
         if (error) {
             XCTFail(@"Share fail with error %@",error);
+        }
+    }];
+}
+
+- (void)testBookDetail {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"book detail test"];
+    [XRBookService bookDetail:ISBN success:^(id param) {
+        DLog(@"book detail is %@",param);
+        XCTAssert(YES,@"book detail pass");
+    } failure:^(NSError *error) {
+        XCTFail(@"book detail fail with error %@",error);
+        [expectation fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:5. handler:^(NSError *error) {
+        if (error) {
+            XCTFail(@"book detail fail with error %@",error);
         }
     }];
 }

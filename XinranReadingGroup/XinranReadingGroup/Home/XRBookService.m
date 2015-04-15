@@ -16,6 +16,7 @@
 + (void)fetchSearchResult:(NSString *)keyword startPage:(NSInteger)startPage pageSize:(NSInteger)pageSize success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     if (!keyword) {
         failure(nil);
+        return;
     }
     [[XRNetwork sharedXRNetwork] GET:@"search" param:@{@"q":keyword,@"startPage":[NSNumber numberWithInteger:startPage],@"pageSize":[NSNumber numberWithInteger:pageSize]} withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
         if (success) {
@@ -28,19 +29,21 @@
     }];
 }
 
-+ (void)donateBook:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    [[self class] uploadBook:ISBN type:kBookTypeBorrow success:success failure:failure];
++ (void)donateBook:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[self class] uploadBook:bookId methodName:@"donate" success:success failure:failure];
 }
 
-+ (void)shareBook:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    [[self class] uploadBook:ISBN type:kBookTypeShare success:success failure:failure];
++ (void)shareBook:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[self class] uploadBook:bookId methodName:@"share" success:success failure:failure];
 }
 
-+ (void)uploadBook:(NSString *)ISBN type:(BookType)type success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    if (!ISBN) {
++ (void)uploadBook:(NSString *)bookId methodName:(NSString *)methodName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    if (!bookId) {
         failure(nil);
+        return;
     }
-    [[XRNetwork sharedXRNetwork] GET:@"book" param:@{@"isbn":ISBN,@"type":[NSNumber numberWithInt:type]} withEntityName:NSStringFromClass([XRBookEntity class]) success:^(id param) {
+    NSString *url = [NSString stringWithFormat:@"book/%@/%@",methodName,bookId];
+    [[XRNetwork sharedXRNetwork] GET:url param:nil withEntityName:NSStringFromClass([XRBookEntity class]) success:^(id param) {
         if (success) {
             success(param);
         }
@@ -54,6 +57,7 @@
 + (void)borrowBook:(NSString *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure {
     if (!bookId) {
         failure(nil);
+        return;
     }
     [[XRNetwork sharedXRNetwork] GET:@"book/borrow" param:@{@"id":bookId} success:^(id param) {
         if (success) {
@@ -71,6 +75,23 @@
         failure(nil);
     }
     [[XRNetwork sharedXRNetwork] GET:@"book/return" param:@{@"id":bookId} success:^(id param) {
+        if (success) {
+            success(param);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
++ (void)bookDetail:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    if (!ISBN) {
+        failure(nil);
+        return;
+    }
+    NSString *methodName = [NSString stringWithFormat:@"book/isbn/%@",ISBN];
+    [[XRNetwork sharedXRNetwork] GET:methodName param:nil withEntityName:NSStringFromClass([XRBookEntity class]) success:^(id param) {
         if (success) {
             success(param);
         }

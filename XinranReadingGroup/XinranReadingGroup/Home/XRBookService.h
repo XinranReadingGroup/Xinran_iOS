@@ -30,7 +30,7 @@
  *  @param success 捐赠成功返回书籍信息的entity
  *  @param failure 捐赠失败返回error
  */
-+ (void)donateBook:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)donateBook:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  分享书籍
@@ -39,7 +39,7 @@
  *  @param success 分享成功返回书籍信息的entity
  *  @param failure 分享失败返回error
  */
-+ (void)shareBook:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)shareBook:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  借阅书籍
@@ -58,5 +58,7 @@
  *  @param failure 还书失败返回error
  */
 + (void)returnBook:(NSString *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure;
+
++ (void)bookDetail:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 @end
