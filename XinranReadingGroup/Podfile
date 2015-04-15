@@ -7,4 +7,4 @@ xcodeproj 'XinranReadingGroup'
 pod 'ZYCoreFramework',:path=>'~/Developer/Code/ZengYun/iOS/ZYCoreFramework'
 pod 'AFNetworking','2.5.2'
 pod 'JsonModel','1.0.2'
-
+pod 'SSKeychain','1.2.2'

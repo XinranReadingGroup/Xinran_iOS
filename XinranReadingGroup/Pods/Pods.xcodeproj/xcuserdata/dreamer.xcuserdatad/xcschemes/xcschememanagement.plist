@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SSKeychain.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ZYCoreFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05B70713BC19A1463B614362</key>
+		<key>58287736319DD3A0B808193D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C5C80BE6AF334E9DD62F8D2</key>
+		<key>6F413F328DB4783FFEC5D3F6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A17DF7EC8944B737B7842D3</key>
+		<key>A29FE17F113331C61F40B8DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D736E693A24FE096D76D43D3</key>
+		<key>DF0B8128DFB67E5C3A7164E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF70BD966ADCE28C5AE4FE01</key>
 		<dict>
 			<key>primary</key>
 			<true/>
