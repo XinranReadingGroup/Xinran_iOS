@@ -42,11 +42,13 @@
     self.registerButton.enabled = NO;
     [XRLoginBiz registerUser:self.userName.text password:self.password.text success:^{
         //跳到主页
+        self.registerButton.enabled = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:nil];
         });
     } failure:^(NSError *error) {
         DLog(@"注册失败，失败原因：%@",error.description);
+        self.registerButton.enabled = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
             [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"注册失败啦")];
         });
