@@ -11,6 +11,6 @@
 /**
  *  登录界面
  */
-@interface XRLoginViewController : UIViewController
+@interface XRLoginViewController : UITableViewController
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "XRLoginWelcomeViewController.h"
+#import "XRUser.h"
+#import <UIViewController+ZYCore.h>
 
 @interface XRLoginWelcomeViewController ()
 
@@ -16,12 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.navigationController.navigationController setNavigationBarHidden:YES];
+//    [XRUser sharedXRUser].userIdentifier = @"123";
+//    [XRUser sharedXRUser].accessToken = @"aaaa";
+    if ([XRUser sharedXRUser].isLogin) {
+        //如果登录就直接跳过登录界面
+        [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

@@ -11,6 +11,6 @@
 /**
  *  注册界面
  */
-@interface XRRegisterViewController : UIViewController
+@interface XRRegisterViewController : UITableViewController
 
 @end

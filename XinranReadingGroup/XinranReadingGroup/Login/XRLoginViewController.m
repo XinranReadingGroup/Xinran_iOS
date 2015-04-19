@@ -10,6 +10,8 @@
 #import "XRLoginBiz.h"
 #import <ZYCoreDefine.h>
 #import <UIViewController+ZYCore.h>
+#import <NSString+ZYCore.h>
+#import <ZYCoreHintAssistant.h>
 
 @interface XRLoginViewController ()
 
@@ -37,6 +39,15 @@
  *  @param sender 登录按钮
  */
 - (IBAction)loginButtonTapped:(UIButton *)sender {
+    if ([[self.userName.text trim] isEmpty]) {
+        [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"请填写用户名")];
+        return;
+    }
+    if ([[self.password.text trim] isEmpty]) {
+        [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"请填写密码")];
+        return;
+    }
+    
     self.loginButton.enabled = NO;
     NSString *userNameStr = self.userName.text;
     NSString *passwordStr = self.password.text;
@@ -48,8 +59,7 @@
         });
     } failure:^(NSError *error) {
         self.loginButton.enabled = YES;
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:LOCALSTRING(@"啊哦，登录失败了，再试一下吧") message:nil delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
-        [alertView show];
+        [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"啊哦，登录失败了，再试一下吧")];
     }];
 }
 
