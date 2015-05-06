@@ -16,6 +16,7 @@ typedef enum {
 typedef enum {
     kBookTypeBorrow,                //借阅书，已经捐了的书
     kBookTypeShare,                 //分享书，不捐但是可以借给人家的书
+    kBookTypeUnknown,               //未知类型
 }BookType;
 
 @protocol XRBookEntity <NSObject>

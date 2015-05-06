@@ -18,6 +18,20 @@
         failure(nil);
         return;
     }
+    //for test
+    [[XRNetwork sharedXRNetwork] GET:@"" param:nil withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
+        if (success) {
+            success(param);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+    return;
+    //test end
+    
+    
     [[XRNetwork sharedXRNetwork] GET:@"search" param:@{@"q":keyword,@"startPage":[NSNumber numberWithInteger:startPage],@"pageSize":[NSNumber numberWithInteger:pageSize]} withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
         if (success) {
             success(param);
@@ -100,6 +114,45 @@
             failure(error);
         }
     }];
+}
+
++ (NSDictionary *)mockSearchResult {
+    NSString *mockSearchResultString = @"{\
+                                            \"code\": 200,\
+                                            \"data\":\
+                                            {\
+                                                \"list\":\
+                                                [\
+                                                 {\
+                                                     \"id\": 1,\
+                                                     \"createdAt\": 1428763706074,\
+                                                     \"updatedAt\": 1428763706074,\
+                                                     \"isbn\": \"9787550244146\",\
+                                                     \"title\": \"罗辑思维：成大事者不纠结\",\
+                                                     \"imgURL\": \"http://img3.douban.com/mpic/s28016051.jpg\",\
+                                                     \"author\": \"罗振宇\",\
+                                                     \"summary\": \"【编辑推荐】\n1、罗振宇，自媒体视频脱口秀《罗辑思维》主讲人，互联网知识型社群试水者，资深媒体人和传播专家。曾任CCTV《经济与法》《对话》制片人等。2012年底打造知识型视频脱口秀《罗辑思维》...\",\
+                                                     \"price\": \"42.00元\",\
+                                                     \"publisher\": \"北京联合出版公司\"\
+                                                 },\
+                                                 {\
+                                                     \"id\": 1,\
+                                                     \"createdAt\": 1428763706074,\
+                                                     \"updatedAt\": 1428763706074,\
+                                                     \"isbn\": \"9787550244146\",\
+                                                     \"title\": \"罗辑思维：成大事者不纠结\",\
+                                                     \"imgURL\": \"http://img3.douban.com/mpic/s28016051.jpg\",\
+                                                     \"author\": \"罗振宇\",\
+                                                     \"summary\": \"【编辑推荐】\n1、罗振宇，自媒体视频脱口秀《罗辑思维》主讲人，互联网知识型社群试水者，资深媒体人和传播专家。曾任CCTV《经济与法》《对话》制片人等。2012年底打造知识型视频脱口秀《罗辑思维》...\",\
+                                                     \"price\": \"42.00元\",\
+                                                     \"publisher\": \"北京联合出版公司\"\
+                                                 }\
+                                                 ]\
+                                            }\
+                                            \"desc\": null\
+                                        }";
+    NSDictionary *mockDic;
+    return mockDic;
 }
 
 @end

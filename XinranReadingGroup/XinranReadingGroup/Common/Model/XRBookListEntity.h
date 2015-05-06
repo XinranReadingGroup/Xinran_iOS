@@ -6,11 +6,12 @@
 //  Copyright (c) 2015年 SnowWolf. All rights reserved.
 //
 
-#import "XREntity.h"
 #import "XRBookListItemEntity.h"
+
+@class XRBookEntity;
 
 @interface XRBookListEntity : XREntity
 
-@property (nonatomic, strong) NSArray<XRBookListItemEntity> *bookList;
+@property (nonatomic, strong) NSArray<XRBookEntity> *bookList;
 
 @end

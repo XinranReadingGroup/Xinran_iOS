@@ -10,4 +10,10 @@
 
 @implementation XRBookListEntity
 
+//+ (JSONKeyMapper *)keyMapper {
+//    return [[JSONKeyMapper alloc] initWithDictionary:@{
+//                                                       @"data.list":@"bookList"
+//                                                       }];
+//}
+
 @end
