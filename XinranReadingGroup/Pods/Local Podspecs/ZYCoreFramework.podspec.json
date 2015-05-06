@@ -1,0 +1,17 @@
+{
+  "name": "ZYCoreFramework",
+  "version": "1.0",
+  "license": {
+    "type": "MIT"
+  },
+  "homepage": "https://bitbucket.org/yun_zeng/zycoreframework",
+  "authors": {
+    "Programmer Du": "zengyun.programmer@gmail.com"
+  },
+  "summary": "It's a iOS Core Framework",
+  "source": {
+    "git": "git@bitbucket.org:yun_zeng/zycoreframework.git"
+  },
+  "source_files": "Core/*.{h,m}",
+  "requires_arc": true
+}
