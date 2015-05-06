@@ -11,10 +11,10 @@
 #import <AFNetworking.h>
 #import "XREntity.h"
 
-static NSString * const defaultXRBaseURL = @"http://www.xinrandushuba.com:8080/mobile";
+static NSString * const defaultXRBaseURL = @"http://xinrandushuba.com/mobile";
 static NSString * const defaultTestBaseURL= @"http://10.16.225.38:8080/mobile";
 static NSString * const defaultDoubanBaseURL = @"";
-static BOOL const isTest = YES;
+static BOOL const isTest = NO;
 
 @implementation XRNetwork
 
@@ -45,7 +45,7 @@ static BOOL const isTest = YES;
 };
 
 - (NSString *)urlWithMethodName:(NSString *)methodName {
-    if (![methodName hasPrefix:@"/"]) {
+    if (![methodName hasPrefix:@"/"] && methodName && methodName.length > 0) {
         methodName = [NSString stringWithFormat:@"/%@",methodName];
     }
     return [NSString stringWithFormat:@"%@%@",self.baseURL,methodName];
@@ -69,10 +69,12 @@ static BOOL const isTest = YES;
 - (void)GET:(NSString *)methodName param:(NSDictionary *)param success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:[self urlWithMethodName:methodName] parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        DLog(@"get request success. url is %@, response is %@",operation.request.URL.absoluteString,responseObject);
         if (success) {
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        DLog(@"get request fail. url is %@",operation.request.URL.absoluteString);
         failure(error);
     }];
 }
@@ -80,10 +82,12 @@ static BOOL const isTest = YES;
 - (void)POST:(NSString *)methodName param:(NSDictionary *)param success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:[self urlWithMethodName:methodName] parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        DLog(@"post request success. url is %@, response is %@",operation.request.URL.absoluteString,responseObject);
         if (success) {
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        DLog(@"post request fail. url is %@",operation.request.URL.absoluteString);
         if (failure) {
             failure(error);
         }
