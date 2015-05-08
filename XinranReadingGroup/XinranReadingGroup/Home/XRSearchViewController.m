@@ -14,6 +14,8 @@
 #import "XRBookListEntity.h"
 #import "XRSearchListCell.h"
 #import <UIViewController+ZYCore.h>
+#import "XRBookDetailBaseViewController.h"
+#import <UIViewController+ZYCore.h>
 
 @interface XRSearchViewController () <UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -115,7 +117,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    XRBookEntity *bookEntity = self.biz.bookList.bookList[indexPath.row];
+    XRBookDetailBaseViewController *detailViewController = (XRBookDetailBaseViewController *)[UIViewController viewControllerWithIdentifer:@"XRBookDetailBaseViewController" withStoryboardName:@"Main"];
+    detailViewController.bookData = bookEntity;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 /*

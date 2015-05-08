@@ -602,7 +602,6 @@
                                     <outlet property="detail" destination="Oyb-DU-Tkd" id="V37-jR-ddf"/>
                                     <outlet property="title" destination="xBI-yl-CfK" id="HFu-ai-HMh"/>
                                     <outlet property="type" destination="9N6-JO-eMa" id="MrX-cm-mYr"/>
-                                    <segue destination="8Ms-J7-3Kc" kind="show" id="qze-P7-r9k"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -646,10 +645,10 @@
             </objects>
             <point key="canvasLocation" x="3783" y="-359"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Book Detail Base View Controller-->
         <scene sceneID="gCV-aa-niu">
             <objects>
-                <tableViewController id="8Ms-J7-3Kc" sceneMemberID="viewController">
+                <tableViewController id="8Ms-J7-3Kc" customClass="XRBookDetailBaseViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="w1s-CE-FwJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
