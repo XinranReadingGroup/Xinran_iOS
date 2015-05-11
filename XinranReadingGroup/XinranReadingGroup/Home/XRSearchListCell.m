@@ -33,6 +33,8 @@
     self.title.text = self.data.title;
     self.detail.text = [self jointDetail];
     [self.type setTitle:[self bookType:self.data.type] forState:UIControlStateNormal];
+    [self.type setTitle:[self bookType:self.data.type] forState:UIControlStateSelected];
+    [self.type setTitle:[self bookType:self.data.type] forState:UIControlStateHighlighted];
     [self.type setBackgroundImage:[self bookTypeImage:self.data.type] forState:UIControlStateNormal];
     [self.type setBackgroundImage:[self bookTypeSelectImage:self.data.type] forState:UIControlStateSelected];
     [self.type setBackgroundImage:[self bookTypeSelectImage:self.data.type] forState:UIControlStateHighlighted];

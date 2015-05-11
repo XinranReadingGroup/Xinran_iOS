@@ -8,10 +8,20 @@
 
 #import "XRBookDetailBaseViewController.h"
 #import "XRBookDetailBiz.h"
+#import <UIImageView+WebCache.h>
+#import "XRBookEntity.h"
 
 @interface XRBookDetailBaseViewController ()
 
 @property (nonatomic, strong) XRBookDetailBiz *biz;
+@property (weak, nonatomic) IBOutlet UIImageView *bookCover;
+@property (weak, nonatomic) IBOutlet UILabel *bookTitle;
+@property (weak, nonatomic) IBOutlet UILabel *bookCase;
+@property (weak, nonatomic) IBOutlet UITextView *bookContent;
+@property (weak, nonatomic) IBOutlet UITextView *publisherInfo;
+@property (weak, nonatomic) IBOutlet UIImageView *donatorAvatar;
+@property (weak, nonatomic) IBOutlet UILabel *donatorName;
+@property (weak, nonatomic) IBOutlet UILabel *donateDate;
 
 @end
 
@@ -38,6 +48,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self registerCell];
+    
     [self.biz fetchBookDetail:^{
         [self.tableView reloadData];
     } failure:^(NSError *error) {
@@ -54,6 +66,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)registerCell {
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"bookInfo"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"content"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"publisherInfo"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"donatorInfo"];
 }
 
 #pragma mark - Table view data source
@@ -99,15 +118,42 @@
     }
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell;
+    switch (indexPath.section) {
+        case 0:
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"bookInfo" forIndexPath:indexPath];
+            [self.bookCover sd_setImageWithURL:[NSURL URLWithString:self.biz.bookData.imgURL]];
+            self.bookTitle.text = self.biz.bookData.title;
+            self.bookCase.text = self.biz.bookData.bookcase;
+        }
+            break;
+        case 1:
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"content" forIndexPath:indexPath];
+            self.bookContent.text = self.biz.bookData.summary;
+        }
+            break;
+        case 2:
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"publisherInfo" forIndexPath:indexPath];
+            self.publisherInfo.text = self.biz.bookData.publisher;
+        }
+            break;
+        case 3:
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"donatorInfo" forIndexPath:indexPath];
+        }
+            break;
+        default:
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+            break;
+    }
     
-    // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
