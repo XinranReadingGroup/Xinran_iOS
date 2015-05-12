@@ -10,6 +10,7 @@
 #import "XRBookDetailBiz.h"
 #import <UIImageView+WebCache.h>
 #import "XRBookEntity.h"
+#import <UIView+ZYCore.h>
 
 @interface XRBookDetailBaseViewController ()
 
@@ -77,17 +78,13 @@
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Potentially incomplete method implementation.
-//    // Return the number of sections.
-//    return 0;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
-//    // Return the number of rows in the section.
-//    return 0;
-//}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 4;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
@@ -98,12 +95,12 @@
             break;
         case 1:
         {
-            return 0;
+            return [self contentInfoHeight];
         }
             break;
         case 2:
         {
-            return 0;
+            return 162;
         }
             break;
         case 3:
@@ -114,6 +111,35 @@
             
         default:
             return 0;
+            break;
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+        {
+            return nil;
+        }
+            break;
+        case 1:
+        {
+            return @"内容简介";
+        }
+            break;
+        case 2:
+        {
+            return @"出版信息";
+        }
+            break;
+        case 3:
+        {
+            return @"捐书人";
+        }
+            break;
+            
+        default:
+            return @"";
             break;
     }
 }
@@ -138,12 +164,15 @@
         case 2:
         {
             cell = [tableView dequeueReusableCellWithIdentifier:@"publisherInfo" forIndexPath:indexPath];
-            self.publisherInfo.text = self.biz.bookData.publisher;
+            self.publisherInfo.text = [self publisherInfoText];
         }
             break;
         case 3:
         {
             cell = [tableView dequeueReusableCellWithIdentifier:@"donatorInfo" forIndexPath:indexPath];
+            self.donatorName.text = self.biz.bookData.donator;
+            [self.donatorAvatar sd_setImageWithURL:[NSURL URLWithString:@"http://fd.topitme.com/d/8b/d4/1187454768482d48bdo.jpg"]];
+            self.donateDate.text = @"2015-5-11";
         }
             break;
         default:
@@ -155,39 +184,29 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *)publisherInfoText {
+    NSMutableString *publisherInfo = [NSMutableString string];
+    NSArray *titles = @[@"作 者",@"出版社",@"出版年",@"页 数",@"定 价",@"装 帧",@"ISBN码"];
+    NSArray *values = @[self.bookData.author?self.bookData.author:@"",self.bookData.publisher?self.bookData.publisher:@"",@"",@"",@"",@"",self.bookData.isbn?self.bookData.isbn:@""];
+    if (titles.count != values.count) {
+        return @"";
+    }
+    [titles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *title = obj;
+        NSString *value = values[idx];
+        [publisherInfo appendFormat:@"%@：%@\n",title,value];
+    }];
+    if (publisherInfo.length > 0) {
+        //去掉最后一个换行符
+        [publisherInfo deleteCharactersInRange:NSMakeRange(publisherInfo.length - 1, 1)];
+    }
+    return [NSString stringWithString:publisherInfo];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)contentInfoHeight {
+    CGSize textSize = [self.biz.bookData.summary sizeWithFont:self.bookContent.font forWidth:self.bookContent.width lineBreakMode:NSLineBreakByWordWrapping];
+    return textSize.height;
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
