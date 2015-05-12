@@ -16,6 +16,7 @@
 #import <UIViewController+ZYCore.h>
 #import "XRBookDetailBaseViewController.h"
 #import <UIViewController+ZYCore.h>
+#import <ZYCoreDefine.h>
 
 @interface XRSearchViewController () <UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 
