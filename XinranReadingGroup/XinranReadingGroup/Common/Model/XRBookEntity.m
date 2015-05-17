@@ -11,14 +11,13 @@
 @implementation XRBookEntity
 
 + (JSONKeyMapper *)keyMapper {
-    return [[JSONKeyMapper alloc] initWithDictionary:@{
-                                                       @"id":@"bookID",
-                                                       }];
+	return [[JSONKeyMapper alloc] initWithDictionary:@{
+	            @"id" : @"bookID",
+			}];
 }
 
-+(BOOL)propertyIsOptional:(NSString*)propertyName
-{
-    return YES;
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+	return YES;
 }
 
 @end

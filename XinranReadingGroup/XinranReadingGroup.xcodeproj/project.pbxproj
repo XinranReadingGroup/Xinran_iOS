@@ -34,6 +34,10 @@
 		BD8DFE0F1AE00DE3003FAF06 /* XRSetupAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DFE0E1AE00DE3003FAF06 /* XRSetupAssistant.m */; };
 		BD8DFE131AE00E60003FAF06 /* XRMoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DFE121AE00E60003FAF06 /* XRMoreTableViewController.m */; };
 		BD8DFE191AE3A75E003FAF06 /* XRSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DFE181AE3A75E003FAF06 /* XRSearchViewController.m */; };
+		BD8E393D1B0226BD00AF1CFD /* XRBookDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E393C1B0226BD00AF1CFD /* XRBookDetailInfoCell.m */; };
+		BD8E39401B0226D700AF1CFD /* XRBookDetailContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E393F1B0226D700AF1CFD /* XRBookDetailContentCell.m */; };
+		BD8E39431B0226E800AF1CFD /* XRBookDetailPublisherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E39421B0226E800AF1CFD /* XRBookDetailPublisherCell.m */; };
+		BD8E39461B0226FD00AF1CFD /* XRBookDetailDonatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E39451B0226FD00AF1CFD /* XRBookDetailDonatorCell.m */; };
 		BDBDB7D11AD967A800977A37 /* XRBookListItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */; };
 		BDBDB7D41AD97FFA00977A37 /* XRBookListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */; };
 		BDBDB7D61ADA254600977A37 /* XRInterfaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D51ADA254600977A37 /* XRInterfaceTest.m */; };
@@ -121,6 +125,14 @@
 		BD8DFE121AE00E60003FAF06 /* XRMoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRMoreTableViewController.m; sourceTree = "<group>"; };
 		BD8DFE171AE3A75E003FAF06 /* XRSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSearchViewController.h; sourceTree = "<group>"; };
 		BD8DFE181AE3A75E003FAF06 /* XRSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSearchViewController.m; sourceTree = "<group>"; };
+		BD8E393B1B0226BD00AF1CFD /* XRBookDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailInfoCell.h; sourceTree = "<group>"; };
+		BD8E393C1B0226BD00AF1CFD /* XRBookDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailInfoCell.m; sourceTree = "<group>"; };
+		BD8E393E1B0226D700AF1CFD /* XRBookDetailContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailContentCell.h; sourceTree = "<group>"; };
+		BD8E393F1B0226D700AF1CFD /* XRBookDetailContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailContentCell.m; sourceTree = "<group>"; };
+		BD8E39411B0226E800AF1CFD /* XRBookDetailPublisherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailPublisherCell.h; sourceTree = "<group>"; };
+		BD8E39421B0226E800AF1CFD /* XRBookDetailPublisherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailPublisherCell.m; sourceTree = "<group>"; };
+		BD8E39441B0226FD00AF1CFD /* XRBookDetailDonatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailDonatorCell.h; sourceTree = "<group>"; };
+		BD8E39451B0226FD00AF1CFD /* XRBookDetailDonatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailDonatorCell.m; sourceTree = "<group>"; };
 		BDBDB7CF1AD967A800977A37 /* XRBookListItemEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookListItemEntity.h; sourceTree = "<group>"; };
 		BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookListItemEntity.m; sourceTree = "<group>"; };
 		BDBDB7D21AD97FFA00977A37 /* XRBookListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookListEntity.h; sourceTree = "<group>"; };
@@ -378,6 +390,14 @@
 			children = (
 				BD2810BD1AE3AB6C006D551B /* XRSearchListCell.h */,
 				BD2810BE1AE3AB6C006D551B /* XRSearchListCell.m */,
+				BD8E393B1B0226BD00AF1CFD /* XRBookDetailInfoCell.h */,
+				BD8E393C1B0226BD00AF1CFD /* XRBookDetailInfoCell.m */,
+				BD8E393E1B0226D700AF1CFD /* XRBookDetailContentCell.h */,
+				BD8E393F1B0226D700AF1CFD /* XRBookDetailContentCell.m */,
+				BD8E39411B0226E800AF1CFD /* XRBookDetailPublisherCell.h */,
+				BD8E39421B0226E800AF1CFD /* XRBookDetailPublisherCell.m */,
+				BD8E39441B0226FD00AF1CFD /* XRBookDetailDonatorCell.h */,
+				BD8E39451B0226FD00AF1CFD /* XRBookDetailDonatorCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -643,6 +663,7 @@
 				BD1D63E61ADFFF8100CCE363 /* XRShareAssistant.m in Sources */,
 				BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */,
 				BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */,
+				BD8E39461B0226FD00AF1CFD /* XRBookDetailDonatorCell.m in Sources */,
 				BDE6920F1AD92B8500F5E5AB /* XRBookEntity.m in Sources */,
 				BDE692031AD8FFA900F5E5AB /* XRTabbarController.m in Sources */,
 				09DC13401AD39F3600CE8277 /* XRLoginViewController.m in Sources */,
@@ -651,6 +672,7 @@
 				BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */,
 				BDFB0AC11AFA595300F2C738 /* XRBookDetailBiz.m in Sources */,
 				BDE691FD1AD8F65400F5E5AB /* XRLoginBiz.m in Sources */,
+				BD8E393D1B0226BD00AF1CFD /* XRBookDetailInfoCell.m in Sources */,
 				BDE692181AD963DF00F5E5AB /* XRSearchBiz.m in Sources */,
 				BD8DFE131AE00E60003FAF06 /* XRMoreTableViewController.m in Sources */,
 				09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */,
@@ -663,7 +685,9 @@
 				BD8DFE191AE3A75E003FAF06 /* XRSearchViewController.m in Sources */,
 				BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */,
 				09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */,
+				BD8E39431B0226E800AF1CFD /* XRBookDetailPublisherCell.m in Sources */,
 				09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */,
+				BD8E39401B0226D700AF1CFD /* XRBookDetailContentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

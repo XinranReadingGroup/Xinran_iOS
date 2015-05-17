@@ -631,7 +631,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookInfo" rowHeight="184" id="adI-Aw-svx">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="XRBookDetailInfoCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailInfoCell" rowHeight="184" id="adI-Aw-svx" customClass="XRBookDetailInfoCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="adI-Aw-svx" id="1Lf-Bc-wMk">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -670,13 +670,18 @@
                                         <constraint firstItem="zBz-do-rxq" firstAttribute="top" secondItem="NOR-L7-GUa" secondAttribute="top" id="yHu-Ft-QAN"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookCase" destination="JzK-YV-jnM" id="4Lo-dJ-ecC"/>
+                                    <outlet property="bookCover" destination="zBz-do-rxq" id="s5L-xm-MOF"/>
+                                    <outlet property="bookTitle" destination="NOR-L7-GUa" id="liv-1C-6Gf"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="content" rowHeight="44" id="e3L-8I-O5C">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailContentCell" rowHeight="44" id="e3L-8I-O5C" customClass="XRBookDetailContentCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3L-8I-O5C" id="NgF-5E-kTL">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KB-Dr-YYt">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KB-Dr-YYt">
                                             <rect key="frame" x="32" y="0.0" width="536" height="43"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -692,13 +697,16 @@
                                         <constraint firstItem="3KB-Dr-YYt" firstAttribute="leading" secondItem="NgF-5E-kTL" secondAttribute="leadingMargin" constant="24" id="pys-QE-88J"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="content" destination="3KB-Dr-YYt" id="vPl-q6-1pr"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="publisherInfo" rowHeight="44" id="lRT-sj-0r1">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailPublisherCell" rowHeight="44" id="lRT-sj-0r1" customClass="XRBookDetailPublisherCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lRT-sj-0r1" id="EXf-cZ-n9g">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yX-Y8-KaW">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yX-Y8-KaW">
                                             <rect key="frame" x="32" y="0.0" width="536" height="43"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -714,8 +722,11 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="9yX-Y8-KaW" secondAttribute="trailing" constant="24" id="yVo-R4-AzO"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="publisherInfo" destination="9yX-Y8-KaW" id="Qhn-KZ-cRl"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="donatorInfo" rowHeight="77" id="YWX-KT-6af">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailDonatorCell" rowHeight="77" id="YWX-KT-6af" customClass="XRBookDetailDonatorCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YWX-KT-6af" id="QzU-IN-TKs">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -757,6 +768,11 @@
                                         <constraint firstItem="ndp-Ud-1rp" firstAttribute="width" secondItem="dK3-VK-Ai8" secondAttribute="width" id="wPb-4Y-lfQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="donateDate" destination="ndp-Ud-1rp" id="rjJ-LL-YE1"/>
+                                    <outlet property="donatorAvatar" destination="ekU-CB-vz6" id="08S-sm-z40"/>
+                                    <outlet property="donatorName" destination="dK3-VK-Ai8" id="C3G-QO-CyE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
