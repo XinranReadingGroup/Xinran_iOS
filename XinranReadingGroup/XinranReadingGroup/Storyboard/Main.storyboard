@@ -620,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbv-mX-E6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3783" y="-359"/>
+            <point key="canvasLocation" x="3829" y="-921"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="gCV-aa-niu">
@@ -784,7 +784,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR3-X0-KOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4541" y="-359"/>
+            <point key="canvasLocation" x="5273" y="-921"/>
         </scene>
         <!--Book Detail Base View Controller-->
         <scene sceneID="Voe-lD-ejJ">
@@ -798,7 +798,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-IM-fgp">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-IM-fgp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -923,7 +923,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiz-Ba-FyU">
-                                                    <rect key="frame" x="75" y="42" width="503" height="21"/>
+                                                    <rect key="frame" x="74" y="42" width="503" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="5Je-hR-fha"/>
                                                     </constraints>
@@ -935,13 +935,23 @@
                                             <constraints>
                                                 <constraint firstItem="tiz-Ba-FyU" firstAttribute="top" secondItem="d9i-4y-Woh" secondAttribute="bottom" id="9ql-L8-ORT"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="d9i-4y-Woh" secondAttribute="trailing" constant="15" id="D0B-KJ-MPG"/>
+                                                <constraint firstItem="tiz-Ba-FyU" firstAttribute="top" secondItem="d9i-4y-Woh" secondAttribute="bottom" id="Mhd-Jj-DX8"/>
                                                 <constraint firstItem="4Og-A1-ngK" firstAttribute="leading" secondItem="Dfy-hC-WKW" secondAttribute="leadingMargin" constant="7" id="TIz-Ay-Awj"/>
+                                                <constraint firstItem="d9i-4y-Woh" firstAttribute="leading" secondItem="tiz-Ba-FyU" secondAttribute="leading" id="X3j-pe-rvA"/>
                                                 <constraint firstItem="d9i-4y-Woh" firstAttribute="top" secondItem="4Og-A1-ngK" secondAttribute="top" constant="6" id="ZEh-sO-sLn"/>
                                                 <constraint firstItem="d9i-4y-Woh" firstAttribute="leading" secondItem="4Og-A1-ngK" secondAttribute="trailing" constant="7" id="a22-co-Mq8"/>
                                                 <constraint firstItem="tiz-Ba-FyU" firstAttribute="leading" secondItem="d9i-4y-Woh" secondAttribute="trailing" constant="-502" id="bNE-yQ-qbQ"/>
                                                 <constraint firstItem="tiz-Ba-FyU" firstAttribute="width" secondItem="d9i-4y-Woh" secondAttribute="width" id="fdm-MP-jkE"/>
+                                                <constraint firstItem="d9i-4y-Woh" firstAttribute="top" secondItem="Dfy-hC-WKW" secondAttribute="topMargin" constant="13" id="jHW-Ed-7ny"/>
                                                 <constraint firstAttribute="centerY" secondItem="4Og-A1-ngK" secondAttribute="centerY" constant="-2.5" id="u4f-Kf-vWU"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="ZEh-sO-sLn"/>
+                                                    <exclude reference="9ql-L8-ORT"/>
+                                                    <exclude reference="bNE-yQ-qbQ"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="donateDate" destination="tiz-Ba-FyU" id="xQU-V9-pSh"/>
@@ -965,12 +975,19 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="borrowButtonTapped:" destination="Roa-0Z-x6m" eventType="touchUpInside" id="Em8-Y9-hvo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cj3-IM-fgp" firstAttribute="top" secondItem="OXV-QP-uoT" secondAttribute="top" id="YfA-0K-qL8"/>
                             <constraint firstAttribute="centerX" secondItem="7vw-Bu-9KI" secondAttribute="centerX" id="a13-W6-QYg"/>
                             <constraint firstItem="eGn-QN-PUT" firstAttribute="top" secondItem="7vw-Bu-9KI" secondAttribute="bottom" constant="16" id="b14-er-4D4"/>
+                            <constraint firstItem="eGn-QN-PUT" firstAttribute="top" secondItem="cj3-IM-fgp" secondAttribute="bottom" id="iAC-Js-vCJ"/>
+                            <constraint firstAttribute="trailing" secondItem="cj3-IM-fgp" secondAttribute="trailing" id="oTt-on-cgV"/>
+                            <constraint firstItem="cj3-IM-fgp" firstAttribute="leading" secondItem="OXV-QP-uoT" secondAttribute="leading" id="pfe-lf-qVL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -980,7 +997,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lF-Q6-hNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5229" y="-359"/>
+            <point key="canvasLocation" x="4517" y="-921"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="3bq-1I-NNb">

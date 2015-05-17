@@ -16,6 +16,7 @@
 #import "XRBookDetailPublisherCell.h"
 #import "XRBookDetailContentCell.h"
 #import <UIViewController+ZYCore.h>
+#import <ZYCoreDefine.h>
 
 @interface XRBookDetailBaseViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -53,24 +54,49 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    [self updateBorrowButton];
 	
-
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 63, 0);
 	[self.biz fetchBookDetail: ^{
 	    [self.tableView reloadData];
+        [self updateBorrowButton];
 	} failure: ^(NSError *error) {
 	    //TODO 获取书籍信息失败处理
 	}];
-	
-	// Uncomment the following line to preserve selection between presentations.
-	// self.clearsSelectionOnViewWillAppear = NO;
-	
-	// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-	// self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+#pragma mark - borrow button 
+- (void)updateBorrowButton {
+    if (self.biz.bookData.bookStatus == kBookStatusAvaliable) {
+        self.borrowButton.enabled = YES;
+        if (self.biz.bookData.type == kBookTypeBorrow) {
+            [self.borrowButton setTitle:LOCALSTRING(@"扫码借阅") forState:UIControlStateNormal];
+        }
+        else {
+            [self.borrowButton setTitle:LOCALSTRING(@"我想借") forState:UIControlStateNormal];
+        }
+    }
+    else {
+        self.borrowButton.enabled = NO;
+        [self.borrowButton setTitle:LOCALSTRING(@"已被借") forState:UIControlStateNormal];
+    }
+    
+}
+
+- (IBAction)borrowButtonTapped:(UIButton *)sender {
+    if (self.biz.bookData.type == kBookTypeBorrow) {
+        //借书
+        [self.biz borrowBook:^{
+            //TODO 借阅成功提示
+        } failure:^(NSError *error) {
+            //TODO 借阅失败提示
+        }];
+    }
 }
 
 #pragma mark - Table view data source
@@ -81,6 +107,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
 	return 24;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -194,14 +224,4 @@
 	}
 }
 
-/*
-   #pragma mark - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-   }
- */
- 
 @end

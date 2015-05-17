@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09060F831B08725A003C69EF /* XRBorrowedBookDetaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09060F821B08725A003C69EF /* XRBorrowedBookDetaiViewController.m */; };
 		09060F861B087782003C69EF /* XRSharedBookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09060F851B087782003C69EF /* XRSharedBookDetailController.m */; };
+		09060F891B0887BF003C69EF /* XRQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09060F881B0887BF003C69EF /* XRQRViewController.m */; };
 		09DC13311AD39BB500CE8277 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */; };
 		09DC13321AD39BB500CE8277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DC13301AD39BB500CE8277 /* Main.storyboard */; };
 		09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13351AD39D7700CE8277 /* AppDelegate.m */; };
@@ -79,6 +80,8 @@
 		09060F821B08725A003C69EF /* XRBorrowedBookDetaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBorrowedBookDetaiViewController.m; sourceTree = "<group>"; };
 		09060F841B087782003C69EF /* XRSharedBookDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSharedBookDetailController.h; sourceTree = "<group>"; };
 		09060F851B087782003C69EF /* XRSharedBookDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSharedBookDetailController.m; sourceTree = "<group>"; };
+		09060F871B0887BF003C69EF /* XRQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRQRViewController.h; sourceTree = "<group>"; };
+		09060F881B0887BF003C69EF /* XRQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRQRViewController.m; sourceTree = "<group>"; };
 		09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		09DC13301AD39BB500CE8277 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		09DC13341AD39D7700CE8277 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -489,6 +492,8 @@
 				09060F821B08725A003C69EF /* XRBorrowedBookDetaiViewController.m */,
 				09060F841B087782003C69EF /* XRSharedBookDetailController.h */,
 				09060F851B087782003C69EF /* XRSharedBookDetailController.m */,
+				09060F871B0887BF003C69EF /* XRQRViewController.h */,
+				09060F881B0887BF003C69EF /* XRQRViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -692,6 +697,7 @@
 				BDFB0ABE1AFA58F800F2C738 /* XRBookDetailBaseViewController.m in Sources */,
 				BD8DFE0F1AE00DE3003FAF06 /* XRSetupAssistant.m in Sources */,
 				BDBDB7D11AD967A800977A37 /* XRBookListItemEntity.m in Sources */,
+				09060F891B0887BF003C69EF /* XRQRViewController.m in Sources */,
 				BDE692151AD953E400F5E5AB /* XRBookService.m in Sources */,
 				BD8DFE191AE3A75E003FAF06 /* XRSearchViewController.m in Sources */,
 				BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */,
