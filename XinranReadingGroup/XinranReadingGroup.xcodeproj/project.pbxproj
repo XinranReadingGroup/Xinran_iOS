@@ -10,6 +10,7 @@
 		09060F831B08725A003C69EF /* XRBorrowedBookDetaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09060F821B08725A003C69EF /* XRBorrowedBookDetaiViewController.m */; };
 		09060F861B087782003C69EF /* XRSharedBookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09060F851B087782003C69EF /* XRSharedBookDetailController.m */; };
 		09060F891B0887BF003C69EF /* XRQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09060F881B0887BF003C69EF /* XRQRViewController.m */; };
+		09060F8B1B088CE9003C69EF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09060F8A1B088CE9003C69EF /* AVFoundation.framework */; };
 		09DC13311AD39BB500CE8277 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */; };
 		09DC13321AD39BB500CE8277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DC13301AD39BB500CE8277 /* Main.storyboard */; };
 		09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13351AD39D7700CE8277 /* AppDelegate.m */; };
@@ -18,6 +19,7 @@
 		09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC133C1AD39E4100CE8277 /* XRLoginWelcomeViewController.m */; };
 		09DC13401AD39F3600CE8277 /* XRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */; };
 		09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */; };
+		09E39C941B089F8700A443AC /* XRBorrowBookQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C931B089F8700A443AC /* XRBorrowBookQRViewController.m */; };
 		6F34F267973D11B9B8664098 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E15F82D97BF4D76A946888F /* libPods.a */; };
 		BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D41A98398F009CD8EF /* Images.xcassets */; };
 		BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */; };
@@ -82,6 +84,7 @@
 		09060F851B087782003C69EF /* XRSharedBookDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSharedBookDetailController.m; sourceTree = "<group>"; };
 		09060F871B0887BF003C69EF /* XRQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRQRViewController.h; sourceTree = "<group>"; };
 		09060F881B0887BF003C69EF /* XRQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRQRViewController.m; sourceTree = "<group>"; };
+		09060F8A1B088CE9003C69EF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		09DC13301AD39BB500CE8277 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		09DC13341AD39D7700CE8277 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 		09DC133F1AD39F3600CE8277 /* XRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRLoginViewController.m; sourceTree = "<group>"; };
 		09DC13411AD39F4A00CE8277 /* XRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRegisterViewController.h; sourceTree = "<group>"; };
 		09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRegisterViewController.m; sourceTree = "<group>"; };
+		09E39C921B089F8700A443AC /* XRBorrowBookQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBorrowBookQRViewController.h; sourceTree = "<group>"; };
+		09E39C931B089F8700A443AC /* XRBorrowBookQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBorrowBookQRViewController.m; sourceTree = "<group>"; };
 		1E15F82D97BF4D76A946888F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6BDAE75C27E1F589481796 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BD1AD3C11A98398F009CD8EF /* XinranReadingGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XinranReadingGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +184,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09060F8B1B088CE9003C69EF /* AVFoundation.framework in Frameworks */,
 				BD1D64051AE006D200CCE363 /* libUMSocial_Sdk_4.2.2.a in Frameworks */,
 				6F34F267973D11B9B8664098 /* libPods.a in Frameworks */,
 			);
@@ -254,6 +260,7 @@
 		7A6AAC1FE59086D8F8088ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09060F8A1B088CE9003C69EF /* AVFoundation.framework */,
 				1E15F82D97BF4D76A946888F /* libPods.a */,
 			);
 			name = Frameworks;
@@ -494,6 +501,8 @@
 				09060F851B087782003C69EF /* XRSharedBookDetailController.m */,
 				09060F871B0887BF003C69EF /* XRQRViewController.h */,
 				09060F881B0887BF003C69EF /* XRQRViewController.m */,
+				09E39C921B089F8700A443AC /* XRBorrowBookQRViewController.h */,
+				09E39C931B089F8700A443AC /* XRBorrowBookQRViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -686,6 +695,7 @@
 				BDE692091AD907E700F5E5AB /* XRHomeViewController.m in Sources */,
 				BD2810BF1AE3AB6C006D551B /* XRSearchListCell.m in Sources */,
 				BDE691FA1AD4B12A00F5E5AB /* XRNetwork.m in Sources */,
+				09E39C941B089F8700A443AC /* XRBorrowBookQRViewController.m in Sources */,
 				BDFB0AC11AFA595300F2C738 /* XRBookDetailBiz.m in Sources */,
 				BDE691FD1AD8F65400F5E5AB /* XRLoginBiz.m in Sources */,
 				BD8E393D1B0226BD00AF1CFD /* XRBookDetailInfoCell.m in Sources */,

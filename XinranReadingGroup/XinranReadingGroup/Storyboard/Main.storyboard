@@ -479,6 +479,9 @@
                                 <state key="normal" title="借书">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="borrowButtonTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="1r7-3b-8BD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oM-8X-gkO">
                                 <rect key="frame" x="207" y="90" width="54" height="52"/>
@@ -620,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cbv-mX-E6N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3829" y="-921"/>
+            <point key="canvasLocation" x="3829" y="-847"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="gCV-aa-niu">
@@ -784,7 +787,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HR3-X0-KOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5273" y="-921"/>
+            <point key="canvasLocation" x="5359" y="-847"/>
         </scene>
         <!--Book Detail Base View Controller-->
         <scene sceneID="Voe-lD-ejJ">
@@ -997,7 +1000,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lF-Q6-hNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4517" y="-921"/>
+            <point key="canvasLocation" x="4571" y="-847"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="3bq-1I-NNb">

@@ -8,6 +8,7 @@
 
 #import "XRHomeViewController.h"
 #import <UIViewController+navigationBarItem.h>
+#import "XRBorrowBookQRViewController.h"
 
 @interface XRHomeViewController ()
 
@@ -23,6 +24,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)borrowButtonTapped:(UIButton *)sender {
+    XRBorrowBookQRViewController *qrViewController = [[XRBorrowBookQRViewController alloc] init];
+    qrViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:qrViewController animated:YES];
 }
 
 

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3D8A4AD51F37AB2E2D3B5D8"
+               BlueprintIdentifier = "2DDC07AEFE4CF7CD6CC2BEE8"
                BuildableName = "libPods-ZYCoreFramework.a"
                BlueprintName = "Pods-ZYCoreFramework"
                ReferencedContainer = "container:Pods.xcodeproj">

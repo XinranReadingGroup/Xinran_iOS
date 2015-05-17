@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ZYCoreQRViewController.h>
 
-@interface XRQRViewController : UIViewController
+/**
+ *  借书时扫面二维码的界面
+ */
+@interface XRQRViewController : ZYCoreQRViewController
 
 @end
