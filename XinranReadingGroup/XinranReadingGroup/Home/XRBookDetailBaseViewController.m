@@ -15,8 +15,9 @@
 #import "XRBookDetailDonatorCell.h"
 #import "XRBookDetailPublisherCell.h"
 #import "XRBookDetailContentCell.h"
+#import <UIViewController+ZYCore.h>
 
-@interface XRBookDetailBaseViewController ()
+@interface XRBookDetailBaseViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) XRBookDetailBiz *biz;
 @property (weak, nonatomic) IBOutlet UIImageView *bookCover;
@@ -162,7 +163,6 @@
 	switch (indexPath.section) {
 		case 0:
 		{
-//            XRBookDetailInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailInfoCell"];
 			XRBookDetailInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailInfoCell" forIndexPath:indexPath];
 			cell.data = self.biz.bookData;
 			return cell;

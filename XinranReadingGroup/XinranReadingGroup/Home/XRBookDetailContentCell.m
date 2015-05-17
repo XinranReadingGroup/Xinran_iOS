@@ -28,7 +28,7 @@
 }
 
 + (CGFloat)cellHeight:(XRBookEntity *)data {
-	CGSize textSize = [data.summary boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 100, MAXFLOAT) options:(NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin) attributes:@{ NSFontAttributeName:[UIFont systemFontOfSize:14.] } context:NULL].size;
+	CGSize textSize = [data.summary boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 95, MAXFLOAT) options:(NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin) attributes:@{ NSFontAttributeName:[UIFont systemFontOfSize:14.] } context:NULL].size;
 	return textSize.height;
 }
 
