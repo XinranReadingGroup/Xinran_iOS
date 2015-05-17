@@ -8,6 +8,7 @@ pod 'AFNetworking','2.5.2'
 pod 'JsonModel','1.0.2'
 pod 'SSKeychain','1.2.2'
 pod 'SDWebImage','3.7.1'
+pod 'BlocksKit'
 
 #pod 'ZYCoreFramework',:path=>'~/Developer/Code/ZengYun/iOS/ZYCoreFramework'
 pod 'ZYCoreFramework',:path=>'~/Developer/Zeng Yun/zycoreframework'

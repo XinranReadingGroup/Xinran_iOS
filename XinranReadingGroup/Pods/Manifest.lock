@@ -20,6 +20,21 @@ PODS:
   - AFNetworking/UIKit (2.5.2):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - JSONModel (1.0.2)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
@@ -29,6 +44,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 2.5.2)
+  - BlocksKit
   - JsonModel (= 1.0.2)
   - SDWebImage (= 3.7.1)
   - SSKeychain (= 1.2.2)
@@ -40,6 +56,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
   SSKeychain: 88767e903ee8d274ed380e364d96b7a101235286
