@@ -54,7 +54,6 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-//    [self registerCell];
 
 	[self.biz fetchBookDetail: ^{
 	    [self.tableView reloadData];
@@ -72,13 +71,6 @@
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
-}
-
-- (void)registerCell {
-	[self.tableView registerClass:[XRBookDetailInfoCell class] forCellReuseIdentifier:@"XRBookDetailInfoCell"];
-	[self.tableView registerClass:[XRBookDetailContentCell class] forCellReuseIdentifier:@"XRBookDetailContentCell"];
-	[self.tableView registerClass:[XRBookDetailPublisherCell class] forCellReuseIdentifier:@"XRBookDetailPublisherCell"];
-	[self.tableView registerClass:[XRBookDetailDonatorCell class] forCellReuseIdentifier:@"XRBookDetailDonatorCell"];
 }
 
 #pragma mark - Table view data source
