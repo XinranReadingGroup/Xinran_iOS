@@ -1,1 +1,1 @@
-../../../../../../../ZYCoreFramework/Core/ZYCoreViewController.h
+../../../../../../zycoreframework/Core/ZYCoreViewController.h

@@ -1,1 +1,1 @@
-../../../../../../../ZYCoreFramework/Core/NSString+ZYCore.h
+../../../../../../zycoreframework/Core/NSString+ZYCore.h
