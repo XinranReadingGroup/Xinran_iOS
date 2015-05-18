@@ -36,6 +36,7 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - JSONModel (1.0.2)
+  - MBProgressHUD (0.9.1)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
@@ -44,8 +45,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 2.5.2)
-  - BlocksKit
+  - BlocksKit (= 2.2.5)
   - JsonModel (= 1.0.2)
+  - MBProgressHUD (= 0.9.1)
   - SDWebImage (= 3.7.1)
   - SSKeychain (= 1.2.2)
   - ZYCoreFramework (from `~/Developer/Zeng Yun/zycoreframework`)
@@ -58,6 +60,7 @@ SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
   SSKeychain: 88767e903ee8d274ed380e364d96b7a101235286
   ZYCoreFramework: 680845b79d1e8b1339c95f261e63f95022828f04
