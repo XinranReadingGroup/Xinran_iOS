@@ -35,6 +35,10 @@
                 if (buttonIndex == 1) {
                     //确定
                 }
+                else {
+                    //取消的话继续扫描
+                    [self startReading];
+                }
             }];
             [alertView show];
         }
