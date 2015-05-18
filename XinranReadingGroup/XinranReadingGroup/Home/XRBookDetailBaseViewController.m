@@ -57,7 +57,7 @@
     [self updateBorrowButton];
 	
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 63, 0);
-	[self.biz fetchBookDetail: ^{
+	[self.biz fetchBookDetailWithISBN: ^{
 	    [self.tableView reloadData];
         [self updateBorrowButton];
 	} failure: ^(NSError *error) {

@@ -59,6 +59,6 @@
  */
 + (void)returnBook:(NSString *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure;
 
-+ (void)bookDetail:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)bookDetailWithISBN:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 @end

@@ -145,7 +145,7 @@ static NSString * const bookId = @"9787550244146";
 
 - (void)testBookDetail {
     XCTestExpectation *expectation = [self expectationWithDescription:@"book detail test"];
-    [XRBookService bookDetail:ISBN success:^(id param) {
+    [XRBookService bookDetailWithISBN:ISBN success:^(id param) {
         DLog(@"book detail is %@",param);
         XCTAssert(YES,@"book detail pass");
     } failure:^(NSError *error) {

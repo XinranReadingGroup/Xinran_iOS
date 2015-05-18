@@ -99,7 +99,7 @@
     }];
 }
 
-+ (void)bookDetail:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
++ (void)bookDetailWithISBN:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     if (!ISBN) {
         failure(nil);
         return;
