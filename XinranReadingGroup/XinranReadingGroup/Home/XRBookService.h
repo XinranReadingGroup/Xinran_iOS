@@ -61,4 +61,13 @@
 
 + (void)bookDetailWithISBN:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
+/**
+ *  通过bookID获取书籍详情
+ *
+ *  @param bookID  书籍的ID
+ *  @param success 请求成功调用的block
+ *  @param failure 请求失败调用的block
+ */
++ (void)bookDetailWithBookID:(NSString *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
+
 @end
