@@ -27,7 +27,7 @@
 }
 
 - (void)scanFinish:(NSString *)result {
-    [XRBookService bookDetailWithISBN:result success:^(id param) {
+    [XRBookService bookDetailWithBookID:result success:^(id param) {
         XRBookEntity *bookEntity = param;
         if (bookEntity && bookEntity.title) {
             NSString *message = [NSString stringWithFormat:@"确定要借阅《%@》吗？",bookEntity.title];

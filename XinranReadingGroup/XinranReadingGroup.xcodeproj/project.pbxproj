@@ -11,6 +11,7 @@
 		09060F861B087782003C69EF /* XRSharedBookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09060F851B087782003C69EF /* XRSharedBookDetailController.m */; };
 		09060F891B0887BF003C69EF /* XRQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09060F881B0887BF003C69EF /* XRQRViewController.m */; };
 		09060F8B1B088CE9003C69EF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09060F8A1B088CE9003C69EF /* AVFoundation.framework */; };
+		09DAD4941B0AF903007F92D7 /* XRBorrowResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DAD4931B0AF903007F92D7 /* XRBorrowResultViewController.m */; };
 		09DC13311AD39BB500CE8277 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */; };
 		09DC13321AD39BB500CE8277 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DC13301AD39BB500CE8277 /* Main.storyboard */; };
 		09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13351AD39D7700CE8277 /* AppDelegate.m */; };
@@ -85,6 +86,8 @@
 		09060F871B0887BF003C69EF /* XRQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRQRViewController.h; sourceTree = "<group>"; };
 		09060F881B0887BF003C69EF /* XRQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRQRViewController.m; sourceTree = "<group>"; };
 		09060F8A1B088CE9003C69EF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		09DAD4921B0AF903007F92D7 /* XRBorrowResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBorrowResultViewController.h; sourceTree = "<group>"; };
+		09DAD4931B0AF903007F92D7 /* XRBorrowResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBorrowResultViewController.m; sourceTree = "<group>"; };
 		09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		09DC13301AD39BB500CE8277 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		09DC13341AD39D7700CE8277 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -503,6 +506,8 @@
 				09060F881B0887BF003C69EF /* XRQRViewController.m */,
 				09E39C921B089F8700A443AC /* XRBorrowBookQRViewController.h */,
 				09E39C931B089F8700A443AC /* XRBorrowBookQRViewController.m */,
+				09DAD4921B0AF903007F92D7 /* XRBorrowResultViewController.h */,
+				09DAD4931B0AF903007F92D7 /* XRBorrowResultViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -689,6 +694,7 @@
 				BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */,
 				BD8E39461B0226FD00AF1CFD /* XRBookDetailDonatorCell.m in Sources */,
 				BDE6920F1AD92B8500F5E5AB /* XRBookEntity.m in Sources */,
+				09DAD4941B0AF903007F92D7 /* XRBorrowResultViewController.m in Sources */,
 				09060F831B08725A003C69EF /* XRBorrowedBookDetaiViewController.m in Sources */,
 				BDE692031AD8FFA900F5E5AB /* XRTabbarController.m in Sources */,
 				09DC13401AD39F3600CE8277 /* XRLoginViewController.m in Sources */,
