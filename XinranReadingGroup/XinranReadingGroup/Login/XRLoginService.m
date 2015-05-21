@@ -44,13 +44,13 @@
     }];
 }
 
-+ (void)registerUser:(NSString *)userName password:(NSString *)password success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure {
-    if (!password || !userName) {
++ (void)registerUser:(NSString *)userName password:(NSString *)password nickName:(NSString *)nickName success:(ZYDictionaryBlock)success failure:(ZYErrorBlock)failure {
+    if (!password || !userName || !nickName) {
         if (failure) {
             failure(nil);
         }
     }
-    NSDictionary *param = @{@"userIdentifier":userName,@"password":password};
+    NSDictionary *param = @{@"userIdentifier":userName,@"password":password,@"nickName":nickName};
     [[XRNetwork sharedXRNetwork] GET:@"user/signUp" param:param success:^(id param) {
         if (success) {
             success(param);

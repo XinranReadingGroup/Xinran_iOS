@@ -11,6 +11,7 @@
 #import <ZYCoreDefine.h>
 #import <UIViewController+ZYCore.h>
 #import <ZYCoreHintAssistant.h>
+#import "XRUser.h"
 
 @interface XRRegisterViewController ()
 
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPassword;
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
+@property (weak, nonatomic) IBOutlet UITextField *nickName;
 
 @end
 
@@ -38,9 +40,8 @@
         [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"确认密码的内容与密码不一致哟")];
         return;
     }
-    
     self.registerButton.enabled = NO;
-    [XRLoginBiz registerUser:self.userName.text password:self.password.text success:^{
+    [XRLoginBiz registerUser:self.userName.text password:self.password.text nickName:self.nickName.text success:^{
         //跳到主页
         self.registerButton.enabled = YES;
         dispatch_async(dispatch_get_main_queue(), ^{

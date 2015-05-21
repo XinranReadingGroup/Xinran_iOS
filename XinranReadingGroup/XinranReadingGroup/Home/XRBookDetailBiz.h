@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) XRBookEntity *bookData;
 
-- (void)fetchBookDetailWithISBN:(ZYBlock)success failure:(ZYErrorBlock)failure;
+- (void)fetchBookDetail:(ZYBlock)success failure:(ZYErrorBlock)failure;
 
 - (void)borrowBook:(ZYBlock)success failure:(ZYErrorBlock)failure;
 

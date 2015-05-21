@@ -10,6 +10,9 @@
 
 @class XRBookEntity;
 
+/**
+ *  借阅结果界面
+ */
 @interface XRBorrowResultViewController : UIViewController
 
 @property (nonatomic, strong) XRBookEntity *bookData;

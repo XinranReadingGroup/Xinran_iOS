@@ -13,8 +13,8 @@
 
 @implementation XRBookDetailBiz
 
-- (void)fetchBookDetailWithISBN:(ZYBlock)success failure:(ZYErrorBlock)failure {
-    [XRBookService bookDetailWithISBN:self.bookData.isbn success:^(id param) {
+- (void)fetchBookDetail:(ZYBlock)success failure:(ZYErrorBlock)failure {
+    [XRBookService bookDetailWithBookID:self.bookData.bookID success:^(id param) {
         self.bookData = param;
         if (success) {
             success();
