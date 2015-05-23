@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07E72A394D26E737AFA8CAA2</key>
+		<key>0337959F7E4CE230D85314A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0D9F38A8DF308AD94E150ADD</key>
+		<key>4F8150963A73B9A9BF5B3F08</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2916B2ACB0AC4B52B2155C10</key>
+		<key>59257D5E0DCD007EB6047544</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3EDEF0BB6D872A3399EB587D</key>
+		<key>85667F0C1980297D4466BDEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75CB2902F541EF20E9499EEB</key>
+		<key>88FF53747D3C0758BBE5CF7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82969A29AC48E48384810CF0</key>
+		<key>C00CFD370B0083AAC66B9F7F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3D633C6A837B259049D6BA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

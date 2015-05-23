@@ -10,5 +10,5 @@ pod 'SSKeychain','1.2.2'
 pod 'SDWebImage','3.7.1'
 pod 'BlocksKit'
 
-#pod 'ZYCoreFramework',:path=>'~/Developer/Code/ZengYun/iOS/ZYCoreFramework'
-pod 'ZYCoreFramework',:path=>'~/Developer/Zeng Yun/zycoreframework'
+pod 'ZYCoreFramework',:path=>'~/Developer/Code/ZengYun/iOS/ZYCoreFramework'
+#pod 'ZYCoreFramework',:path=>'~/Developer/Zeng Yun/zycoreframework'
