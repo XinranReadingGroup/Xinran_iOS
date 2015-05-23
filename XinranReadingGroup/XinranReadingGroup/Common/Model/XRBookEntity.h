@@ -25,7 +25,7 @@ typedef enum {
 
 @interface XRBookEntity : XREntity
 
-@property (nonatomic, strong) NSString *bookID;
+@property (nonatomic, strong) NSNumber *bookID;
 @property (nonatomic, strong) NSString *title;  //书名
 @property (nonatomic, strong) NSString *author;  //作者
 @property (nonatomic, strong) NSString *publisher;  //出版社å

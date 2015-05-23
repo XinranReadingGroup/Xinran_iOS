@@ -27,23 +27,34 @@
 }
 
 - (void)scanFinish:(NSString *)result {
-    [XRBookService bookDetail:result success:^(id param) {
+    [XRBookService bookDetailWithBookID:result success:^(id param) {
         XRBookEntity *bookEntity = param;
         if (bookEntity && bookEntity.title) {
-            NSString *message = [NSString stringWithFormat:@"确定要借阅《%@》吗？",bookEntity];
+            NSString *message = [NSString stringWithFormat:@"确定要借阅《%@》吗？",bookEntity.title];
             UIAlertView *alertView = [UIAlertView bk_showAlertViewWithTitle:LOCALSTRING(@"借阅确认") message:LOCALSTRING(message) cancelButtonTitle:LOCALSTRING(@"取消") otherButtonTitles:@[LOCALSTRING(@"确定")] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
                 if (buttonIndex == 1) {
                     //确定
+                    
+                }
+                else {
+                    //取消的话继续扫描
+                    [self startReading];
                 }
             }];
             [alertView show];
         }
         else {
-            UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:LOCALSTRING(@"书籍信息获取失败")];
+            UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:LOCALSTRING(@"您扫描的书籍不在系统中")];
+            [alertView bk_setCancelButtonWithTitle:LOCALSTRING(@"好") handler:^{
+                [self startReading];
+            }];
             [alertView show];
         }
     } failure:^(NSError *error) {
         UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:LOCALSTRING(@"书籍信息获取失败")];
+        [alertView bk_setCancelButtonWithTitle:LOCALSTRING(@"好") handler:^{
+            [self startReading];
+        }];
         [alertView show];
     }];
 }

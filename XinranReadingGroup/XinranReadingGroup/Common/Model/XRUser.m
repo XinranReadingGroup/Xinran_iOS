@@ -18,8 +18,7 @@
 SYNTHESIZE_SINGLETON_FOR_CLASS(XRUser);
 
 - (BOOL)isLogin {
-    _isLogin = self.accessToken ? YES : NO;
-    return _isLogin;
+    return self.accessToken ? YES : NO;
 }
 
 - (NSString *)userIdentifier {
@@ -35,13 +34,21 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(XRUser);
 }
 
 - (void)setAccessToken:(NSString *)accessToken {
-    [SSKeychain setPassword:accessToken forService:@"XinranReading" account:_userIdentifier];
+    NSError *error;
+    [SSKeychain setPassword:accessToken forService:@"XinranReading" account:_userIdentifier error:&error];
+    if (error) {
+        DLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n保存access token时出错\n%@",error);
+    }
     _accessToken = accessToken;
 }
 
 - (NSString *)accessToken {
     if (!_accessToken) {
-        _accessToken = [SSKeychain passwordForService:@"XinranReading" account:_userIdentifier];
+        NSError *error;
+        _accessToken = [SSKeychain passwordForService:@"XinranReading" account:_userIdentifier error:&error];
+        if (error) {
+            DLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n读取access token时出错\n%@",error);
+        }
     }
     return _accessToken;
 }

@@ -14,7 +14,6 @@
 
 + (void)login:(NSString *)userName password:(NSString *)password success:(ZYBlock)success failure:(ZYErrorBlock)failure {
     [XRLoginService login:userName password:password success:^(NSDictionary *dic) {
-        [XRUser sharedXRUser].isLogin = YES;
         [XRUser sharedXRUser].userIdentifier = userName;
         [XRUser sharedXRUser].accessToken = [dic valueForKeyPath:@"data.accessToken"];
         if (success) {
@@ -27,8 +26,8 @@
     }];
 }
 
-+ (void)registerUser:(NSString *)userName password:(NSString *)password success:(ZYBlock)success failure:(ZYErrorBlock)failure {
-    [XRLoginService registerUser:userName password:password success:^(NSDictionary *dic) {
++ (void)registerUser:(NSString *)userName password:(NSString *)password nickName:(NSString *)nickName success:(ZYBlock)success failure:(ZYErrorBlock)failure {
+    [XRLoginService registerUser:userName password:password nickName:(NSString *)nickName success:^(NSDictionary *dic) {
         [XRUser sharedXRUser].isLogin = YES;
         [XRUser sharedXRUser].userIdentifier = userName;
         [XRUser sharedXRUser].accessToken = [dic valueForKeyPath:@"data.accessToken"];
