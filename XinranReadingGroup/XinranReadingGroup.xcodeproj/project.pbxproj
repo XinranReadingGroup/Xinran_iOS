@@ -14,7 +14,7 @@
 		0988B4B61B0D9BC50004DFD8 /* XRBookInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0988B4B51B0D9BC50004DFD8 /* XRBookInfoCell.xib */; };
 		0988B4B91B0D9BEC0004DFD8 /* XRResultBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0988B4B81B0D9BEC0004DFD8 /* XRResultBaseViewController.m */; };
 		0992FA6F1B0DFBF1009CD369 /* XRBookInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0992FA6E1B0DFBF1009CD369 /* XRBookInfoCell.m */; };
-		0992FA721B0E0D41009CD369 /* XRBookRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0992FA711B0E0D41009CD369 /* XRBookRecord.m */; };
+		0992FA721B0E0D41009CD369 /* XRBookRecordEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0992FA711B0E0D41009CD369 /* XRBookRecordEntity.m */; };
 		0992FA751B0E1119009CD369 /* XRBookDetailEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0992FA741B0E1119009CD369 /* XRBookDetailEntity.m */; };
 		09DAD4941B0AF903007F92D7 /* XRBorrowResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DAD4931B0AF903007F92D7 /* XRBorrowResultViewController.m */; };
 		09DC13311AD39BB500CE8277 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DC132F1AD39BB500CE8277 /* LaunchScreen.xib */; };
@@ -96,8 +96,8 @@
 		0988B4B81B0D9BEC0004DFD8 /* XRResultBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRResultBaseViewController.m; sourceTree = "<group>"; };
 		0992FA6D1B0DFBF1009CD369 /* XRBookInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookInfoCell.h; sourceTree = "<group>"; };
 		0992FA6E1B0DFBF1009CD369 /* XRBookInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookInfoCell.m; sourceTree = "<group>"; };
-		0992FA701B0E0D41009CD369 /* XRBookRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookRecord.h; sourceTree = "<group>"; };
-		0992FA711B0E0D41009CD369 /* XRBookRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookRecord.m; sourceTree = "<group>"; };
+		0992FA701B0E0D41009CD369 /* XRBookRecordEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookRecordEntity.h; sourceTree = "<group>"; };
+		0992FA711B0E0D41009CD369 /* XRBookRecordEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookRecordEntity.m; sourceTree = "<group>"; };
 		0992FA731B0E1119009CD369 /* XRBookDetailEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailEntity.h; sourceTree = "<group>"; };
 		0992FA741B0E1119009CD369 /* XRBookDetailEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailEntity.m; sourceTree = "<group>"; };
 		09DAD4921B0AF903007F92D7 /* XRBorrowResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBorrowResultViewController.h; sourceTree = "<group>"; };
@@ -493,8 +493,8 @@
 				BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */,
 				BDBDB7D21AD97FFA00977A37 /* XRBookListEntity.h */,
 				BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */,
-				0992FA701B0E0D41009CD369 /* XRBookRecord.h */,
-				0992FA711B0E0D41009CD369 /* XRBookRecord.m */,
+				0992FA701B0E0D41009CD369 /* XRBookRecordEntity.h */,
+				0992FA711B0E0D41009CD369 /* XRBookRecordEntity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -714,7 +714,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1D63E61ADFFF8100CCE363 /* XRShareAssistant.m in Sources */,
-				0992FA721B0E0D41009CD369 /* XRBookRecord.m in Sources */,
+				0992FA721B0E0D41009CD369 /* XRBookRecordEntity.m in Sources */,
 				BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */,
 				BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */,
 				BD8E39461B0226FD00AF1CFD /* XRBookDetailDonatorCell.m in Sources */,

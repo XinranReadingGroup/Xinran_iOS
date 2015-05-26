@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68B087CF3B620810856B25B1"
-               BuildableName = "libPods-BlocksKit.a"
-               BlueprintName = "Pods-BlocksKit"
+               BlueprintIdentifier = "3338D4052F596AB64B580DFA"
+               BuildableName = "libPods-MBProgressHUD.a"
+               BlueprintName = "Pods-MBProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
