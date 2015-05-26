@@ -14,7 +14,7 @@
 static NSString *const defaultXRBaseURL = @"http://xinrandushuba.com/mobile";
 static NSString *const defaultTestBaseURL = @"http://10.18.219.152/mobile";
 static NSString *const defaultDoubanBaseURL = @"";
-static BOOL const isTest = YES;
+static BOOL const isTest = NO;
 
 @implementation XRNetwork
 
