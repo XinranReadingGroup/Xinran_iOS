@@ -13,47 +13,51 @@
 @implementation XRLoginBiz
 
 + (void)login:(NSString *)userName password:(NSString *)password success:(ZYBlock)success failure:(ZYErrorBlock)failure {
-    [XRLoginService login:userName password:password success:^(NSDictionary *dic) {
-        [XRUser sharedXRUser].userIdentifier = userName;
-        [XRUser sharedXRUser].accessToken = [dic valueForKeyPath:@"data.accessToken"];
-        if (success) {
-            success();
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+	[XRLoginService login:userName password:password success: ^(NSDictionary *dic) {
+	    if (!dic || !dic[@"data"] || ![dic[@"data"] isKindOfClass:[NSDictionary class]] || dic[@"data"][@"accessToken"]) {
+	        failure(nil);
+	        return;
+		}
+	    [XRUser sharedXRUser].userIdentifier = userName;
+	    [XRUser sharedXRUser].accessToken = [dic valueForKeyPath:@"data.accessToken"];
+	    if (success) {
+	        success();
+		}
+	} failure: ^(NSError *error) {
+	    if (failure) {
+	        failure(error);
+		}
+	}];
 }
 
 + (void)registerUser:(NSString *)userName password:(NSString *)password nickName:(NSString *)nickName success:(ZYBlock)success failure:(ZYErrorBlock)failure {
-    [XRLoginService registerUser:userName password:password nickName:(NSString *)nickName success:^(NSDictionary *dic) {
-        [XRUser sharedXRUser].isLogin = YES;
-        [XRUser sharedXRUser].userIdentifier = userName;
-        [XRUser sharedXRUser].accessToken = [dic valueForKeyPath:@"data.accessToken"];
-        if (success) {
-            success();
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+	[XRLoginService registerUser:userName password:password nickName:(NSString *)nickName success: ^(NSDictionary *dic) {
+	    [XRUser sharedXRUser].isLogin = YES;
+	    [XRUser sharedXRUser].userIdentifier = userName;
+	    [XRUser sharedXRUser].accessToken = [dic valueForKeyPath:@"data.accessToken"];
+	    if (success) {
+	        success();
+		}
+	} failure: ^(NSError *error) {
+	    if (failure) {
+	        failure(error);
+		}
+	}];
 }
 
 - (void)logout:(ZYBlock)success failure:(ZYBlock)failure {
-    [XRLoginService logout:[XRUser sharedXRUser].accessToken success:^{
-        [XRUser sharedXRUser].isLogin = NO;
-        [XRUser sharedXRUser].userIdentifier = nil;
-        [XRUser sharedXRUser].accessToken = nil;
-        if (success) {
-            success();
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+	[XRLoginService logout:[XRUser sharedXRUser].accessToken success: ^{
+	    [XRUser sharedXRUser].isLogin = NO;
+	    [XRUser sharedXRUser].userIdentifier = nil;
+	    [XRUser sharedXRUser].accessToken = nil;
+	    if (success) {
+	        success();
+		}
+	} failure: ^(NSError *error) {
+	    if (failure) {
+	        failure(error);
+		}
+	}];
 }
 
 @end
