@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class XRBookEntity;
+@class XRBookRecordEntity;
 
 @interface XRBookDetailDonatorCell : UITableViewCell
 
-@property (nonatomic, strong) XRBookEntity *data;
+@property (nonatomic, strong) XRBookRecordEntity *data;
 @property (weak, nonatomic) IBOutlet UIImageView *donatorAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *donatorName;
 @property (weak, nonatomic) IBOutlet UILabel *donateDate;

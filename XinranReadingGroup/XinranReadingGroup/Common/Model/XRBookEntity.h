@@ -8,21 +8,15 @@
 
 #import "XREntity.h"
 
-typedef enum {
-	kBookStatusAvaliable,           //可借
-	kBookStatusBorrowed,            //已借
-}BookStatus;
-
-typedef enum {
-	kBookTypeBorrow,                //借阅书，已经捐了的书
-	kBookTypeShare,                 //分享书，不捐但是可以借给人家的书
-	kBookTypeUnknown,               //未知类型
-}BookType;
 
 @protocol XRBookEntity <NSObject>
 
 @end
 
+/**
+ *  书籍。将ISBN中相同的书籍中的公共部分抽象出来变成了这个数据结构
+ *  这个数据结构用来记录书籍的通用信息，如作者、出版社等。同一个ISBN的BookEntity的内容是相同的
+ */
 @interface XRBookEntity : XREntity
 
 @property (nonatomic, strong) NSNumber *bookID;
@@ -34,11 +28,7 @@ typedef enum {
 @property (nonatomic, strong) NSString *isbn;  //书籍的ISBN号
 @property (nonatomic, strong) NSString *price;  //价格
 
-@property (nonatomic, strong) NSString *donator;  //捐书人
-@property (nonatomic, strong) NSString *bookcase;  //书架
 @property (nonatomic) NSInteger createdAt;         //创建时间
 @property (nonatomic) NSInteger updatedAt;         //修改时间
-@property (nonatomic) BookStatus bookStatus;        //书的状态：可借，已借
-@property (nonatomic) BookType type;          //书的类型，借阅书或者分享书
 
 @end

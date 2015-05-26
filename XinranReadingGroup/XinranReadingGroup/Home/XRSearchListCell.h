@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class XRBookEntity;
+@class XRBookDetailEntity;
 
 @interface XRSearchListCell : UITableViewCell
 
-@property (nonatomic, weak) XRBookEntity *data;
+@property (nonatomic, weak) XRBookDetailEntity *data;
 @property (weak, nonatomic) IBOutlet UIImageView *cover;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UIButton *type;

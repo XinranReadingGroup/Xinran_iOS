@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class XRBookEntity;
+
 @interface XRResultBaseViewController : UIViewController
+
+@property (nonatomic, strong) XRBookEntity *bookData;
+@property (nonatomic, strong) NSString *resultText;
+@property (nonatomic, strong) NSString *noticeText;
 
 @end

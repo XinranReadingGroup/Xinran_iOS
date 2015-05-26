@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class XRBookEntity;
+@class XRBookDetailEntity;
 
 @interface XRBookDetailInfoCell : UITableViewCell
 
@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *bookTitle;
 @property (weak, nonatomic) IBOutlet UILabel *bookCase;
 
-@property (nonatomic, strong) XRBookEntity *data;
+@property (nonatomic, strong) XRBookDetailEntity *data;
 
 + (CGFloat)cellHeight;
 

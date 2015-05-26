@@ -7,30 +7,31 @@
 //
 
 #import "XRBookDetailDonatorCell.h"
-#import "XRBookEntity.h"
+#import "XRBookRecordEntity.h"
 #import <UIImageView+WebCache.h>
+#import <NSNumber+ZYCore.h>
 
 @implementation XRBookDetailDonatorCell
 
-- (void)setData:(XRBookEntity *)data {
-    _data = data;
-    [_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:@"http://fd.topitme.com/d/8b/d4/1187454768482d48bdo.jpg"]];
-    _donatorName.text = _data.donator;
-    _donateDate.text = @"2015-6-1";
+- (void)setData:(XRBookRecordEntity *)data {
+	_data = data;
+	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:@"http://fd.topitme.com/d/8b/d4/1187454768482d48bdo.jpg"]];
+	_donatorName.text = _data.ownerUserId.stringValue;
+	_donateDate.text = [_data.onStockDate toDefaultDataString];
 }
 
 - (void)awakeFromNib {
-    // Initialization code
+	// Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+	[super setSelected:selected animated:animated];
+	
+	// Configure the view for the selected state
 }
 
 + (CGFloat)cellHeight {
-    return 77;
+	return 77;
 }
 
 @end

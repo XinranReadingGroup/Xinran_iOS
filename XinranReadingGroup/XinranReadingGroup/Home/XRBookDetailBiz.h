@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <ZYBlockDefine.h>
 
-@class XRBookEntity;
+@class XRBookDetailEntity;
 
 @interface XRBookDetailBiz : NSObject
 
-@property (nonatomic, strong) XRBookEntity *bookData;
+@property (nonatomic, strong) XRBookDetailEntity *bookData;
 
 - (void)fetchBookDetail:(ZYBlock)success failure:(ZYErrorBlock)failure;
 

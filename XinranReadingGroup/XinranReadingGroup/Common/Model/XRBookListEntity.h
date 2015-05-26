@@ -7,11 +7,12 @@
 //
 
 #import "XRBookListItemEntity.h"
+#import "XRBookDetailEntity.h"
 
-@class XRBookEntity;
+@class XRBookDetailEntity;
 
 @interface XRBookListEntity : XREntity
 
-@property (nonatomic, strong) NSArray<XRBookEntity> *bookList;
+@property (nonatomic, strong) NSArray <XRBookDetailEntity> *bookList;
 
 @end

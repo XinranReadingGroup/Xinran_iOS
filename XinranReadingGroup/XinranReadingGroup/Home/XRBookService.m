@@ -68,7 +68,7 @@
     }];
 }
 
-+ (void)borrowBook:(NSString *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure {
++ (void)borrowBook:(NSNumber *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure {
     if (!bookId) {
         failure(nil);
         return;
@@ -116,7 +116,7 @@
     }];
 }
 
-+ (void)bookDetailWithBookID:(NSString *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
++ (void)bookDetailWithBookID:(NSNumber *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     if (!bookID) {
         failure(nil);
         return;

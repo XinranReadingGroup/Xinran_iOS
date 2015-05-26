@@ -17,8 +17,10 @@
 #import "XRBookDetailContentCell.h"
 #import <UIViewController+ZYCore.h>
 #import <ZYCoreDefine.h>
+#import "XRBookRecordEntity.h"
+#import "XRBookDetailEntity.h"
 
-@interface XRBookDetailBaseViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface XRBookDetailBaseViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) XRBookDetailBiz *biz;
 @property (weak, nonatomic) IBOutlet UIImageView *bookCover;
@@ -43,7 +45,7 @@
 	return _biz;
 }
 
-- (void)setBookData:(XRBookEntity *)bookData {
+- (void)setBookData:(XRBookDetailEntity *)bookData {
 	_bookData = bookData;
 	self.biz.bookData = bookData;
 }
@@ -54,12 +56,12 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-    [self updateBorrowButton];
+	[self updateBorrowButton];
 	
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 63, 0);
+	self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 63, 0);
 	[self.biz fetchBookDetail: ^{
 	    [self.tableView reloadData];
-        [self updateBorrowButton];
+	    [self updateBorrowButton];
 	} failure: ^(NSError *error) {
 	    //TODO 获取书籍信息失败处理
 	}];
@@ -70,33 +72,32 @@
 	// Dispose of any resources that can be recreated.
 }
 
-#pragma mark - borrow button 
+#pragma mark - borrow button
 - (void)updateBorrowButton {
-    if (self.biz.bookData.bookStatus == kBookStatusAvaliable) {
-        self.borrowButton.enabled = YES;
-        if (self.biz.bookData.type == kBookTypeBorrow) {
-            [self.borrowButton setTitle:LOCALSTRING(@"扫码借阅") forState:UIControlStateNormal];
-        }
-        else {
-            [self.borrowButton setTitle:LOCALSTRING(@"我想借") forState:UIControlStateNormal];
-        }
-    }
-    else {
-        self.borrowButton.enabled = NO;
-        [self.borrowButton setTitle:LOCALSTRING(@"已被借") forState:UIControlStateNormal];
-    }
-    
+	if (self.biz.bookData.onOffStockRecord.borrowStatus == kBookStatusAvaliable) {
+		self.borrowButton.enabled = YES;
+		if (self.biz.bookData.onOffStockRecord.bookType == kBookTypeBorrow) {
+			[self.borrowButton setTitle:LOCALSTRING(@"扫码借阅") forState:UIControlStateNormal];
+		}
+		else {
+			[self.borrowButton setTitle:LOCALSTRING(@"我想借") forState:UIControlStateNormal];
+		}
+	}
+	else {
+		self.borrowButton.enabled = NO;
+		[self.borrowButton setTitle:LOCALSTRING(@"已被借") forState:UIControlStateNormal];
+	}
 }
 
 - (IBAction)borrowButtonTapped:(UIButton *)sender {
-    if (self.biz.bookData.type == kBookTypeBorrow) {
-        //借书
-        [self.biz borrowBook:^{
-            //TODO 借阅成功提示
-        } failure:^(NSError *error) {
-            //TODO 借阅失败提示
-        }];
-    }
+	if (self.biz.bookData.onOffStockRecord.bookType == kBookTypeBorrow) {
+		//借书
+		[self.biz borrowBook: ^{
+		    //TODO 借阅成功提示
+		} failure: ^(NSError *error) {
+		    //TODO 借阅失败提示
+		}];
+	}
 }
 
 #pragma mark - Table view data source
@@ -110,7 +111,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return [[UIView alloc] initWithFrame:CGRectZero];
+	return [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -186,7 +187,7 @@
 		case 0:
 		{
 			XRBookDetailInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailInfoCell" forIndexPath:indexPath];
-			cell.data = self.biz.bookData;
+			cell.data = self.biz.bookData.book;
 			return cell;
 		}
 		break;
@@ -194,7 +195,7 @@
 		case 1:
 		{
 			XRBookDetailContentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailContentCell" forIndexPath:indexPath];
-			cell.data = self.biz.bookData;
+			cell.data = self.biz.bookData.book;
 			return cell;
 		}
 		break;
@@ -202,7 +203,7 @@
 		case 2:
 		{
 			XRBookDetailPublisherCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailPublisherCell" forIndexPath:indexPath];
-			cell.data = self.biz.bookData;
+			cell.data = self.biz.bookData.book;
 			return cell;
 		}
 		break;
@@ -210,7 +211,7 @@
 		case 3:
 		{
 			XRBookDetailDonatorCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailDonatorCell" forIndexPath:indexPath];
-			cell.data = self.biz.bookData;
+			cell.data = self.biz.bookData.onOffStockRecord;
 			return cell;
 		}
 		break;
