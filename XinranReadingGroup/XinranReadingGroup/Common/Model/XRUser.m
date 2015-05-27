@@ -45,7 +45,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(XRUser);
 - (NSString *)accessToken {
     if (!_accessToken) {
         NSError *error;
-        _accessToken = [SSKeychain passwordForService:@"XinranReading" account:_userIdentifier error:&error];
+        _accessToken = [SSKeychain passwordForService:@"XinranReading" account:self.userIdentifier error:&error];
         if (error) {
             DLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n读取access token时出错\n%@",error);
         }
