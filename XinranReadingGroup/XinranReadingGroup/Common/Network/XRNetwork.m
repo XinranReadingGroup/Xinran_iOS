@@ -55,7 +55,10 @@ static BOOL const isTest = NO;
 	[self GET:methodName param:param success: ^(id param) {
 	    NSError *error;
 	    XREntity *entity = [[NSClassFromString(entityName) alloc] initWithDictionary:[param objectForKey:@"data"] error:&error];
-	    if (!error) {
+	    if (error) {
+	        DLog(@"映射json时出错：\n%@", error.description);
+		}
+	    if (entity) {
 	        if (success) {
 	            success(entity);
 			}
