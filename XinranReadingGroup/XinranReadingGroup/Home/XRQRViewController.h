@@ -14,4 +14,6 @@
  */
 @interface XRQRViewController : ZYCoreQRViewController
 
+- (void)initUI;
+
 @end
