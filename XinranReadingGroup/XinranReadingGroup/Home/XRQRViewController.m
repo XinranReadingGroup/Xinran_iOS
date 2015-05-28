@@ -22,8 +22,9 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[self initUI];
-	// Do any additional setup after loading the view.
+	if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+		self.edgesForExtendedLayout = UIRectEdgeNone;
+	}
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,18 +32,21 @@
 	// Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidLayoutSubviews {
+	[super viewDidLayoutSubviews];
+	[self initUI];
+}
+
 - (void)initUI {
-	if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-		self.edgesForExtendedLayout = UIRectEdgeNone;
-	}
+	CGRect centerSquare = CGRectMake((self.view.width - 240) / 2, (self.view.height - 240) / 2, 240, 240);
 	
-	UIView *topBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 73)];
+	UIView *topBackground = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, centerSquare.origin.y)];
 	topBackground.backgroundColor = RGBACOLOR(0, 0, 0, 0.5);
-	UIView *leftBackground = [[UIView alloc] initWithFrame:CGRectMake(0, topBackground.bottom, (SCREEN_WIDTH - 240) / 2, 240)];
+	UIView *leftBackground = [[UIView alloc] initWithFrame:CGRectMake(0, topBackground.bottom, centerSquare.origin.x, centerSquare.size.height)];
 	leftBackground.backgroundColor = RGBACOLOR(0, 0, 0, 0.5);
-	UIView *rightBackground = [[UIView alloc] initWithFrame:CGRectMake(leftBackground.left + 240, topBackground.bottom, (SCREEN_WIDTH - 240) / 2, 240)];
+	UIView *rightBackground = [[UIView alloc] initWithFrame:CGRectMake(centerSquare.origin.x + centerSquare.size.width, topBackground.bottom, self.view.width - centerSquare.origin.x - centerSquare.size.width, centerSquare.size.height)];
 	rightBackground.backgroundColor = RGBACOLOR(0, 0, 0, 0.5);
-	UIView *bottomBackground = [[UIView alloc] initWithFrame:CGRectMake(0, leftBackground.bottom, SCREEN_WIDTH, SCREEN_HEIGHT - leftBackground.bottom)];
+	UIView *bottomBackground = [[UIView alloc] initWithFrame:CGRectMake(0, leftBackground.bottom, self.view.width, self.view.height - centerSquare.origin.y - centerSquare.size.height)];
 	bottomBackground.backgroundColor = RGBACOLOR(0, 0, 0, 0.5);
 	[self.view addSubview:topBackground];
 	[self.view addSubview:leftBackground];
