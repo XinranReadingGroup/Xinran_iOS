@@ -35,6 +35,7 @@
 
 - (IBAction)donateButtonTapped:(UIButton *)sender {
 	XRDonateViewController *donateViewController = [[XRDonateViewController alloc] init];
+	donateViewController.hidesBottomBarWhenPushed = YES;
 	[self.navigationController pushViewController:donateViewController animated:YES];
 }
 
