@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XRResultBaseViewController.h"
 
-@class XRBookEntity;
+@class XRBookDetailEntity;
 
 /**
  *  借阅结果界面
  */
-@interface XRBorrowResultViewController : UIViewController
+@interface XRBorrowResultViewController : XRResultBaseViewController
 
-@property (nonatomic, strong) XRBookEntity *bookData;
 
 @end

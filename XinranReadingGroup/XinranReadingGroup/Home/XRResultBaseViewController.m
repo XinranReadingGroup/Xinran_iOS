@@ -9,10 +9,10 @@
 #import "XRResultBaseViewController.h"
 #import "XRBookInfoCell.h"
 #import <UIView+ZYCore.h>
+#import <ZYCoreDefine.h>
 
 @interface XRResultBaseViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -20,13 +20,22 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	[self addTableView];
+}
+
+- (void)update {
+	self.tableView.tableHeaderView = [self headerView];
+	[self.tableView reloadData];
 }
 
 - (void)addTableView {
 	self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
 	[self.view addSubview:self.tableView];
 	self.tableView.delegate = self;
+	self.tableView.backgroundColor = RGBCOLOR(242, 242, 242);
 	self.tableView.dataSource = self;
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 #pragma mark - UI
@@ -41,14 +50,29 @@
 	
 	UILabel *result = [[UILabel alloc] init];
 	result.text = self.resultText;
+	result.font = [UIFont boldSystemFontOfSize:20.];
 	[result sizeToFit];
-	result.left = successIcon.right + 5;
+	result.left = successIcon.right + 10;
 	[containterView addSubview:result];
-    
-    UILabel *notice = [[UILabel alloc] init];
-    notice.text = self.noticeText;
-    [notice sizeToFit];
-    [containterView addSubview:notice];
+	
+	UILabel *notice = [[UILabel alloc] init];
+	notice.text = self.noticeText;
+	notice.font = [UIFont systemFontOfSize:16.];
+	[notice sizeToFit];
+	notice.left = result.left;
+	notice.top = result.bottom + 5;
+	[containterView addSubview:notice];
+	
+	CGFloat containerWidth = notice.right > result.right ? notice.right : result.right;
+	CGFloat containerHeight = successIcon.height > notice.bottom - result.top ? successIcon.height : notice.bottom - successIcon.top;
+	containterView.width = containerWidth;
+	containterView.height = containerHeight;
+	
+	containterView.centerX = headerView.width / 2;
+	containterView.centerY = headerView.height / 2;
+	
+	result.top = (containterView.height - (notice.bottom - result.top)) / 2;
+	notice.top = result.bottom + 5;
 	
 	return headerView;
 }

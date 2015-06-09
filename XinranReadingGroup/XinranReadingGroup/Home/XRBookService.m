@@ -69,34 +69,36 @@
 }
 
 + (void)borrowBook:(NSNumber *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure {
-    if (!bookId) {
-        failure(nil);
-        return;
-    }
-    [[XRNetwork sharedXRNetwork] GET:@"book/borrow" param:@{@"id":bookId} success:^(id param) {
-        if (success) {
-            success(param);
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+	if (!bookId) {
+		failure(nil);
+		return;
+	}
+	NSString *url = [NSString stringWithFormat:@"book/borrow/%@", bookId];
+	[[XRNetwork sharedXRNetwork] GET:url param:nil success: ^(id param) {
+	    if (success) {
+	        success(param);
+		}
+	} failure: ^(NSError *error) {
+	    if (failure) {
+	        failure(error);
+		}
+	}];
 }
 
 + (void)returnBook:(NSString *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure {
-    if (!bookId) {
-        failure(nil);
-    }
-    [[XRNetwork sharedXRNetwork] GET:@"book/return" param:@{@"id":bookId} success:^(id param) {
-        if (success) {
-            success(param);
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+	if (!bookId) {
+		failure(nil);
+	}
+	NSString *url = [NSString stringWithFormat:@"book/return/%@", bookId];
+	[[XRNetwork sharedXRNetwork] GET:url param:nil success: ^(id param) {
+	    if (success) {
+	        success(param);
+		}
+	} failure: ^(NSError *error) {
+	    if (failure) {
+	        failure(error);
+		}
+	}];
 }
 
 + (void)bookDetailWithISBN:(NSString *)ISBN success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {

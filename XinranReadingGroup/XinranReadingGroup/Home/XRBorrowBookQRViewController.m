@@ -14,6 +14,8 @@
 #import "XRBookEntity.h"
 #import <NSString+ZYCore.h>
 #import "XRBookRecordEntity.h"
+#import <ZYCoreHintAssistant.h>
+#import "XRBorrowResultViewController.h"
 
 @interface XRBorrowBookQRViewController ()
 
@@ -30,6 +32,9 @@
 }
 
 - (void)scanFinish:(NSString *)result {
+	if (!result) {
+		[ZYCoreHintAssistant showAlertViewWithTitle:@"扫描失败，再试一次吧"];
+	}
 	[XRBookService bookDetailWithBookID:[result toNumber] success: ^(id param) {
 	    XRBookDetailEntity *bookEntity = param;
 	    if (bookEntity && bookEntity.book.title && bookEntity.onOffStockRecord.borrowStatus == kBookStatusAvaliable) {
@@ -37,6 +42,9 @@
 	        UIAlertView *alertView = [UIAlertView bk_showAlertViewWithTitle:LOCALSTRING(@"借阅确认") message:LOCALSTRING(message) cancelButtonTitle:LOCALSTRING(@"取消") otherButtonTitles:@[LOCALSTRING(@"确定")] handler: ^(UIAlertView *alertView, NSInteger buttonIndex) {
 	                if (buttonIndex == 1) {
 	                    //确定
+	                    XRBorrowResultViewController *resultViewController = [[XRBorrowResultViewController alloc] init];
+	                    resultViewController.bookData = bookEntity;
+	                    [self.navigationController pushViewController:resultViewController animated:YES];
 					}
 	                else {
 	                    //取消的话继续扫描
