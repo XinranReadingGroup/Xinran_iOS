@@ -15,6 +15,6 @@
 
 + (void)registerUser:(NSString *)userName password:(NSString *)password nickName:(NSString *)nickName success:(ZYBlock)success failure:(ZYErrorBlock)failure;
 
-- (void)logout:(ZYBlock)success failure:(ZYBlock)failure;
++ (void)logout:(ZYBlock)success failure:(ZYBlock)failure;
 
 @end

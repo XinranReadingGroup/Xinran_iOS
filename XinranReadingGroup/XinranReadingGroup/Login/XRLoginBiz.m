@@ -14,7 +14,7 @@
 
 + (void)login:(NSString *)userName password:(NSString *)password success:(ZYBlock)success failure:(ZYErrorBlock)failure {
 	[XRLoginService login:userName password:password success: ^(NSDictionary *dic) {
-	    if (!dic || !dic[@"data"] || ![dic[@"data"] isKindOfClass:[NSDictionary class]] || dic[@"data"][@"accessToken"]) {
+	    if (!dic || !dic[@"data"] || ![dic[@"data"] isKindOfClass:[NSDictionary class]] || !dic[@"data"][@"accessToken"]) {
 	        failure(nil);
 	        return;
 		}
@@ -45,7 +45,7 @@
 	}];
 }
 
-- (void)logout:(ZYBlock)success failure:(ZYBlock)failure {
++ (void)logout:(ZYBlock)success failure:(ZYBlock)failure {
 	[XRLoginService logout:[XRUser sharedXRUser].accessToken success: ^{
 	    [XRUser sharedXRUser].isLogin = NO;
 	    [XRUser sharedXRUser].userIdentifier = nil;

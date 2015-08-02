@@ -27,6 +27,7 @@
 		09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */; };
 		09E39C941B089F8700A443AC /* XRBorrowBookQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C931B089F8700A443AC /* XRBorrowBookQRViewController.m */; };
 		6F34F267973D11B9B8664098 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E15F82D97BF4D76A946888F /* libPods.a */; };
+		723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 723493823B37038BD12BD629 /* XRNetwork+Token.m */; };
 		BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D41A98398F009CD8EF /* Images.xcassets */; };
 		BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */; };
 		BD1D63E61ADFFF8100CCE363 /* XRShareAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1D63E51ADFFF8100CCE363 /* XRShareAssistant.m */; };
@@ -120,6 +121,8 @@
 		09E39C931B089F8700A443AC /* XRBorrowBookQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBorrowBookQRViewController.m; sourceTree = "<group>"; };
 		1E15F82D97BF4D76A946888F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6BDAE75C27E1F589481796 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		723493823B37038BD12BD629 /* XRNetwork+Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XRNetwork+Token.m"; sourceTree = "<group>"; };
+		723493C508AD77EF7F443977 /* XRNetwork+Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XRNetwork+Token.h"; sourceTree = "<group>"; };
 		BD1AD3C11A98398F009CD8EF /* XinranReadingGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XinranReadingGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1AD3D41A98398F009CD8EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD1AD3DD1A98398F009CD8EF /* XinranReadingGroupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XinranReadingGroupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -510,6 +513,8 @@
 			children = (
 				BDE691F81AD4B12A00F5E5AB /* XRNetwork.h */,
 				BDE691F91AD4B12A00F5E5AB /* XRNetwork.m */,
+				723493823B37038BD12BD629 /* XRNetwork+Token.m */,
+				723493C508AD77EF7F443977 /* XRNetwork+Token.h */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -762,6 +767,7 @@
 				BD41EBD41B16936E003A04BA /* XRDonateResultViewController.m in Sources */,
 				09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */,
 				BD8E39401B0226D700AF1CFD /* XRBookDetailContentCell.m in Sources */,
+				723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
