@@ -124,7 +124,7 @@
         return;
     }
     NSString *methodName = [NSString stringWithFormat:@"book/detail/%@",bookID];
-    [[XRNetwork sharedXRNetwork] GET:methodName param:nil withEntityName:NSStringFromClass([XRBookEntity class]) success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GET:methodName param:nil withEntityName:NSStringFromClass([XRBookDetailEntity class]) success:^(id param) {
         if (success) {
             success(param);
         }
