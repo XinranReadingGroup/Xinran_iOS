@@ -13,6 +13,7 @@
 + (JSONKeyMapper *)keyMapper {
 	return [[JSONKeyMapper alloc] initWithDictionary:@{
 	            @"id" : @"bookID",
+                @"imgUrl":@"imgURL",
 			}];
 }
 
