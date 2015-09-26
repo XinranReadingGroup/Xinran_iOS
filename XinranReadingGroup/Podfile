@@ -1,16 +1,18 @@
-#source 'https://github.com/CocoaPods/Specs.git'
-source 'git@gitlab.alibaba-inc.com:alipods/specs-mirror.git'
+source 'git@github.com:CocoaPods/Specs.git'
 
 platform :ios, '7.0'
 
 xcodeproj 'XinranReadingGroup'
 
-pod 'AFNetworking','2.5.2'
+pod 'AFNetworking','2.6.0'
 pod 'JSONModel', '~> 1.1.0'
 pod 'SSKeychain','1.2.2'
 pod 'SDWebImage','3.7.1'
 pod 'BlocksKit','2.2.5'
 pod 'MBProgressHUD','0.9.1'
+pod 'Masonry','0.6.3'
+pod 'UITableView+FDTemplateLayoutCell','1.3'
+pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 
 #pod 'ZYCoreFramework',:git=>'git@bitbucket.org:yun_zeng/zycoreframework.git'
 pod 'ZYCoreFramework',:path=>'~/Developer/Code/Mine/iOS/ZYCoreFramework'

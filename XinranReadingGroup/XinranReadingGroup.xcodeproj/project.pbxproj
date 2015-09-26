@@ -911,6 +911,7 @@
 					"$(PROJECT_DIR)/XinranReadingGroup/Framework/UMSocial_Sdk_4.2.2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
@@ -927,6 +928,7 @@
 					"$(PROJECT_DIR)/XinranReadingGroup/Framework/UMSocial_Sdk_4.2.2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
