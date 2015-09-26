@@ -32,9 +32,7 @@
 }
 
 - (void)scanFinish:(NSString *)result {
-	if (!result) {
-		[ZYCoreHintAssistant showAlertViewWithTitle:@"扫描失败，再试一次吧"];
-	}
+    [super scanFinish:result];
 	[XRBookService bookDetailWithBookID:[result toNumber] success: ^(id param) {
 	    XRBookDetailEntity *bookEntity = param;
 	    if (bookEntity && bookEntity.book.title && bookEntity.onOffStockRecord.borrowStatus == kBookStatusAvaliable) {

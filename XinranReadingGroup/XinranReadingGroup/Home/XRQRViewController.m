@@ -56,7 +56,7 @@
 
 - (void)scanFinish:(NSString *)result {
 	if (!result) {
-		[ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"扫描结果为空 ~~~~(>_<)~~~~ ")];
+        [ZYCoreHintAssistant showAlertViewWithTitle:@"扫描失败，再试一次吧"];
 		return;
 	}
 }
