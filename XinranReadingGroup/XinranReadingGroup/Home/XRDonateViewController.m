@@ -9,6 +9,7 @@
 #import "XRDonateViewController.h"
 #import "XRBookService.h"
 #import "XRDonateResultViewController.h"
+#import "View+MASAdditions.h"
 #import <UIView+ZYCore.h>
 #import <ZYCoreDefine.h>
 
@@ -28,14 +29,18 @@
 	// Dispose of any resources that can be recreated.
 }
 
-- (void)initUI {
-	[super initUI];
-	UIView *redLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 2)];
-	redLine.backgroundColor = RGBACOLOR(255, 0, 0, 0.7);
-	redLine.centerX = self.view.width / 2;
-	redLine.centerY = self.view.height / 2;
-    redLine.tag = 50000;
-	[self.view addSubview:redLine];
+- (void)setupUI {
+    [super setupUI];
+    self.notice = LOCALSTRING(@"将ISBN条形码放入框内，即可自动扫描");
+    UIImageView *lightLine = [[UIImageView alloc] init];
+    lightLine.image = [[UIImage imageNamed:@"qr_light_line"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 40)];
+    __weak UIImageView *weakLightLine = lightLine;
+    [self.centerView addSubview:lightLine];
+    [lightLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.centerView).offset(-10);
+        make.height.mas_equalTo(weakLightLine.image.size.height);
+        make.center.equalTo(self.centerView);
+    }];
 }
 
 - (void)scanFinish:(NSString *)result {
