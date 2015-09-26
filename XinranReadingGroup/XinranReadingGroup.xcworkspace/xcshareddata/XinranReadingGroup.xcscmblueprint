@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "22857529A87D8EFE1958C2804A02BA7B0259E9C8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "22857529A87D8EFE1958C2804A02BA7B0259E9C8" : 0,
+    "DCD808317C1CD14A96A3A1C0E0727A42C0BF84CB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CC7AD2E8-1E5B-4BD3-AEFA-B6E78A74A398",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "22857529A87D8EFE1958C2804A02BA7B0259E9C8" : "Xinran_iOS\/",
+    "DCD808317C1CD14A96A3A1C0E0727A42C0BF84CB" : "..\/ZYCoreFramework"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "XinranReadingGroup",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XinranReadingGroup\/XinranReadingGroup.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:XinranReadingGroup\/Xinran_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "22857529A87D8EFE1958C2804A02BA7B0259E9C8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:yun_zeng\/zycoreframework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCD808317C1CD14A96A3A1C0E0727A42C0BF84CB"
+    }
+  ]
+}
