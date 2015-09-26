@@ -7,14 +7,15 @@
 //
 
 #import "XRBookDetailContentCell.h"
+#import "XRBookDetailEntity.h"
 #import "XRBookEntity.h"
 #import <ZYCoreDefine.h>
 
 @implementation XRBookDetailContentCell
 
-- (void)setData:(XRBookEntity *)data {
+- (void)setData:(XRBookDetailEntity *)data {
 	_data = data;
-	_content.text = _data.summary;
+	_content.text = _data.book.summary;
 }
 
 - (void)awakeFromNib {
@@ -27,11 +28,11 @@
 	// Configure the view for the selected state
 }
 
-+ (CGFloat)cellHeight:(XRBookEntity *)data {
++ (CGFloat)cellHeight:(XRBookDetailEntity *)data {
     CGSize textSize = CGSizeZero;
-    if (data.summary) {
-        textSize = [data.summary boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 95, MAXFLOAT) options:(NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin) attributes:@{ NSFontAttributeName:[UIFont systemFontOfSize:14.] } context:NULL].size;
-    }
+//    if (data && data.book.summary) {
+        textSize = [data.book.summary boundingRectWithSize:CGSizeMake(SCREEN_WIDTH - 95, MAXFLOAT) options:(NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin) attributes:@{ NSFontAttributeName:[UIFont systemFontOfSize:14.] } context:NULL].size;
+//    }
 	return textSize.height;
 }
 
