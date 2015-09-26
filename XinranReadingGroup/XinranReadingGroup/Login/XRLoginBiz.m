@@ -33,9 +33,9 @@
 + (void)registerUser:(NSString *)userName password:(NSString *)password nickName:(NSString *)nickName success:(ZYBlock)success failure:(ZYErrorBlock)failure {
 	[XRLoginService registerUser:userName password:password nickName:(NSString *)nickName success: ^(NSDictionary *dic) {
 	    [XRUser sharedXRUser].isLogin = YES;
-	    [XRUser sharedXRUser].userIdentifier = userName;
-	    [XRUser sharedXRUser].accessToken = [dic valueForKeyPath:@"data.accessToken"];
-	    if (success) {
+	    [[XRUser sharedXRUser] setUserIdentifier:userName];
+        [[XRUser sharedXRUser] setAccessToken:[dic valueForKeyPath:@"data.accessToken"]];
+        if (success) {
 	        success();
 		}
 	} failure: ^(NSError *error) {
