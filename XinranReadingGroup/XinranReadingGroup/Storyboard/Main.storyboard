@@ -507,7 +507,7 @@
                         <viewControllerLayoutGuide type="top" id="eGO-oE-7ev"/>
                         <viewControllerLayoutGuide type="bottom" id="xl6-Wt-MdC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ReG-PE-5gg" customClass="XRHome">
+                    <view key="view" contentMode="scaleToFill" id="ReG-PE-5gg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
