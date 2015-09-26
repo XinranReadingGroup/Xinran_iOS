@@ -14,6 +14,9 @@
  */
 @interface XRQRViewController : ZYCoreQRViewController
 
-- (void)initUI;
+@property (nonatomic) UIView *centerView;
+@property (nonatomic) NSString *notice;
+
+- (void)setupUI;
 
 @end
