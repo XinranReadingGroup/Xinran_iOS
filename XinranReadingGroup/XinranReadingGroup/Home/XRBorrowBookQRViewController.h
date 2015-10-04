@@ -2,12 +2,15 @@
 //  XRBorrowBookQRViewController.h
 //  XinranReadingGroup
 //
-//  Created by Xiao Du on 15/5/17.
-//  Copyright (c) 2015年 SnowWolf. All rights reserved.
+//  Created by dreamer on 15/10/4.
+//  Copyright © 2015年 SnowWolf. All rights reserved.
 //
 
-#import "XRQRViewController.h"
+#import "XRBookQRViewController.h"
 
-@interface XRBorrowBookQRViewController : XRQRViewController
+/**
+ *  借书界面
+ */
+@interface XRBorrowBookQRViewController : XRBookQRViewController
 
 @end

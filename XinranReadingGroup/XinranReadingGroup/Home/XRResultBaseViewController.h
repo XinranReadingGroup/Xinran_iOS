@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ZYCoreViewController.h>
 
 @class XRBookDetailEntity;
 
-@interface XRResultBaseViewController : UIViewController
+@interface XRResultBaseViewController : ZYCoreViewController
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) XRBookDetailEntity *bookData;

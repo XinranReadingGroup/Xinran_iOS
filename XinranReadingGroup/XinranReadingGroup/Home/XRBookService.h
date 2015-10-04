@@ -50,7 +50,7 @@
  *  @param success 借阅成功返回200
  *  @param failure 借阅失败返回error
  */
-+ (void)borrowBook:(NSNumber *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure;
++ (void)borrowBook:(NSString *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  还书

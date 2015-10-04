@@ -37,10 +37,6 @@
 	// Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidLayoutSubviews {
-	[super viewDidLayoutSubviews];
-}
-
 - (void)setupUI {
     //中间的框框
     self.centerView = [[UIView alloc] init];

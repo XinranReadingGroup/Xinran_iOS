@@ -7,13 +7,11 @@
 //
 
 #import "XRHomeViewController.h"
-#import "XRBorrowBookQRViewController.h"
 #import "XRDonateViewController.h"
 #import <ZYCoreDefine.h>
-#import "XRBookEntity.h"
-#import "XRBookDetailEntity.h"
 #import "XRDonateResultViewController.h"
 #import "XRShareResultViewController.h"
+#import "XRBorrowBookQRViewController.h"
 
 @interface XRHomeViewController ()
 

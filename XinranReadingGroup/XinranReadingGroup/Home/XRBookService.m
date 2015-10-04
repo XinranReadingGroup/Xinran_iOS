@@ -76,13 +76,15 @@
     }];
 }
 
-+ (void)borrowBook:(NSNumber *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure {
++ (void)borrowBook:(NSString *)bookId success:(ZYBlock)success failure:(ZYErrorBlock)failure {
 	if (!bookId) {
 		failure(nil);
 		return;
 	}
 	NSString *url = [NSString stringWithFormat:@"book/borrow/%@", bookId];
-	[[XRNetwork sharedXRNetwork] GET:url param:nil success: ^(id param) {
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [param setValue:[XRUser sharedXRUser].accessToken forKey:@"accessToken"];
+	[[XRNetwork sharedXRNetwork] GET:url param:param success: ^(id param) {
 	    if (success) {
 	        success(param);
 		}
@@ -98,7 +100,9 @@
 		failure(nil);
 	}
 	NSString *url = [NSString stringWithFormat:@"book/return/%@", bookId];
-	[[XRNetwork sharedXRNetwork] GET:url param:nil success: ^(id param) {
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [param setValue:[XRUser sharedXRUser].accessToken forKey:@"accessToken"];
+	[[XRNetwork sharedXRNetwork] GET:url param:param success: ^(id param) {
 	    if (success) {
 	        success(param);
 		}

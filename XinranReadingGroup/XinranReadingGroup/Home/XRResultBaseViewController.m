@@ -20,6 +20,10 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
+	{
+		self.edgesForExtendedLayout = UIRectEdgeNone;
+	}
 }
 
 - (void)update {
