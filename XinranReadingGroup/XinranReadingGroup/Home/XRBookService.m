@@ -21,20 +21,21 @@
         return;
     }
     //for test
-    [[XRNetwork sharedXRNetwork] GET:@"" param:nil withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
-        if (success) {
-            success(param);
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
-    return;
+//    [[XRNetwork sharedXRNetwork] GET:@"" param:nil withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
+//        if (success) {
+//            success(param);
+//        }
+//    } failure:^(NSError *error) {
+//        if (failure) {
+//            failure(error);
+//        }
+//    }];
+//    return;
     //test end
+
+    NSString *methodName = [NSString stringWithFormat:@"search/%@",keyword];
     
-    
-    [[XRNetwork sharedXRNetwork] GET:@"search" param:@{@"q":keyword,@"startPage":[NSNumber numberWithInteger:startPage],@"pageSize":[NSNumber numberWithInteger:pageSize]} withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GET:methodName param:nil withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
         if (success) {
             success(param);
         }
