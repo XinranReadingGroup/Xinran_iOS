@@ -16,6 +16,11 @@
 
 @implementation XRBorrowBookQRViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = LOCALSTRING(@"借书");
+}
+
 - (void)scanBookSuccess:(XRBookDetailEntity *)bookData {
     [super scanBookSuccess:bookData];
     if (bookData && bookData.book.title && bookData.onOffStockRecord.borrowStatus == kBookStatusAvaliable) {
@@ -44,7 +49,7 @@
         [alertView show];
     }
     else if (bookData.onOffStockRecord.borrowStatus != kBookStatusAvaliable) {
-        UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:LOCALSTRING(@"这本书已被借走")];
+        UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:LOCALSTRING(@"啊哦这本书借不了哟")];
         [alertView bk_setCancelButtonWithTitle:LOCALSTRING(@"好") handler: ^{
             [self startReading];
         }];

@@ -1,10 +1,13 @@
 //
-// Created by dreamer on 15/8/4.
-// Copyright (c) 2015 SnowWolf. All rights reserved.
+//  XRReturnBookQRViewController.h
+//  XinranReadingGroup
+//
+//  Created by dreamer on 15/10/4.
+//  Copyright © 2015年 SnowWolf. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "XRQRViewController.h"
+#import "XRBookQRViewController.h"
 
-@interface XRReturnBookQRViewController : XRQRViewController
+@interface XRReturnBookQRViewController : XRBookQRViewController
+
 @end

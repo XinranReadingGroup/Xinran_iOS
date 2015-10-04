@@ -359,6 +359,8 @@
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRBookInfoCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRBookInfoCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRBookInfoCell.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRBookQRViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRBookQRViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRBookService.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRBookService.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRBorrowBookQRViewController.h" isTestSource="false" />

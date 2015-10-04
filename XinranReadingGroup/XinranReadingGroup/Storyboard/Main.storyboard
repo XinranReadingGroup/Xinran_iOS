@@ -530,6 +530,9 @@
                                 <state key="normal" title="还书">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="returnBookTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="6pA-34-OWL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bc1-du-KQj">
                                 <rect key="frame" x="40" y="173" width="54" height="52"/>

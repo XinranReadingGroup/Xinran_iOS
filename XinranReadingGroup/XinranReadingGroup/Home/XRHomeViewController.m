@@ -12,6 +12,7 @@
 #import "XRDonateResultViewController.h"
 #import "XRShareResultViewController.h"
 #import "XRBorrowBookQRViewController.h"
+#import "XRReturnBookQRViewController.h"
 
 @interface XRHomeViewController ()
 
@@ -29,11 +30,24 @@
 	// Dispose of any resources that can be recreated.
 }
 
+/**
+ *  借书
+ */
 - (IBAction)borrowButtonTapped:(UIButton *)sender {
 	XRBorrowBookQRViewController *qrViewController = [[XRBorrowBookQRViewController alloc] init];
 	qrViewController.hidesBottomBarWhenPushed = YES;
 	[self.navigationController pushViewController:qrViewController animated:YES];
 }
+
+/**
+ *  还书
+ */
+- (IBAction)returnBookTapped:(UIButton *)sender {
+    XRReturnBookQRViewController *qrViewController = [[XRReturnBookQRViewController alloc] init];
+	qrViewController.hidesBottomBarWhenPushed = YES;
+	[self.navigationController pushViewController:qrViewController animated:YES];
+}
+
 
 //捐书
 - (IBAction)donateButtonTapped:(UIButton *)sender {
