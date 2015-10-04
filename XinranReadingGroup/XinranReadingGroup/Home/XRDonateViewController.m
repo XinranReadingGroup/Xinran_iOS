@@ -94,6 +94,11 @@
     } failure:^(NSError *error) {
         dispatch_async(dispatch_get_main_queue(),^{
             [SVProgressHUD dismiss];
+            //暂时先不可以捐赠
+            UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:LOCALSTRING(@"获取书籍信息失败，该书籍无法捐赠")];
+            [alertView show];
+            //以后要开放
+            /**
             UIAlertView *alertView = [UIAlertView bk_showAlertViewWithTitle:LOCALSTRING(@"获取书籍信息失败") message:nil cancelButtonTitle:LOCALSTRING(@"重新扫描") otherButtonTitles:@[@"手动输入"] handler:^(UIAlertView *alertView, NSInteger integer) {
                 if (integer == 1) {
                     //手动输入
@@ -108,6 +113,7 @@
                 }
             }];
             [alertView show];
+            **/
         });
     }];
 }
