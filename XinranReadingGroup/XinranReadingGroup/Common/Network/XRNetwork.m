@@ -48,7 +48,7 @@ static BOOL const isTest = NO;
 	if (![methodName hasPrefix:@"/"] && methodName && methodName.length > 0) {
 		methodName = [NSString stringWithFormat:@"/%@", methodName];
 	}
-	return [NSString stringWithFormat:@"%@%@", self.baseURL, methodName];
+	return [[NSString stringWithFormat:@"%@%@", self.baseURL, methodName] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (void)GET:(NSString *)methodName param:(NSDictionary *)param withEntityName:(NSString *)entityName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
