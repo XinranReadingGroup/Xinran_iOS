@@ -13,5 +13,10 @@
     "git": "git@bitbucket.org:yun_zeng/zycoreframework.git"
   },
   "source_files": "Core/*.{h,m}",
-  "requires_arc": true
+  "requires_arc": true,
+  "dependencies": {
+    "UITableView+FDTemplateLayoutCell": [
+      "1.3"
+    ]
+  }
 }

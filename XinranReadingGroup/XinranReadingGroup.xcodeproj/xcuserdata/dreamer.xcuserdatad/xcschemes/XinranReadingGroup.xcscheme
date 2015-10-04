@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BD1AD3C01A98398F009CD8EF"
-               BuildableName = "XinranReadingGroup"
+               BuildableName = "XinranReadingGroup.app"
                BlueprintName = "XinranReadingGroup"
                ReferencedContainer = "container:XinranReadingGroup.xcodeproj">
             </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BD1AD3C01A98398F009CD8EF"
-            BuildableName = "XinranReadingGroup"
+            BuildableName = "XinranReadingGroup.app"
             BlueprintName = "XinranReadingGroup"
             ReferencedContainer = "container:XinranReadingGroup.xcodeproj">
          </BuildableReference>
