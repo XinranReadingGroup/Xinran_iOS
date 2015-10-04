@@ -20,10 +20,12 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[self addTableView];
 }
 
 - (void)update {
+	if (!self.tableView) {
+		[self addTableView];
+	}
 	self.tableView.tableHeaderView = [self headerView];
 	[self.tableView reloadData];
 }

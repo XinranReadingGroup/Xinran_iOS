@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  实现统一样式的button
+ */
 @interface UIButton (XRButton)
 
++ (UIButton *)blueRoundedRectButtonWithTitle:(NSString *)title;
+
++ (UIButton *)redRoundedRectButtonWithTitle:(NSString *)title;
+
++ (UIButton *)roundedRecButtonWithTitle:(NSString *)title;
 @end

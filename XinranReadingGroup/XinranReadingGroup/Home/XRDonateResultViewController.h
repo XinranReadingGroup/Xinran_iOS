@@ -7,9 +7,13 @@
 //
 
 #import "XRResultBaseViewController.h"
+#import "ZYCoreViewController.h"
 
-@interface XRDonateResultViewController : XRResultBaseViewController
+@class XRBookEntity;
+
+@interface XRDonateResultViewController : ZYCoreViewController
 
 @property (nonatomic, strong) NSString *ISBN;
+@property (nonatomic) XRBookEntity *bookData;
 
 @end

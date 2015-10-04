@@ -14,7 +14,6 @@
 
 @interface XRQRViewController ()
 
-@property (nonatomic) UILabel *noticeLabel;
 
 @end
 
@@ -123,9 +122,18 @@
 
 - (void)scanFinish:(NSString *)result {
 	if (!result) {
-        [ZYCoreHintAssistant showAlertViewWithTitle:@"扫描失败，再试一次吧"];
+        if (self.scanFailed) {
+            self.scanFailed();
+        }
+        else {
+            [ZYCoreHintAssistant showAlertViewWithTitle:@"扫描失败，再试一次吧"];
+        }
 		return;
 	}
+    if (self.scanSuccess) {
+        self.scanSuccess(result);
+    }
+    self.shouldRead = NO;
 }
 
 @end

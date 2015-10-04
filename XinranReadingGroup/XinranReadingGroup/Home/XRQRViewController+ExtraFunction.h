@@ -8,6 +8,9 @@
 
 #import "XRQRViewController.h"
 
+/**
+ *  一些二维码界面中可以重用的UI方法，因为功能有交叉，不能继承只好写在这里
+ */
 @interface XRQRViewController (ExtraFunction)
 
 @end

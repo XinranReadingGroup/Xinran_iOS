@@ -26,7 +26,7 @@ typedef enum {
  */
 @interface XRBookRecordEntity : XREntity
 
-@property (nonatomic, strong) NSNumber *bookID;                 //真正的书籍的ID
+@property (nonatomic, strong) NSString *bookID;                 //真正的书籍的ID
 @property (nonatomic, strong) NSNumber *createdAt;
 @property (nonatomic, strong) NSNumber *updatedAt;
 @property (nonatomic, strong) NSNumber *bookEntityId;                 //对应的书籍信息（BookEntity）的ID

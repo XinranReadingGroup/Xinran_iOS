@@ -6,8 +6,12 @@
 //  Copyright © 2015年 SnowWolf. All rights reserved.
 //
 
+#import <Masonry/View+MASAdditions.h>
+#import <ZYCoreFramework/UIView+ZYCore.h>
 #import "XRQRViewController+ExtraFunction.h"
 
 @implementation XRQRViewController (ExtraFunction)
+
+
 
 @end

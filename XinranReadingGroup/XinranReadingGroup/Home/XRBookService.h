@@ -9,6 +9,8 @@
 #import "XREntity.h"
 #import <ZYBlockDefine.h>
 
+@class XRBookEntity;
+
 /**
  *  关于书籍的所有接口
  */
@@ -39,7 +41,7 @@
  *  @param success 分享成功返回书籍信息的entity
  *  @param failure 分享失败返回error
  */
-+ (void)shareBook:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)shareBookBookId:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  借阅书籍

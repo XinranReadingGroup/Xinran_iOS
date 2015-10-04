@@ -10,4 +10,6 @@
 
 @interface XRSetupAssistant : NSObject
 
++ (void)setup;
+
 @end

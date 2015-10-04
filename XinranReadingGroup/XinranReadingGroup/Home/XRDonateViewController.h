@@ -7,7 +7,10 @@
 //
 
 #import "XRQRViewController.h"
+#import "XRCommonDefine.h"
 
 @interface XRDonateViewController : XRQRViewController
+
+@property (nonatomic, copy) BookEntityBlock sumitCallBack;      //传给编辑书籍界面的，=。= 这么传的确low
 
 @end

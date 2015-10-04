@@ -10,6 +10,8 @@
 #import "XRNetwork.h"
 #import "XRBookEntity.h"
 #import "XRBookListEntity.h"
+#import "XRUser.h"
+#import "XRBookRecordEntity.h"
 
 @implementation XRBookService
 
@@ -47,7 +49,7 @@
     [[self class] uploadBook:bookId methodName:@"donate" success:success failure:failure];
 }
 
-+ (void)shareBook:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
++ (void)shareBookBookId:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     [[self class] uploadBook:bookId methodName:@"share" success:success failure:failure];
 }
 
@@ -57,7 +59,13 @@
         return;
     }
     NSString *url = [NSString stringWithFormat:@"book/%@/%@",methodName,bookId];
-    [[XRNetwork sharedXRNetwork] GET:url param:nil withEntityName:NSStringFromClass([XRBookEntity class]) success:^(id param) {
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [param setValue:[XRUser sharedXRUser].accessToken forKey:@"accessToken"];
+    //for test
+    [param setValue:@"1" forKey:@"location"];
+    //test end
+    
+    [[XRNetwork sharedXRNetwork] GET:url param:param withEntityName:NSStringFromClass([XRBookRecordEntity class]) success:^(id param) {
         if (success) {
             success(param);
         }
