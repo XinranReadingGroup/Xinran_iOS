@@ -13,6 +13,7 @@
 #import "XRBookEntity.h"
 #import "XRBookDetailEntity.h"
 #import "XRDonateResultViewController.h"
+#import "XRShareResultViewController.h"
 
 @interface XRHomeViewController ()
 
@@ -36,6 +37,7 @@
 	[self.navigationController pushViewController:qrViewController animated:YES];
 }
 
+//捐书
 - (IBAction)donateButtonTapped:(UIButton *)sender {
 	XRDonateViewController *donateViewController = [[XRDonateViewController alloc] init];
 	donateViewController.title = LOCALSTRING(@"捐书");
@@ -50,6 +52,23 @@
 	};
 	[self.navigationController pushViewController:donateViewController animated:YES];
 }
+
+//享书
+- (IBAction)shareBookTapped:(UIButton *)sender {
+	XRDonateViewController *donateViewController = [[XRDonateViewController alloc] init];
+	donateViewController.title = LOCALSTRING(@"享书");
+	donateViewController.hidesBottomBarWhenPushed = YES;
+	donateViewController.sumitCallBack = ^(XRBookEntity *bookData) {
+		//捐书之后
+		XRShareResultViewController *shareResultViewController = [XRShareResultViewController new];
+		shareResultViewController.bookData = bookData;
+		dispatch_async(dispatch_get_main_queue(),^{
+			[self.navigationController pushViewController:shareResultViewController animated:YES];
+		});
+	};
+	[self.navigationController pushViewController:donateViewController animated:YES];
+}
+
 
 - (void)initNavigationBar {
 }

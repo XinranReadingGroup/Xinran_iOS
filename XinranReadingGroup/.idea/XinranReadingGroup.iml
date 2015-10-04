@@ -391,6 +391,8 @@
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRSearchListCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRSearchViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRSearchViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRShareResultViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRShareResultViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRSharedBookDetailController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Home/XRSharedBookDetailController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Images.xcassets" isTestSource="false" />
@@ -513,6 +515,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/include" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
+          <root url="file://$MODULE_DIR$/Pods/Headers/Private" />
           <root url="file://$MODULE_DIR$/Pods/Headers/Public" />
           <root url="file://$MODULE_DIR$/Pods/Reveal-iOS-SDK/Reveal-Framework-1.5.1/Reveal.framework/Headers" />
         </CLASSES>
@@ -605,6 +608,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/include" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
+          <root url="file://$MODULE_DIR$/Pods/Headers/Private" />
           <root url="file://$MODULE_DIR$/Pods/Headers/Public" />
           <root url="file://$MODULE_DIR$/Pods/Reveal-iOS-SDK/Reveal-Framework-1.5.1/Reveal.framework/Headers" />
         </SOURCES>
