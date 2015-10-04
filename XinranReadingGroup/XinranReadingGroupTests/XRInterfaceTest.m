@@ -91,20 +91,20 @@ static NSString * const bookId = @"9787550244146";
         if ([param isKindOfClass:[XRBookEntity class]]) {
             XRBookEntity *book = param;
             if (book.bookID) {
-                XCTAssert(YES,@"donate pass");
+                XCTAssert(YES, @"donate pass");
             }
             else {
-                XCTFail(@"donate fail,book data is empty %@",book);
+                XCTFail(@"donate fail,book data is empty %@", book);
                 [expectation fulfill];
             }
         }
         else {
-            XCTFail(@"donate fail book data is wrong %@",param);
+            XCTFail(@"donate fail book data is wrong %@", param);
             [expectation fulfill];
-            XCTAssert(NO,@"donate fail");
+            XCTAssert(NO, @"donate fail");
         }
-    } failure:^(NSError *error) {
-        XCTFail(@"donate fail with error %@",error);
+    }                 failure:^(NSError *error) {
+        XCTFail(@"donate fail with error %@", error);
         [expectation fulfill];
     }];
     
@@ -117,23 +117,23 @@ static NSString * const bookId = @"9787550244146";
 
 - (void)testShare {
     XCTestExpectation *expectation = [self expectationWithDescription:@"share test"];
-    [XRBookService shareBook:bookId success:^(id param) {
+    [XRBookService shareBookBookId:bookId success:^(id param) {
         if ([param isKindOfClass:[XRBookEntity class]]) {
             XRBookEntity *book = param;
             if (book.bookID) {
-                XCTAssert(YES,@"Share pass");
+                XCTAssert(YES, @"Share pass");
             }
             else {
-                XCTFail(@"Share fail ,book data is empty %@",book);
+                XCTFail(@"Share fail ,book data is empty %@", book);
                 [expectation fulfill];
             }
         }
         else {
-            XCTFail(@"Share fail book data is wrong %@",param);
+            XCTFail(@"Share fail book data is wrong %@", param);
             [expectation fulfill];
         }
-    } failure:^(NSError *error) {
-        XCTFail(@"Share fail with error %@",error);
+    }                      failure:^(NSError *error) {
+        XCTFail(@"Share fail with error %@", error);
         [expectation fulfill];
     }];
     [self waitForExpectationsWithTimeout:5. handler:^(NSError *error) {
