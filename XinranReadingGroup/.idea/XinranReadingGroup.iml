@@ -40,6 +40,8 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../zycoreframework/Core/ZYCoreViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../zycoreframework/Core/ZYCoreWebViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../zycoreframework/Core/ZYCoreWebViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../zycoreframework/Core/ZYTitleCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../zycoreframework/Core/ZYTitleCell.m" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
@@ -412,6 +414,10 @@
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/More/XRMoreTableViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/More/XRShareAssistant.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/More/XRShareAssistant.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/My/XRMyProfileCell.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/My/XRMyProfileCell.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/My/XRMyViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/My/XRMyViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Storyboard/LaunchScreen.xib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Storyboard/Main.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/XinranReadingGroup/Supporting Files/AppDelegate.h" isTestSource="false" />
