@@ -18,4 +18,5 @@
 + (UIButton *)redRoundedRectButtonWithTitle:(NSString *)title;
 
 + (UIButton *)roundedRecButtonWithTitle:(NSString *)title;
+
 @end

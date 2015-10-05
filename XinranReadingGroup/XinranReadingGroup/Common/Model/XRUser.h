@@ -17,4 +17,5 @@
 
 + (XRUser *)sharedXRUser;
 
+- (void)signOut;
 @end
