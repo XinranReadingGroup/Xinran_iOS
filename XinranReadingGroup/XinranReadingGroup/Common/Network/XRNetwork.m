@@ -64,7 +64,9 @@ static BOOL const isTest = NO;
 			}
 		}
 	    else {
-	        failure(nil);
+			if (failure) {
+				failure(nil);
+			}
 		}
 	} failure:failure];
 }
@@ -78,7 +80,9 @@ static BOOL const isTest = NO;
 		}
 	} failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
 	    DLog(@"--------------------------------------------------\n请求失败!!!!!!!!!!!!!!\nurl: \n%@\nerror: \n%@\n--------------------------------------------------", operation.request.URL.absoluteString, error.description);
-	    failure(error);
+		if (failure) {
+            failure(error);
+		}
 	}];
 }
 
@@ -95,6 +99,14 @@ static BOOL const isTest = NO;
 	        failure(error);
 		}
 	}];
+}
+
+- (void)GETWithToken:(NSString *)methodName param:(NSDictionary *)param withEntityName:(NSString *)entityName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    if (!param) {
+        param = [NSDictionary dictionary];
+    }
+    NSMutableDictionary *paramWithToken = [NSMutableDictionary dictionaryWithDictionary:param];
+	[self GET:methodName param:paramWithToken withEntityName:entityName success:success failure:failure];
 }
 
 @end
