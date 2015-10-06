@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ZYCoreTableViewController.h>
 
-@interface XRMoreTableViewController : UITableViewController
+@interface XRMoreTableViewController : ZYCoreTableViewController
 
 @end
