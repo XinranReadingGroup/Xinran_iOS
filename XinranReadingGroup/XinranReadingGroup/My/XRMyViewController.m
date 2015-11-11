@@ -12,6 +12,7 @@
 #import "XRUser.h"
 #import "XRBookCollectionViewController.h"
 #import "XRDonateBookCollectionViewController.h"
+#import "XRLoginViewController.h"
 #import <ZYCoreCellInfo.h>
 #import <ZYTitleCell.h>
 #import <ZYCoreFramework/ZYCoreDefine.h>
@@ -62,17 +63,20 @@
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     UIButton *signOut = [UIButton redRoundedRectButtonWithTitle:LOCALSTRING(@"退出登录")];
     [footerView addSubview:signOut];
+    __weak UIButton *weakSignOut = signOut;
     [signOut mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(footerView);
-        make.size.mas_equalTo(signOut.frame.size);
+        make.width.equalTo(footerView).multipliedBy(0.7);
+        make.height.mas_equalTo(weakSignOut.frame.size.height);
     }];
     [signOut addTarget:self action:@selector(signOutTapped) forControlEvents:UIControlEventTouchUpInside];
     return footerView;
 }
 
 - (void)signOutTapped {
-    //TODO 退出登录之后界面要刷新
     [[XRUser sharedXRUser] signOut];
+    XRLoginViewController *loginViewController = [[XRLoginViewController alloc] init];
+    [self presentViewController:loginViewController animated:YES completion:nil];
 }
 
 @end
