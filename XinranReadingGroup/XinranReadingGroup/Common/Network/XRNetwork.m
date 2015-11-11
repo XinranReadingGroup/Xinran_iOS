@@ -11,7 +11,7 @@
 #import <AFNetworking.h>
 #import "XREntity.h"
 
-static NSString *const defaultXRBaseURL = @"http://xinrandushuba.com/mobile";
+static NSString *const defaultXRBaseURL = @"http://www.xinrandushuba.com/mobile";
 static NSString *const defaultTestBaseURL = @"http://10.18.219.152/mobile";
 static NSString *const defaultDoubanBaseURL = @"";
 static BOOL const isTest = NO;
@@ -58,16 +58,15 @@ static BOOL const isTest = NO;
 	    if (error) {
 	        DLog(@"映射json时出错：\n%@", error.description);
 		}
-	    if (entity) {
-	        if (success) {
-	            success(entity);
-			}
-		}
-	    else {
-			if (failure) {
-				failure(nil);
-			}
-		}
+        if (success) {
+            if (entity) {
+                success(entity);
+            }
+            else {
+                success([param valueForKey:@"data"]);
+            }
+            success(entity);
+        }
 	} failure:failure];
 }
 

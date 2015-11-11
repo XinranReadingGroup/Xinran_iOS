@@ -25,7 +25,6 @@
     //TODO 头像还没有地方可以获取
     [avatar sd_setImageWithURL:[NSURL URLWithString:@"http://www.wmpic.me/wp-content/uploads/2014/06/20140611171618736.jpeg"]];
     UILabel *IDText = [[UILabel alloc] init];
-    __weak UILabel *weakIDText = IDText;
     [IDText mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(@60);
     }];

@@ -70,6 +70,6 @@
  *  @param success 请求成功调用的block
  *  @param failure 请求失败调用的block
  */
-+ (void)bookDetailWithBookID:(NSNumber *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)bookDetailWithBookID:(NSString *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 @end

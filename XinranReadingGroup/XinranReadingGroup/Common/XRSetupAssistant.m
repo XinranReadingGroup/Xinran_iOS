@@ -8,12 +8,14 @@
 
 #import "XRSetupAssistant.h"
 #import "XRShareAssistant.h"
+#import <Bugtags/Bugtags.h>
 
 @implementation XRSetupAssistant
 
 + (void)setup {
     [XRShareAssistant setup];
     [[self class] setupNavigationBar];
+    [Bugtags startWithAppKey:@"cc612951d27832ef7a8af0f71b61a9b3" invocationEvent:BTGInvocationEventBubble];
 }
 
 + (void)setupNavigationBar {

@@ -50,7 +50,7 @@
 	self.biz.bookData = bookData;
 }
 
-- (XRBookEntity *)bookData {
+- (XRBookDetailEntity *)bookData {
 	return self.biz.bookData;
 }
 
@@ -187,7 +187,7 @@
 		case 0:
 		{
 			XRBookDetailInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailInfoCell" forIndexPath:indexPath];
-			cell.data = self.biz.bookData.book;
+			cell.data = self.biz.bookData;
 			return cell;
 		}
 		break;
@@ -195,7 +195,7 @@
 		case 1:
 		{
 			XRBookDetailContentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailContentCell" forIndexPath:indexPath];
-			cell.data = self.biz.bookData.book;
+			cell.data = self.biz.bookData;
 			return cell;
 		}
 		break;

@@ -62,6 +62,7 @@
     NSString *url = [NSString stringWithFormat:@"book/%@/%@",methodName,bookId];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setValue:[XRUser sharedXRUser].accessToken forKey:@"accessToken"];
+    [param setValue:[XRUser sharedXRUser].userIdentifier forKey:@"donater"];
     //for test
     [param setValue:@"1" forKey:@"location"];
     //test end
@@ -131,7 +132,7 @@
     }];
 }
 
-+ (void)bookDetailWithBookID:(NSNumber *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
++ (void)bookDetailWithBookID:(NSString *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     if (!bookID) {
         failure(nil);
         return;

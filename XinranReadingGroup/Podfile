@@ -13,6 +13,7 @@ pod 'SVProgressHUD'
 pod 'Masonry','0.6.3'
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 pod 'OAStackView','0.1.0'
+pod 'Bugtags'
 
 #pod 'ZYCoreFramework',:git=>'git@bitbucket.org:yun_zeng/zycoreframework.git'
 pod 'ZYCoreFramework',:path=>'~/Developer/Code/Mine/iOS/ZYCoreFramework'

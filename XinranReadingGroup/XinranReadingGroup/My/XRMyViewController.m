@@ -10,10 +10,13 @@
 #import "XRMyProfileCell.h"
 #import "UIButton+XRButton.h"
 #import "XRUser.h"
+#import "XRBookCollectionViewController.h"
+#import "XRDonateBookCollectionViewController.h"
 #import <ZYCoreCellInfo.h>
 #import <ZYTitleCell.h>
 #import <ZYCoreFramework/ZYCoreDefine.h>
 #import <Masonry/View+MASAdditions.h>
+#import <ZYCoreFramework/UIViewController+ZYCore.h>
 
 @implementation XRMyViewController
 
@@ -33,11 +36,19 @@
 
     //section 2
     NSArray *cellTitles = @[@"我的捐书记录",@"我的借阅记录",@"我的共享记录",@"我的公益积分"];
+    NSArray *jumpViewControllers = @[[XRDonateBookCollectionViewController class],[XRBookCollectionViewController class],[XRBookCollectionViewController class],[XRBookCollectionViewController class]];
     NSMutableArray *section2 = [NSMutableArray array];
     [cellTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"title":obj};
         ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
             //TODO 界面跳转
+            Class aClass = jumpViewControllers[idx];
+            dispatch_async(dispatch_get_main_queue(),^{
+//                [self pushToViewControllerWithStoryboardName:@"Main" viewController:NSStringFromClass(aClass)];
+                UIViewController *viewController = [aClass new];
+                viewController.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:viewController animated:YES];
+            });
         }];
         cellInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [section2 addObject:cellInfo];
@@ -51,7 +62,6 @@
     UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     UIButton *signOut = [UIButton redRoundedRectButtonWithTitle:LOCALSTRING(@"退出登录")];
     [footerView addSubview:signOut];
-    __weak UIButton *weakSignOut = signOut;
     [signOut mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(footerView);
         make.size.mas_equalTo(signOut.frame.size);
