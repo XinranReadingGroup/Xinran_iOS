@@ -35,4 +35,27 @@
     } failure:failure];
 }
 
++ (void)fetchShareBook:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[XRNetwork sharedXRNetwork] GETWithToken:@"book/share/records" param:nil withEntityName:nil success:^(id param) {
+        if (param) {
+            //对传过来的array进行处理
+            NSDictionary * const result = @{@"bookList":param};
+            NSError *error;
+            XRBookListEntity *listEntity = [[XRBookListEntity alloc] initWithDictionary:result error:&error];
+            if (!error) {
+                if (success) {
+                    success(listEntity);
+                }
+            }
+            else {
+                success(param);
+            }
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 @end

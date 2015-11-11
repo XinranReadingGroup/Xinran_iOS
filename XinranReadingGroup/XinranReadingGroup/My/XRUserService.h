@@ -16,4 +16,5 @@
 
 + (void)fetchDonateRecord:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
++ (void)fetchShareBook:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 @end

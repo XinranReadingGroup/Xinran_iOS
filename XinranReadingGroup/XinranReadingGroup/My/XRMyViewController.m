@@ -12,12 +12,11 @@
 #import "XRUser.h"
 #import "XRBookCollectionViewController.h"
 #import "XRDonateBookCollectionViewController.h"
-#import "XRLoginViewController.h"
+#import "XRShareBookCollectionViewController.h"
 #import <ZYCoreCellInfo.h>
 #import <ZYTitleCell.h>
 #import <ZYCoreFramework/ZYCoreDefine.h>
 #import <Masonry/View+MASAdditions.h>
-#import <ZYCoreFramework/UIViewController+ZYCore.h>
 
 @implementation XRMyViewController
 
@@ -37,7 +36,7 @@
 
     //section 2
     NSArray *cellTitles = @[@"我的捐书记录",@"我的借阅记录",@"我的共享记录",@"我的公益积分"];
-    NSArray *jumpViewControllers = @[[XRDonateBookCollectionViewController class],[XRBookCollectionViewController class],[XRBookCollectionViewController class],[XRBookCollectionViewController class]];
+    NSArray *jumpViewControllers = @[[XRDonateBookCollectionViewController class],[XRBookCollectionViewController class],[XRShareBookCollectionViewController class],[XRBookCollectionViewController class]];
     NSMutableArray *section2 = [NSMutableArray array];
     [cellTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"title":obj};
