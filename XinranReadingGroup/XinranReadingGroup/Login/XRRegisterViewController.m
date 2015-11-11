@@ -45,7 +45,11 @@
         //跳到主页
         self.registerButton.enabled = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:nil];
+            [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:^{
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.navigationController popToRootViewControllerAnimated:NO];
+                });
+            }];
         });
     } failure:^(NSError *error) {
         DLog(@"注册失败，失败原因：%@",error.description);

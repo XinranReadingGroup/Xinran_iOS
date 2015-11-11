@@ -75,8 +75,7 @@
 
 - (void)signOutTapped {
     [[XRUser sharedXRUser] signOut];
-    XRLoginViewController *loginViewController = [[XRLoginViewController alloc] init];
-    [self presentViewController:loginViewController animated:YES completion:nil];
+    [self.tabBarController dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end

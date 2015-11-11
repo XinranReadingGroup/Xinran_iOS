@@ -19,11 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController.navigationController setNavigationBarHidden:YES];
-//    [XRUser sharedXRUser].userIdentifier = @"123";
-//    [XRUser sharedXRUser].accessToken = @"aaaa";
     if ([XRUser sharedXRUser].isLogin) {
         //如果登录就直接跳过登录界面
-        [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:nil];
+        [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:^{
+        }];
     }
 }
 
