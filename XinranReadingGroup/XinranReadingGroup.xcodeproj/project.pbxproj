@@ -28,7 +28,10 @@
 		09E39C941B089F8700A443AC /* XRBookQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C931B089F8700A443AC /* XRBookQRViewController.m */; };
 		6F34F267973D11B9B8664098 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E15F82D97BF4D76A946888F /* libPods.a */; };
 		723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 723493823B37038BD12BD629 /* XRNetwork+Token.m */; };
+		72349AABBDE4A909A565D634 /* XRInfoTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D7B0E9E480D7B52EFF4 /* XRInfoTools.m */; };
 		BD0D91CA1BF37C1D006E722B /* XRShareBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */; };
+		BD10B3D31C0343DB00944045 /* XRBorrowRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10B3D21C0343DB00944045 /* XRBorrowRecordViewController.m */; };
+		BD10B3D61C03442700944045 /* XRBorrowRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10B3D51C03442700944045 /* XRBorrowRecordCell.m */; };
 		BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D41A98398F009CD8EF /* Images.xcassets */; };
 		BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */; };
 		BD1D63E61ADFFF8100CCE363 /* XRShareAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1D63E51ADFFF8100CCE363 /* XRShareAssistant.m */; };
@@ -139,8 +142,14 @@
 		2D6BDAE75C27E1F589481796 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		723493823B37038BD12BD629 /* XRNetwork+Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XRNetwork+Token.m"; sourceTree = "<group>"; };
 		723493C508AD77EF7F443977 /* XRNetwork+Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XRNetwork+Token.h"; sourceTree = "<group>"; };
+		7234961464069054EC01A046 /* XRInfoTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRInfoTools.h; sourceTree = "<group>"; };
+		72349D7B0E9E480D7B52EFF4 /* XRInfoTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRInfoTools.m; sourceTree = "<group>"; };
 		BD0D91C81BF37C1D006E722B /* XRShareBookCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRShareBookCollectionViewController.h; sourceTree = "<group>"; };
 		BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRShareBookCollectionViewController.m; sourceTree = "<group>"; };
+		BD10B3D11C0343DB00944045 /* XRBorrowRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBorrowRecordViewController.h; sourceTree = "<group>"; };
+		BD10B3D21C0343DB00944045 /* XRBorrowRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBorrowRecordViewController.m; sourceTree = "<group>"; };
+		BD10B3D41C03442700944045 /* XRBorrowRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBorrowRecordCell.h; sourceTree = "<group>"; };
+		BD10B3D51C03442700944045 /* XRBorrowRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBorrowRecordCell.m; sourceTree = "<group>"; };
 		BD1AD3C11A98398F009CD8EF /* XinranReadingGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XinranReadingGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1AD3D41A98398F009CD8EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD1AD3DD1A98398F009CD8EF /* XinranReadingGroupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XinranReadingGroupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -509,6 +518,8 @@
 				BDA01DA41BD39295004E6304 /* XRDonateBookCollectionViewController.m */,
 				BD0D91C81BF37C1D006E722B /* XRShareBookCollectionViewController.h */,
 				BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */,
+				BD10B3D11C0343DB00944045 /* XRBorrowRecordViewController.h */,
+				BD10B3D21C0343DB00944045 /* XRBorrowRecordViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -521,6 +532,8 @@
 				BDA01D9D1BD369FA004E6304 /* XRBookCollectionViewCell.h */,
 				BDA01D9E1BD369FA004E6304 /* XRBookCollectionViewCell.m */,
 				BDF1E7C71BDCCDD0004730B7 /* BookCollectionView.xib */,
+				BD10B3D41C03442700944045 /* XRBorrowRecordCell.h */,
+				BD10B3D51C03442700944045 /* XRBorrowRecordCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -583,6 +596,8 @@
 				BD8DFE0D1AE00DE3003FAF06 /* XRSetupAssistant.h */,
 				BD8DFE0E1AE00DE3003FAF06 /* XRSetupAssistant.m */,
 				BD3B0EEC1BBB8495006C0A92 /* XRCommonDefine.h */,
+				72349D7B0E9E480D7B52EFF4 /* XRInfoTools.m */,
+				7234961464069054EC01A046 /* XRInfoTools.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -703,6 +718,7 @@
 				BD1AD3BE1A98398F009CD8EF /* Frameworks */,
 				BD1AD3BF1A98398F009CD8EF /* Resources */,
 				86616BA05D6EF0A13E4F9827 /* Copy Pods Resources */,
+				2EAA5F2F68738FECE452F2D1 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -805,6 +821,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2EAA5F2F68738FECE452F2D1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		86616BA05D6EF0A13E4F9827 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -846,6 +877,7 @@
 				0992FA721B0E0D41009CD369 /* XRBookRecordEntity.m in Sources */,
 				BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */,
 				BDE0063C1B162A2B00FBC8DB /* XRDonateViewController.m in Sources */,
+				BD10B3D31C0343DB00944045 /* XRBorrowRecordViewController.m in Sources */,
 				BDE691F61AD4A9FF00F5E5AB /* XRUser.m in Sources */,
 				BD0D91CA1BF37C1D006E722B /* XRShareBookCollectionViewController.m in Sources */,
 				BD8E39461B0226FD00AF1CFD /* XRBookDetailDonatorCell.m in Sources */,
@@ -883,6 +915,7 @@
 				BD8DFE0F1AE00DE3003FAF06 /* XRSetupAssistant.m in Sources */,
 				BDBDB7D11AD967A800977A37 /* XRBookListItemEntity.m in Sources */,
 				0988B4B91B0D9BEC0004DFD8 /* XRResultBaseViewController.m in Sources */,
+				BD10B3D61C03442700944045 /* XRBorrowRecordCell.m in Sources */,
 				09060F891B0887BF003C69EF /* XRQRViewController.m in Sources */,
 				BDE692151AD953E400F5E5AB /* XRBookService.m in Sources */,
 				BD8DFE191AE3A75E003FAF06 /* XRSearchViewController.m in Sources */,
@@ -897,6 +930,7 @@
 				723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */,
 				BDB1AD211BC2121B009BB273 /* XRMyViewController.m in Sources */,
 				BDC7B8F11BBA747400687B68 /* XREditBookInfoViewController.m in Sources */,
+				72349AABBDE4A909A565D634 /* XRInfoTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1024,6 +1058,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1044,6 +1079,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

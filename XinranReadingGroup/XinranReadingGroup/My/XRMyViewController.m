@@ -13,6 +13,8 @@
 #import "XRBookCollectionViewController.h"
 #import "XRDonateBookCollectionViewController.h"
 #import "XRShareBookCollectionViewController.h"
+#import "XRBorrowRecordViewController.h"
+#import "UIViewController+ZYCore.h"
 #import <ZYCoreCellInfo.h>
 #import <ZYTitleCell.h>
 #import <ZYCoreFramework/ZYCoreDefine.h>
@@ -36,17 +38,16 @@
 
     //section 2
     NSArray *cellTitles = @[@"我的捐书记录",@"我的借阅记录",@"我的共享记录",@"我的公益积分"];
-    NSArray *jumpViewControllers = @[[XRDonateBookCollectionViewController class],[XRBookCollectionViewController class],[XRShareBookCollectionViewController class],[XRBookCollectionViewController class]];
+    NSArray *jumpViewControllers = @[[XRDonateBookCollectionViewController new],[UIViewController viewControllerWithIdentifer:NSStringFromClass([XRBorrowRecordViewController class]) withStoryboardName:@"Main"],[XRShareBookCollectionViewController new],[XRBookCollectionViewController new]];
     NSMutableArray *section2 = [NSMutableArray array];
     [cellTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"title":obj};
         ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
             //TODO 界面跳转
-            Class aClass = jumpViewControllers[idx];
+            UIViewController *viewController = jumpViewControllers[idx];
+            viewController.hidesBottomBarWhenPushed = YES;
             dispatch_async(dispatch_get_main_queue(),^{
 //                [self pushToViewControllerWithStoryboardName:@"Main" viewController:NSStringFromClass(aClass)];
-                UIViewController *viewController = [aClass new];
-                viewController.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:viewController animated:YES];
             });
         }];
