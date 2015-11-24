@@ -7,17 +7,17 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
+            buildForAnalyzing = "YES"
             buildForTesting = "YES"
             buildForRunning = "YES"
             buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "40DD4AF2EEB58B399664A06FABE6DD2C"
-               BuildableName = "libUITableView+FDTemplateLayoutCell.a"
+               BlueprintIdentifier = "A3FC77C45A5B813B0C3B674AAC517282"
                BlueprintName = "UITableView+FDTemplateLayoutCell"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libUITableView+FDTemplateLayoutCell.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,28 +29,26 @@
       buildConfiguration = "Debug">
       <AdditionalOptions>
       </AdditionalOptions>
-      <Testables>
-      </Testables>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
+      buildConfiguration = "Debug"
       allowLocationSimulation = "YES">
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES"
       buildConfiguration = "Release"
-      debugDocumentVersioning = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

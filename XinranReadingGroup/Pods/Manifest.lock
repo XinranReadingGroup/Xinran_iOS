@@ -35,13 +35,22 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
-  - Bugtags (1.1.2)
+  - Bugtags (1.1.4)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
   - DUQRAssistant (0.0.1):
     - Masonry
+  - FDStackView (1.0-alpha)
   - JSONModel (1.1.2)
   - Masonry (0.6.3)
   - OAStackView (0.1.0)
-  - Reveal-iOS-SDK (1.6.0)
+  - Reveal-iOS-SDK (1.6.2)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
@@ -54,8 +63,10 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (= 2.6.0)
   - BlocksKit (= 2.2.5)
-  - Bugtags (= 1.1.2)
+  - Bugtags
+  - CocoaLumberjack
   - DUQRAssistant (from `~/Developer/code/mine/ios/DUQRAssistant`)
+  - FDStackView (= 1.0-alpha)
   - JSONModel (~> 1.1.0)
   - Masonry (= 0.6.3)
   - OAStackView (= 0.1.0)
@@ -74,16 +85,18 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
-  Bugtags: 0a6b51a1298d32859b640a8901cdbdf822dac3e0
+  Bugtags: eb4a2a235d8007d4643716b58015b8754728765b
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   DUQRAssistant: 07190f7dd017a0df592bb588dd80a9b70dc1c881
+  FDStackView: 6abd2cdb128430264d5c6e87277629abad222f20
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   OAStackView: 76e64242351e2746374b9161a03021cbc19341ff
-  Reveal-iOS-SDK: 6afacafd60f66f2822c09c43ae60562881bfab6e
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
   SSKeychain: 88767e903ee8d274ed380e364d96b7a101235286
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   UITableView+FDTemplateLayoutCell: d5be6056b5060313f5955a2590ecd33142ad713d
   ZYCoreFramework: 0c3d6f085a4803f9a097d688ecfd21c8f6c6788e
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
