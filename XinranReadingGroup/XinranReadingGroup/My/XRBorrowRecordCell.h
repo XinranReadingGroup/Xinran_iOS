@@ -9,10 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ZYCoreTableViewCell.h"
 
-@interface XRBorrowRecordCell : UITableViewCell
-
-@property (nonatomic) id data;
-
-- (void)updateUI;
+@interface XRBorrowRecordCell : ZYCoreTableViewCell
 
 @end

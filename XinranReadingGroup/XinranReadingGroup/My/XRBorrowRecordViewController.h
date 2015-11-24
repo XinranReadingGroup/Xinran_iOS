@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <ZYCoreFramework/ZYCoreTableViewController.h>
 
-@interface XRBorrowRecordViewController : UITableViewController
+@interface XRBorrowRecordViewController : ZYCoreTableViewController
 
 @end
