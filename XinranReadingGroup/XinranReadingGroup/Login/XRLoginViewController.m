@@ -55,15 +55,11 @@
         self.loginButton.enabled = YES;
         //跳转到主页
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:^{
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.navigationController popToRootViewControllerAnimated:NO];
-                });
-            }];
+            [self.view endEditing:YES];
+            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         });
     } failure:^(NSError *error) {
         self.loginButton.enabled = YES;
-        [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"啊哦，登录失败了，再试一下吧")];
     }];
 }
 
