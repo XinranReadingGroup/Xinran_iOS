@@ -22,6 +22,6 @@
     NSMutableDictionary *mutableParam = [NSMutableDictionary dictionaryWithDictionary:dictionary];
     [mutableParam setValue:[XRUser sharedXRUser].accessToken forKey:@"accessToken"];
     return [NSDictionary dictionaryWithDictionary:mutableParam];
-    }
+}
 
 @end

@@ -55,7 +55,7 @@
     }];
     feedbackInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
-    ZYCoreCellInfo *aboutInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:@{@"title":LOCALSTRING(@"关于")} withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
+    ZYCoreCellInfo *aboutInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:@{@"title":LOCALSTRING(@"关于欣然流动读书吧")} withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
 
     }];
     aboutInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

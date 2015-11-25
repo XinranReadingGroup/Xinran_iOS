@@ -21,8 +21,10 @@
     [self.navigationController.navigationController setNavigationBarHidden:YES];
     if ([XRUser sharedXRUser].isLogin) {
         //如果登录就直接跳过登录界面
-        [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:^{
-        }];
+//        [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:^{
+//        }];
+        //如果登录成功界面就消失
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

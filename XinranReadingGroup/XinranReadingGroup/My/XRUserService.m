@@ -7,12 +7,12 @@
 //
 
 #import "XRUserService.h"
-#import "XRNetwork.h"
 #import "XRBookListEntity.h"
 #import <CocoaLumberjack.h>
 //test
 #import <ZYCoreFramework/ZYCoreDefine.h>
 #import <AFNetworking.h>
+#import "XRNetwork+Token.h"
 //test end
 
 @implementation XRUserService

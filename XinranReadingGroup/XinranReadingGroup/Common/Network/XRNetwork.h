@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <ZYBlockDefine.h>
 
+static NSString * const KEY_NETWORK_ERROR_MESSAGE = @"key_network_error_mesage";
+
 @interface XRNetwork : NSObject
 
 @property (nonatomic, strong) NSString *baseURL;
@@ -23,5 +25,4 @@
 
 - (void)POST:(NSString *)methodName param:(NSDictionary *)param success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
-- (void)GETWithToken:(NSString *)methodName param:(NSDictionary *)param withEntityName:(NSString *)entityName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 @end
