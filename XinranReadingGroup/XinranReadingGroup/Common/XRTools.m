@@ -27,4 +27,12 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     [viewController presentViewController:navigationController animated:YES completion:nil];
 }
+
++ (UIViewController *)loginViewController {
+    XRLoginWelcomeViewController *loginViewController = (XRLoginWelcomeViewController *)[UIViewController viewControllerWithIdentifer:
+                                                                                         NSStringFromClass([XRLoginWelcomeViewController class]) withStoryboardName:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    return navigationController;
+}
+
 @end

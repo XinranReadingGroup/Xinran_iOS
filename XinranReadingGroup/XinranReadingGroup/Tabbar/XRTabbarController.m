@@ -8,6 +8,7 @@
 
 #import "XRTabbarController.h"
 #import "XRUser.h"
+#import "XRTools.h"
 
 @interface XRTabbarController ()
 
@@ -15,9 +16,11 @@
 
 @implementation XRTabbarController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if (![XRUser sharedXRUser].isLogin) {
+        [self presentViewController:[XRTools loginViewController] animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

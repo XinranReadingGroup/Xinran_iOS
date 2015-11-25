@@ -11,4 +11,7 @@
 + (void)popToTop;
 
 + (void)showLoginViewController;
+
++ (UIViewController *)loginViewController;
+
 @end
