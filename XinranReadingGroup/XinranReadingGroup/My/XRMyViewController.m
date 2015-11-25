@@ -16,6 +16,7 @@
 #import "XRBorrowRecordViewController.h"
 #import "UIViewController+ZYCore.h"
 #import "XRMemberPointViewController.h"
+#import "XRTools.h"
 #import <ZYCoreCellInfo.h>
 #import <ZYTitleCell.h>
 #import <ZYCoreFramework/ZYCoreDefine.h>
@@ -77,7 +78,7 @@
 
 - (void)signOutTapped {
     [[XRUser sharedXRUser] signOut];
-    [self.tabBarController dismissViewControllerAnimated:NO completion:nil];
+    [XRTools showLoginViewController];
 }
 
 @end
