@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 #import "XRSetupAssistant.h"
+#import "XRUser.h"
+#import "XRTabbarController.h"
+#import "UIViewController+ZYCore.h"
+#import "XRLoginWelcomeViewController.h"
+#import "AppDelegate+XRSetup.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +24,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [XRSetupAssistant setup];
+    [self setupInitialViewController];
     return YES;
 }
 

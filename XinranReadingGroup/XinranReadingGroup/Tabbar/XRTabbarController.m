@@ -16,12 +16,22 @@
 
 @implementation XRTabbarController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)awakeFromNib {
+    [super awakeFromNib];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     if (![XRUser sharedXRUser].isLogin) {
         [self presentViewController:[XRTools loginViewController] animated:NO completion:nil];
     }
 }
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

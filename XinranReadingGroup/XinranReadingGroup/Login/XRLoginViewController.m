@@ -8,6 +8,8 @@
 
 #import "XRLoginViewController.h"
 #import "XRLoginBiz.h"
+#import "XRTabbarController.h"
+#import "XRTools.h"
 #import <ZYCoreDefine.h>
 #import <UIViewController+ZYCore.h>
 #import <NSString+ZYCore.h>
@@ -56,7 +58,7 @@
         //跳转到主页
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.view endEditing:YES];
-            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+            [XRTools showTabbarViewController:self animated:NO];
         });
     } failure:^(NSError *error) {
         self.loginButton.enabled = YES;

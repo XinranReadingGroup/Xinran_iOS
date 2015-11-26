@@ -7,6 +7,7 @@
 #import "XRTools.h"
 #import "UIViewController+ZYCore.h"
 #import "XRLoginWelcomeViewController.h"
+#import "XRTabbarController.h"
 
 
 @implementation XRTools {
@@ -26,6 +27,11 @@
             NSStringFromClass([XRLoginWelcomeViewController class]) withStoryboardName:nil];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     [viewController presentViewController:navigationController animated:NO completion:nil];
+}
+
++ (void)showTabbarViewController:(UIViewController *)currentViewController animated:(BOOL)animated {
+    XRTabbarController *tabbarController = [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRTabbarController class]) withStoryboardName:nil];
+    [UIApplication sharedApplication].delegate.window.rootViewController = tabbarController;
 }
 
 + (UIViewController *)loginViewController {

@@ -20,20 +20,8 @@
         failure(nil);
         return;
     }
-    //for test
-//    [[XRNetwork sharedXRNetwork] GET:@"" param:nil withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
-//        if (success) {
-//            success(param);
-//        }
-//    } failure:^(NSError *error) {
-//        if (failure) {
-//            failure(error);
-//        }
-//    }];
-//    return;
-    //test end
 
-    NSString *methodName = [NSString stringWithFormat:@"search/%@",keyword];
+    NSString *methodName = [NSString stringWithFormat:@"/book/search/%@",keyword];
     
     [[XRNetwork sharedXRNetwork] GET:methodName param:nil withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
         if (success) {

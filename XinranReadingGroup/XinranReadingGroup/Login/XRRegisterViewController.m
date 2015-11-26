@@ -12,6 +12,7 @@
 #import <UIViewController+ZYCore.h>
 #import <ZYCoreHintAssistant.h>
 #import "XRUser.h"
+#import "XRTools.h"
 
 @interface XRRegisterViewController ()
 
@@ -45,11 +46,8 @@
         //跳到主页
         self.registerButton.enabled = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self presentViewControllerWithStoryboardName:@"Main" viewController:@"XRTabbarController" animation:NO completion:^{
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.navigationController popToRootViewControllerAnimated:NO];
-                });
-            }];
+            [self.view endEditing:YES];
+            [XRTools showTabbarViewController:self animated:NO];
         });
     } failure:^(NSError *error) {
         DLog(@"注册失败，失败原因：%@",error.description);

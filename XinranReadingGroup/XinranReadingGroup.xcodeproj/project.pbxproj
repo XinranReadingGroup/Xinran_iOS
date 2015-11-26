@@ -28,6 +28,7 @@
 		09E39C941B089F8700A443AC /* XRBookQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C931B089F8700A443AC /* XRBookQRViewController.m */; };
 		6F34F267973D11B9B8664098 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E15F82D97BF4D76A946888F /* libPods.a */; };
 		723490C7CD67731F0837F029 /* XRNetworkErrorAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349E888B55E3230AF52AFA /* XRNetworkErrorAssistant.m */; };
+		7234919271CA1F3253A64FAE /* AppDelegate+XRSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */; };
 		723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 723493823B37038BD12BD629 /* XRNetwork+Token.m */; };
 		72349AABBDE4A909A565D634 /* XRTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D7B0E9E480D7B52EFF4 /* XRTools.m */; };
 		BD0D91CA1BF37C1D006E722B /* XRShareBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */; };
@@ -147,7 +148,9 @@
 		723493C508AD77EF7F443977 /* XRNetwork+Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XRNetwork+Token.h"; sourceTree = "<group>"; };
 		72349446914F6F8E8E400166 /* XRNetworkErrorAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRNetworkErrorAssistant.h; sourceTree = "<group>"; };
 		7234961464069054EC01A046 /* XRTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRTools.h; sourceTree = "<group>"; };
+		723497B2F055A1969277936A /* AppDelegate+XRSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+XRSetup.h"; sourceTree = "<group>"; };
 		72349D7B0E9E480D7B52EFF4 /* XRTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRTools.m; sourceTree = "<group>"; };
+		72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XRSetup.m"; sourceTree = "<group>"; };
 		72349E888B55E3230AF52AFA /* XRNetworkErrorAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNetworkErrorAssistant.m; sourceTree = "<group>"; };
 		BD0D91C81BF37C1D006E722B /* XRShareBookCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRShareBookCollectionViewController.h; sourceTree = "<group>"; };
 		BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRShareBookCollectionViewController.m; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				09DC13351AD39D7700CE8277 /* AppDelegate.m */,
 				09DC13361AD39D7700CE8277 /* Info.plist */,
 				09DC13371AD39D7700CE8277 /* main.m */,
+				72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */,
+				723497B2F055A1969277936A /* AppDelegate+XRSetup.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -734,6 +739,7 @@
 				BD1AD3BF1A98398F009CD8EF /* Resources */,
 				86616BA05D6EF0A13E4F9827 /* Copy Pods Resources */,
 				2EAA5F2F68738FECE452F2D1 /* Embed Pods Frameworks */,
+				BD91CF991C0760FC0033DEE4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -881,6 +887,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		BD91CF991C0760FC0033DEE4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env ruby";
+			shellScript = "";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -949,6 +968,7 @@
 				BDC7B8F11BBA747400687B68 /* XREditBookInfoViewController.m in Sources */,
 				72349AABBDE4A909A565D634 /* XRTools.m in Sources */,
 				723490C7CD67731F0837F029 /* XRNetworkErrorAssistant.m in Sources */,
+				7234919271CA1F3253A64FAE /* AppDelegate+XRSetup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

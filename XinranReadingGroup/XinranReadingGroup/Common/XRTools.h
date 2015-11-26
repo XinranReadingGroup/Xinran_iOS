@@ -12,6 +12,8 @@
 
 + (void)showLoginViewController;
 
++ (void)showTabbarViewController:(UIViewController *)currentViewController animated:(BOOL)animated;
+
 + (UIViewController *)loginViewController;
 
 @end
