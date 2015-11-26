@@ -19,7 +19,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if (![XRUser sharedXRUser].isLogin) {
-        [self presentViewController:[XRTools loginViewController] animated:YES completion:nil];
+        [self presentViewController:[XRTools loginViewController] animated:NO completion:nil];
     }
 }
 

@@ -41,8 +41,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uq3-tJ-F4F">
                                 <rect key="frame" x="20" y="476" width="560" height="40"/>
                                 <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-uJ-BFU">
-                                        <rect key="frame" x="-20" y="-476" width="0.0" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-uJ-BFU">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -65,8 +65,8 @@
                                             <segue destination="HCy-Zg-NOO" kind="push" id="L9c-xk-fal"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46L-lg-PaX">
-                                        <rect key="frame" x="-20" y="-476" width="0.0" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46L-lg-PaX">
+                                        <rect key="frame" x="290" y="0.0" width="270" height="40"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -151,6 +151,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="g71-s1-gNi"/>
                     <connections>
+                        <outlet property="buttonStackView" destination="uq3-tJ-F4F" id="aQE-BW-DtL"/>
                         <outlet property="registerButton" destination="Tuc-uJ-BFU" id="MV6-Vh-yBs"/>
                         <outlet property="signButton" destination="46L-lg-PaX" id="sD0-hK-pmQ"/>
                     </connections>
