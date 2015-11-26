@@ -9,8 +9,12 @@
 #import "XRLoginWelcomeViewController.h"
 #import "XRUser.h"
 #import <UIViewController+ZYCore.h>
+#import <Masonry/View+MASAdditions.h>
 
 @interface XRLoginWelcomeViewController ()
+
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+@property (weak, nonatomic) IBOutlet UIButton *signButton;
 
 @end
 
@@ -18,7 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController.navigationController setNavigationBarHidden:YES];
+    [self setupButtons];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}
+
+- (void)setupButtons {
+    self.registerButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.registerButton.layer.borderWidth = 1;
+    self.registerButton.layer.cornerRadius = 20;
+
+    self.signButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.signButton.layer.borderWidth = 1;
+    self.signButton.layer.cornerRadius = 20;
 }
 
 - (void)didReceiveMemoryWarning {
