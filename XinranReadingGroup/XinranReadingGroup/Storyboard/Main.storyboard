@@ -182,7 +182,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="xI0-AT-mCr"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                                 </textField>
                                             </subviews>
                                             <animations/>
@@ -278,7 +278,6 @@
                         <segue destination="xg5-2w-uCg" kind="relationship" relationship="viewControllers" id="bYp-k6-ezw"/>
                         <segue destination="VLG-ed-iW1" kind="relationship" relationship="viewControllers" id="cXd-t4-OQb"/>
                         <segue destination="DCr-ks-S8J" kind="relationship" relationship="viewControllers" id="yUc-58-peY"/>
-                        <segue destination="gtX-V0-zce" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" id="urP-uh-uVU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewU-ar-KCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1910,7 +1909,7 @@
                                                 <constraint firstAttribute="height" constant="70" id="spB-7n-Db3"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYG-Ce-b8b">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYG-Ce-b8b">
                                             <rect key="frame" x="70" y="25" width="8" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
