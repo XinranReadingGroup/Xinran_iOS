@@ -27,7 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = LOCALSTRING(@"我的借阅记录");
-    [self setLeftBackItem];
     [self fetchData];
     self.tableView.backgroundColor = RGBCOLOR(242,242,242);
 }
