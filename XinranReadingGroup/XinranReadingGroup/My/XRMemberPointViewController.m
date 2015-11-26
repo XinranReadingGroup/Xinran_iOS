@@ -7,7 +7,25 @@
 //
 
 #import "XRMemberPointViewController.h"
+#import "XRUserService.h"
+
+@interface XRMemberPointViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *pointSum;
+
+@end
 
 @implementation XRMemberPointViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self fetchData];
+}
+
+- (void)fetchData {
+    [XRUserService fetchMemberPoint:^(id param) {
+
+    } failure:nil]; 
+}
 
 @end

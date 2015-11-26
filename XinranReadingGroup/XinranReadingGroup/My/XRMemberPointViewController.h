@@ -6,8 +6,8 @@
 //  Copyright © 2015年 SnowWolf. All rights reserved.
 //
 
-#import <ZYCoreFramework/ZYCoreTableViewCell.h>
+#import <ZYCoreFramework/ZYCoreTableViewController.h>
 
-@interface XRMemberPointViewController : ZYCoreTableViewCell
+@interface XRMemberPointViewController : ZYCoreTableViewController
 
 @end
