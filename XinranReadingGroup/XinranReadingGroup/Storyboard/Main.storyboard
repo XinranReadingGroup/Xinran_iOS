@@ -41,8 +41,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uq3-tJ-F4F">
                                 <rect key="frame" x="20" y="476" width="560" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-uJ-BFU">
-                                        <rect key="frame" x="0.0" y="0.0" width="270" height="40"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-uJ-BFU">
+                                        <rect key="frame" x="-20" y="-476" width="0.0" height="40"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -65,8 +65,8 @@
                                             <segue destination="HCy-Zg-NOO" kind="push" id="L9c-xk-fal"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46L-lg-PaX">
-                                        <rect key="frame" x="290" y="0.0" width="270" height="40"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46L-lg-PaX">
+                                        <rect key="frame" x="-20" y="-476" width="0.0" height="40"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -95,6 +95,22 @@
                                     <constraint firstAttribute="height" constant="40" id="6kv-fi-dHN"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btg_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZY-CB-5xe">
+                                <rect key="frame" x="260" y="242" width="81" height="53"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="GgC-LD-L0D"/>
+                                    <constraint firstAttribute="width" constant="81" id="Qjm-av-Lai"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UMS_url_video.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nwz-3A-rrf">
+                                <rect key="frame" x="187" y="315" width="227" height="23"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="hJq-Jy-gcO"/>
+                                    <constraint firstAttribute="width" constant="227" id="pyB-S1-ZdI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -102,9 +118,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="IIw-S0-Izr" secondAttribute="trailing" id="0fh-gf-Y2U"/>
                             <constraint firstItem="KzR-7S-Iyg" firstAttribute="top" secondItem="uq3-tJ-F4F" secondAttribute="bottom" constant="20" id="1V1-JO-6kw"/>
                             <constraint firstItem="IIw-S0-Izr" firstAttribute="leading" secondItem="81M-WX-PZ7" secondAttribute="leadingMargin" id="A0G-9E-eXd"/>
+                            <constraint firstItem="QZY-CB-5xe" firstAttribute="centerY" secondItem="81M-WX-PZ7" secondAttribute="centerY" id="Bh2-DS-med"/>
+                            <constraint firstItem="QZY-CB-5xe" firstAttribute="centerX" secondItem="81M-WX-PZ7" secondAttribute="centerX" id="DPS-kj-ylO"/>
+                            <constraint firstItem="Nwz-3A-rrf" firstAttribute="top" secondItem="QZY-CB-5xe" secondAttribute="bottom" constant="20" id="FZ9-nv-MZ1"/>
                             <constraint firstAttribute="trailing" secondItem="IIw-S0-Izr" secondAttribute="trailing" id="Khu-ac-uKL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IIw-S0-Izr" secondAttribute="trailing" id="Usz-Pd-nOh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uq3-tJ-F4F" secondAttribute="trailing" id="VO1-6O-5Tf"/>
+                            <constraint firstItem="Nwz-3A-rrf" firstAttribute="centerX" secondItem="81M-WX-PZ7" secondAttribute="centerX" id="VTL-JY-8KO"/>
                             <constraint firstItem="IIw-S0-Izr" firstAttribute="top" secondItem="lov-ja-DGv" secondAttribute="bottom" id="Wms-uo-34K"/>
                             <constraint firstAttribute="leadingMargin" secondItem="IIw-S0-Izr" secondAttribute="leading" id="YB0-R0-QeH"/>
                             <constraint firstItem="IIw-S0-Izr" firstAttribute="height" secondItem="81M-WX-PZ7" secondAttribute="height" id="Yho-HV-CPM"/>
@@ -2159,6 +2179,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="UMS_url_video.png" width="74" height="73"/>
+        <image name="btg_line.png" width="5" height="1"/>
         <image name="detail_borrow_normal" width="348" height="96"/>
         <image name="search_blue-btn-chose" width="80" height="80"/>
         <image name="welcome_bg" width="375" height="667"/>
