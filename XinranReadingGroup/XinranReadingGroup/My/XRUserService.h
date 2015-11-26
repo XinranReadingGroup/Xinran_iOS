@@ -19,4 +19,6 @@
 + (void)fetchShareBook:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 + (void)fetchBorrowBook:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
+
++ (void)fetchMemberPoint:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 @end

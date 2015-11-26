@@ -82,4 +82,10 @@
     }];
 }
 
++ (void)fetchMemberPoint:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[XRNetwork sharedXRNetwork] GETWithToken:@"activities" param:@{@"status":@"available"} withEntityName:nil success:^(id param) {
+
+    } failure:failure];
+}
+
 @end
