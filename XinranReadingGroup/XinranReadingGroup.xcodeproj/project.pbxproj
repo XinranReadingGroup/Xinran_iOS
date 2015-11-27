@@ -35,7 +35,6 @@
 		BD10B3D31C0343DB00944045 /* XRBorrowRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10B3D21C0343DB00944045 /* XRBorrowRecordViewController.m */; };
 		BD10B3D61C03442700944045 /* XRBorrowRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10B3D51C03442700944045 /* XRBorrowRecordCell.m */; };
 		BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1AD3D41A98398F009CD8EF /* Images.xcassets */; };
-		BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1AD3E31A98398F009CD8EF /* XinranReadingGroupTests.m */; };
 		BD1D63E61ADFFF8100CCE363 /* XRShareAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1D63E51ADFFF8100CCE363 /* XRShareAssistant.m */; };
 		BD1D64041AE006D200CCE363 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD1D63EA1AE006D200CCE363 /* UMSocialLocalizable.strings */; };
 		BD1D64051AE006D200CCE363 /* libUMSocial_Sdk_4.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1D63F81AE006D200CCE363 /* libUMSocial_Sdk_4.2.2.a */; };
@@ -69,14 +68,6 @@
 		BDB847371BEF3D6300561D62 /* XRMockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB847361BEF3D6300561D62 /* XRMockTool.m */; };
 		BDBDB7D11AD967A800977A37 /* XRBookListItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */; };
 		BDBDB7D41AD97FFA00977A37 /* XRBookListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */; };
-		BDBDB7D61ADA254600977A37 /* XRInterfaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D51ADA254600977A37 /* XRInterfaceTest.m */; };
-		BDBDB7D71ADA257700977A37 /* XRSearchBiz.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692171AD963DF00F5E5AB /* XRSearchBiz.m */; };
-		BDBDB7D81ADA298D00977A37 /* XRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE691F51AD4A9FF00F5E5AB /* XRUser.m */; };
-		BDBDB7D91ADA298D00977A37 /* XREntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6920B1AD92B6B00F5E5AB /* XREntity.m */; };
-		BDBDB7DA1ADA298D00977A37 /* XRBookEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6920E1AD92B8500F5E5AB /* XRBookEntity.m */; };
-		BDBDB7DB1ADA298D00977A37 /* XRBookListItemEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D01AD967A800977A37 /* XRBookListItemEntity.m */; };
-		BDBDB7DC1ADA298D00977A37 /* XRBookListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */; };
-		BDBDB7DD1ADA2A6F00977A37 /* XRBookService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE692141AD953E400F5E5AB /* XRBookService.m */; };
 		BDC7B8E31BB6D3EB00687B68 /* UIButton+XRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7B8E21BB6D3EB00687B68 /* UIButton+XRButton.m */; };
 		BDC7B8F11BBA747400687B68 /* XREditBookInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC7B8F01BBA747400687B68 /* XREditBookInfoViewController.m */; };
 		BDE0063C1B162A2B00FBC8DB /* XRDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE0063B1B162A2B00FBC8DB /* XRDonateViewController.m */; };
@@ -897,8 +888,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/usr/bin/env ruby";
-			shellScript = "";
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\nnow=date +\"%Y%m%d%H%M%S\"\necho \"now is $now\"\n\n#if [ $CONFIGURATION == Release ]; then\necho \"Bumping build number...\"\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n#increment the build number (ie 115 to 116)\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\n#if [[ \"${buildnum}\" == \"\" ]]; then\n#echo \"No build number in $plist\"\n#exit 2\n#fi\n\nbuildnum=$now\necho $buildnum\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\necho \"Bumped build number to $buildnum\"\n\n#else\n#echo $CONFIGURATION \" build - Not bumping build number.\"\n#fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -976,15 +967,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDBDB7DB1ADA298D00977A37 /* XRBookListItemEntity.m in Sources */,
-				BDBDB7D81ADA298D00977A37 /* XRUser.m in Sources */,
-				BD1AD3E41A98398F009CD8EF /* XinranReadingGroupTests.m in Sources */,
-				BDBDB7DC1ADA298D00977A37 /* XRBookListEntity.m in Sources */,
-				BDBDB7DD1ADA2A6F00977A37 /* XRBookService.m in Sources */,
-				BDBDB7D61ADA254600977A37 /* XRInterfaceTest.m in Sources */,
-				BDBDB7DA1ADA298D00977A37 /* XRBookEntity.m in Sources */,
-				BDBDB7D71ADA257700977A37 /* XRSearchBiz.m in Sources */,
-				BDBDB7D91ADA298D00977A37 /* XREntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,6 +1084,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/XinranReadingGroup/Framework/UMSocial_Sdk_4.2.2",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinrandushuba.ios.xiangyue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -1123,6 +1106,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/XinranReadingGroup/Framework/UMSocial_Sdk_4.2.2",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinrandushuba.ios.xiangyue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
