@@ -13,6 +13,7 @@
 #import "XRShareResultViewController.h"
 #import "XRBorrowBookQRViewController.h"
 #import "XRReturnBookQRViewController.h"
+#import "UIViewController+navigationBarItem.h"
 
 @interface XRHomeViewController ()
 
@@ -22,7 +23,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view.
+	[self setTitleWithImage:@"home_title"];
 }
 
 - (void)didReceiveMemoryWarning {

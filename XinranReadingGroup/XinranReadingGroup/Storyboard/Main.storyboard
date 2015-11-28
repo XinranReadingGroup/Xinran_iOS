@@ -250,7 +250,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="xI0-AT-mCr"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                             <animations/>
@@ -292,7 +292,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="Bnl-yt-R8Q"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <animations/>
@@ -341,6 +341,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0078431372550000003" green="0.70588235290000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0078431372549019607" green="0.70588235294117641" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="xg5-2w-uCg" kind="relationship" relationship="viewControllers" id="bYp-k6-ezw"/>
@@ -2093,7 +2100,7 @@
         <scene sceneID="7BR-nG-vq3">
             <objects>
                 <navigationController id="VLG-ed-iW1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="gvn-lr-fFN"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="tabbar_my_normal" selectedImage="tabbar_my_selected" id="gvn-lr-fFN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h7U-ed-Lmq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2144,7 +2151,7 @@
         <scene sceneID="DCu-KY-ddF">
             <objects>
                 <navigationController id="DCr-ks-S8J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="更多" id="Gfx-yC-ref"/>
+                    <tabBarItem key="tabBarItem" title="更多" image="tabbar_more_normal" selectedImage="tabbar_more_selected" id="Gfx-yC-ref"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dij-n2-YZB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2162,7 +2169,7 @@
         <scene sceneID="6kD-b7-PPf">
             <objects>
                 <navigationController id="xg5-2w-uCg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="JPf-ng-6HM"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="tabbar_home_normal" selectedImage="tabbar_home_selected" id="JPf-ng-6HM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UUI-IS-k4L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2184,6 +2191,12 @@
         <image name="login_password" width="16" height="20"/>
         <image name="login_username" width="19" height="20"/>
         <image name="search_blue-btn-chose" width="80" height="80"/>
+        <image name="tabbar_home_normal" width="25" height="25"/>
+        <image name="tabbar_home_selected" width="25" height="25"/>
+        <image name="tabbar_more_normal" width="30" height="8"/>
+        <image name="tabbar_more_selected" width="30" height="8"/>
+        <image name="tabbar_my_normal" width="24" height="25"/>
+        <image name="tabbar_my_selected" width="24" height="25"/>
         <image name="welcome_bg" width="375" height="667"/>
     </resources>
 </document>
