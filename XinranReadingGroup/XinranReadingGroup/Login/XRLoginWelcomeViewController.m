@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *signButton;
 @property (weak, nonatomic) IBOutlet UIStackView *buttonStackView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconStackViewCenterY;
+@property (weak, nonatomic) IBOutlet UIImageView *iconText;
 
 @end
 
@@ -33,7 +35,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self startAnimation];
+    [self performSelector:@selector(startAnimation) withObject:nil afterDelay:0.5];
 }
 
 
@@ -59,9 +61,25 @@
 }
 
 - (void)startAnimation {
-    [UIView animateWithDuration:1 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.iconText.alpha = 0;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.iconText.alpha = 1;
+            //改变图片
+            self.iconText.image = [UIImage imageNamed:@"welcome_text"];
+        } completion:nil];
+    }];
+    
+    
+    [UIView animateWithDuration:1.5 animations:^{
+        //按钮渐现
         self.registerButton.alpha = 1;
         self.signButton.alpha = 1;
+        
+        //图标上移
+        self.iconStackViewCenterY.constant -= 120;
+        [self.view layoutIfNeeded];
     }];
 }
 
