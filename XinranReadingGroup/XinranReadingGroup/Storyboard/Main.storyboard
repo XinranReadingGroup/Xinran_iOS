@@ -200,7 +200,7 @@
                                         <action selector="loginButtonTapped:" destination="KfA-m6-bEO" eventType="touchUpInside" id="tPZ-MP-SiA"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0L-Kz-BAL">
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0L-Kz-BAL">
                                     <rect key="frame" x="480" y="58" width="95" height="30"/>
                                     <animations/>
                                     <state key="normal" title="忘记密码？">
@@ -235,16 +235,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tmd-Q1-NOJ">
-                                                    <rect key="frame" x="29" y="12" width="21" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_username" translatesAutoresizingMaskIntoConstraints="NO" id="Tmd-Q1-NOJ">
+                                                    <rect key="frame" x="20" y="12" width="20" height="20"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="Ib3-Kt-6W6"/>
-                                                        <constraint firstAttribute="width" constant="21" id="OR8-aJ-cCR"/>
+                                                        <constraint firstAttribute="height" constant="20" id="Ib3-Kt-6W6"/>
+                                                        <constraint firstAttribute="width" constant="20" id="OR8-aJ-cCR"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-91-1AF">
-                                                    <rect key="frame" x="57" y="7" width="528" height="30"/>
+                                                    <rect key="frame" x="56" y="7" width="529" height="30"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="xI0-AT-mCr"/>
@@ -256,8 +256,8 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bwa-91-1AF" secondAttribute="trailing" constant="7" id="BvG-so-nbS"/>
-                                                <constraint firstItem="Tmd-Q1-NOJ" firstAttribute="leading" secondItem="m9n-qg-5f3" secondAttribute="leading" constant="29" id="HDT-DF-Cka"/>
-                                                <constraint firstItem="bwa-91-1AF" firstAttribute="leading" secondItem="Tmd-Q1-NOJ" secondAttribute="trailing" constant="7" id="Uet-Tt-PbM"/>
+                                                <constraint firstItem="Tmd-Q1-NOJ" firstAttribute="leading" secondItem="m9n-qg-5f3" secondAttribute="leading" constant="20" id="HDT-DF-Cka"/>
+                                                <constraint firstItem="bwa-91-1AF" firstAttribute="leading" secondItem="Tmd-Q1-NOJ" secondAttribute="trailing" constant="16" id="Uet-Tt-PbM"/>
                                                 <constraint firstAttribute="centerY" secondItem="Tmd-Q1-NOJ" secondAttribute="centerY" constant="11.5" id="Ytt-zT-rZp"/>
                                                 <constraint firstAttribute="centerY" secondItem="bwa-91-1AF" secondAttribute="centerY" id="i8H-Ka-UoT"/>
                                                 <constraint firstAttribute="centerY" secondItem="Tmd-Q1-NOJ" secondAttribute="centerY" id="vdk-EH-vHR"/>
@@ -277,16 +277,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSO-Fe-7nA">
-                                                    <rect key="frame" x="29" y="12" width="21" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_password" translatesAutoresizingMaskIntoConstraints="NO" id="dSO-Fe-7nA">
+                                                    <rect key="frame" x="20" y="12.5" width="20" height="20"/>
                                                     <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="7jb-Mw-UfD"/>
-                                                        <constraint firstAttribute="width" constant="21" id="Nvc-29-hFM"/>
+                                                        <constraint firstAttribute="height" constant="20" id="7jb-Mw-UfD"/>
+                                                        <constraint firstAttribute="width" constant="20" id="Nvc-29-hFM"/>
                                                     </constraints>
                                                 </imageView>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入登录密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wIH-C7-qrM">
-                                                    <rect key="frame" x="57" y="7" width="528" height="30"/>
+                                                    <rect key="frame" x="56" y="7" width="529" height="30"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="Bnl-yt-R8Q"/>
@@ -299,10 +299,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="dSO-Fe-7nA" secondAttribute="centerY" id="2gZ-eh-B7O"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="wIH-C7-qrM" secondAttribute="trailing" constant="7" id="83z-u1-h9n"/>
-                                                <constraint firstItem="dSO-Fe-7nA" firstAttribute="leading" secondItem="DWE-bo-CiG" secondAttribute="leading" constant="29" id="8zr-yR-SEV"/>
+                                                <constraint firstItem="dSO-Fe-7nA" firstAttribute="leading" secondItem="DWE-bo-CiG" secondAttribute="leading" constant="20" id="8zr-yR-SEV"/>
                                                 <constraint firstAttribute="centerY" secondItem="wIH-C7-qrM" secondAttribute="centerY" id="9a4-6e-DKu"/>
                                                 <constraint firstAttribute="centerY" secondItem="dSO-Fe-7nA" secondAttribute="centerY" constant="11.5" id="TIM-Ua-ecm"/>
-                                                <constraint firstItem="wIH-C7-qrM" firstAttribute="leading" secondItem="dSO-Fe-7nA" secondAttribute="trailing" constant="7" id="xPf-YF-2lq"/>
+                                                <constraint firstItem="wIH-C7-qrM" firstAttribute="leading" secondItem="dSO-Fe-7nA" secondAttribute="trailing" constant="16" id="xPf-YF-2lq"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -2181,6 +2181,8 @@
         <image name="detail_borrow_normal" width="348" height="96"/>
         <image name="loading_icon" width="80" height="50"/>
         <image name="loading_text" width="224" height="22"/>
+        <image name="login_password" width="16" height="20"/>
+        <image name="login_username" width="19" height="20"/>
         <image name="search_blue-btn-chose" width="80" height="80"/>
         <image name="welcome_bg" width="375" height="667"/>
     </resources>

@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupButtons];
+    [self performSelector:@selector(startAnimation) withObject:nil afterDelay:0.5];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -35,7 +36,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self performSelector:@selector(startAnimation) withObject:nil afterDelay:0.5];
 }
 
 
