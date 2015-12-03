@@ -19,6 +19,7 @@
 #import <ZYCoreDefine.h>
 #import "XRBookRecordEntity.h"
 #import "XRBookDetailEntity.h"
+#import "XRBookDetailHeaderView.h"
 
 @interface XRBookDetailBaseViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -56,6 +57,9 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+
+	self.title = self.bookData.book.title;
+
 	[self updateBorrowButton];
 	
 	self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 63, 0);
@@ -100,13 +104,19 @@
 	}
 }
 
-#pragma mark - Table view data source
++ (NSArray *)sectionTitles {
+    return @[@"内容简介",@"出版信息",@"捐书人"];
+}
 
+#pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 0;
+    }
 	return 24;
 }
 
@@ -116,6 +126,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	return 1;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return [[UIView alloc] initWithFrame:CGRectZero];
+    }
+    else {
+        XRBookDetailHeaderView *bookDetailHeaderView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([XRBookDetailHeaderView class]) owner:nil options:nil].lastObject;
+        bookDetailHeaderView.sectionTitle.text = [[self class] sectionTitles][section - 1];
+        return bookDetailHeaderView;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

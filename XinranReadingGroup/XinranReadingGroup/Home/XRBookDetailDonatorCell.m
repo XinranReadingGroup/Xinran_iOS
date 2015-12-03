@@ -16,6 +16,7 @@
 - (void)setData:(XRBookRecordEntity *)data {
 	_data = data;
 	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:@"http://fd.topitme.com/d/8b/d4/1187454768482d48bdo.jpg"]];
+//	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:self.data.offStockDate.]]
 	_donatorName.text = _data.ownerUserId.stringValue;
 	_donateDate.text = [_data.onStockDate toDefaultDataString];
 }

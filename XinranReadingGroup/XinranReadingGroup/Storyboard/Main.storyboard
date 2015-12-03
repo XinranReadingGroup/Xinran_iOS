@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -620,52 +621,146 @@
                         <viewControllerLayoutGuide type="bottom" id="xl6-Wt-MdC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ReG-PE-5gg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCU-0v-9ZS">
-                                <rect key="frame" x="40" y="90" width="54" height="52"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJp-xI-p3V" userLabel="contentView">
+                                <rect key="frame" x="31" y="108" width="258" height="264"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qn-b0-OUH" userLabel="借书">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="139"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="270" id="QCc-5Y-pP1"/>
+                                            <constraint firstAttribute="width" constant="220" id="kOk-h0-j42"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="40"/>
+                                        <state key="normal" title="借书" backgroundImage="home_button_borrow">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="QCc-5Y-pP1"/>
+                                                <exclude reference="kOk-h0-j42"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="borrowButtonTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="1r7-3b-8BD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oM-8X-gkO" userLabel="return">
+                                        <rect key="frame" x="138" y="19" width="120" height="120"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="5Q6-Vq-UyG"/>
+                                            <constraint firstAttribute="width" constant="120" id="FEf-hr-cLW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                        <state key="normal" title="还书" backgroundImage="home_button_return">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="returnBookTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="6pA-34-OWL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bc1-du-KQj" userLabel="share">
+                                        <rect key="frame" x="138" y="144" width="120" height="120"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="QFJ-fy-2Iy"/>
+                                            <constraint firstAttribute="height" constant="120" id="uoW-MC-1hU"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                        <state key="normal" title="享书" backgroundImage="home_button_share">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareBookTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="C51-0D-JHo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCU-0v-9ZS" userLabel="donate">
+                                        <rect key="frame" x="13" y="144" width="120" height="120"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="9oS-9p-15u"/>
+                                            <constraint firstAttribute="height" constant="120" id="UfT-Pw-q6f"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="20"/>
+                                        <state key="normal" title="捐书" backgroundImage="home_button_return">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="donateButtonTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="Den-82-RP0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <state key="normal" title="捐书">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="donateButtonTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="Den-82-RP0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qn-b0-OUH">
-                                <rect key="frame" x="122" y="90" width="54" height="52"/>
-                                <animations/>
-                                <state key="normal" title="借书">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="borrowButtonTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="1r7-3b-8BD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oM-8X-gkO">
-                                <rect key="frame" x="207" y="90" width="54" height="52"/>
-                                <animations/>
-                                <state key="normal" title="还书">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="returnBookTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="6pA-34-OWL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bc1-du-KQj">
-                                <rect key="frame" x="40" y="173" width="54" height="52"/>
-                                <animations/>
-                                <state key="normal" title="享书">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareBookTapped:" destination="5nA-QJ-HJt" eventType="touchUpInside" id="C51-0D-JHo"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="LCU-0v-9ZS" secondAttribute="bottom" id="4hd-ZH-nb7"/>
+                                    <constraint firstItem="4qn-b0-OUH" firstAttribute="top" secondItem="iJp-xI-p3V" secondAttribute="top" id="5cV-Dk-PaT"/>
+                                    <constraint firstItem="4qn-b0-OUH" firstAttribute="leading" secondItem="iJp-xI-p3V" secondAttribute="leading" id="9SC-TT-Tam"/>
+                                    <constraint firstItem="LCU-0v-9ZS" firstAttribute="top" secondItem="4qn-b0-OUH" secondAttribute="bottom" constant="5" id="BdM-N7-Rco"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bc1-du-KQj" secondAttribute="trailing" id="Bsd-5S-Gjg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bc1-du-KQj" secondAttribute="bottom" id="CGk-KH-t3j"/>
+                                    <constraint firstItem="8oM-8X-gkO" firstAttribute="leading" secondItem="4qn-b0-OUH" secondAttribute="trailing" constant="5" id="NrG-Vy-lme"/>
+                                    <constraint firstAttribute="height" constant="396" id="Q7i-2I-VeK"/>
+                                    <constraint firstItem="Bc1-du-KQj" firstAttribute="top" secondItem="8oM-8X-gkO" secondAttribute="bottom" constant="5" id="Stm-wA-Yy4"/>
+                                    <constraint firstItem="Bc1-du-KQj" firstAttribute="leading" secondItem="iJp-xI-p3V" secondAttribute="leading" constant="210" id="d2N-qJ-JBu"/>
+                                    <constraint firstAttribute="trailing" secondItem="8oM-8X-gkO" secondAttribute="trailing" id="dU1-IP-Nfi"/>
+                                    <constraint firstItem="Bc1-du-KQj" firstAttribute="leading" secondItem="LCU-0v-9ZS" secondAttribute="trailing" constant="5" id="hCr-bn-227"/>
+                                    <constraint firstItem="4qn-b0-OUH" firstAttribute="leading" secondItem="iJp-xI-p3V" secondAttribute="leading" id="hI5-hy-PK8"/>
+                                    <constraint firstAttribute="width" constant="347" id="paR-7S-Rpw"/>
+                                    <constraint firstItem="4qn-b0-OUH" firstAttribute="top" secondItem="iJp-xI-p3V" secondAttribute="top" id="wMa-C5-mqr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Q7i-2I-VeK"/>
+                                        <exclude reference="paR-7S-Rpw"/>
+                                        <exclude reference="5cV-Dk-PaT"/>
+                                        <exclude reference="hI5-hy-PK8"/>
+                                        <exclude reference="d2N-qJ-JBu"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="centerY" secondItem="ReG-PE-5gg" secondAttribute="centerY" id="1EK-jK-P1r"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="centerY" secondItem="ReG-PE-5gg" secondAttribute="centerY" multiplier="0.95" id="3Te-Hu-4ln"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="top" secondItem="eGO-oE-7ev" secondAttribute="bottom" constant="40" id="5fG-AV-Xc3"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="height" secondItem="ReG-PE-5gg" secondAttribute="height" multiplier="0.6" id="6P8-18-0xG"/>
+                            <constraint firstItem="xl6-Wt-MdC" firstAttribute="top" secondItem="iJp-xI-p3V" secondAttribute="bottom" constant="40" id="A7z-ll-Cwd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iJp-xI-p3V" secondAttribute="trailing" constant="15" id="RPk-Jq-mSh"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="height" secondItem="ReG-PE-5gg" secondAttribute="height" multiplier="0.55" id="RwX-Fx-y81"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="height" secondItem="ReG-PE-5gg" secondAttribute="height" multiplier="0.6" id="Yen-T5-9Uf"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="centerY" secondItem="ReG-PE-5gg" secondAttribute="centerY" id="ceT-uz-6Gi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iJp-xI-p3V" secondAttribute="trailing" constant="15" id="ia9-4E-0oK"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="leading" secondItem="ReG-PE-5gg" secondAttribute="leadingMargin" constant="15" id="lPT-CE-kyh"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="centerX" secondItem="ReG-PE-5gg" secondAttribute="centerX" id="nyC-tu-ix1"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="leading" secondItem="ReG-PE-5gg" secondAttribute="leadingMargin" constant="15" id="oY6-EL-ue2"/>
+                            <constraint firstItem="iJp-xI-p3V" firstAttribute="centerX" secondItem="ReG-PE-5gg" secondAttribute="centerX" id="rKH-Rm-ZFW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1EK-jK-P1r"/>
+                                <exclude reference="3Te-Hu-4ln"/>
+                                <exclude reference="5fG-AV-Xc3"/>
+                                <exclude reference="6P8-18-0xG"/>
+                                <exclude reference="Yen-T5-9Uf"/>
+                                <exclude reference="ia9-4E-0oK"/>
+                                <exclude reference="nyC-tu-ix1"/>
+                                <exclude reference="oY6-EL-ue2"/>
+                                <exclude reference="rKH-Rm-ZFW"/>
+                                <exclude reference="A7z-ll-Cwd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="欣然读书吧" id="CMy-MO-QUW">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="lNq-Sq-82u">
@@ -675,6 +770,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="contentView" destination="iJp-xI-p3V" id="a7n-u1-vXX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLh-Nn-DoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -685,20 +784,20 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="S0F-As-9yG" customClass="XRSearchViewController" sceneMemberID="viewController">
                     <tableView key="view" hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="143" sectionHeaderHeight="22" sectionFooterHeight="22" id="dNL-JR-z0n">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="15" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="XRSearchListCell" rowHeight="115" id="xrw-36-JAj" customClass="XRSearchListCell">
-                                <rect key="frame" x="0.0" y="22" width="600" height="115"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xrw-36-JAj" id="1c2-fV-6bM">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="115"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0E7-KM-ZXl" userLabel="container">
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0E7-KM-ZXl" userLabel="container">
                                             <rect key="frame" x="13" y="0.0" width="574" height="102"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mcO-ya-5uJ">
@@ -709,7 +808,7 @@
                                                         <constraint firstAttribute="width" constant="51" id="fRD-CH-22r"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBI-yl-CfK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBI-yl-CfK">
                                                     <rect key="frame" x="71" y="9" width="360" height="15"/>
                                                     <animations/>
                                                     <constraints>
@@ -719,7 +818,7 @@
                                                     <color key="textColor" red="0.0" green="0.69803921568627447" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N6-JO-eMa">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N6-JO-eMa">
                                                     <rect key="frame" x="484" y="10" width="80" height="82"/>
                                                     <animations/>
                                                     <constraints>
@@ -735,7 +834,7 @@
                                                     </state>
                                                     <state key="highlighted" image="search_blue-btn-chose"/>
                                                 </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyb-DU-Tkd">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyb-DU-Tkd">
                                                     <rect key="frame" x="71" y="29" width="360" height="58"/>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1429,7 +1528,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGF-fj-bil">
-                                                    <rect key="frame" x="32" y="0.0" width="536" height="43"/>
+                                                    <rect key="frame" x="20" y="0.0" width="560" height="43"/>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -1442,8 +1541,8 @@
                                                 <constraint firstAttribute="bottom" secondItem="kGF-fj-bil" secondAttribute="bottom" id="KoX-sM-EuT"/>
                                                 <constraint firstItem="kGF-fj-bil" firstAttribute="top" secondItem="W8b-tN-W9G" secondAttribute="top" id="XBa-Wb-paK"/>
                                                 <constraint firstAttribute="centerY" secondItem="kGF-fj-bil" secondAttribute="centerY" id="rpt-Zm-9C0"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="kGF-fj-bil" secondAttribute="trailing" constant="24" id="vFk-K9-RB6"/>
-                                                <constraint firstItem="kGF-fj-bil" firstAttribute="leading" secondItem="W8b-tN-W9G" secondAttribute="leadingMargin" constant="24" id="yfm-y1-DOA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kGF-fj-bil" secondAttribute="trailing" constant="12" id="vFk-K9-RB6"/>
+                                                <constraint firstItem="kGF-fj-bil" firstAttribute="leading" secondItem="W8b-tN-W9G" secondAttribute="leadingMargin" constant="12" id="yfm-y1-DOA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -1459,7 +1558,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5q-Qg-XuU">
-                                                    <rect key="frame" x="32" y="0.0" width="536" height="43"/>
+                                                    <rect key="frame" x="20" y="0.0" width="560" height="43"/>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -1470,10 +1569,10 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="p5q-Qg-XuU" secondAttribute="centerY" id="JAX-J4-fXB"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="p5q-Qg-XuU" secondAttribute="trailing" constant="24" id="Yec-nE-jUM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="p5q-Qg-XuU" secondAttribute="trailing" constant="12" id="Yec-nE-jUM"/>
                                                 <constraint firstAttribute="bottom" secondItem="p5q-Qg-XuU" secondAttribute="bottom" id="dCA-CD-PH0"/>
                                                 <constraint firstItem="p5q-Qg-XuU" firstAttribute="top" secondItem="2wr-zP-wha" secondAttribute="top" id="kIv-51-5pZ"/>
-                                                <constraint firstItem="p5q-Qg-XuU" firstAttribute="leading" secondItem="2wr-zP-wha" secondAttribute="leadingMargin" constant="24" id="kk6-lE-G9g"/>
+                                                <constraint firstItem="p5q-Qg-XuU" firstAttribute="leading" secondItem="2wr-zP-wha" secondAttribute="leadingMargin" constant="12" id="kk6-lE-G9g"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
@@ -2186,6 +2285,9 @@
     </scenes>
     <resources>
         <image name="detail_borrow_normal" width="348" height="96"/>
+        <image name="home_button_borrow" width="220" height="270"/>
+        <image name="home_button_return" width="120" height="120"/>
+        <image name="home_button_share" width="120" height="120"/>
         <image name="loading_icon" width="80" height="50"/>
         <image name="loading_text" width="224" height="22"/>
         <image name="login_password" width="16" height="20"/>

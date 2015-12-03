@@ -21,9 +21,7 @@
         return;
     }
 
-    NSString *methodName = [NSString stringWithFormat:@"/book/search/%@",keyword];
-    
-    [[XRNetwork sharedXRNetwork] GET:methodName param:nil withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GET:@"book/search" param:@{@"q":keyword} withEntityName:NSStringFromClass([XRBookListEntity class]) success:^(id param) {
         if (success) {
             success(param);
         }

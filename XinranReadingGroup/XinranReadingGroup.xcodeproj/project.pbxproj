@@ -49,6 +49,8 @@
 		BD1D640E1AE006D300CCE363 /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD1D64021AE006D200CCE363 /* UMSocialSDKResourcesNew.bundle */; };
 		BD2810BF1AE3AB6C006D551B /* XRSearchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2810BE1AE3AB6C006D551B /* XRSearchListCell.m */; };
 		BD41EBD41B16936E003A04BA /* XRDonateResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD41EBD31B16936E003A04BA /* XRDonateResultViewController.m */; };
+		BD72727C1C107A0B00509D4D /* XRBookDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD72727B1C107A0B00509D4D /* XRBookDetailHeaderView.m */; };
+		BD72727E1C107A1800509D4D /* XRBookDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD72727D1C107A1800509D4D /* XRBookDetailHeaderView.xib */; };
 		BD7AD9801BC103210083C59F /* XRShareResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7AD97F1BC103210083C59F /* XRShareResultViewController.m */; };
 		BD7AD9831BC14A270083C59F /* XRBorrowBookQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7AD9821BC14A270083C59F /* XRBorrowBookQRViewController.m */; };
 		BD7AD9861BC150720083C59F /* XRReturnBookQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7AD9851BC150720083C59F /* XRReturnBookQRViewController.m */; };
@@ -184,6 +186,9 @@
 		BD3B0EEC1BBB8495006C0A92 /* XRCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRCommonDefine.h; sourceTree = "<group>"; };
 		BD41EBD21B16936E003A04BA /* XRDonateResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRDonateResultViewController.h; sourceTree = "<group>"; };
 		BD41EBD31B16936E003A04BA /* XRDonateResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRDonateResultViewController.m; sourceTree = "<group>"; };
+		BD72727A1C107A0B00509D4D /* XRBookDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailHeaderView.h; sourceTree = "<group>"; };
+		BD72727B1C107A0B00509D4D /* XRBookDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailHeaderView.m; sourceTree = "<group>"; };
+		BD72727D1C107A1800509D4D /* XRBookDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XRBookDetailHeaderView.xib; sourceTree = "<group>"; };
 		BD7AD97E1BC103210083C59F /* XRShareResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRShareResultViewController.h; sourceTree = "<group>"; };
 		BD7AD97F1BC103210083C59F /* XRShareResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRShareResultViewController.m; sourceTree = "<group>"; };
 		BD7AD9811BC14A270083C59F /* XRBorrowBookQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBorrowBookQRViewController.h; sourceTree = "<group>"; };
@@ -498,6 +503,9 @@
 				0988B4B51B0D9BC50004DFD8 /* XRBookInfoCell.xib */,
 				0992FA6D1B0DFBF1009CD369 /* XRBookInfoCell.h */,
 				0992FA6E1B0DFBF1009CD369 /* XRBookInfoCell.m */,
+				BD72727A1C107A0B00509D4D /* XRBookDetailHeaderView.h */,
+				BD72727B1C107A0B00509D4D /* XRBookDetailHeaderView.m */,
+				BD72727D1C107A1800509D4D /* XRBookDetailHeaderView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -812,6 +820,7 @@
 				09DC13311AD39BB500CE8277 /* LaunchScreen.xib in Resources */,
 				BD1D640E1AE006D300CCE363 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				BD1D64081AE006D300CCE363 /* UMSCommentInputControlleriPad.xib in Resources */,
+				BD72727E1C107A1800509D4D /* XRBookDetailHeaderView.xib in Resources */,
 				BD1D64091AE006D300CCE363 /* UMShareEditViewController.xib in Resources */,
 				BDF1E7C81BDCCDD0004730B7 /* BookCollectionView.xib in Resources */,
 				BD1D640D1AE006D300CCE363 /* UMSShareListController.xib in Resources */,
@@ -953,6 +962,7 @@
 				BD41EBD41B16936E003A04BA /* XRDonateResultViewController.m in Sources */,
 				09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */,
 				BD8E39401B0226D700AF1CFD /* XRBookDetailContentCell.m in Sources */,
+				BD72727C1C107A0B00509D4D /* XRBookDetailHeaderView.m in Sources */,
 				723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */,
 				BDF003DA1C060C3800D5AE7D /* XRMemberPointViewController.m in Sources */,
 				BDB1AD211BC2121B009BB273 /* XRMyViewController.m in Sources */,

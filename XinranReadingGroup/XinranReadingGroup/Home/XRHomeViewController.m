@@ -9,6 +9,7 @@
 #import "XRHomeViewController.h"
 #import "XRDonateViewController.h"
 #import <ZYCoreDefine.h>
+#import <Masonry.h>
 #import "XRDonateResultViewController.h"
 #import "XRShareResultViewController.h"
 #import "XRBorrowBookQRViewController.h"
@@ -17,6 +18,8 @@
 
 @interface XRHomeViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+
 @end
 
 @implementation XRHomeViewController
@@ -24,6 +27,16 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self setTitleWithImage:@"home_title"];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+//		make.leading.mas_equalTo(@15);
+//        make.trailing.mas_equalTo(@-15);
+//        make.centerY.equalTo(self.view);
+//        make.height.mas_equalTo(self.contentView.mas_width).multipliedBy(800/690);
+	}];
 }
 
 - (void)didReceiveMemoryWarning {
