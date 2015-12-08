@@ -9,6 +9,10 @@
 #import "XRLoginBiz.h"
 #import "XRLoginService.h"
 #import "XRUser.h"
+#import "XRUserService.h"
+#import "MTLModel.h"
+#import "XRUserProfile.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @implementation XRLoginBiz
 
@@ -20,7 +24,10 @@
 		}
 	    [XRUser sharedXRUser].userIdentifier = userName;
 	    [XRUser sharedXRUser].accessToken = [dic valueForKeyPath:@"data.accessToken"];
-	    if (success) {
+		//获取用户信息
+		[[self class] refreshUserProfile:^{
+        }];
+		if (success) {
 	        success();
 		}
 	} failure: ^(NSError *error) {
@@ -57,6 +64,23 @@
 	    if (failure) {
 	        failure(error);
 		}
+	}];
+}
+
++ (void)refreshUserProfile:(ZYBlock)success {
+	[XRUserService fetchUserProfile:^(id param) {
+		NSError *error;
+		XRUserProfile *userProfile = [MTLJSONAdapter modelOfClass:[XRUserProfile class] fromJSONDictionary:param error:&error];
+		if (!error) {
+			[XRUser sharedXRUser].profile = userProfile;
+		}
+        [[NSNotificationCenter defaultCenter] postNotificationName:FETCH_USER_PROFILE_SUCCESS object:nil];
+		DDLogDebug(@"更新用户信息成功");
+        if (success) {
+            success();
+        }
+	} failure:^(NSError *error) {
+		DDLogDebug(@"获取用户信息失败");
 	}];
 }
 

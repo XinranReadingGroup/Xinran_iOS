@@ -20,5 +20,7 @@
 
 + (void)fetchBorrowBook:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
-+ (void)fetchMemberPoint:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)fetchActivity:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
+
++ (void)fetchUserProfile:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 @end

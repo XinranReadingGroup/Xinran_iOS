@@ -21,6 +21,7 @@
 #import <ZYTitleCell.h>
 #import <ZYCoreFramework/ZYCoreDefine.h>
 #import <Masonry/View+MASAdditions.h>
+#import "XRLoginBiz.h"
 
 @implementation XRMyViewController
 
@@ -29,6 +30,7 @@
     self.title = LOCALSTRING(@"我的");
     self.tableView.tableFooterView = [self footerView];
     [self setupData];
+    [[NSNotificationCenter defaultCenter] addObserver:self.tableView selector:@selector(reloadData) name:FETCH_USER_PROFILE_SUCCESS object:nil];
 }
 
 - (void)setupData {

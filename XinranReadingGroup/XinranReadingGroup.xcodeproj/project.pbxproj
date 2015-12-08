@@ -29,6 +29,7 @@
 		6F34F267973D11B9B8664098 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E15F82D97BF4D76A946888F /* libPods.a */; };
 		723490C7CD67731F0837F029 /* XRNetworkErrorAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349E888B55E3230AF52AFA /* XRNetworkErrorAssistant.m */; };
 		7234919271CA1F3253A64FAE /* AppDelegate+XRSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */; };
+		723491E59D0C39670D9238B0 /* XRUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349577E7C2340F253B4DBB /* XRUserProfile.m */; };
 		723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 723493823B37038BD12BD629 /* XRNetwork+Token.m */; };
 		72349AABBDE4A909A565D634 /* XRTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D7B0E9E480D7B52EFF4 /* XRTools.m */; };
 		BD0D91CA1BF37C1D006E722B /* XRShareBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */; };
@@ -140,8 +141,10 @@
 		723493823B37038BD12BD629 /* XRNetwork+Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XRNetwork+Token.m"; sourceTree = "<group>"; };
 		723493C508AD77EF7F443977 /* XRNetwork+Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XRNetwork+Token.h"; sourceTree = "<group>"; };
 		72349446914F6F8E8E400166 /* XRNetworkErrorAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRNetworkErrorAssistant.h; sourceTree = "<group>"; };
+		72349577E7C2340F253B4DBB /* XRUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRUserProfile.m; sourceTree = "<group>"; };
 		7234961464069054EC01A046 /* XRTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRTools.h; sourceTree = "<group>"; };
 		723497B2F055A1969277936A /* AppDelegate+XRSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+XRSetup.h"; sourceTree = "<group>"; };
+		72349907DBD119B6F701C713 /* XRUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRUserProfile.h; sourceTree = "<group>"; };
 		72349D7B0E9E480D7B52EFF4 /* XRTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRTools.m; sourceTree = "<group>"; };
 		72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XRSetup.m"; sourceTree = "<group>"; };
 		72349E888B55E3230AF52AFA /* XRNetworkErrorAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNetworkErrorAssistant.m; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 		BD2810BD1AE3AB6C006D551B /* XRSearchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSearchListCell.h; sourceTree = "<group>"; };
 		BD2810BE1AE3AB6C006D551B /* XRSearchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSearchListCell.m; sourceTree = "<group>"; };
 		BD3B0EEC1BBB8495006C0A92 /* XRCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRCommonDefine.h; sourceTree = "<group>"; };
+		BD4069471C14216A0090E322 /* XinranReadingGroup.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XinranReadingGroup.pch; sourceTree = "<group>"; };
 		BD41EBD21B16936E003A04BA /* XRDonateResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRDonateResultViewController.h; sourceTree = "<group>"; };
 		BD41EBD31B16936E003A04BA /* XRDonateResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRDonateResultViewController.m; sourceTree = "<group>"; };
 		BD72727A1C107A0B00509D4D /* XRBookDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailHeaderView.h; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 				09DC13371AD39D7700CE8277 /* main.m */,
 				72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */,
 				723497B2F055A1969277936A /* AppDelegate+XRSetup.h */,
+				BD4069471C14216A0090E322 /* XinranReadingGroup.pch */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -636,6 +641,8 @@
 				BDBDB7D31AD97FFA00977A37 /* XRBookListEntity.m */,
 				0992FA701B0E0D41009CD369 /* XRBookRecordEntity.h */,
 				0992FA711B0E0D41009CD369 /* XRBookRecordEntity.m */,
+				72349577E7C2340F253B4DBB /* XRUserProfile.m */,
+				72349907DBD119B6F701C713 /* XRUserProfile.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -970,6 +977,7 @@
 				72349AABBDE4A909A565D634 /* XRTools.m in Sources */,
 				723490C7CD67731F0837F029 /* XRNetworkErrorAssistant.m in Sources */,
 				7234919271CA1F3253A64FAE /* AppDelegate+XRSetup.m in Sources */,
+				723491E59D0C39670D9238B0 /* XRUserProfile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1087,6 +1095,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1109,6 +1118,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

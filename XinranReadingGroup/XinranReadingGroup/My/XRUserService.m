@@ -82,10 +82,14 @@
     }];
 }
 
-+ (void)fetchMemberPoint:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
++ (void)fetchActivity:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     [[XRNetwork sharedXRNetwork] GETWithToken:@"activities" param:@{@"status":@"available"} withEntityName:nil success:^(id param) {
 
     } failure:failure];
+}
+
++ (void)fetchUserProfile:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[XRNetwork sharedXRNetwork] GETWithToken:@"user/profile" param:nil withEntityName:nil success:success failure:failure];
 }
 
 @end

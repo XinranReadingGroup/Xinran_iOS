@@ -11,6 +11,7 @@
 #import "XRMyProfileCell.h"
 #import "XRUser.h"
 #import "OAStackView.h"
+#import "XRUserProfile.h"
 #import <Masonry.h>
 
 @implementation XRMyProfileCell
@@ -22,13 +23,18 @@
         make.width.mas_equalTo(@60);
         make.height.mas_equalTo(@60);
     }];
-    //TODO 头像还没有地方可以获取
-    [avatar sd_setImageWithURL:[NSURL URLWithString:@"http://www.wmpic.me/wp-content/uploads/2014/06/20140611171618736.jpeg"]];
+    
+    if ([XRUser sharedXRUser].profile.imgId) {
+        [avatar sd_setImageWithURL:[NSURL URLWithString:[XRUser sharedXRUser].profile.imgId]];
+    }
+    else {
+        [avatar sd_setImageWithURL:[NSURL URLWithString:@"http://7xn9af.com1.z0.glb.clouddn.com/default_avatar@2x.png"] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
+    }
     UILabel *IDText = [[UILabel alloc] init];
     [IDText mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(@60);
     }];
-    IDText.text = [XRUser sharedXRUser].userIdentifier;
+    IDText.text = [XRUser sharedXRUser].profile.nickName;
     OAStackView *stackView = [[OAStackView alloc] initWithArrangedSubviews:@[avatar,IDText]];
     stackView.axis = UILayoutConstraintAxisHorizontal;
     stackView.alignment = OAStackViewAlignmentLeading;

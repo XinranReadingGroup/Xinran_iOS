@@ -98,7 +98,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dsP-ru-zb5" userLabel="iconStackView">
-                                <rect key="frame" x="188" y="224.5" width="224" height="87"/>
+                                <rect key="frame" x="188" y="225" width="224" height="87"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_icon" translatesAutoresizingMaskIntoConstraints="NO" id="QZY-CB-5xe">
                                         <rect key="frame" x="72" y="0.0" width="80" height="50"/>
@@ -280,7 +280,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_password" translatesAutoresizingMaskIntoConstraints="NO" id="dSO-Fe-7nA">
-                                                    <rect key="frame" x="20" y="12.5" width="20" height="20"/>
+                                                    <rect key="frame" x="20" y="13" width="20" height="20"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="7jb-Mw-UfD"/>

@@ -7,6 +7,7 @@
 //
 
 #import "XRUser.h"
+#import "XRUserProfile.h"
 #import <ZYCoreDefine.h>
 #import <SSKeychain.h>
 
@@ -17,6 +18,7 @@ static NSString * const SERVER_NAME = @"XinranReading";
 
 @synthesize accessToken = _accessToken;
 @synthesize userIdentifier = _userIdentifier;
+@synthesize profile = _profile;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(XRUser);
 
@@ -45,8 +47,25 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(XRUser);
     _accessToken = accessToken;
 }
 
+- (XRUserProfile *)profile {
+    if (!_profile) {
+        _profile = [XRUserProfile userProfileWithUserID:self.userIdentifier];
+    }
+    return _profile;
+}
+
+- (void)setProfile:(XRUserProfile *)profile {
+    _profile = profile;
+    [XRUserProfile storeProfile:profile withUserID:self.userIdentifier];
+}
+
 - (void)clearAccessToken {
     [SSKeychain deletePasswordForService:SERVER_NAME account:self.userIdentifier];
+}
+
+- (void)clearUserData {
+    [self clearAccessToken];
+    [XRUserProfile deleteProfileWithUserID:self.userIdentifier];
 }
 
 - (NSString *)accessToken {
@@ -61,7 +80,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(XRUser);
 }
 
 - (void)signOut {
-    [self clearAccessToken];
+    [self clearUserData];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:USER_DEFAULTS_USER_NAME];
 }
 
