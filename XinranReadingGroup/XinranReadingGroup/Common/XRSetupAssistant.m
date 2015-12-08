@@ -16,6 +16,7 @@
     [XRShareAssistant setup];
     [[self class] setupNavigationBar];
     [Bugtags startWithAppKey:@"cc612951d27832ef7a8af0f71b61a9b3" invocationEvent:BTGInvocationEventShake];
+    [[self class] setupCocoaLumberjack];
 }
 
 + (void)setupNavigationBar {
@@ -26,6 +27,20 @@
                                                          forBarMetrics:UIBarMetricsDefault];
 }
 
++ (void)setupCocoaLumberjack {
+    static DDLogLevel ddLogLevel;
+#if DEBUG
+    ddLogLevel = DDLogLevelVerbose;
+#else
+    ddLogLevel = DDLogLevelWarning;
+#endif
+    [DDLog addLogger:[DDTTYLogger sharedInstance] withLevel:ddLogLevel];
+    [DDLog addLogger:[DDASLLogger sharedInstance] withLevel:ddLogLevel];
 
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [DDLog addLogger:fileLogger];
+}
 
 @end

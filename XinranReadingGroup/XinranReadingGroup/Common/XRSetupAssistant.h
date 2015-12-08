@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CocoaLumberjack.h>
 
 @interface XRSetupAssistant : NSObject
 
