@@ -8,6 +8,9 @@
 
 #import "XRMemberPointViewController.h"
 #import "XRUserService.h"
+#import "XRLoginBiz.h"
+#import "XRUser.h"
+#import "XRUserProfile.h"
 
 @interface XRMemberPointViewController ()
 
@@ -23,9 +26,12 @@
 }
 
 - (void)fetchData {
-    [XRUserService fetchMemberPoint:^(id param) {
-
-    } failure:nil]; 
+    [XRLoginBiz refreshUserProfile:^{
+        self.pointSum.text = [NSString stringWithFormat:@"您的积分为%@",[XRUser sharedXRUser].profile.score];
+    }];
+    [XRUserService fetchActivity:^(id param) {
+        self.tableViewData = param;
+    } failure:nil];
 }
 
 @end
