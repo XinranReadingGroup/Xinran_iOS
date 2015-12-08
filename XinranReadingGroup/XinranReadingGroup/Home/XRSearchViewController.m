@@ -77,6 +77,7 @@
 
 #pragma mark - SearchBar Delegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
 	//清空上一次的搜索结果
 	self.biz.bookList = [[XRBookListEntity alloc] init];
 	[self.tableView reloadData];
