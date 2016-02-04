@@ -62,6 +62,7 @@
 		BD8E39401B0226D700AF1CFD /* XRBookDetailContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E393F1B0226D700AF1CFD /* XRBookDetailContentCell.m */; };
 		BD8E39431B0226E800AF1CFD /* XRBookDetailPublisherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E39421B0226E800AF1CFD /* XRBookDetailPublisherCell.m */; };
 		BD8E39461B0226FD00AF1CFD /* XRBookDetailDonatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E39451B0226FD00AF1CFD /* XRBookDetailDonatorCell.m */; };
+		BD9506351C62440900A78864 /* XRBookOwnerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9506341C62440900A78864 /* XRBookOwnerEntity.m */; };
 		BDA01D9F1BD369FA004E6304 /* XRBookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA01D9E1BD369FA004E6304 /* XRBookCollectionViewCell.m */; };
 		BDA01DA21BD383B5004E6304 /* XRBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA01DA11BD383B5004E6304 /* XRBookCollectionViewController.m */; };
 		BDA01DA51BD39295004E6304 /* XRDonateBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA01DA41BD39295004E6304 /* XRDonateBookCollectionViewController.m */; };
@@ -213,6 +214,8 @@
 		BD8E39421B0226E800AF1CFD /* XRBookDetailPublisherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailPublisherCell.m; sourceTree = "<group>"; };
 		BD8E39441B0226FD00AF1CFD /* XRBookDetailDonatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailDonatorCell.h; sourceTree = "<group>"; };
 		BD8E39451B0226FD00AF1CFD /* XRBookDetailDonatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailDonatorCell.m; sourceTree = "<group>"; };
+		BD9506331C62440900A78864 /* XRBookOwnerEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookOwnerEntity.h; sourceTree = "<group>"; };
+		BD9506341C62440900A78864 /* XRBookOwnerEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookOwnerEntity.m; sourceTree = "<group>"; };
 		BDA01D9D1BD369FA004E6304 /* XRBookCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookCollectionViewCell.h; sourceTree = "<group>"; };
 		BDA01D9E1BD369FA004E6304 /* XRBookCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookCollectionViewCell.m; sourceTree = "<group>"; };
 		BDA01DA01BD383B5004E6304 /* XRBookCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookCollectionViewController.h; sourceTree = "<group>"; };
@@ -643,6 +646,8 @@
 				0992FA711B0E0D41009CD369 /* XRBookRecordEntity.m */,
 				72349577E7C2340F253B4DBB /* XRUserProfile.m */,
 				72349907DBD119B6F701C713 /* XRUserProfile.h */,
+				BD9506331C62440900A78864 /* XRBookOwnerEntity.h */,
+				BD9506341C62440900A78864 /* XRBookOwnerEntity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -915,6 +920,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1D63E61ADFFF8100CCE363 /* XRShareAssistant.m in Sources */,
+				BD9506351C62440900A78864 /* XRBookOwnerEntity.m in Sources */,
 				0992FA721B0E0D41009CD369 /* XRBookRecordEntity.m in Sources */,
 				BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */,
 				BDE0063C1B162A2B00FBC8DB /* XRDonateViewController.m in Sources */,

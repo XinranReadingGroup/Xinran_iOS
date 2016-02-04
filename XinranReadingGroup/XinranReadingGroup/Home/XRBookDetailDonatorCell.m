@@ -10,15 +10,14 @@
 #import "XRBookRecordEntity.h"
 #import <UIImageView+WebCache.h>
 #import <NSNumber+ZYCore.h>
+#import "XRBookOwnerEntity.h"
+#import "XRBookDetailEntity.h"
 
 @implementation XRBookDetailDonatorCell
 
-- (void)setData:(XRBookRecordEntity *)data {
-	_data = data;
-	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:@"http://fd.topitme.com/d/8b/d4/1187454768482d48bdo.jpg"]];
-//	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:self.data.offStockDate.]]
-	_donatorName.text = _data.ownerUserId.stringValue;
-	_donateDate.text = [_data.onStockDate toDefaultDataString];
+- (void)setData:(XRBookDetailEntity *)data {
+    _data = data;
+    [self updateUI];
 }
 
 - (void)awakeFromNib {
@@ -33,6 +32,16 @@
 
 + (CGFloat)cellHeight {
 	return 77;
+}
+
+- (void)updateUI {
+	//TODO 用户图片的信息也木有
+	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:@"http://fd.topitme.com/d/8b/d4/1187454768482d48bdo.jpg"]];
+//	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:self.data.offStockDate.]]
+	_donatorName.text = self.data.ownerUserVO.nickName;
+	//TODO 日期数据还没有
+	_donateDate.text = [self.data.onOffStockRecord.onStockDate toDefaultDataString];
+
 }
 
 @end

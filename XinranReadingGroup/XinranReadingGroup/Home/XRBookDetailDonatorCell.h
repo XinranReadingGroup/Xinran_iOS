@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@class XRBookRecordEntity;
+@class XRBookDetailEntity;
 
 @interface XRBookDetailDonatorCell : UITableViewCell
 
-@property (nonatomic, strong) XRBookRecordEntity *data;
+@property (nonatomic, strong) XRBookDetailEntity *data;
 @property (weak, nonatomic) IBOutlet UIImageView *donatorAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *donatorName;
 @property (weak, nonatomic) IBOutlet UILabel *donateDate;
 
 + (CGFloat)cellHeight;
+- (void)updateUI;
 
 @end

@@ -232,7 +232,7 @@
 		case 3:
 		{
 			XRBookDetailDonatorCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailDonatorCell" forIndexPath:indexPath];
-			cell.data = self.biz.bookData.onOffStockRecord;
+            cell.data = self.biz.bookData;
 			return cell;
 		}
 		break;
