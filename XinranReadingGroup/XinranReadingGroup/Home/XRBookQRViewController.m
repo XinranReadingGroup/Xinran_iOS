@@ -89,7 +89,7 @@
 - (void)scanFinish:(NSString *)result {
     [super scanFinish:result];
     [SVProgressHUD showWithStatus:LOCALSTRING(@"扫码成功，书籍信息获取中……")];
-    [XRBookService bookDetailWithBookID:[result toNumber] success: ^(id param) {
+    [XRBookService bookDetailWithBookID:result success: ^(id param) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
         });
