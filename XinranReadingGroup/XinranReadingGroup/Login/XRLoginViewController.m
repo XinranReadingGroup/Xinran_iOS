@@ -10,6 +10,7 @@
 #import "XRLoginBiz.h"
 #import "XRTabbarController.h"
 #import "XRTools.h"
+#import "SVProgressHUD.h"
 #import <ZYCoreDefine.h>
 #import <UIViewController+ZYCore.h>
 #import <NSString+ZYCore.h>
@@ -51,16 +52,20 @@
     }
     
     self.loginButton.enabled = NO;
+    [SVProgressHUD show];
     NSString *userNameStr = self.userName.text;
     NSString *passwordStr = self.password.text;
     [XRLoginBiz login:userNameStr password:passwordStr success:^{
         self.loginButton.enabled = YES;
         //跳转到主页
         dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
             [self.view endEditing:YES];
             [XRTools showTabbarViewController:self animated:NO];
         });
     } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:@"登录失败,请重试"];
         self.loginButton.enabled = YES;
     }];
 }
