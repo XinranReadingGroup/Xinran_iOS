@@ -30,7 +30,7 @@
 }
 
 + (void)showTabbarViewController:(UIViewController *)currentViewController animated:(BOOL)animated {
-    XRTabbarController *tabbarController = [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRTabbarController class]) withStoryboardName:nil];
+    XRTabbarController *tabbarController = (XRTabbarController *)[UIViewController viewControllerWithIdentifer:NSStringFromClass([XRTabbarController class]) withStoryboardName:nil];
     [UIApplication sharedApplication].delegate.window.rootViewController = tabbarController;
 }
 

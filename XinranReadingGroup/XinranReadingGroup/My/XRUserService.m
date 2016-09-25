@@ -83,7 +83,7 @@
 }
 
 + (void)fetchActivity:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    [[XRNetwork sharedXRNetwork] GETWithToken:@"activities" param:@{@"status":@"available"} withEntityName:nil success:^(id param) {
+    [[XRNetwork sharedXRNetwork] GETWithToken:@"activities" param:@{@"status":@"available",@"pageSize":@"10000",@"pageNo":@"1"} withEntityName:nil success:^(id param) {
 
     } failure:failure];
 }
