@@ -16,7 +16,7 @@ target 'XinranReadingGroup' do
     pod 'OAStackView','0.1.0'
     pod 'Bugtags'
     pod 'FDStackView','1.0-alpha'
-    pod 'CocoaLumberjack'
+    pod 'CocoaLumberjack','2.2.0'
     pod 'DZNEmptyDataSet'
     pod 'Mantle'
     pod 'PINCache'
