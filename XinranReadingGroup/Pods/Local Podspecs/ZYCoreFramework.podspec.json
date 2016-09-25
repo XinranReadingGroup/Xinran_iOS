@@ -16,7 +16,7 @@
   "requires_arc": true,
   "dependencies": {
     "UITableView+FDTemplateLayoutCell": [
-      "1.3"
+
     ]
   }
 }

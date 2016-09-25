@@ -1,1 +1,1 @@
-../../../../../../../ZYCoreFramework/Core/ZYConfig.h
+../../../ZYCoreFramework/Core/ZYConfig.h

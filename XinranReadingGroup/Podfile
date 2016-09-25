@@ -1,26 +1,28 @@
-source 'git@github.com:CocoaPods/Specs.git'
+source 'git@gitlab.alibaba-inc.com:alipods/specs-mirror.git'
 
-platform :ios, '7.0'
+platform :ios, '8.0'
 
 xcodeproj 'XinranReadingGroup'
 
-pod 'AFNetworking','2.6.0'
-pod 'JSONModel', '~> 1.1.0'
-pod 'SSKeychain','1.2.2'
-pod 'SDWebImage','3.7.1'
-pod 'BlocksKit','2.2.5'
-pod 'SVProgressHUD'
-pod 'Masonry','0.6.3'
-pod 'Reveal-iOS-SDK', :configurations => ['Debug']
-pod 'OAStackView','0.1.0'
-pod 'Bugtags'
-pod 'FDStackView','1.0-alpha'
-pod 'CocoaLumberjack'
-pod 'DZNEmptyDataSet'
-pod 'Mantle'
-pod 'PINCache'
+target 'XinranReadingGroup' do
+    pod 'AFNetworking','2.6.0'
+    pod 'JSONModel', '~> 1.1.0'
+    pod 'SSKeychain','1.2.2'
+    pod 'SDWebImage','3.7.1'
+    pod 'BlocksKit','2.2.5'
+    pod 'SVProgressHUD'
+    pod 'Masonry','0.6.3'
+    pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+    pod 'OAStackView','0.1.0'
+    pod 'Bugtags'
+    pod 'FDStackView','1.0-alpha'
+    pod 'CocoaLumberjack'
+    pod 'DZNEmptyDataSet'
+    pod 'Mantle'
+    pod 'PINCache'
 
-#pod 'ZYCoreFramework',:git=>'git@bitbucket.org:yun_zeng/zycoreframework.git'
-pod 'ZYCoreFramework',:path=>'~/Developer/Code/Mine/iOS/ZYCoreFramework'
-#pod 'ZYCoreFramework',:path=>'~/Developer/Zeng Yun/zycoreframework'
-pod 'DUQRAssistant',:path=>'~/Developer/code/mine/ios/DUQRAssistant'
+    pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+
+    pod 'ZYCoreFramework',:git=>'git@github.com:zengyun-programmer/ZYCoreFramework.git',:tag=>'0.1'
+    pod 'DUQRAssistant',:git=>'git@github.com:zengyun-programmer/DUQRAssistant.git',:branch=>'develop'
+end

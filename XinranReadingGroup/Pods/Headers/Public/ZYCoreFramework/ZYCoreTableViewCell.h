@@ -1,1 +1,1 @@
-../../../../../../../ZYCoreFramework/Core/ZYCoreTableViewCell.h
+../../../ZYCoreFramework/Core/ZYCoreTableViewCell.h
