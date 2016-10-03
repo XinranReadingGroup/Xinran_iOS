@@ -8,12 +8,14 @@
 
 #import "XRResultBaseViewController.h"
 #import "ZYCoreViewController.h"
+#import "XRBookRecordEntity.h"
 
 @class XRBookEntity;
 
 @interface XRDonateResultViewController : ZYCoreViewController
 
 @property (nonatomic, strong) NSString *ISBN;
-@property (nonatomic) XRBookEntity *bookData;
+@property (nonatomic) XRBookRecordEntity *donateBookDetail;
+@property (nonatomic) BOOL success;//是否成功捐书
 
 @end

@@ -20,18 +20,18 @@
 
 @interface XRDonateResultViewController ()
 
-@property (nonatomic) XRBookRecordEntity *donateBookDetail;
-
 @end
 
 @implementation XRDonateResultViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /*
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
     {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
+     */
     [self setupUI];
     [self submitDonateBook];
 }
@@ -42,22 +42,9 @@
 }
 
 - (void)submitDonateBook {
-    if (self.bookData) {
-        [SVProgressHUD showWithStatus:LOCALSTRING(@"捐书进行中")];
-        [XRBookService donateBook:self.bookData.bookID success:^(id param) {
-            self.donateBookDetail = (XRBookRecordEntity *)param;
-            dispatch_async(dispatch_get_main_queue(),^{
-                [SVProgressHUD dismiss];
-                [self showSuccessView];
-            });
-        } failure:^(NSError *error) {
-            dispatch_async(dispatch_get_main_queue(),^{
-                [SVProgressHUD dismiss];
-                [self showFailView];
-            });
-        }];
-    }
-    else {
+    if (self.success) {
+        [self showSuccessView];
+    } else {
         [self showFailView];
     }
 }
@@ -71,7 +58,7 @@
     [self.view addSubview:resultIcon];
     [resultIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(resultIcon.image.size);
-        make.top.equalTo(self.view).offset(50);
+        make.top.equalTo(self.view).offset(50+64);
         make.centerX.equalTo(self.view);
     }];
 
@@ -121,7 +108,7 @@
     [self.view addSubview:resultIcon];
     [resultIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(resultIcon.image.size);
-        make.top.equalTo(self.view).offset(50);
+        make.top.equalTo(self.view).offset(50+64);
         make.centerX.equalTo(self.view);
     }];
 

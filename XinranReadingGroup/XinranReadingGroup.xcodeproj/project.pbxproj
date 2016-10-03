@@ -32,6 +32,7 @@
 		723491E59D0C39670D9238B0 /* XRUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349577E7C2340F253B4DBB /* XRUserProfile.m */; };
 		723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 723493823B37038BD12BD629 /* XRNetwork+Token.m */; };
 		72349AABBDE4A909A565D634 /* XRTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D7B0E9E480D7B52EFF4 /* XRTools.m */; };
+		9870E0601DA24E29004F31EE /* XRDonateRelationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870E05F1DA24E29004F31EE /* XRDonateRelationViewController.m */; };
 		BD0D91CA1BF37C1D006E722B /* XRShareBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */; };
 		BD10B3D31C0343DB00944045 /* XRBorrowRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10B3D21C0343DB00944045 /* XRBorrowRecordViewController.m */; };
 		BD10B3D61C03442700944045 /* XRBorrowRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10B3D51C03442700944045 /* XRBorrowRecordCell.m */; };
@@ -147,6 +148,8 @@
 		72349D7B0E9E480D7B52EFF4 /* XRTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRTools.m; sourceTree = "<group>"; };
 		72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XRSetup.m"; sourceTree = "<group>"; };
 		72349E888B55E3230AF52AFA /* XRNetworkErrorAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNetworkErrorAssistant.m; sourceTree = "<group>"; };
+		9870E05E1DA24E29004F31EE /* XRDonateRelationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRDonateRelationViewController.h; sourceTree = "<group>"; };
+		9870E05F1DA24E29004F31EE /* XRDonateRelationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRDonateRelationViewController.m; sourceTree = "<group>"; };
 		B03EBA5BEB04718E3DAEDC2E /* Pods-XinranReadingGroup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XinranReadingGroup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup.debug.xcconfig"; sourceTree = "<group>"; };
 		BBB66382AB01B716B8E82731 /* Pods-XinranReadingGroup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XinranReadingGroup.release.xcconfig"; path = "Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup.release.xcconfig"; sourceTree = "<group>"; };
 		BD0D91C81BF37C1D006E722B /* XRShareBookCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRShareBookCollectionViewController.h; sourceTree = "<group>"; };
@@ -688,6 +691,8 @@
 				0988B4B81B0D9BEC0004DFD8 /* XRResultBaseViewController.m */,
 				BDE0063A1B162A2B00FBC8DB /* XRDonateViewController.h */,
 				BDE0063B1B162A2B00FBC8DB /* XRDonateViewController.m */,
+				9870E05E1DA24E29004F31EE /* XRDonateRelationViewController.h */,
+				9870E05F1DA24E29004F31EE /* XRDonateRelationViewController.m */,
 				BD41EBD21B16936E003A04BA /* XRDonateResultViewController.h */,
 				BD41EBD31B16936E003A04BA /* XRDonateResultViewController.m */,
 				BDE1B5C01B739A220077310D /* XRReturnBookResultViewController.h */,
@@ -989,6 +994,7 @@
 				BDEB8D0C1BB69EEF0072EB6C /* XRQRViewController+ExtraFunction.m in Sources */,
 				BD8E39431B0226E800AF1CFD /* XRBookDetailPublisherCell.m in Sources */,
 				BD41EBD41B16936E003A04BA /* XRDonateResultViewController.m in Sources */,
+				9870E0601DA24E29004F31EE /* XRDonateRelationViewController.m in Sources */,
 				09DC13381AD39D7700CE8277 /* AppDelegate.m in Sources */,
 				BD8E39401B0226D700AF1CFD /* XRBookDetailContentCell.m in Sources */,
 				BD72727C1C107A0B00509D4D /* XRBookDetailHeaderView.m in Sources */,

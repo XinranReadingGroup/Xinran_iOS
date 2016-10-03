@@ -13,6 +13,7 @@
 #import "UIButton+WebCache.h"
 #import "XRBookEntity.h"
 #import "XRBookService.h"
+#import "XRDonateRelationViewController.h"
 
 @interface XREditBookInfoViewController ()
 
@@ -31,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setRightBarItemWithString:LOCALSTRING(@"提交") target:self action:@selector(submitBookData)];
+    [self setRightBarItemWithString:LOCALSTRING(@"关联二维码") target:self action:@selector(submitBookData)];
     [self setupTableView];
 }
 
@@ -70,9 +71,12 @@
     }
 
     //上传书籍信息
-    if (self.sumbitCallback) {
-        self.sumbitCallback(self.bookData);
-    }
+//    if (self.sumbitCallback) {
+//        self.sumbitCallback(self.bookData);
+//    }
+    XRDonateRelationViewController *donateRelationController = [XRDonateRelationViewController new];
+    donateRelationController.bookData = self.bookData;
+    [self.navigationController pushViewController:donateRelationController animated:YES];
 }
 
 - (void)uploadBook {

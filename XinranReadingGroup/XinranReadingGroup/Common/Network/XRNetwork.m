@@ -66,7 +66,6 @@ static BOOL const isTest = NO;
             else {
                 success([param valueForKey:@"data"]);
             }
-            success(entity);
         }
 	} failure:failure];
 }

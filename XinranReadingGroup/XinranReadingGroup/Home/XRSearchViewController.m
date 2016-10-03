@@ -94,7 +94,8 @@
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-	[self.navigationController popViewControllerAnimated:NO];
+    [self.searchBar resignFirstResponder];
+	[self.navigationController popViewControllerAnimated:YES];
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {

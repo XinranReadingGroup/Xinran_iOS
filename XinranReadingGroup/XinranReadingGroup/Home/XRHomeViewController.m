@@ -66,12 +66,12 @@
 //捐书
 - (IBAction)donateButtonTapped:(UIButton *)sender {
 	XRDonateViewController *donateViewController = [[XRDonateViewController alloc] init];
+    donateViewController.view.backgroundColor = [UIColor whiteColor];
 	donateViewController.title = LOCALSTRING(@"捐书");
 	donateViewController.hidesBottomBarWhenPushed = YES;
 	donateViewController.sumitCallBack = ^(XRBookEntity *bookData) {
 		//捐书之后
 		XRDonateResultViewController *donateResultViewController = [XRDonateResultViewController new];
-		donateResultViewController.bookData = bookData;
 		dispatch_async(dispatch_get_main_queue(),^{
 			[self.navigationController pushViewController:donateResultViewController animated:YES];
 		});

@@ -26,9 +26,11 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    /*
 	if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
 		self.edgesForExtendedLayout = UIRectEdgeNone;
 	}
+    */
     [self setupUI];
 }
 
@@ -42,7 +44,7 @@
     self.centerView = [[UIView alloc] init];
     [self.view addSubview:self.centerView];
     __weak UIView *weakCenterView = self.centerView;
-    CGFloat offSet = 150;
+    CGFloat offSet = 150 + 60;
     [self.centerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).with.offset(offSet - 80);
         make.bottom.equalTo(self.view).with.offset(- offSet - 80);
