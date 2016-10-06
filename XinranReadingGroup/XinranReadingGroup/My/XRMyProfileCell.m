@@ -41,7 +41,7 @@
     stackView.spacing = 15;
     [self.contentView addSubview:stackView];
     [stackView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.mas_equalTo(UIEdgeInsetsMake(10, 15, 10, 15));
+        //make.centerY.mas_equalTo(UIEdgeInsetsMake(10, 15, 10, 15));
         make.edges.equalTo(self.contentView).offset(15);
     }];
 }

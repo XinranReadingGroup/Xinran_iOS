@@ -32,7 +32,7 @@ static CGFloat const HEIGHT_TITLE = 30;
 }
 
 - (void)setupUI {
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    //self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = RGBCOLOR(242, 242, 242);
     [self setupTitleView];
     [self setupColletionView];
@@ -43,7 +43,7 @@ static CGFloat const HEIGHT_TITLE = 30;
     titleBg.backgroundColor = RGBACOLOR(0,0,0,0.8);
     [self.view addSubview:titleBg];
     [titleBg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(@0);
+        make.top.mas_equalTo(@64);
         make.height.mas_equalTo([NSNumber numberWithFloat:HEIGHT_TITLE]);
         make.leading.mas_equalTo(@0);
         make.trailing.mas_equalTo(@0);
@@ -76,7 +76,7 @@ static CGFloat const HEIGHT_TITLE = 30;
     [self.view addSubview:self.collectionView];
 
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(HEIGHT_TITLE + 10, 10, 10, 10));
+        make.edges.equalTo(self.view).with.insets(UIEdgeInsetsMake(HEIGHT_TITLE + 10 + 64, 10, 10, 10));
     }];
 }
 
