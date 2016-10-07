@@ -14,6 +14,7 @@
 #import "XRDonateBookCollectionViewController.h"
 #import "XRShareBookCollectionViewController.h"
 #import "XRBorrowRecordViewController.h"
+#import "XRProfileViewController.h"
 #import "UIViewController+ZYCore.h"
 #import "XRMemberPointViewController.h"
 #import "XRTools.h"
@@ -37,6 +38,9 @@
     //用户信息
     ZYCoreCellInfo *userInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRMyProfileCell class] withCellHeight:80. withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
         //TODO 点击头像
+        XRProfileViewController *profileController = [XRProfileViewController new];
+        profileController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:profileController animated:YES];
     }];
     userInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
