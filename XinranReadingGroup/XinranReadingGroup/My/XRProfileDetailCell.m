@@ -68,8 +68,13 @@
     self.titleLabel.text = [XRProfileDetailCell titleForType:type];
     if (type == ProfileDetailTypeAvatar) {
         self.detailImageView.hidden = NO;
+        self.detailLabel.hidden = YES;
+    } else if (type == ProfileDetailTypePassword) {
+        self.detailImageView.hidden = YES;
+        self.detailLabel.hidden = YES;
     } else {
         self.detailImageView.hidden = YES;
+        self.detailLabel.hidden = NO;
     }
 }
 
