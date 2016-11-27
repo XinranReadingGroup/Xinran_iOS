@@ -35,6 +35,8 @@
 		9870E0601DA24E29004F31EE /* XRDonateRelationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870E05F1DA24E29004F31EE /* XRDonateRelationViewController.m */; };
 		9879A6CD1DEA8F2A00645583 /* XRProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9879A6CB1DEA8F2A00645583 /* XRProfileEditViewController.m */; };
 		9879A6CE1DEA8F2A00645583 /* XRProfileEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9879A6CC1DEA8F2A00645583 /* XRProfileEditViewController.xib */; };
+		9879A6D21DEB2E3700645583 /* XRFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9879A6D01DEB2E3700645583 /* XRFeedbackViewController.m */; };
+		9879A6D31DEB2E3700645583 /* XRFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9879A6D11DEB2E3700645583 /* XRFeedbackViewController.xib */; };
 		98BAE6EB1DA63F0300D8A3BB /* XRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98BAE6EA1DA63F0300D8A3BB /* XRProfileViewController.m */; };
 		98BAE6EE1DA6411900D8A3BB /* XRProfileDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98BAE6ED1DA6411900D8A3BB /* XRProfileDetailCell.m */; };
 		BD0D91CA1BF37C1D006E722B /* XRShareBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */; };
@@ -157,6 +159,9 @@
 		9879A6CA1DEA8F2A00645583 /* XRProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRProfileEditViewController.h; sourceTree = "<group>"; };
 		9879A6CB1DEA8F2A00645583 /* XRProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRProfileEditViewController.m; sourceTree = "<group>"; };
 		9879A6CC1DEA8F2A00645583 /* XRProfileEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XRProfileEditViewController.xib; sourceTree = "<group>"; };
+		9879A6CF1DEB2E3700645583 /* XRFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRFeedbackViewController.h; sourceTree = "<group>"; };
+		9879A6D01DEB2E3700645583 /* XRFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRFeedbackViewController.m; sourceTree = "<group>"; };
+		9879A6D11DEB2E3700645583 /* XRFeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XRFeedbackViewController.xib; sourceTree = "<group>"; };
 		98BAE6E91DA63F0300D8A3BB /* XRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRProfileViewController.h; sourceTree = "<group>"; };
 		98BAE6EA1DA63F0300D8A3BB /* XRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRProfileViewController.m; sourceTree = "<group>"; };
 		98BAE6EC1DA6411900D8A3BB /* XRProfileDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRProfileDetailCell.h; sourceTree = "<group>"; };
@@ -505,6 +510,9 @@
 			children = (
 				BD8DFE111AE00E60003FAF06 /* XRMoreTableViewController.h */,
 				BD8DFE121AE00E60003FAF06 /* XRMoreTableViewController.m */,
+				9879A6CF1DEB2E3700645583 /* XRFeedbackViewController.h */,
+				9879A6D01DEB2E3700645583 /* XRFeedbackViewController.m */,
+				9879A6D11DEB2E3700645583 /* XRFeedbackViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -853,6 +861,7 @@
 				BD1D64071AE006D300CCE363 /* UMSCommentInputController.xib in Resources */,
 				BD1D64061AE006D300CCE363 /* UMSCommentDetailController.xib in Resources */,
 				09DC13391AD39D7700CE8277 /* Info.plist in Resources */,
+				9879A6D31DEB2E3700645583 /* XRFeedbackViewController.xib in Resources */,
 				09DC13311AD39BB500CE8277 /* LaunchScreen.xib in Resources */,
 				BD1D640E1AE006D300CCE363 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				BD1D64081AE006D300CCE363 /* UMSCommentInputControlleriPad.xib in Resources */,
@@ -960,6 +969,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1D63E61ADFFF8100CCE363 /* XRShareAssistant.m in Sources */,
+				9879A6D21DEB2E3700645583 /* XRFeedbackViewController.m in Sources */,
 				BD9506351C62440900A78864 /* XRBookOwnerEntity.m in Sources */,
 				0992FA721B0E0D41009CD369 /* XRBookRecordEntity.m in Sources */,
 				BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */,
