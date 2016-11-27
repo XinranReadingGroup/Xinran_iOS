@@ -103,7 +103,8 @@ static CGFloat const HEIGHT_TITLE = 30;
             break;
         case kBookTypeShare:
         {
-            XRSharedBookDetailController *detailViewController = (XRSharedBookDetailController *)[UIViewController viewControllerWithIdentifer:@"XRBookDetailBaseViewControllerr" withStoryboardName:@"Main"];
+            //XRSharedBookDetailController *detailViewController = (XRSharedBookDetailController *)[UIViewController viewControllerWithIdentifer:@"XRBookDetailBaseViewControllerr" withStoryboardName:@"Main"];
+            XRSharedBookDetailController *detailViewController = [[XRSharedBookDetailController alloc] init];
             detailViewController.bookData = bookDetailEntity;
             [self.navigationController pushViewController:detailViewController animated:YES];
         }

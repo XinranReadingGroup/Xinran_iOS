@@ -8,6 +8,8 @@
 
 #import "XRProfileDetailCell.h"
 #import "ZYCoreCellInfo.h"
+#import "XRUser.h"
+#import "XRUserProfile.h"
 
 #import <Masonry.h>
 #import <ZYCoreFramework/ZYCoreDefine.h>
@@ -30,7 +32,6 @@
     self.titleLabel = [[UILabel alloc] init];
     self.titleLabel.font = [UIFont systemFontOfSize:15];
     self.titleLabel.textColor = RGBACOLOR(75, 75, 75, 1);
-    self.titleLabel.text = @"测试标题";
     [self.contentView addSubview:self.titleLabel];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -41,7 +42,6 @@
     self.detailLabel = [[UILabel alloc] init];
     self.detailLabel.font = [UIFont systemFontOfSize:15];
     self.detailLabel.textColor = RGBACOLOR(140, 140, 140, 1);
-    self.detailLabel.text = @"测试文本";
     [self.contentView addSubview:self.detailLabel];
     
     [self.detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -76,6 +76,7 @@
         self.detailImageView.hidden = YES;
         self.detailLabel.hidden = NO;
     }
+    self.detailLabel.text = [XRProfileDetailCell detailForType:type];
 }
 
 + (NSString *)titleForType:(ProfileDetailType)type
@@ -101,6 +102,31 @@
             break;
     }
     return title;
+}
+
++ (NSString *)detailForType:(ProfileDetailType)type
+{
+    NSString *detail = @"";
+    switch (type) {
+        case ProfileDetailTypeAvatar:
+            detail = @"";
+            break;
+        case ProfileDetailTypeLocation:
+            detail = [XRUser sharedXRUser].profile.area;
+            break;
+        case ProfileDetailTypeNickName:
+            detail = [XRUser sharedXRUser].profile.nickName;
+            break;
+        case ProfileDetailTypePassword:
+            detail = @"";
+            break;
+        case ProfileDetailTypeIntroduction:
+            detail = [XRUser sharedXRUser].profile.signature;
+            break;
+        default:
+            break;
+    }
+    return detail;
 }
 
 @end

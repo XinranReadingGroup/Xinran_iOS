@@ -10,7 +10,7 @@
 #import <ZYCoreDefine.h>
 #import <AFNetworking.h>
 #import "XREntity.h"
-#import "XRNetworkErrorAssistant.h"
+//#import "XRNetworkErrorAssistant.h"
 
 static NSString *const defaultXRBaseURL = @"http://www.xinrandushuba.com/mobile";
 static NSString *const defaultTestBaseURL = @"http://10.18.219.152/mobile";
@@ -80,7 +80,7 @@ static BOOL const isTest = NO;
 			}
 		}
 		else {
-            [XRNetworkErrorAssistant handleErrorFromServer:responseObject];
+            //[XRNetworkErrorAssistant handleErrorFromServer:responseObject];
             NSInteger code = [responseObject valueForKey:@"code"] ? [[responseObject valueForKey:@"code"] integerValue] : 0;
             NSError *error = [NSError errorWithDomain:operation.request.URL.host code:code userInfo:
                               @{KEY_NETWORK_ERROR_MESSAGE:
@@ -91,7 +91,7 @@ static BOOL const isTest = NO;
 		}
 	} failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
 	    DLog(@"--------------------------------------------------\n请求失败!!!!!!!!!!!!!!\nurl: \n%@\nerror: \n%@\n--------------------------------------------------", operation.request.URL.absoluteString, error.description);
-		[XRNetworkErrorAssistant handleNetworkFailure:error];
+		//[XRNetworkErrorAssistant handleNetworkFailure:error];
 		if (failure) {
             failure(error);
 		}
@@ -108,7 +108,7 @@ static BOOL const isTest = NO;
 			}
 		}
 		else {
-            [XRNetworkErrorAssistant handleErrorFromServer:responseObject];
+            //[XRNetworkErrorAssistant handleErrorFromServer:responseObject];
             NSInteger code = [responseObject valueForKey:@"code"] ? [[responseObject valueForKey:@"code"] integerValue] : 0;
             NSError *error = [NSError errorWithDomain:operation.request.URL.host code:code userInfo:
                               @{KEY_NETWORK_ERROR_MESSAGE:
@@ -119,7 +119,7 @@ static BOOL const isTest = NO;
 		}
 	} failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
 	    DLog(@"--------------------------------------------------\n请求失败!!!!!!!!!!!!!!\nurl: \n%@\nerror: \n%@\n--------------------------------------------------", operation.request.URL.absoluteString, error.description);
-		[XRNetworkErrorAssistant handleNetworkFailure:error];
+		//[XRNetworkErrorAssistant handleNetworkFailure:error];
 	    if (failure) {
 	        failure(error);
 		}
