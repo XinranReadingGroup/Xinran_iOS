@@ -8,6 +8,7 @@
 
 #import "XRShareAssistant.h"
 #import "UMSocial.h"
+#import "UMFeedback.h"
 #import <ZYCoreDefine.h>
 
 static NSString * const UM_App_key = @"552fc463fd98c5ad320009dc";
@@ -16,6 +17,7 @@ static NSString * const UM_App_key = @"552fc463fd98c5ad320009dc";
 
 + (void)setup {
     [UMSocialData setAppKey:UM_App_key];
+    [UMFeedback setAppkey:UM_App_key];
 }
 
 - (void)showShareSheet:(UIViewController *)target {

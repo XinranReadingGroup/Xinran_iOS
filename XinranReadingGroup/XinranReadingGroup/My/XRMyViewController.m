@@ -54,11 +54,23 @@
     [cellTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"title":obj};
         ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
-            UIViewController *viewController = jumpViewControllers[idx];
-            viewController.hidesBottomBarWhenPushed = YES;
-            dispatch_async(dispatch_get_main_queue(),^{
-                [self.navigationController pushViewController:viewController animated:YES];
-            });
+            UIViewController *viewController = nil;
+            if (idx == 0) {
+                
+            } else if (idx == 1) {
+                
+            } else if (idx == 2) {
+                
+            } else if (idx == 3) {
+                
+            }
+            if (viewController) {
+                viewController.hidesBottomBarWhenPushed = YES;
+                dispatch_async(dispatch_get_main_queue(),^{
+                    [self.navigationController pushViewController:viewController animated:YES];
+                });
+            }
+            
         }];
         cellInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [section2 addObject:cellInfo];
