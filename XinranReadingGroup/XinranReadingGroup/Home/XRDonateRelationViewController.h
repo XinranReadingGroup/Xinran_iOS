@@ -6,10 +6,10 @@
 //  Copyright © 2016年 SnowWolf. All rights reserved.
 //
 
-#import "XRQRViewController.h"
+#import "XRBookQRViewController.h"
 #import "XRBookEntity.h"
 
-@interface XRDonateRelationViewController : XRQRViewController
+@interface XRDonateRelationViewController : XRBookQRViewController
 
 @property (nonatomic) XRBookEntity *bookData;
 

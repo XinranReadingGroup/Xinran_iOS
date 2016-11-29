@@ -26,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setObjectTypes:@[AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeEAN8Code]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,35 +35,7 @@
 
 - (void)setupUI {
     [super setupUI];
-    self.notice = LOCALSTRING(@"将二位码放入框内，即可自动扫描");
-    [self addLightLine];
-    [self addInputButton];
-}
-
-- (void)addLightLine {
-    UIImageView *lightLine = [[UIImageView alloc] init];
-    lightLine.image = [[UIImage imageNamed:@"qr_light_line"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 40, 0, 40)];
-    __weak UIImageView *weakLightLine = lightLine;
-    [self.centerView addSubview:lightLine];
-    [lightLine mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(self.centerView).offset(-10);
-        make.height.mas_equalTo(weakLightLine.image.size.height);
-        make.center.equalTo(self.centerView);
-    }];
-}
-
-- (void)addInputButton {
-    UIButton *inputButton = [UIButton blueRoundedRectButtonWithTitle:LOCALSTRING(@"手动输入")];
-    [self.view addSubview:inputButton];
-    __weak UIButton *weakInputbutton = inputButton;
-    [inputButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        __strong UIButton *strongInputButton = weakInputbutton;
-        make.top.mas_equalTo(self.noticeLabel.mas_bottom).offset(25);
-        make.centerX.equalTo(self.view);
-        make.height.mas_equalTo(strongInputButton.height + 5);
-        make.width.mas_equalTo(strongInputButton.width + strongInputButton.height);
-    }];
-    [inputButton addTarget:self action:@selector(inputButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    self.notice = LOCALSTRING(@"将码放入框内，即可自动扫描");
 }
 
 - (void)scanFinish:(NSString *)result {
