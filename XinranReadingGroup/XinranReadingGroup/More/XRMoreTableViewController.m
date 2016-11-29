@@ -14,6 +14,8 @@
 #import "XRShareAssistant.h"
 #import <ZYTitleCell.h>
 #import <ZYCoreCellInfo.h>
+#import "XRAboutViewController.h"
+#import "UIViewController+ZYCore.h"
 
 @interface XRMoreTableViewController ()
 
@@ -38,15 +40,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        [self.shareAssistant showShareSheet:self];
-    } else if (indexPath.row == 1) {
-        XRFeedbackViewController *feedBack = [[XRFeedbackViewController alloc] initWithNibName:@"XRFeedbackViewController" bundle:nil];
-        [self.navigationController pushViewController:feedBack animated:YES];
-    }
-}
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (indexPath.row == 0) {
+//        [self.shareAssistant showShareSheet:self];
+//    } else if (indexPath.row == 1) {
+//        XRFeedbackViewController *feedBack = [[XRFeedbackViewController alloc] initWithNibName:@"XRFeedbackViewController" bundle:nil];
+//        [self.navigationController pushViewController:feedBack animated:YES];
+//    }
+//}
 
 - (void)setupData {
     ZYCoreCellInfo *shareInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:@{@"title":LOCALSTRING(@"分享给朋友")} withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
@@ -61,7 +63,8 @@
     feedbackInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     ZYCoreCellInfo *aboutInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:@{@"title":LOCALSTRING(@"关于欣然流动读书吧")} withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
-
+        XRAboutViewController *aboutViewController = (XRAboutViewController *)[UIViewController viewControllerWithIdentifer:NSStringFromClass([XRAboutViewController class]) withStoryboardName:@"Main"];
+        [self.navigationController pushViewController:aboutViewController animated:YES];
     }];
     aboutInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
