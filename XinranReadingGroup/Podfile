@@ -20,6 +20,7 @@ target 'XinranReadingGroup' do
     pod 'DZNEmptyDataSet'
     pod 'Mantle'
     pod 'PINCache'
+    pod 'UMengFeedback', '~> 2.3.4'
 
     pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 

@@ -72,6 +72,7 @@ static BOOL const isTest = NO;
 
 - (void)GET:(NSString *)methodName param:(NSDictionary *)param success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
 	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
 	[manager GET:[self urlWithMethodName:methodName] parameters:param success: ^(AFHTTPRequestOperation *operation, id responseObject) {
 	    DLog(@"--------------------------------------------------\n请求成功~~~~~~~~~~~~~\nurl: \n%@ \n返回数据:\n%@\n--------------------------------------------------", operation.request.URL.absoluteString, responseObject);
 		if ([self isRequestSuccess:responseObject]) {

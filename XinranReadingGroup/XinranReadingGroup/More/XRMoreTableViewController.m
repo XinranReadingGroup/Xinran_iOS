@@ -10,6 +10,7 @@
 #import <ZYCoreFramework/ZYTitleCell.h>
 #import <ZYCoreFramework/ZYCoreDefine.h>
 #import "XRMoreTableViewController.h"
+#import "XRFeedbackViewController.h"
 #import "XRShareAssistant.h"
 #import <ZYTitleCell.h>
 #import <ZYCoreCellInfo.h>
@@ -41,6 +42,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         [self.shareAssistant showShareSheet:self];
+    } else if (indexPath.row == 1) {
+        XRFeedbackViewController *feedBack = [[XRFeedbackViewController alloc] initWithNibName:@"XRFeedbackViewController" bundle:nil];
+        [self.navigationController pushViewController:feedBack animated:YES];
     }
 }
 
@@ -51,7 +55,8 @@
     shareInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     ZYCoreCellInfo *feedbackInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:@{@"title":LOCALSTRING(@"意见反馈")} withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
-
+        XRFeedbackViewController *feedBack = [[XRFeedbackViewController alloc] initWithNibName:@"XRFeedbackViewController" bundle:nil];
+        [self.navigationController pushViewController:feedBack animated:YES];
     }];
     feedbackInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 

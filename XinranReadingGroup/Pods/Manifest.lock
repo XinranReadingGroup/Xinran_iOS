@@ -35,7 +35,9 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
-  - Bugtags (1.3.1)
+  - Bugtags (2.0.2):
+    - Bugtags/Core (= 2.0.2)
+  - Bugtags/Core (2.0.2)
   - CocoaLumberjack (2.2.0):
     - CocoaLumberjack/Default (= 2.2.0)
     - CocoaLumberjack/Extensions (= 2.2.0)
@@ -49,9 +51,9 @@ PODS:
   - DZNEmptyDataSet (1.8.1)
   - FDStackView (1.0-alpha)
   - JSONModel (1.1.2)
-  - Mantle (2.0.7):
-    - Mantle/extobjc (= 2.0.7)
-  - Mantle/extobjc (2.0.7)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
   - Masonry (0.6.3)
   - OAStackView (0.1.0)
   - PINCache (2.3)
@@ -62,6 +64,7 @@ PODS:
   - SSKeychain (1.2.2)
   - SVProgressHUD (2.0.3)
   - UITableView+FDTemplateLayoutCell (1.4)
+  - UMengFeedback (2.3.4)
   - ZYCoreFramework (1.0):
     - UITableView+FDTemplateLayoutCell
 
@@ -83,6 +86,7 @@ DEPENDENCIES:
   - SDWebImage (= 3.7.1)
   - SSKeychain (= 1.2.2)
   - SVProgressHUD
+  - UMengFeedback (~> 2.3.4)
   - ZYCoreFramework (from `git@github.com:zengyun-programmer/ZYCoreFramework.git`,
     tag `0.1`)
 
@@ -105,13 +109,13 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: a3151c2bfb2edb038b8ce0da89471b488dcfb96f
   BlocksKit: 6943dac06ef5c352bd28d969aa053d68ac0ba5d6
-  Bugtags: 1b4277bf970f978f51076cd3be2e3a71c39e64ac
+  Bugtags: 911027e39d8356ca17eae46f09c1a03ad2a453d0
   CocoaLumberjack: 6d5dd69b171824df0c9eb2a93aff7cf555c92070
   DUQRAssistant: 07190f7dd017a0df592bb588dd80a9b70dc1c881
   DZNEmptyDataSet: 996c4705866c7f6c0ec825a398169ee7100deae3
   FDStackView: e6dcec57e323ce899857b1724c051c5a9b8c5f35
   JSONModel: bf0f914046ae297431eb92545526d5777d4469bb
-  Mantle: f5cfc40c2fe6beee181d7c880e6e2a5c55ad4087
+  Mantle: 025d4a3c1ae27dc5a7cdcd089b7f043fe6455c06
   Masonry: 2338c7e3fedb913a430a75d187be685b839f8d3a
   OAStackView: ff2526296ec6e74b1f939bd2a4979083370288ee
   PINCache: 224272f5ca15a2e261c330d7a09fa317af099fc6
@@ -120,6 +124,7 @@ SPEC CHECKSUMS:
   SSKeychain: 959805f5cd52ff9611b5d131ef9ab16b8baae731
   SVProgressHUD: f13d117b8bc3f9da2980741a15e0f4eaf5f69a07
   UITableView+FDTemplateLayoutCell: 6a9cb274480dc9ee5e22e4455a2b201cc2ea2bde
+  UMengFeedback: 5283cc0e324dffca4dd54c4abb3cbded56487817
   ZYCoreFramework: 9c5094ed54edc289b87deca8a2c8756213f1e524
 
 COCOAPODS: 0.39.0

@@ -9,6 +9,7 @@
 #import "XRProfileViewController.h"
 #import "ZYCoreCellInfo.h"
 #import "XRProfileDetailCell.h"
+#import "XRProfileEditViewController.h"
 #import <ZYCoreFramework/ZYCoreDefine.h>
 
 @interface XRProfileViewController ()
@@ -34,20 +35,24 @@
 - (void)setupData
 {
     NSArray *firstTypes = @[@(ProfileDetailTypeAvatar),@(ProfileDetailTypeNickName),@(ProfileDetailTypePassword)];
-    NSArray *secondTypes = @[@(ProfileDetailTypeLocation),@(ProfileDetailTypeIntroduction)];
+    NSArray *secondTypes = @[@(ProfileDetailTypeIntroduction)];
 //    NSArray *jumpViewControllers = @[[XRDonateBookCollectionViewController new],
 //                                     [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRBorrowRecordViewController class]) withStoryboardName:@"Main"],
 //                                     [XRShareBookCollectionViewController new],
 //                                     [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRMemberPointViewController class]) withStoryboardName:@"Main"]];
+
     NSMutableArray *section1 = [NSMutableArray array];
     [firstTypes enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"type":obj};
-        ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRProfileDetailCell class] withCellHeight:[XRProfileDetailCell cellHeightForType:[obj integerValue]] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
-//            UIViewController *viewController = jumpViewControllers[idx];
-//            viewController.hidesBottomBarWhenPushed = YES;
-//            dispatch_async(dispatch_get_main_queue(),^{
-//                [self.navigationController pushViewController:viewController animated:YES];
-//            });
+        ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRProfileDetailCell class] withCellHeight:[XRProfileDetailCell cellHeightForType:[obj integerValue]] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, ZYCoreCellInfo *cellData) {
+            ProfileDetailType type = [[cellData.cellData objectForKey:@"type"] integerValue];
+            if (type == ProfileDetailTypeNickName || type == ProfileDetailTypePassword) {
+                XRProfileEditViewController *profileEditController = [[XRProfileEditViewController alloc] initWithNibName:@"XRProfileEditViewController" bundle:nil];
+                profileEditController.cellData = cellData.cellData;
+                [self.navigationController pushViewController:profileEditController animated:YES];
+            } else if (type == ProfileDetailTypeAvatar) {
+                
+            }
         }];
         cellInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [section1 addObject:cellInfo];
@@ -56,12 +61,13 @@
     NSMutableArray *section2 = [NSMutableArray array];
     [secondTypes enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"type":obj};
-        ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRProfileDetailCell class] withCellHeight:[XRProfileDetailCell cellHeightForType:[obj integerValue]] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
-//            UIViewController *viewController = jumpViewControllers[idx];
-//            viewController.hidesBottomBarWhenPushed = YES;
-//            dispatch_async(dispatch_get_main_queue(),^{
-//                [self.navigationController pushViewController:viewController animated:YES];
-//            });
+        ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRProfileDetailCell class] withCellHeight:[XRProfileDetailCell cellHeightForType:[obj integerValue]] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, ZYCoreCellInfo *cellData) {
+            ProfileDetailType type = [[cellData.cellData objectForKey:@"type"] integerValue];
+            if (type == ProfileDetailTypeIntroduction) {
+                XRProfileEditViewController *profileEditController = [[XRProfileEditViewController alloc] initWithNibName:@"XRProfileEditViewController" bundle:nil];
+                profileEditController.cellData = cellData.cellData;
+                [self.navigationController pushViewController:profileEditController animated:YES];
+            }
         }];
         cellInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [section2 addObject:cellInfo];

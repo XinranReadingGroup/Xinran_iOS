@@ -46,19 +46,27 @@
 
     //section 2
     NSArray *cellTitles = @[@"我的捐书记录",@"我的借阅记录",@"我的共享记录",@"我的公益积分"];
-    NSArray *jumpViewControllers = @[[XRDonateBookCollectionViewController new],
-            [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRBorrowRecordViewController class]) withStoryboardName:@"Main"],
-            [XRShareBookCollectionViewController new],
-            [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRMemberPointViewController class]) withStoryboardName:@"Main"]];
     NSMutableArray *section2 = [NSMutableArray array];
     [cellTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"title":obj};
         ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[ZYTitleCell class] withCellHeight:[ZYTitleCell cellHeight] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
-            UIViewController *viewController = jumpViewControllers[idx];
-            viewController.hidesBottomBarWhenPushed = YES;
-            dispatch_async(dispatch_get_main_queue(),^{
-                [self.navigationController pushViewController:viewController animated:YES];
-            });
+            UIViewController *viewController = nil;
+            if (idx == 0) {
+                viewController = [XRDonateBookCollectionViewController new];
+            } else if (idx == 1) {
+                viewController = [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRBorrowRecordViewController class]) withStoryboardName:@"Main"];
+            } else if (idx == 2) {
+                viewController = [XRShareBookCollectionViewController new];
+            } else if (idx == 3) {
+                viewController = [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRMemberPointViewController class]) withStoryboardName:@"Main"];
+            }
+            if (viewController) {
+                viewController.hidesBottomBarWhenPushed = YES;
+                dispatch_async(dispatch_get_main_queue(),^{
+                    [self.navigationController pushViewController:viewController animated:YES];
+                });
+            }
+            
         }];
         cellInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         [section2 addObject:cellInfo];
