@@ -27,3 +27,11 @@ target 'XinranReadingGroup' do
     pod 'ZYCoreFramework',:git=>'git@github.com:zengyun-programmer/ZYCoreFramework.git',:tag=>'0.1'
     pod 'DUQRAssistant',:git=>'git@github.com:zengyun-programmer/DUQRAssistant.git',:branch=>'develop'
 end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '8.0'
+        end
+    end
+end
