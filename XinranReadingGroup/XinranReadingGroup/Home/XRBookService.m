@@ -32,15 +32,15 @@
     }];
 }
 
-+ (void)donateBook:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    [[self class] uploadBook:bookId methodName:@"donate" success:success failure:failure];
++ (void)donateBook:(NSString *)bookId locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[self class] uploadBook:bookId locationID:(NSNumber *)locationID methodName:@"donate" success:success failure:failure];
 }
 
-+ (void)shareBookBookId:(NSString *)bookId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    [[self class] uploadBook:bookId methodName:@"share" success:success failure:failure];
++ (void)shareBookBookId:(NSString *)bookId locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[self class] uploadBook:bookId locationID:(NSNumber *)locationID methodName:@"share" success:success failure:failure];
 }
 
-+ (void)uploadBook:(NSString *)bookId methodName:(NSString *)methodName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
++ (void)uploadBook:(NSString *)bookId locationID:(NSNumber *)locationID methodName:(NSString *)methodName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     if (!bookId) {
         failure(nil);
         return;
@@ -48,9 +48,9 @@
     NSString *url = [NSString stringWithFormat:@"book/%@/%@",methodName,bookId];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setValue:[XRUser sharedXRUser].accessToken forKey:@"accessToken"];
-    [param setValue:[XRUser sharedXRUser].userIdentifier forKey:@"donater"];
+    
     //for test
-    [param setValue:@"1" forKey:@"location"];
+    [param setValue:@"1" forKey:@"locationId"];
     //test end
     
     [[XRNetwork sharedXRNetwork] GET:url param:param withEntityName:NSStringFromClass([XRBookRecordEntity class]) success:^(id param) {

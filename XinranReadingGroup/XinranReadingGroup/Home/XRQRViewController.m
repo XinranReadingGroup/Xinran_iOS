@@ -106,10 +106,11 @@
     //下方的提示文字
     self.noticeLabel = [[UILabel alloc] init];
     [self.view addSubview:self.noticeLabel];
-    self.noticeLabel.font = [UIFont systemFontOfSize:12.];
+    self.noticeLabel.font = [UIFont systemFontOfSize:14.];
     self.noticeLabel.textColor = [UIColor whiteColor];
     self.noticeLabel.backgroundColor = [UIColor clearColor];
     self.noticeLabel.textAlignment = NSTextAlignmentCenter;
+    self.noticeLabel.text = self.notice;
     [self.noticeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.centerView.mas_bottom).offset(25);
         make.height.mas_equalTo(50);

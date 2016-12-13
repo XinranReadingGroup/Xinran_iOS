@@ -34,8 +34,9 @@
 }
 
 - (void)setupUI {
+    self.notice = LOCALSTRING(@"将二维码放入框内，即可自动扫描");
     [super setupUI];
-    self.notice = LOCALSTRING(@"将码放入框内，即可自动扫描");
+    self.title = LOCALSTRING(@"关联二维码");
 }
 
 - (void)scanFinish:(NSString *)result {
@@ -55,7 +56,7 @@
     [SVProgressHUD showWithStatus:LOCALSTRING(@"扫描成功，正在关联二维码")];
     XRDonateResultViewController *donateResultViewController = [XRDonateResultViewController new];
     
-    [XRBookService donateBook:self.bookData.bookID success:^(id param) {
+    [XRBookService donateBook:self.bookData.bookID locationID:@1 success:^(id param) {
         if (param && [param isKindOfClass:[XRBookRecordEntity class]]) {
             donateResultViewController.success = YES;
             donateResultViewController.donateBookDetail = param;

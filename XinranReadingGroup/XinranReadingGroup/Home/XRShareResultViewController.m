@@ -41,7 +41,7 @@
 - (void)submitShareBook {
     if (self.bookData) {
         [SVProgressHUD showWithStatus:LOCALSTRING(@"捐书进行中")];
-        [XRBookService shareBookBookId:self.bookData.bookID success:^(id param) {
+        [XRBookService shareBookBookId:self.bookData.bookID locationID:@1 success:^(id param) {
             self.donateBookDetail = (XRBookRecordEntity *)param;
             dispatch_async(dispatch_get_main_queue(),^{
                 [SVProgressHUD dismiss];

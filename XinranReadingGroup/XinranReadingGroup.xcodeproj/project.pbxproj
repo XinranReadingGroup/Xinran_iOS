@@ -827,10 +827,11 @@
 				TargetAttributes = {
 					BD1AD3C01A98398F009CD8EF = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = FM4A2EYEUJ;
+						DevelopmentTeam = LMU58WLMLD;
 					};
 					BD1AD3DC1A98398F009CD8EF = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = LMU58WLMLD;
 						TestTargetID = BD1AD3C01A98398F009CD8EF;
 					};
 				};
@@ -1144,6 +1145,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LMU58WLMLD;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
@@ -1167,6 +1169,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LMU58WLMLD;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
@@ -1187,6 +1190,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = LMU58WLMLD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1206,6 +1210,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = LMU58WLMLD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -44,9 +44,9 @@
 
 
 - (void)setupUI {
+    [self setupInfo];
     [super setupUI];
     [self setupScanAnimation];
-    [self setupInfo];
 }
 
 - (void)setupScanAnimation {
@@ -75,15 +75,7 @@
 }
 
 - (void)setupInfo {
-    UILabel *textLabel = [[UILabel alloc] init];
-    textLabel.text = LOCALSTRING(@"将书背面的享阅二维码放入框中，即可扫描");
-    textLabel.font = [UIFont systemFontOfSize:14.];
-    textLabel.textColor = [UIColor whiteColor];
-    [self.view addSubview:textLabel];
-    [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.centerView.mas_bottom).offset(30);
-        make.centerX.equalTo(self.centerView);
-    }];
+    self.notice = LOCALSTRING(@"将书背面的享阅二维码放入框中，即可扫描");
 }
 
 - (void)scanFinish:(NSString *)result {

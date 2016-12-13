@@ -26,12 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    /*
-    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
-    {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    }
-     */
+    self.title = LOCALSTRING(@"捐书结果");
     [self setupUI];
     [self submitDonateBook];
 }
@@ -71,6 +66,7 @@
         make.centerX.equalTo(resultIcon);
     }];
 
+    /**
     UIImage *QRImage = [DUQRAssistant createQRImage:self.donateBookDetail.bookID withWidth:150];
     UIImageView *QRImageView = [[UIImageView alloc] initWithImage:QRImage];
     [self.view addSubview:QRImageView];
@@ -89,22 +85,22 @@
         make.height.mas_equalTo(strongPrintButton.height + 5);
         make.width.mas_equalTo(strongPrintButton.width + strongPrintButton.height);
     }];
+     **/
     UIButton *continueButton = [UIButton redRoundedRectButtonWithTitle:LOCALSTRING(@"继续捐书")];
     [self.view addSubview:continueButton];
     [continueButton addTarget:self action:@selector(continueDonateBookTapped:) forControlEvents:UIControlEventTouchUpInside];
     __weak UIButton *weakContinueButton = continueButton;
     [continueButton mas_makeConstraints:^(MASConstraintMaker *make) {
         __strong UIButton *strongContinueButton = weakContinueButton;
-        make.top.mas_equalTo(printButton.mas_bottom).offset(20);
-        make.centerX.equalTo(printButton);
+        make.top.mas_equalTo(resultLabel.mas_bottom).offset(20);
+        make.centerX.equalTo(resultLabel);
         make.height.mas_equalTo(strongContinueButton.height + 5);
         make.width.mas_equalTo(strongContinueButton.width + strongContinueButton.height);
     }];
 }
 
 - (void)showFailView {
-    //TODO 捐书失败的Icon要换
-    UIImageView *resultIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"result_donate_success"]];
+    UIImageView *resultIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"result_donate_failed"]];
     [self.view addSubview:resultIcon];
     [resultIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(resultIcon.image.size);
@@ -122,10 +118,6 @@
     }];
 }
 
-- (void)printQRCodeTapped {
-    //TODO 打印二维码
-}
-
 - (void)continueDonateBookTapped:(UIButton *)button {
     __block UIViewController *QRViewController = nil;
     [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -136,15 +128,5 @@
     }];
     [self.navigationController popToViewController:QRViewController animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

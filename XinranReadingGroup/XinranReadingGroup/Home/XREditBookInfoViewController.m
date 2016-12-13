@@ -23,8 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *bookAuthor;
 @property (weak, nonatomic) IBOutlet UITextField *bookPublisher;
 @property (weak, nonatomic) IBOutlet UITextField *bookISBN;
-@property (weak, nonatomic) IBOutlet UITextField *donater;
-@property (weak, nonatomic) IBOutlet UITextField *introduction;
+@property (weak, nonatomic) IBOutlet UITextView *introduction;
 
 @end
 
@@ -71,9 +70,6 @@
     }
 
     //上传书籍信息
-//    if (self.sumbitCallback) {
-//        self.sumbitCallback(self.bookData);
-//    }
     XRDonateRelationViewController *donateRelationController = [XRDonateRelationViewController new];
     donateRelationController.bookData = self.bookData;
     [self.navigationController pushViewController:donateRelationController animated:YES];
