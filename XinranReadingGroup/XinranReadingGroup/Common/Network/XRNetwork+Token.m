@@ -10,6 +10,10 @@
 
 @implementation XRNetwork (Token)
 
+- (void)GETWithToken:(NSString *)methodName param:(NSDictionary *)param success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [self GET:methodName param:[[self class] dictionaryWithToken:param] success:success failure:failure];
+}
+
 - (void)GETWithToken:(NSString *)methodName param:(NSDictionary *)param withEntityName:(NSString *)entityName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     [self GET:methodName param:[[self class] dictionaryWithToken:param] withEntityName:entityName success:success failure:failure];
 }

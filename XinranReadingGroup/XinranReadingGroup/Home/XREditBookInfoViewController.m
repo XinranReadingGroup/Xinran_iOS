@@ -49,7 +49,7 @@
 
 - (void)setupTableView {
     if (self.bookData) {
-        [self.bookCover setTitle:@"" forState:UIControlStateNormal];
+//        [self.bookCover sd_setBackgroundImageWithURL:[NSURL URLWithString:self.bookData.imgURL] forState:UIControlStateNormal];
         [self.bookCover sd_setImageWithURL:[NSURL URLWithString:self.bookData.imgURL] forState:UIControlStateNormal];
         self.bookName.text = self.bookData.title;
         self.bookPrice.text = self.bookData.price;
