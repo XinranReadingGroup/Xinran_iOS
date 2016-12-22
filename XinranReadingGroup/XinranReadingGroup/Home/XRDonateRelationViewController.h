@@ -9,8 +9,11 @@
 #import "XRBookQRViewController.h"
 #import "XRBookEntity.h"
 
+@class XRAddressEntity;
+
 @interface XRDonateRelationViewController : XRBookQRViewController
 
 @property (nonatomic) XRBookEntity *bookData;
+@property (nonatomic, strong) XRAddressEntity *address;
 
 @end

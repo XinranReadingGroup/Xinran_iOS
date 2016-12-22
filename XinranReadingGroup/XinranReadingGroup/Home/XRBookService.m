@@ -49,9 +49,7 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setValue:[XRUser sharedXRUser].accessToken forKey:@"accessToken"];
     
-    //for test
-    [param setValue:@"1" forKey:@"locationId"];
-    //test end
+    [param setValue:locationID forKey:@"locationId"];
     
     [[XRNetwork sharedXRNetwork] GET:url param:param withEntityName:NSStringFromClass([XRBookRecordEntity class]) success:^(id param) {
         if (success) {

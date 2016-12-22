@@ -14,6 +14,10 @@
 #import "XRBookEntity.h"
 #import "XRBookService.h"
 #import "XRDonateRelationViewController.h"
+#import "XRAddressListViewController.h"
+#import "XRAddressEntity.h"
+#import "SVProgressHUD.h"
+#import "ZYCoreDefine.h"
 
 @interface XREditBookInfoViewController ()
 
@@ -24,6 +28,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *bookPublisher;
 @property (weak, nonatomic) IBOutlet UITextField *bookISBN;
 @property (weak, nonatomic) IBOutlet UITextView *introduction;
+@property (weak, nonatomic) IBOutlet UILabel *bookLocation;
+
+@property (nonatomic, strong) XRAddressEntity *address;
 
 @end
 
@@ -68,25 +75,32 @@
     if (!dataChanged) {
         return;
     }
+    
+    if (!self.address) {
+        [SVProgressHUD showErrorWithStatus:LOCALSTRING(@"请选择书架位置")];
+        return;
+    }
 
     //上传书籍信息
     XRDonateRelationViewController *donateRelationController = [XRDonateRelationViewController new];
     donateRelationController.bookData = self.bookData;
+    donateRelationController.address = self.address;
     [self.navigationController pushViewController:donateRelationController animated:YES];
 }
 
-- (void)uploadBook {
-
-}
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UIViewController *viewController = [segue destinationViewController];
+    if ([viewController isKindOfClass:[XRAddressListViewController class]]) {
+        XRAddressListViewController *addressListViewController = (XRAddressListViewController *)viewController;
+        __weak typeof(self) weakSelf = self;
+        addressListViewController.addressTappedCallback = ^(XRAddressEntity *address) {
+            weakSelf.address = address;
+            weakSelf.bookLocation.text = address.addressTitle;
+        };
+    }
 }
-*/
 
 @end

@@ -74,6 +74,9 @@
 		BDA01DA21BD383B5004E6304 /* XRBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA01DA11BD383B5004E6304 /* XRBookCollectionViewController.m */; };
 		BDA01DA51BD39295004E6304 /* XRDonateBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA01DA41BD39295004E6304 /* XRDonateBookCollectionViewController.m */; };
 		BDA023631DEDC19100549DD3 /* XRAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA023621DEDC19100549DD3 /* XRAboutViewController.m */; };
+		BDAD882F1E0C064900A5257D /* XRAddressListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAD882E1E0C064900A5257D /* XRAddressListViewController.m */; };
+		BDAD88321E0C15EF00A5257D /* XRAddressEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAD88311E0C15EF00A5257D /* XRAddressEntity.m */; };
+		BDAD88351E0C18B300A5257D /* XRAddressService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAD88341E0C18B300A5257D /* XRAddressService.m */; };
 		BDB1AD211BC2121B009BB273 /* XRMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB1AD201BC2121B009BB273 /* XRMyViewController.m */; };
 		BDB1AD261BC2131E009BB273 /* XRMyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB1AD251BC2131E009BB273 /* XRMyProfileCell.m */; };
 		BDB1AD2E1BC2654E009BB273 /* XRUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB1AD2D1BC2654E009BB273 /* XRUserService.m */; };
@@ -243,6 +246,12 @@
 		BDA01DA41BD39295004E6304 /* XRDonateBookCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRDonateBookCollectionViewController.m; sourceTree = "<group>"; };
 		BDA023611DEDC19100549DD3 /* XRAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRAboutViewController.h; sourceTree = "<group>"; };
 		BDA023621DEDC19100549DD3 /* XRAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRAboutViewController.m; sourceTree = "<group>"; };
+		BDAD882D1E0C064900A5257D /* XRAddressListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRAddressListViewController.h; sourceTree = "<group>"; };
+		BDAD882E1E0C064900A5257D /* XRAddressListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRAddressListViewController.m; sourceTree = "<group>"; };
+		BDAD88301E0C15EF00A5257D /* XRAddressEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRAddressEntity.h; sourceTree = "<group>"; };
+		BDAD88311E0C15EF00A5257D /* XRAddressEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRAddressEntity.m; sourceTree = "<group>"; };
+		BDAD88331E0C18B300A5257D /* XRAddressService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRAddressService.h; sourceTree = "<group>"; };
+		BDAD88341E0C18B300A5257D /* XRAddressService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRAddressService.m; sourceTree = "<group>"; };
 		BDB1AD1F1BC2121B009BB273 /* XRMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRMyViewController.h; sourceTree = "<group>"; };
 		BDB1AD201BC2121B009BB273 /* XRMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRMyViewController.m; sourceTree = "<group>"; };
 		BDB1AD241BC2131E009BB273 /* XRMyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRMyProfileCell.h; sourceTree = "<group>"; };
@@ -738,6 +747,8 @@
 				BD7AD9821BC14A270083C59F /* XRBorrowBookQRViewController.m */,
 				BD7AD9841BC150720083C59F /* XRReturnBookQRViewController.h */,
 				BD7AD9851BC150720083C59F /* XRReturnBookQRViewController.m */,
+				BDAD882D1E0C064900A5257D /* XRAddressListViewController.h */,
+				BDAD882E1E0C064900A5257D /* XRAddressListViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -751,6 +762,8 @@
 				BDFB0AC01AFA595300F2C738 /* XRBookDetailBiz.m */,
 				0992FA731B0E1119009CD369 /* XRBookDetailEntity.h */,
 				0992FA741B0E1119009CD369 /* XRBookDetailEntity.m */,
+				BDAD88301E0C15EF00A5257D /* XRAddressEntity.h */,
+				BDAD88311E0C15EF00A5257D /* XRAddressEntity.m */,
 			);
 			name = Biz;
 			sourceTree = "<group>";
@@ -760,6 +773,8 @@
 			children = (
 				BDE692131AD953E400F5E5AB /* XRBookService.h */,
 				BDE692141AD953E400F5E5AB /* XRBookService.m */,
+				BDAD88331E0C18B300A5257D /* XRAddressService.h */,
+				BDAD88341E0C18B300A5257D /* XRAddressService.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -960,6 +975,7 @@
 			files = (
 				BD1D63E61ADFFF8100CCE363 /* XRShareAssistant.m in Sources */,
 				9879A6D21DEB2E3700645583 /* XRFeedbackViewController.m in Sources */,
+				BDAD88351E0C18B300A5257D /* XRAddressService.m in Sources */,
 				BD9506351C62440900A78864 /* XRBookOwnerEntity.m in Sources */,
 				0992FA721B0E0D41009CD369 /* XRBookRecordEntity.m in Sources */,
 				BDE6920C1AD92B6B00F5E5AB /* XREntity.m in Sources */,
@@ -1001,6 +1017,7 @@
 				BDA01DA21BD383B5004E6304 /* XRBookCollectionViewController.m in Sources */,
 				09DC13431AD39F4A00CE8277 /* XRRegisterViewController.m in Sources */,
 				BDBDB7D41AD97FFA00977A37 /* XRBookListEntity.m in Sources */,
+				BDAD882F1E0C064900A5257D /* XRAddressListViewController.m in Sources */,
 				09DC133A1AD39D7700CE8277 /* main.m in Sources */,
 				BDFB0ABE1AFA58F800F2C738 /* XRBookDetailBaseViewController.m in Sources */,
 				BD8DFE0F1AE00DE3003FAF06 /* XRSetupAssistant.m in Sources */,
@@ -1014,6 +1031,7 @@
 				09060F861B087782003C69EF /* XRSharedBookDetailController.m in Sources */,
 				09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */,
 				BDEB8D0C1BB69EEF0072EB6C /* XRQRViewController+ExtraFunction.m in Sources */,
+				BDAD88321E0C15EF00A5257D /* XRAddressEntity.m in Sources */,
 				BD8E39431B0226E800AF1CFD /* XRBookDetailPublisherCell.m in Sources */,
 				BD41EBD41B16936E003A04BA /* XRDonateResultViewController.m in Sources */,
 				9870E0601DA24E29004F31EE /* XRDonateRelationViewController.m in Sources */,

@@ -6,7 +6,6 @@
 //  Copyright (c) 2015年 SnowWolf. All rights reserved.
 //
 
-#import "XREntity.h"
 #import <ZYBlockDefine.h>
 
 @class XRBookEntity;
@@ -14,7 +13,7 @@
 /**
  *  关于书籍的所有接口
  */
-@interface XRBookService : XREntity
+@interface XRBookService : NSObject
 
 /**
  *  搜索书籍
