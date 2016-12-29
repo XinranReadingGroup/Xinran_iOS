@@ -949,7 +949,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "#!/bin/bash\nnow=date +\"%Y%m%d%H%M%S\"\necho \"now is $now\"\n\n#if [ $CONFIGURATION == Release ]; then\necho \"Bumping build number...\"\nplist=${PROJECT_DIR}/${INFOPLIST_FILE}\n\n#increment the build number (ie 115 to 116)\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${plist}\")\n#if [[ \"${buildnum}\" == \"\" ]]; then\n#echo \"No build number in $plist\"\n#exit 2\n#fi\n\nbuildnum=$now\necho $buildnum\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${plist}\"\necho \"Bumped build number to $buildnum\"\n\n#else\n#echo $CONFIGURATION \" build - Not bumping build number.\"\n#fi\n";
+			shellScript = "";
 		};
 		D2DE6BFAEE9DF83F5967A78F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
