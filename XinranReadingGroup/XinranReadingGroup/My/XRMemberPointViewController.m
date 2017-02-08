@@ -22,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //[self fetchData];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self fetchData];
 }
 
