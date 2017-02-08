@@ -13,6 +13,8 @@
 #import <ZYCoreFramework/ZYCoreDefine.h>
 #import <AFNetworking.h>
 #import "XRNetwork+Token.h"
+#import "XRUser.h"
+#import "XRUserProfile.h"
 //test end
 
 @implementation XRUserService
@@ -90,6 +92,19 @@
 
 + (void)fetchUserProfile:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     [[XRNetwork sharedXRNetwork] GETWithToken:@"user/profile" param:nil withEntityName:nil success:success failure:failure];
+}
+
++ (void)updateUserProfile:(XRUserProfile *)profile success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    NSString *token = [NSString stringWithFormat:@"user/%@/profile", [XRUser sharedXRUser].profile.userId];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    if (profile.nickName) {
+        [dict setObject:profile.nickName forKey:@"nickName"];
+    }
+    if (profile.signature) {
+        [dict setObject:profile.signature forKey:@"signature"];
+    }
+    
+    [[XRNetwork sharedXRNetwork] POSTWithToken:token param:dict success:success failure:failure];
 }
 
 @end

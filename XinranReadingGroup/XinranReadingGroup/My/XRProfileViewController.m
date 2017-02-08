@@ -10,6 +10,10 @@
 #import "ZYCoreCellInfo.h"
 #import "XRProfileDetailCell.h"
 #import "XRProfileEditViewController.h"
+#import "XRUser.h"
+#import "XRUserService.h"
+#import "XRLoginBiz.h"
+#import "SVProgressHUD.h"
 #import <ZYCoreFramework/ZYCoreDefine.h>
 
 @interface XRProfileViewController ()
@@ -36,22 +40,20 @@
 {
     NSArray *firstTypes = @[@(ProfileDetailTypeAvatar),@(ProfileDetailTypeNickName),@(ProfileDetailTypePassword)];
     NSArray *secondTypes = @[@(ProfileDetailTypeIntroduction)];
-//    NSArray *jumpViewControllers = @[[XRDonateBookCollectionViewController new],
-//                                     [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRBorrowRecordViewController class]) withStoryboardName:@"Main"],
-//                                     [XRShareBookCollectionViewController new],
-//                                     [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRMemberPointViewController class]) withStoryboardName:@"Main"]];
 
     NSMutableArray *section1 = [NSMutableArray array];
     [firstTypes enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"type":obj};
         ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRProfileDetailCell class] withCellHeight:[XRProfileDetailCell cellHeightForType:[obj integerValue]] withCellData:cellData withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, ZYCoreCellInfo *cellData) {
             ProfileDetailType type = [[cellData.cellData objectForKey:@"type"] integerValue];
-            if (type == ProfileDetailTypeNickName || type == ProfileDetailTypePassword) {
+            if (type == ProfileDetailTypeNickName) {
                 XRProfileEditViewController *profileEditController = [[XRProfileEditViewController alloc] initWithNibName:@"XRProfileEditViewController" bundle:nil];
                 profileEditController.cellData = cellData.cellData;
                 [self.navigationController pushViewController:profileEditController animated:YES];
             } else if (type == ProfileDetailTypeAvatar) {
                 
+            } else if (type == ProfileDetailTypePassword) {
+                [SVProgressHUD showInfoWithStatus:@"请到web页面上修改密码"];
             }
         }];
         cellInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -74,6 +76,10 @@
     }];
     
     self.tableViewData = @[section1, section2];
+    
+    [XRLoginBiz refreshUserProfile:^{
+        [self.tableView reloadData];
+    }];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
