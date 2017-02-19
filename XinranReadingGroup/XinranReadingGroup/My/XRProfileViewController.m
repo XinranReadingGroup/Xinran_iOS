@@ -53,7 +53,7 @@
             } else if (type == ProfileDetailTypeAvatar) {
                 
             } else if (type == ProfileDetailTypePassword) {
-                [SVProgressHUD showInfoWithStatus:@"请到web页面上修改密码"];
+                [SVProgressHUD showWithStatus:@"请到web页面上修改密码"];
             }
         }];
         cellInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

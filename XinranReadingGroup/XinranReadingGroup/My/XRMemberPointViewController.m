@@ -11,6 +11,9 @@
 #import "XRLoginBiz.h"
 #import "XRUser.h"
 #import "XRUserProfile.h"
+#import "XRActivityListEntity.h"
+#import "ZYCoreCellInfo.h"
+#import "XRPointExchangeCell.h"
 
 @interface XRMemberPointViewController ()
 
@@ -23,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //[self fetchData];
+    self.tableView.tableFooterView = [UIView new];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -33,10 +38,23 @@
 
 - (void)fetchData {
     [XRLoginBiz refreshUserProfile:^{
-        self.pointSum.text = [NSString stringWithFormat:@"您的积分为%@",[XRUser sharedXRUser].profile.score];
+        if ([[XRUser sharedXRUser].profile.score integerValue] > 0) {
+            self.pointSum.text = [NSString stringWithFormat:@"亲，您当前的公益积分为%@",[XRUser sharedXRUser].profile.score];
+        } else {
+            self.pointSum.text = [NSString stringWithFormat:@"亲，您当前的公益积分为0"];
+        }
     }];
-    [XRUserService fetchActivity:^(id param) {
-        self.tableViewData = param;
+    [XRUserService fetchActivity:^(XRActivityListEntity *activityList) {
+        
+        NSMutableArray *sectionInfo = [NSMutableArray array];
+        [activityList.activityList enumerateObjectsUsingBlock:^(XRActivityEntity *obj, NSUInteger idx, BOOL *stop) {
+            ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRPointExchangeCell class] withCellHeight:120 withCellData:obj withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
+                
+            }];
+            cellInfo.doNotRegisterClass = YES;
+            [sectionInfo addObject:cellInfo];
+        }];
+        self.tableViewData = @[[sectionInfo copy]];
     } failure:nil];
 }
 

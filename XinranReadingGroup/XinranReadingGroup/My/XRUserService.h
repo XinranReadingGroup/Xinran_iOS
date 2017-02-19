@@ -26,4 +26,6 @@
 + (void)fetchUserProfile:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 + (void)updateUserProfile:(XRUserProfile *)profile success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
+
++ (void)convertActivity:(NSString *)activityId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 @end

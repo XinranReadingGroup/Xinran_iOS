@@ -8,6 +8,8 @@
 
 #import "XRUserService.h"
 #import "XRBookListEntity.h"
+#import "XRActivityEntity.h"
+#import "XRActivityListEntity.h"
 #import <CocoaLumberjack.h>
 //test
 #import <ZYCoreFramework/ZYCoreDefine.h>
@@ -86,7 +88,20 @@
 
 + (void)fetchActivity:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     [[XRNetwork sharedXRNetwork] GETWithToken:@"activities" param:@{@"status":@"available",@"pageSize":@"10000",@"pageNo":@"1"} withEntityName:nil success:^(id param) {
-
+        id activitys = param[@"activities"];
+        
+        //对传过来的array进行处理
+        NSDictionary * const result = @{@"activityList":activitys};
+        NSError *error;
+        XRActivityListEntity *listEntity = [[XRActivityListEntity alloc] initWithDictionary:result error:&error];
+        if (!error) {
+            if (success) {
+                success(listEntity);
+            }
+        }
+        else {
+            success(param);
+        }
     } failure:failure];
 }
 
@@ -105,6 +120,11 @@
     }
     
     [[XRNetwork sharedXRNetwork] POSTWithToken:token param:dict success:success failure:failure];
+}
+
++ (void)convertActivity:(NSString *)activityId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    NSString *token = [NSString stringWithFormat:@"activity/convert/%@", activityId];
+    [[XRNetwork sharedXRNetwork] POSTWithToken:token param:nil success:success failure:failure];
 }
 
 @end

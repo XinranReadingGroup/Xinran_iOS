@@ -7,7 +7,27 @@
 //
 
 #import "XRPointExchangeCell.h"
+#import "XRActivityEntity.h"
+#import "XRUserService.h"
+
+#import "UIImageView+WebCache.h"
+#import <SVProgressHUD.h>
 
 @implementation XRPointExchangeCell
+
+- (void)updateUI
+{
+    NSDictionary *activity = self.data;
+    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:activity[@"imgId"]] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
+    self.titleLabel.text = activity[@"title"];
+    self.scoreLabel.text = [NSString stringWithFormat:@"%@积分", activity[@"score"]];
+}
+- (IBAction)doneAction:(id)sender {
+    [XRUserService convertActivity:self.data[@"id"] success:^(id param) {
+        [SVProgressHUD showErrorWithStatus:@"兑换成功"];
+    } failure:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"兑换失败"];
+    }];
+}
 
 @end

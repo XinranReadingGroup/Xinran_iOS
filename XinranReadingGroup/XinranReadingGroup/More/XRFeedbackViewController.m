@@ -40,7 +40,7 @@
 {
     NSString *text = [self.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([@"" isEqualToString:text]) {
-        [SVProgressHUD showInfoWithStatus:@"请输入内容"];
+        [SVProgressHUD showWithStatus:@"请输入内容"];
         return;
     }
     NSDictionary *dict = @{@"feedback": text};
