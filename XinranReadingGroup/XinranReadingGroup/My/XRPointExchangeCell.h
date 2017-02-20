@@ -8,6 +8,8 @@
 
 #import <ZYCoreFramework/ZYCoreTableViewCell.h>
 
+static NSString *XRMemberPointRefreshNotification = @"XRMemberPointRefreshNotification";
+
 @interface XRPointExchangeCell : ZYCoreTableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *activityImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

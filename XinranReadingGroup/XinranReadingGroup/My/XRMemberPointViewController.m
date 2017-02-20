@@ -23,11 +23,17 @@
 
 @implementation XRMemberPointViewController
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //[self fetchData];
     self.tableView.tableFooterView = [UIView new];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchData) name:XRMemberPointRefreshNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
