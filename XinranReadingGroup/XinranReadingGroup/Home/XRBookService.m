@@ -32,15 +32,15 @@
     }];
 }
 
-+ (void)donateBook:(NSString *)bookId locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    [[self class] uploadBook:bookId locationID:(NSNumber *)locationID methodName:@"donate" success:success failure:failure];
++ (void)donateBook:(NSString *)bookId QRCode:(NSString *)QRCode locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[self class] uploadBook:bookId QRCode:(NSString *)QRCode locationID:(NSNumber *)locationID methodName:@"donate" success:success failure:failure];
 }
 
-+ (void)shareBookBookId:(NSString *)bookId locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    [[self class] uploadBook:bookId locationID:(NSNumber *)locationID methodName:@"share" success:success failure:failure];
++ (void)shareBookBookId:(NSString *)bookId QRCode:(NSString *)QRCode locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[self class] uploadBook:bookId QRCode:(NSString *)QRCode locationID:(NSNumber *)locationID methodName:@"share" success:success failure:failure];
 }
 
-+ (void)uploadBook:(NSString *)bookId locationID:(NSNumber *)locationID methodName:(NSString *)methodName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
++ (void)uploadBook:(NSString *)bookId QRCode:(NSString *)QRCode locationID:(NSNumber *)locationID methodName:(NSString *)methodName success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
     if (!bookId) {
         failure(nil);
         return;
@@ -48,7 +48,7 @@
     NSString *url = [NSString stringWithFormat:@"book/%@/%@",methodName,bookId];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setValue:[XRUser sharedXRUser].accessToken forKey:@"accessToken"];
-    
+    [param setValue:QRCode forKey:@"qrCode"];
     [param setValue:locationID forKey:@"locationId"];
     
     [[XRNetwork sharedXRNetwork] GET:url param:param withEntityName:NSStringFromClass([XRBookRecordEntity class]) success:^(id param) {
