@@ -17,6 +17,7 @@
 #import <BlocksKit/UIAlertView+BlocksKit.h>
 #import <ZYCoreFramework/UIViewController+ZYCore.h>
 #import "XRAddressEntity.h"
+#import "XRNetwork.h"
 
 @interface XRDonateRelationViewController ()
 
@@ -71,6 +72,7 @@
         donateResultViewController.success = NO;
         [SVProgressHUD dismiss];
         [self.navigationController pushViewController:donateResultViewController animated:YES];
+        [SVProgressHUD showErrorWithStatus:error.userInfo[KEY_NETWORK_ERROR_MESSAGE]];
     }];
 }
 
