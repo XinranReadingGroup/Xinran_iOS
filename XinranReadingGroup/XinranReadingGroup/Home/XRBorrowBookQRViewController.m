@@ -21,14 +21,15 @@
     self.title = LOCALSTRING(@"借书");
 }
 
-- (void)scanBookSuccess:(XRBookDetailEntity *)bookData {
-    [super scanBookSuccess:bookData];
+- (void)scanBookSuccess:(XRBookDetailEntity *)bookData QRCode:(NSString *)QRCode {
+    [super scanBookSuccess:bookData QRCode:QRCode];
     if (bookData && bookData.book.title && bookData.onOffStockRecord.borrowStatus == kBookStatusAvaliable) {
         NSString *message = [NSString stringWithFormat:@"确定要借《%@》啦？", bookData.book.title];
         UIAlertView *alertView = [UIAlertView bk_showAlertViewWithTitle:LOCALSTRING(@"借阅确认") message:LOCALSTRING(message) cancelButtonTitle:LOCALSTRING(@"取消") otherButtonTitles:@[LOCALSTRING(@"确定")] handler: ^(UIAlertView *alertView, NSInteger buttonIndex) {
             if (buttonIndex == 1) {
                 //确定
                 XRBorrowResultViewController *resultViewController = [[XRBorrowResultViewController alloc] init];
+                resultViewController.QRCode = QRCode;
                 resultViewController.bookData = bookData;
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self.navigationController pushViewController:resultViewController animated:YES];

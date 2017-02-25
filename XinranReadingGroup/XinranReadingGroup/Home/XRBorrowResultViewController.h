@@ -16,5 +16,6 @@
  */
 @interface XRBorrowResultViewController : XRResultBaseViewController
 
+@property (nonatomic, copy) NSString *QRCode;               //扫到的二维码文本
 
 @end

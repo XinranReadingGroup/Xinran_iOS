@@ -81,12 +81,12 @@
 - (void)scanFinish:(NSString *)result {
     [super scanFinish:result];
     [SVProgressHUD showWithStatus:LOCALSTRING(@"扫码成功，书籍信息获取中……")];
-    [XRBookService bookDetailWithBookID:result success: ^(id param) {
+    [XRBookService bookDetailWithQRCode:result success: ^(id param) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
         });
         XRBookDetailEntity *bookEntity = param;
-        [self scanBookSuccess:bookEntity];
+        [self scanBookSuccess:bookEntity QRCode:result];
     } failure: ^(NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [SVProgressHUD dismiss];
@@ -99,7 +99,7 @@
     }];
 }
 
-- (void)scanBookSuccess:(XRBookDetailEntity *)bookData {
+- (void)scanBookSuccess:(XRBookDetailEntity *)bookData QRCode:(NSString *)QRCode {
 
 }
 
