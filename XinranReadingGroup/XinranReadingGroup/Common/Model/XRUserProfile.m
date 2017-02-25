@@ -11,6 +11,12 @@
 
 }
 
+- (NSString *)avatarUrl
+{
+    NSString *url = [NSString stringWithFormat:@"http://xinrandushuba.com/img/avatar/user_avatar_origin_%@.jpg", self.userId];
+    return url;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
             @"userId": @"id",

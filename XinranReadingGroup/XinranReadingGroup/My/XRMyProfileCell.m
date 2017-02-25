@@ -23,12 +23,14 @@
         make.width.mas_equalTo(@60);
         make.height.mas_equalTo(@60);
     }];
+    avatar.layer.cornerRadius = 30;
+    avatar.layer.masksToBounds = YES;
     
     if ([XRUser sharedXRUser].profile.imgId) {
         [avatar sd_setImageWithURL:[NSURL URLWithString:[XRUser sharedXRUser].profile.imgId]];
     }
     else {
-        [avatar sd_setImageWithURL:[NSURL URLWithString:@"http://7xn9af.com1.z0.glb.clouddn.com/default_avatar@2x.png"] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
+        [avatar sd_setImageWithURL:[NSURL URLWithString:[XRUser sharedXRUser].profile.avatarUrl] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
     }
     UILabel *IDText = [[UILabel alloc] init];
     [IDText mas_makeConstraints:^(MASConstraintMaker *make) {

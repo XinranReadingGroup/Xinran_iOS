@@ -25,4 +25,5 @@ static NSString * const KEY_NETWORK_ERROR_MESSAGE = @"key_network_error_mesage";
 
 - (void)POST:(NSString *)methodName param:(NSDictionary *)param success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
+- (void)POST:(NSString *)methodName param:(NSDictionary *)param data:(NSData *)data success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 @end

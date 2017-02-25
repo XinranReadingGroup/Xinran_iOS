@@ -127,6 +127,36 @@ static BOOL const isTest = NO;
 	}];
 }
 
+- (void)POST:(NSString *)methodName param:(NSDictionary *)param data:(NSData *)data success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:[self urlWithMethodName:methodName] parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:data name:@"file" fileName:@"test.jpg" mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        DLog(@"--------------------------------------------------\n请求成功~~~~~~~~~~~~~\nurl: \n%@ \n返回数据:\n%@\n--------------------------------------------------", operation.request.URL.absoluteString, responseObject);
+        if ([self isRequestSuccess:responseObject]) {
+            if (success) {
+                success(responseObject);
+            }
+        }
+        else {
+            //[XRNetworkErrorAssistant handleErrorFromServer:responseObject];
+            NSInteger code = [responseObject valueForKey:@"code"] ? [[responseObject valueForKey:@"code"] integerValue] : 0;
+            NSError *error = [NSError errorWithDomain:operation.request.URL.host code:code userInfo:
+                              @{KEY_NETWORK_ERROR_MESSAGE:
+                                    [responseObject valueForKey:@"data"] ? [responseObject valueForKey:@"data"] : @""}];
+            if (failure) {
+                failure(error);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        DLog(@"--------------------------------------------------\n请求失败!!!!!!!!!!!!!!\nurl: \n%@\nerror: \n%@\n--------------------------------------------------", operation.request.URL.absoluteString, error.description);
+        //[XRNetworkErrorAssistant handleNetworkFailure:error];
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 - (BOOL)isRequestSuccess:(id)result {
 	//如果返回200就是成功
 	if ([result valueForKey:@"code"] && [[result valueForKey:@"code"] integerValue] == 200) {

@@ -19,7 +19,8 @@ target 'XinranReadingGroup' do
     pod 'Mantle'
     pod 'PINCache'
     pod 'UMengFeedback', '~> 2.3.4'
-
+    pod 'TZImagePickerController'
+    
     pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 
     pod 'ZYCoreFramework',:git=>'git@github.com:zengyun-programmer/ZYCoreFramework.git',:tag=>'0.1'

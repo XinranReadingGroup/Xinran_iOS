@@ -16,6 +16,8 @@
 @property (nonatomic) NSString *signature;
 @property (nonatomic) NSNumber *score;
 
+@property (nonatomic, readonly) NSString *avatarUrl;    //取头像的url
+
 + (XRUserProfile *)userProfileWithUserID:(NSString *)userID;
 
 + (void)storeProfile:(XRUserProfile *)profile withUserID:(NSString *)userID;
