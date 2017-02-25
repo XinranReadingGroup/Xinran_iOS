@@ -13,6 +13,6 @@
 
 @interface XRBookQRViewController : XRQRViewController
 
-- (void)scanBookSuccess:(XRBookDetailEntity *)bookData;
+- (void)scanBookSuccess:(XRBookDetailEntity *)bookData QRCode:(NSString *)QRCode;
 
 @end

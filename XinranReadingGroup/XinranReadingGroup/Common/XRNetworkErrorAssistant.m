@@ -9,7 +9,7 @@
 #import "XRTools.h"
 #import "XRUserService.h"
 #import "XRUser.h"
-
+#import "XRNetwork.h"
 
 @implementation XRNetworkErrorAssistant {
 
@@ -26,9 +26,13 @@
     }
     else {
         NSString *errorMessage = LOCALSTRING(@"请求错误请重试");
-        if ([responseObject valueForKey:@"data"] && [[responseObject valueForKey:@"data"] isKindOfClass:[NSString class]]) {
+        if ([responseObject isKindOfClass:[NSError class]]) {
+            NSError *error = responseObject;
+            errorMessage = error.userInfo[KEY_NETWORK_ERROR_MESSAGE];
+        } else if ([responseObject isKindOfClass:[NSDictionary class]] && [responseObject valueForKey:@"data"] && [[responseObject valueForKey:@"data"] isKindOfClass:[NSString class]]) {
             errorMessage = [responseObject valueForKey:@"data"];
         }
+        
         [SVProgressHUD showErrorWithStatus:errorMessage];
     }
 }

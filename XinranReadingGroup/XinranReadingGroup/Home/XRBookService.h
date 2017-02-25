@@ -31,7 +31,7 @@
  *  @param success 捐赠成功返回书籍信息的entity
  *  @param failure 捐赠失败返回error
  */
-+ (void)donateBook:(NSString *)bookId locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)donateBook:(NSString *)bookId QRCode:(NSString *)QRCode locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  分享书籍
@@ -40,7 +40,7 @@
  *  @param success 分享成功返回书籍信息的entity
  *  @param failure 分享失败返回error
  */
-+ (void)shareBookBookId:(NSString *)bookId locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)shareBookBookId:(NSString *)bookId QRCode:(NSString *)QRCode locationID:(NSNumber *)locationID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 /**
  *  借阅书籍
@@ -70,5 +70,14 @@
  *  @param failure 请求失败调用的block
  */
 + (void)bookDetailWithBookID:(NSString *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
+
+/**
+ 通过QRCode获取书籍信息
+
+ @param qrCode  扫描出的二维码
+ @param success 成功的回调
+ @param failure 失败的回调
+ */
++ (void)bookDetailWithQRCode:(NSString *)qrCode success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 @end

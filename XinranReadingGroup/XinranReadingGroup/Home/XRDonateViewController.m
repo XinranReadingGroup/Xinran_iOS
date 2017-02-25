@@ -38,7 +38,6 @@
     self.notice = LOCALSTRING(@"将ISBN条形码放入框内，即可自动扫描");
     [super setupUI];
     [self addLightLine];
-    [self addInputButton];
 }
 
 - (void)addLightLine {

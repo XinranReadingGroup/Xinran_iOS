@@ -20,10 +20,11 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
-	{
-		self.edgesForExtendedLayout = UIRectEdgeNone;
-	}
+    self.automaticallyAdjustsScrollViewInsets = YES;
+//	if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
+//	{
+//		self.edgesForExtendedLayout = UIRectEdgeNone;
+//	}
 }
 
 - (void)update {
@@ -36,6 +37,7 @@
 
 - (void)addTableView {
 	self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView.top = 64;
 	[self.view addSubview:self.tableView];
 	self.tableView.delegate = self;
 	self.tableView.backgroundColor = RGBCOLOR(242, 242, 242);

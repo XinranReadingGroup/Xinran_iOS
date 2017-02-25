@@ -22,8 +22,8 @@
 }
 
 
-- (void)scanBookSuccess:(XRBookDetailEntity *)bookData {
-    [super scanBookSuccess:bookData];
+- (void)scanBookSuccess:(XRBookDetailEntity *)bookData QRCode:(NSString *)QRCode {
+    [super scanBookSuccess:bookData QRCode:QRCode];
     if (bookData && bookData.book.title && bookData.onOffStockRecord.borrowStatus == kBookStatusBorrowed) {
         NSString *message = [NSString stringWithFormat:@"确定归还《%@》？", bookData.book.title];
         UIAlertView *alertView = [UIAlertView bk_showAlertViewWithTitle:LOCALSTRING(@"归还确认") message:LOCALSTRING(message) cancelButtonTitle:LOCALSTRING(@"取消") otherButtonTitles:@[LOCALSTRING(@"确定")] handler: ^(UIAlertView *alertView, NSInteger buttonIndex) {

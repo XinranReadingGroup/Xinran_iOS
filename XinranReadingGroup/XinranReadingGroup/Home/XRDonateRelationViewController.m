@@ -17,6 +17,7 @@
 #import <BlocksKit/UIAlertView+BlocksKit.h>
 #import <ZYCoreFramework/UIViewController+ZYCore.h>
 #import "XRAddressEntity.h"
+#import "XRNetwork.h"
 
 @interface XRDonateRelationViewController ()
 
@@ -57,7 +58,7 @@
     [SVProgressHUD showWithStatus:LOCALSTRING(@"扫描成功，正在关联二维码")];
     XRDonateResultViewController *donateResultViewController = [XRDonateResultViewController new];
     
-    [XRBookService donateBook:self.bookData.bookID locationID:self.address.addressID success:^(id param) {
+    [XRBookService donateBook:self.bookData.bookID QRCode:result locationID:self.address.addressID success:^(id param) {
         if (param && [param isKindOfClass:[XRBookRecordEntity class]]) {
             donateResultViewController.success = YES;
             donateResultViewController.donateBookDetail = param;
@@ -71,6 +72,7 @@
         donateResultViewController.success = NO;
         [SVProgressHUD dismiss];
         [self.navigationController pushViewController:donateResultViewController animated:YES];
+        [SVProgressHUD showErrorWithStatus:error.userInfo[KEY_NETWORK_ERROR_MESSAGE]];
     }];
 }
 
