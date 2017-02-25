@@ -133,4 +133,22 @@
     }];
 }
 
++ (void)bookDetailWithQRCode:(NSString *)qrCode success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    if (!qrCode) {
+        failure(nil);
+        return;
+    }
+    NSString *encodeQRCode = [qrCode stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *methodName = [NSString stringWithFormat:@"book/qrCode/%@",encodeQRCode];
+    [[XRNetwork sharedXRNetwork] GET:methodName param:@{@"accessToken":[XRUser sharedXRUser].accessToken} withEntityName:NSStringFromClass([XRBookDetailEntity class]) success:^(id param) {
+        if (success) {
+            success(param);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 @end

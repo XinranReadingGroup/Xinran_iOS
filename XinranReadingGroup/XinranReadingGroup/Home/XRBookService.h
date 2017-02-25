@@ -71,4 +71,13 @@
  */
 + (void)bookDetailWithBookID:(NSString *)bookID success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
+/**
+ 通过QRCode获取书籍信息
+
+ @param qrCode  扫描出的二维码
+ @param success 成功的回调
+ @param failure 失败的回调
+ */
++ (void)bookDetailWithQRCode:(NSString *)qrCode success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
+
 @end
