@@ -45,7 +45,7 @@
     userInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     //section 2
-    NSArray *cellTitles = @[@"我的捐书记录",@"我的借阅记录",@"我的共享记录",@"我的公益积分"];
+    NSArray *cellTitles = @[@"捐书记录",@"正在借阅",@"共享记录",@"公益积分"];
     NSMutableArray *section2 = [NSMutableArray array];
     [cellTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"title":obj};
