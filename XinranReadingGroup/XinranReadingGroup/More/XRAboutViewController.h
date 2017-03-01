@@ -10,4 +10,7 @@
 
 @interface XRAboutViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (nonatomic, copy) NSString *text;
+
 @end

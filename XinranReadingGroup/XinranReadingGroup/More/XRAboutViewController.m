@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    if (self.text.length) {
+        self.textView.text = self.text;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
