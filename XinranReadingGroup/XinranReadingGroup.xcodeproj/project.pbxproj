@@ -40,6 +40,7 @@
 		9879A6D31DEB2E3700645583 /* XRFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9879A6D11DEB2E3700645583 /* XRFeedbackViewController.xib */; };
 		98ABCC9A1E59AA130067303A /* XRActivityEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 98ABCC991E59AA130067303A /* XRActivityEntity.m */; };
 		98ABCC9D1E59B6680067303A /* XRActivityListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 98ABCC9C1E59B6680067303A /* XRActivityListEntity.m */; };
+		98ABCCA01E66F3A00067303A /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 98ABCC9F1E66F3A00067303A /* NSString+URLEncode.m */; };
 		98BAE6EB1DA63F0300D8A3BB /* XRProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98BAE6EA1DA63F0300D8A3BB /* XRProfileViewController.m */; };
 		98BAE6EE1DA6411900D8A3BB /* XRProfileDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98BAE6ED1DA6411900D8A3BB /* XRProfileDetailCell.m */; };
 		BD0D91CA1BF37C1D006E722B /* XRShareBookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D91C91BF37C1D006E722B /* XRShareBookCollectionViewController.m */; };
@@ -176,6 +177,8 @@
 		98ABCC991E59AA130067303A /* XRActivityEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRActivityEntity.m; sourceTree = "<group>"; };
 		98ABCC9B1E59B6680067303A /* XRActivityListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRActivityListEntity.h; sourceTree = "<group>"; };
 		98ABCC9C1E59B6680067303A /* XRActivityListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRActivityListEntity.m; sourceTree = "<group>"; };
+		98ABCC9E1E66F3A00067303A /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "Control/NSString+URLEncode.h"; sourceTree = "<group>"; };
+		98ABCC9F1E66F3A00067303A /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "Control/NSString+URLEncode.m"; sourceTree = "<group>"; };
 		98BAE6E91DA63F0300D8A3BB /* XRProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRProfileViewController.h; sourceTree = "<group>"; };
 		98BAE6EA1DA63F0300D8A3BB /* XRProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRProfileViewController.m; sourceTree = "<group>"; };
 		98BAE6EC1DA6411900D8A3BB /* XRProfileDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRProfileDetailCell.h; sourceTree = "<group>"; };
@@ -629,6 +632,8 @@
 			children = (
 				BDC7B8E11BB6D3EB00687B68 /* UIButton+XRButton.h */,
 				BDC7B8E21BB6D3EB00687B68 /* UIButton+XRButton.m */,
+				98ABCC9E1E66F3A00067303A /* NSString+URLEncode.h */,
+				98ABCC9F1E66F3A00067303A /* NSString+URLEncode.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -1046,6 +1051,7 @@
 				BDE691F11AD4173C00F5E5AB /* XRLoginService.m in Sources */,
 				09060F861B087782003C69EF /* XRSharedBookDetailController.m in Sources */,
 				09DC133D1AD39E4100CE8277 /* XRLoginWelcomeViewController.m in Sources */,
+				98ABCCA01E66F3A00067303A /* NSString+URLEncode.m in Sources */,
 				BDEB8D0C1BB69EEF0072EB6C /* XRQRViewController+ExtraFunction.m in Sources */,
 				BDAD88321E0C15EF00A5257D /* XRAddressEntity.m in Sources */,
 				BD8E39431B0226E800AF1CFD /* XRBookDetailPublisherCell.m in Sources */,

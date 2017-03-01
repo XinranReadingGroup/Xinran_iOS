@@ -11,6 +11,7 @@
 #import "XRUserService.h"
 
 #import "UIImageView+WebCache.h"
+#import "NSString+URLEncode.h"
 #import <SVProgressHUD.h>
 
 @implementation XRPointExchangeCell
@@ -18,7 +19,8 @@
 - (void)updateUI
 {
     NSDictionary *activity = self.data;
-    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:activity[@"imgId"]] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
+    NSString *url = [NSString stringWithFormat:@"http://xinrandushuba.com/%@", [activity[@"imgId"] URLEncode]];
+    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
     self.titleLabel.text = activity[@"title"];
     self.scoreLabel.text = [NSString stringWithFormat:@"%@积分", activity[@"score"]];
 }

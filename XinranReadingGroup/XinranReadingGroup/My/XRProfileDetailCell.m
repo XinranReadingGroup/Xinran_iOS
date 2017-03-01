@@ -52,7 +52,6 @@
     self.detailImageView = [[UIImageView alloc] init];
     self.detailImageView.layer.cornerRadius = 40;
     self.detailImageView.layer.masksToBounds = YES;
-    [self.detailImageView sd_setImageWithURL:[NSURL URLWithString:@"http://7xn9af.com1.z0.glb.clouddn.com/default_avatar@2x.png"] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
     [self.contentView addSubview:self.detailImageView];
     
     [self.detailImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -69,6 +68,7 @@
     if (type == ProfileDetailTypeAvatar) {
         self.detailImageView.hidden = NO;
         self.detailLabel.hidden = YES;
+        [self.detailImageView sd_setImageWithURL:[NSURL URLWithString:[XRUser sharedXRUser].profile.avatarUrl] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
     } else if (type == ProfileDetailTypePassword) {
         self.detailImageView.hidden = YES;
         self.detailLabel.hidden = YES;

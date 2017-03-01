@@ -110,7 +110,7 @@
 }
 
 + (void)updateUserProfile:(XRUserProfile *)profile success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    NSString *token = [NSString stringWithFormat:@"user/%@/profile", [XRUser sharedXRUser].profile.userId];
+    NSString *token = [NSString stringWithFormat:@"user/profile"];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     if (profile.nickName) {
         [dict setObject:profile.nickName forKey:@"nickName"];
@@ -120,6 +120,12 @@
     }
     
     [[XRNetwork sharedXRNetwork] POSTWithToken:token param:dict success:success failure:failure];
+}
+
++ (void)uploadPhotoWith:(NSData *)data success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure
+{
+    NSString *token = @"upload";
+    [[XRNetwork sharedXRNetwork] POST:token param:nil data:data success:success failure:failure];
 }
 
 + (void)convertActivity:(NSString *)activityId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
