@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,7 +15,7 @@
         <scene sceneID="0DA-Ym-Cc7">
             <objects>
                 <navigationController id="gtX-V0-zce" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ImG-tn-eaV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ImG-tn-eaV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1732,7 +1732,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    您已借书13本" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRD-hE-E2t">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BRD-hE-E2t">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2053,7 +2053,7 @@
             <objects>
                 <navigationController id="VLG-ed-iW1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="tabbar_my_normal" selectedImage="tabbar_my_selected" id="gvn-lr-fFN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h7U-ed-Lmq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="h7U-ed-Lmq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2143,7 +2143,7 @@
             <objects>
                 <navigationController id="DCr-ks-S8J" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="更多" image="tabbar_more_normal" selectedImage="tabbar_more_selected" id="Gfx-yC-ref"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dij-n2-YZB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Dij-n2-YZB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2160,7 +2160,7 @@
             <objects>
                 <navigationController id="xg5-2w-uCg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home_normal" selectedImage="tabbar_home_selected" id="JPf-ng-6HM"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UUI-IS-k4L">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UUI-IS-k4L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

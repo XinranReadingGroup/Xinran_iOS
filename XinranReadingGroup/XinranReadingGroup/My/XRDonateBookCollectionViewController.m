@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.infoLabel.text = @"您捐赠了0本书";
+    //self.infoLabel.text = @"您捐赠了0本书";
     [self fetchData];
 }
 

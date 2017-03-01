@@ -18,7 +18,7 @@
 - (void)updateUI
 {
     NSDictionary *activity = self.data;
-    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:activity[@"imgId"]] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
+    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", activity[@"imgId"]]] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
     self.titleLabel.text = activity[@"title"];
     self.scoreLabel.text = [NSString stringWithFormat:@"%@积分", activity[@"score"]];
 }
