@@ -150,7 +150,7 @@ static BOOL const isTest = NO;
         }
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         DLog(@"--------------------------------------------------\n请求失败!!!!!!!!!!!!!!\nurl: \n%@\nerror: \n%@\n--------------------------------------------------", operation.request.URL.absoluteString, error.description);
-        //[XRNetworkErrorAssistant handleNetworkFailure:error];
+        [XRNetworkErrorAssistant handleNetworkFailure:error];
         if (failure) {
             failure(error);
         }
