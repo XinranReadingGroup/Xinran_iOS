@@ -94,8 +94,9 @@
         dispatch_async(dispatch_get_main_queue(),^{
             [SVProgressHUD dismiss];
             //暂时先不可以捐赠
-            UIAlertView *alertView = [UIAlertView bk_alertViewWithTitle:LOCALSTRING(@"获取书籍信息失败，该书籍无法捐赠")];
-            [alertView show];
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:LOCALSTRING(@"获取书籍信息失败，该书籍无法捐赠") message:nil preferredStyle:UIAlertControllerStyleAlert];
+            [alertController addAction:[UIAlertAction actionWithTitle:LOCALSTRING(@"确定") style:UIAlertActionStyleCancel handler:nil]];
+            [self presentViewController:alertController animated:YES completion:NULL];
             //以后要开放
             /**
             UIAlertView *alertView = [UIAlertView bk_showAlertViewWithTitle:LOCALSTRING(@"获取书籍信息失败") message:nil cancelButtonTitle:LOCALSTRING(@"重新扫描") otherButtonTitles:@[@"手动输入"] handler:^(UIAlertView *alertView, NSInteger integer) {

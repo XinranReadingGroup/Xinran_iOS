@@ -20,6 +20,7 @@
 #import "XRBookRecordEntity.h"
 #import "XRBookDetailEntity.h"
 #import "XRBookDetailHeaderView.h"
+#import "SVProgressHUD.h"
 
 @interface XRBookDetailBaseViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -97,9 +98,9 @@
 	if (self.biz.bookData.onOffStockRecord.bookType == kBookTypeBorrow) {
 		//借书
 		[self.biz borrowBook: ^{
-		    //TODO 借阅成功提示
+            [SVProgressHUD showSuccessWithStatus:LOCALSTRING(@"借书成功")];
 		} failure: ^(NSError *error) {
-		    //TODO 借阅失败提示
+            [SVProgressHUD showErrorWithStatus:LOCALSTRING(@"借书失败，请重试")];
 		}];
 	}
 }

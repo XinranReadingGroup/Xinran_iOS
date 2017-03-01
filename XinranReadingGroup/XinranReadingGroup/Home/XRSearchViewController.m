@@ -37,6 +37,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
 	[self addSearchBar];
 	[self initTableView];
 }
@@ -61,6 +62,7 @@
 	self.searchBar.showsCancelButton = YES;
 	[self.searchBar setBackgroundImage:[UIImage new]];
 	[self.searchBar setTranslucent:YES];
+    [self.searchBar setTintColor:[UIColor blackColor]];
 	[self.searchBar becomeFirstResponder];
 	
 	//cancel按钮
