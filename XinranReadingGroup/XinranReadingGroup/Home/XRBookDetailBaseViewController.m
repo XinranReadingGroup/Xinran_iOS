@@ -21,6 +21,7 @@
 #import "XRBookDetailEntity.h"
 #import "XRBookDetailHeaderView.h"
 #import "SVProgressHUD.h"
+#import "XRBorrowBookQRViewController.h"
 
 @interface XRBookDetailBaseViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -97,11 +98,9 @@
 - (IBAction)borrowButtonTapped:(UIButton *)sender {
 	if (self.biz.bookData.onOffStockRecord.bookType == kBookTypeBorrow) {
 		//借书
-		[self.biz borrowBook: ^{
-            [SVProgressHUD showSuccessWithStatus:LOCALSTRING(@"借书成功")];
-		} failure: ^(NSError *error) {
-            [SVProgressHUD showErrorWithStatus:LOCALSTRING(@"借书失败，请重试")];
-		}];
+        XRBorrowBookQRViewController *qrViewController = [[XRBorrowBookQRViewController alloc] init];
+        qrViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:qrViewController animated:YES];
 	}
 }
 
