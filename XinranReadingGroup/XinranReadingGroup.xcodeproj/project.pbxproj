@@ -32,6 +32,8 @@
 		723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 723493823B37038BD12BD629 /* XRNetwork+Token.m */; };
 		72349AABBDE4A909A565D634 /* XRTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D7B0E9E480D7B52EFF4 /* XRTools.m */; };
 		7CF3C4535AE375CD96764D3D /* libPods-XinranReadingGroup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EF959282314C97A2C20593 /* libPods-XinranReadingGroup.a */; };
+		81F2D6201E69930C00534C24 /* XRBookDetailLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F2D61F1E69930C00534C24 /* XRBookDetailLocationCell.m */; };
+		81F2D6231E699C9100534C24 /* XRBookDetailLocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F2D6221E699C9100534C24 /* XRBookDetailLocationEntity.m */; };
 		81FE73101E66F3320002A5C0 /* register.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FE730F1E66F3320002A5C0 /* register.txt */; };
 		9870E0601DA24E29004F31EE /* XRDonateRelationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870E05F1DA24E29004F31EE /* XRDonateRelationViewController.m */; };
 		9879A6CD1DEA8F2A00645583 /* XRProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9879A6CB1DEA8F2A00645583 /* XRProfileEditViewController.m */; };
@@ -163,6 +165,10 @@
 		72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XRSetup.m"; sourceTree = "<group>"; };
 		72349E888B55E3230AF52AFA /* XRNetworkErrorAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNetworkErrorAssistant.m; sourceTree = "<group>"; };
 		77F3F7516CA8C933A1552A9C /* Pods-XinranReadingGroup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XinranReadingGroup.release.xcconfig"; path = "Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup.release.xcconfig"; sourceTree = "<group>"; };
+		81F2D61E1E69930C00534C24 /* XRBookDetailLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailLocationCell.h; sourceTree = "<group>"; };
+		81F2D61F1E69930C00534C24 /* XRBookDetailLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailLocationCell.m; sourceTree = "<group>"; };
+		81F2D6211E699C9100534C24 /* XRBookDetailLocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailLocationEntity.h; sourceTree = "<group>"; };
+		81F2D6221E699C9100534C24 /* XRBookDetailLocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailLocationEntity.m; sourceTree = "<group>"; };
 		81FE730F1E66F3320002A5C0 /* register.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = register.txt; sourceTree = "<group>"; };
 		89EF959282314C97A2C20593 /* libPods-XinranReadingGroup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XinranReadingGroup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9870E05E1DA24E29004F31EE /* XRDonateRelationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRDonateRelationViewController.h; sourceTree = "<group>"; };
@@ -562,6 +568,8 @@
 				BD72727A1C107A0B00509D4D /* XRBookDetailHeaderView.h */,
 				BD72727B1C107A0B00509D4D /* XRBookDetailHeaderView.m */,
 				BD72727D1C107A1800509D4D /* XRBookDetailHeaderView.xib */,
+				81F2D61E1E69930C00534C24 /* XRBookDetailLocationCell.h */,
+				81F2D61F1E69930C00534C24 /* XRBookDetailLocationCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -782,6 +790,8 @@
 				0992FA741B0E1119009CD369 /* XRBookDetailEntity.m */,
 				BDAD88301E0C15EF00A5257D /* XRAddressEntity.h */,
 				BDAD88311E0C15EF00A5257D /* XRAddressEntity.m */,
+				81F2D6211E699C9100534C24 /* XRBookDetailLocationEntity.h */,
+				81F2D6221E699C9100534C24 /* XRBookDetailLocationEntity.m */,
 			);
 			name = Biz;
 			sourceTree = "<group>";
@@ -1032,6 +1042,7 @@
 				BD8E393D1B0226BD00AF1CFD /* XRBookDetailInfoCell.m in Sources */,
 				BDC7B8E31BB6D3EB00687B68 /* UIButton+XRButton.m in Sources */,
 				BDE692181AD963DF00F5E5AB /* XRSearchBiz.m in Sources */,
+				81F2D6201E69930C00534C24 /* XRBookDetailLocationCell.m in Sources */,
 				BD8DFE131AE00E60003FAF06 /* XRMoreTableViewController.m in Sources */,
 				98ABCC9D1E59B6680067303A /* XRActivityListEntity.m in Sources */,
 				BDB1AD261BC2131E009BB273 /* XRMyProfileCell.m in Sources */,
@@ -1067,6 +1078,7 @@
 				BDC7B8F11BBA747400687B68 /* XREditBookInfoViewController.m in Sources */,
 				72349AABBDE4A909A565D634 /* XRTools.m in Sources */,
 				723490C7CD67731F0837F029 /* XRNetworkErrorAssistant.m in Sources */,
+				81F2D6231E699C9100534C24 /* XRBookDetailLocationEntity.m in Sources */,
 				7234919271CA1F3253A64FAE /* AppDelegate+XRSetup.m in Sources */,
 				723491E59D0C39670D9238B0 /* XRUserProfile.m in Sources */,
 			);

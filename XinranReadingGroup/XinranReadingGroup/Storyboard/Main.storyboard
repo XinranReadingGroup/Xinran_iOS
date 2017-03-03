@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HmT-3n-Kjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-163" y="413"/>
+            <point key="canvasLocation" x="-306" y="447"/>
         </scene>
         <!--登录-->
         <scene sceneID="R32-R8-9OH">
@@ -1401,16 +1401,13 @@
                                                         <constraint firstAttribute="height" constant="152" id="xuO-38-AoV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gso-KV-uH1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gso-KV-uH1">
                                                     <rect key="frame" x="137" y="16" width="210" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="ci9-Vy-vGC"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-u1-O2U">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-u1-O2U">
                                                     <rect key="frame" x="137" y="53" width="210" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1418,14 +1415,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="WgW-u1-O2U" firstAttribute="top" secondItem="Gso-KV-uH1" secondAttribute="top" constant="37" id="ChT-6F-IqL"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Gso-KV-uH1" secondAttribute="trailing" constant="20" id="Eva-AS-HJt"/>
                                                 <constraint firstItem="WgW-u1-O2U" firstAttribute="leading" secondItem="e16-kV-Smw" secondAttribute="trailing" constant="20" id="K1p-4h-cmV"/>
                                                 <constraint firstItem="Gso-KV-uH1" firstAttribute="leading" secondItem="e16-kV-Smw" secondAttribute="trailing" constant="20" id="MU1-IU-NcZ"/>
                                                 <constraint firstItem="e16-kV-Smw" firstAttribute="top" secondItem="Gso-KV-uH1" secondAttribute="top" id="O6K-1q-qmP"/>
                                                 <constraint firstItem="WgW-u1-O2U" firstAttribute="width" secondItem="Gso-KV-uH1" secondAttribute="width" id="gXp-nY-kAA"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="WgW-u1-O2U" secondAttribute="bottom" constant="16" id="hFS-2m-Mbj"/>
                                                 <constraint firstItem="e16-kV-Smw" firstAttribute="leading" secondItem="zoz-VS-5e0" secondAttribute="leading" constant="16" id="i63-Q9-AuQ"/>
                                                 <constraint firstItem="e16-kV-Smw" firstAttribute="top" secondItem="zoz-VS-5e0" secondAttribute="top" constant="16" id="lIh-eu-R3R"/>
+                                                <constraint firstItem="WgW-u1-O2U" firstAttribute="top" secondItem="Gso-KV-uH1" secondAttribute="bottom" constant="16" id="nF0-B9-CHE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1434,8 +1432,35 @@
                                             <outlet property="bookTitle" destination="Gso-KV-uH1" id="8gg-WL-4sM"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailContentCell" rowHeight="44" id="njZ-aF-uvz" customClass="XRBookDetailContentCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailLocationCell" rowHeight="44" id="mba-MU-q2v" customClass="XRBookDetailLocationCell">
                                         <rect key="frame" x="0.0" y="206" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mba-MU-q2v" id="nu6-7p-a05">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14e-rT-o5z">
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="43"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="14e-rT-o5z" firstAttribute="top" secondItem="nu6-7p-a05" secondAttribute="top" id="EXr-wb-6SM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="14e-rT-o5z" secondAttribute="trailing" constant="12" id="GI5-sS-3dc"/>
+                                                <constraint firstItem="14e-rT-o5z" firstAttribute="leading" secondItem="nu6-7p-a05" secondAttribute="leadingMargin" constant="12" id="YaM-0X-O0K"/>
+                                                <constraint firstAttribute="bottom" secondItem="14e-rT-o5z" secondAttribute="bottom" id="Yhd-Wx-cTr"/>
+                                                <constraint firstAttribute="centerY" secondItem="14e-rT-o5z" secondAttribute="centerY" id="ryg-kp-KDk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationTextView" destination="14e-rT-o5z" id="ykN-aT-nxL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailContentCell" rowHeight="44" id="njZ-aF-uvz" customClass="XRBookDetailContentCell">
+                                        <rect key="frame" x="0.0" y="250" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="njZ-aF-uvz" id="W8b-tN-W9G">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1462,7 +1487,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailPublisherCell" rowHeight="44" id="Jd9-OS-3tp" customClass="XRBookDetailPublisherCell">
-                                        <rect key="frame" x="0.0" y="250" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="294" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jd9-OS-3tp" id="2wr-zP-wha">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1489,7 +1514,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="XRBookDetailDonatorCell" rowHeight="77" id="SdZ-Hz-xvY" customClass="XRBookDetailDonatorCell">
-                                        <rect key="frame" x="0.0" y="294" width="375" height="77"/>
+                                        <rect key="frame" x="0.0" y="338" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SdZ-Hz-xvY" id="Dfy-hC-WKW">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>

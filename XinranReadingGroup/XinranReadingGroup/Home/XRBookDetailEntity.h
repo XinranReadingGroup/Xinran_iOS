@@ -11,6 +11,7 @@
 @class XRBookEntity;
 @class XRBookRecordEntity;
 @class XRBookOwnerEntity;
+@class XRBookDetailLocationEntity;
 
 @protocol XRBookDetailEntity <NSObject>
 
@@ -21,5 +22,6 @@
 @property (nonatomic, strong) XRBookRecordEntity *onOffStockRecord;
 @property (nonatomic, strong) XRBookEntity *book;
 @property (nonatomic, strong) XRBookOwnerEntity *ownerUserVO;
+@property (nonatomic, strong) XRBookDetailLocationEntity *bookLocationVO;
 
 @end
