@@ -65,17 +65,18 @@
 	[self updateBorrowButton];
 	
 	self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 63, 0);
-	[self.biz fetchBookDetail: ^{
-	    [self.tableView reloadData];
-	    [self updateBorrowButton];
-	} failure: ^(NSError *error) {
-	    //TODO 获取书籍信息失败处理
-	}];
 }
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [SVProgressHUD showWithStatus:LOCALSTRING(@"书籍信息获取中")];
+    [self.biz fetchBookDetail: ^{
+        [self.tableView reloadData];
+        [self updateBorrowButton];
+        [SVProgressHUD dismiss];
+    } failure: ^(NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
 }
 
 #pragma mark - borrow button
