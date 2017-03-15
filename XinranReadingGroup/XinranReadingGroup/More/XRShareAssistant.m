@@ -21,7 +21,13 @@ static NSString * const UM_App_key = @"552fc463fd98c5ad320009dc";
 }
 
 - (void)showShareSheet:(UIViewController *)target {
-    [UMSocialSnsService presentSnsIconSheetView:target appKey:UM_App_key shareText:LOCALSTRING(@"享阅分享测试") shareImage:nil shareToSnsNames:@[UMShareToWechatSession,UMShareToWechatTimeline,UMShareToSina,UMShareToQQ,UMShareToEmail,UMShareToSms,UMShareToQzone] delegate:self];
+    NSString *text = @"使用享阅借阅欣然读书吧藏书";
+    UIImage *image = [UIImage imageNamed:@"AppIcon40x40"];
+    NSURL *url = [NSURL URLWithString:@"http://www.xinrandushuba.com/"];
+    UIActivityViewController *activity = [[UIActivityViewController alloc] initWithActivityItems:@[text, image, url] applicationActivities:nil];
+    activity.excludedActivityTypes = @[UIActivityTypeAirDrop];
+    
+    [target presentViewController:activity animated:YES completion:NULL];
 }
 
 - (void)didFinishGetUMSocialDataInViewController:(UMSocialResponseEntity *)response {
