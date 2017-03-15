@@ -15,6 +15,7 @@
 #import "XRBorrowBookQRViewController.h"
 #import "XRReturnBookQRViewController.h"
 #import "UIViewController+navigationBarItem.h"
+#import "SVProgressHUD.h"
 
 @interface XRHomeViewController ()
 
@@ -81,6 +82,8 @@
 
 //享书
 - (IBAction)shareBookTapped:(UIButton *)sender {
+    [SVProgressHUD showWithStatus:LOCALSTRING(@"正在建设中")];
+    return;
 	XRDonateViewController *donateViewController = [[XRDonateViewController alloc] init];
 	donateViewController.title = LOCALSTRING(@"享书");
 	donateViewController.hidesBottomBarWhenPushed = YES;
