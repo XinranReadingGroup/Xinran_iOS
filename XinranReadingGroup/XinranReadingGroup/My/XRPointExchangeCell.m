@@ -26,7 +26,7 @@
 }
 - (IBAction)doneAction:(id)sender {
     [XRUserService convertActivity:self.data[@"id"] success:^(id param) {
-        [SVProgressHUD showErrorWithStatus:@"兑换成功"];
+        [SVProgressHUD showSuccessWithStatus:@"兑换成功"];
         [[NSNotificationCenter defaultCenter] postNotificationName:XRMemberPointRefreshNotification object:nil];
     } failure:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"兑换失败"];
