@@ -63,8 +63,8 @@
     }];
 }
 
-+ (void)fetchBorrowBook:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
-    [[XRNetwork sharedXRNetwork] GETWithToken:@"book/borrow/records" param:nil withEntityName:nil success:^(id param) {
++ (void)fetchBorrowBookWithPath:(NSString *)path success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure {
+    [[XRNetwork sharedXRNetwork] GETWithToken:path param:nil withEntityName:nil success:^(id param) {
         if (param) {
             //对传过来的array进行处理
             NSDictionary * const result = @{@"bookList":param};

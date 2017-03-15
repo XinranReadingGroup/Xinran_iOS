@@ -11,4 +11,9 @@
 
 @interface XRBorrowRecordViewController : ZYCoreTableViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *bookSum;
+
+@property (nonatomic, strong) NSString *urlPath;
+@property (nonatomic, copy) void (^fetchDataSuccess)(NSArray *books);
+
 @end

@@ -18,28 +18,27 @@
 
 @interface XRBorrowRecordViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *bookSum;
-
 @end
 
 @implementation XRBorrowRecordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = LOCALSTRING(@"我的借阅记录");
     [self fetchData];
     self.tableView.backgroundColor = RGBCOLOR(242,242,242);
 }
 
 - (void)fetchData {
-    [XRUserService fetchBorrowBook:^(id param) {
+    __weak typeof(self) weakSelf = self;
+    [XRUserService fetchBorrowBookWithPath:self.urlPath success:^(id param) {
+        __strong typeof(self) self = weakSelf;
         [self setupTableViewData:param];
         NSArray *books = self.tableViewData.firstObject;
-        self.bookSum.text = [NSString stringWithFormat:@"       您已借书%lu本",(unsigned long)books.count];
         [self.tableView reloadData];
-    } failure:^(NSError *error) {
-
-    }];
+        if (self.fetchDataSuccess) {
+            self.fetchDataSuccess(books);
+        }
+    } failure:NULL];
 }
 
 - (void)setupTableViewData:(XRBookListEntity *)bookListEntity {

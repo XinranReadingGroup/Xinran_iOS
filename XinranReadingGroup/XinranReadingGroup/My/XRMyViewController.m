@@ -45,7 +45,7 @@
     userInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     //section 2
-    NSArray *cellTitles = @[@"捐书记录",@"正在借阅",@"共享记录",@"公益积分"];
+    NSArray *cellTitles = @[@"捐书记录",@"正在借阅", @"还书记录",@"共享记录",@"公益积分"];
     NSMutableArray *section2 = [NSMutableArray array];
     [cellTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSDictionary *cellData = @{@"title":obj};
@@ -54,10 +54,26 @@
             if (idx == 0) {
                 viewController = [XRDonateBookCollectionViewController new];
             } else if (idx == 1) {
-                viewController = [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRBorrowRecordViewController class]) withStoryboardName:@"Main"];
+                XRBorrowRecordViewController *recordViewController = (XRBorrowRecordViewController *)[UIViewController viewControllerWithIdentifer:NSStringFromClass([XRBorrowRecordViewController class]) withStoryboardName:@"Main"];
+                recordViewController.urlPath = @"book/borrow/records";
+                recordViewController.title = LOCALSTRING(@"您的借阅记录");
+                __weak typeof(recordViewController) weakRecord = recordViewController;
+                [recordViewController setFetchDataSuccess:^(NSArray *books) {
+                    weakRecord.bookSum.text = [NSString stringWithFormat:@"       您已借书%lu本",(unsigned long)books.count];
+                }];
+                viewController = recordViewController;
             } else if (idx == 2) {
-                viewController = [XRShareBookCollectionViewController new];
+                XRBorrowRecordViewController *recordViewController = (XRBorrowRecordViewController *)[UIViewController viewControllerWithIdentifer:NSStringFromClass([XRBorrowRecordViewController class]) withStoryboardName:@"Main"];
+                recordViewController.urlPath = @"book/return/records";
+                recordViewController.title = LOCALSTRING(@"您的还书记录");
+                __weak typeof(recordViewController) weakRecord = recordViewController;
+                [recordViewController setFetchDataSuccess:^(NSArray *books) {
+                    weakRecord.bookSum.text = [NSString stringWithFormat:@"       您借过%lu本书",(unsigned long)books.count];
+                }];
+                viewController = recordViewController;
             } else if (idx == 3) {
+                viewController = [XRShareBookCollectionViewController new];
+            } else if (idx == 4) {
                 viewController = [UIViewController viewControllerWithIdentifer:NSStringFromClass([XRMemberPointViewController class]) withStoryboardName:@"Main"];
             }
             if (viewController) {

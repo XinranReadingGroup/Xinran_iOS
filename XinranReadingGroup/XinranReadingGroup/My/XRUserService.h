@@ -19,7 +19,7 @@
 
 + (void)fetchShareBook:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
-+ (void)fetchBorrowBook:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
++ (void)fetchBorrowBookWithPath:(NSString *)path success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 + (void)fetchActivity:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
@@ -30,4 +30,5 @@
 + (void)convertActivity:(NSString *)activityId success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
 
 + (void)uploadPhotoWith:(NSData *)data success:(ZYObjectBlock)success failure:(ZYErrorBlock)failure;
+
 @end
