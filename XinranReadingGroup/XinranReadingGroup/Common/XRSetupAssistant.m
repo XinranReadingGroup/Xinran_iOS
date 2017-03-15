@@ -8,6 +8,7 @@
 
 #import "XRSetupAssistant.h"
 #import "XRShareAssistant.h"
+#import "SVProgressHUD.h"
 
 @implementation XRSetupAssistant
 
@@ -15,6 +16,7 @@
     [XRShareAssistant setup];
     [[self class] setupNavigationBar];
     [[self class] setupCocoaLumberjack];
+    [SVProgressHUD setMinimumDismissTimeInterval:2];
 }
 
 + (void)setupNavigationBar {

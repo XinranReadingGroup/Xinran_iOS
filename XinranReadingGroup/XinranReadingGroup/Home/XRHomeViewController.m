@@ -82,7 +82,7 @@
 
 //享书
 - (IBAction)shareBookTapped:(UIButton *)sender {
-    [SVProgressHUD showWithStatus:LOCALSTRING(@"正在建设中")];
+    [SVProgressHUD showInfoWithStatus:LOCALSTRING(@"正在建设中")];
     return;
 	XRDonateViewController *donateViewController = [[XRDonateViewController alloc] init];
 	donateViewController.title = LOCALSTRING(@"享书");
