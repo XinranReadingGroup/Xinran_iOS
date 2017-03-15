@@ -13,7 +13,7 @@
 
 - (NSString *)avatarUrl
 {
-    NSString *url = [NSString stringWithFormat:@"http://xinrandushuba.com/img/avatar/user_avatar_origin_%@.jpg", self.userId];
+    NSString *url = [NSString stringWithFormat:@"http://xinrandushuba.com/img/avatar/user_avatar_origin_%@.jpg?t=%f", self.userId, [[NSDate date] timeIntervalSince1970]];
     return url;
 }
 
