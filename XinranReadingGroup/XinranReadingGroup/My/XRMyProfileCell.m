@@ -19,6 +19,7 @@
 - (void)setupUI {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     UIImageView *avatar = [[UIImageView alloc] init];
+    self.avatarImageView = avatar;
     [avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(@60);
         make.height.mas_equalTo(@60);
@@ -33,6 +34,7 @@
         [avatar sd_setImageWithURL:[NSURL URLWithString:[XRUser sharedXRUser].profile.avatarUrl] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
     }
     UILabel *IDText = [[UILabel alloc] init];
+    self.nickLabel = IDText;
     [IDText mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(@60);
     }];
@@ -46,6 +48,17 @@
         //make.centerY.mas_equalTo(UIEdgeInsetsMake(10, 15, 10, 15));
         make.edges.equalTo(self.contentView).offset(15);
     }];
+}
+
+- (void)updateUI
+{
+    if ([XRUser sharedXRUser].profile.imgId) {
+        [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[XRUser sharedXRUser].profile.imgId]];
+    }
+    else {
+        [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[XRUser sharedXRUser].profile.avatarUrl] placeholderImage:[UIImage imageNamed:@"default_avatar"] options:SDWebImageRefreshCached];
+    }
+    self.nickLabel.text = [XRUser sharedXRUser].profile.nickName;
 }
 
 @end

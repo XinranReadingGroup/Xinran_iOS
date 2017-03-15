@@ -14,4 +14,7 @@
  */
 @interface XRMyProfileCell : ZYCoreTableViewCell
 
+@property (nonatomic, strong) UIImageView *avatarImageView;
+@property (nonatomic, strong) UILabel *nickLabel;
+
 @end
