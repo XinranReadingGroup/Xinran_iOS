@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1965,11 +1965,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="TkY-Dk-mFO">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4ti-rk-enS">
-                                    <rect key="frame" x="156" y="57.5" width="63" height="35"/>
+                                    <rect key="frame" x="23" y="12.5" width="63" height="35"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="point_icon" translatesAutoresizingMaskIntoConstraints="NO" id="lTC-dm-tup">
                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -1989,13 +1989,13 @@
                             </subviews>
                             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="4ti-rk-enS" firstAttribute="centerY" secondItem="TkY-Dk-mFO" secondAttribute="centerY" id="csA-5R-Lfs"/>
-                                <constraint firstItem="4ti-rk-enS" firstAttribute="centerX" secondItem="TkY-Dk-mFO" secondAttribute="centerX" id="fKO-Gi-3g1"/>
+                                <constraint firstItem="4ti-rk-enS" firstAttribute="leading" secondItem="TkY-Dk-mFO" secondAttribute="leading" constant="23" id="FtT-uF-7vh"/>
+                                <constraint firstItem="4ti-rk-enS" firstAttribute="centerY" secondItem="TkY-Dk-mFO" secondAttribute="centerY" constant="5" id="csA-5R-Lfs"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="XRPointExchangeCell" rowHeight="115" id="7BU-oj-i4a" customClass="XRPointExchangeCell">
-                                <rect key="frame" x="0.0" y="178" width="375" height="115"/>
+                                <rect key="frame" x="0.0" y="78" width="375" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7BU-oj-i4a" id="EgO-xd-Oij">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>

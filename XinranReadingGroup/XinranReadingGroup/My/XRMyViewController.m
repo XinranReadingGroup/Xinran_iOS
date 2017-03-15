@@ -34,6 +34,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self.tableView selector:@selector(reloadData) name:FETCH_USER_PROFILE_SUCCESS object:nil];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)setupData {
     //用户信息
     ZYCoreCellInfo *userInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRMyProfileCell class] withCellHeight:80. withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {

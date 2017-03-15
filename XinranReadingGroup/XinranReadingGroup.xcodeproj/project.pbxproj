@@ -870,7 +870,7 @@
 				TargetAttributes = {
 					BD1AD3C01A98398F009CD8EF = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = LMU58WLMLD;
+						DevelopmentTeam = FM4A2EYEUJ;
 					};
 					BD1AD3DC1A98398F009CD8EF = {
 						CreatedOnToolsVersion = 6.1;
@@ -1197,7 +1197,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = LMU58WLMLD;
+				DEVELOPMENT_TEAM = FM4A2EYEUJ;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
@@ -1221,7 +1221,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = LMU58WLMLD;
+				DEVELOPMENT_TEAM = FM4A2EYEUJ;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
