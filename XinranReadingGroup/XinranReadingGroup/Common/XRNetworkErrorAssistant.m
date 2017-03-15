@@ -33,12 +33,16 @@
             errorMessage = [responseObject valueForKey:@"data"];
         }
         
-        [SVProgressHUD showErrorWithStatus:errorMessage];
+        if (errorMessage.length) {
+            [SVProgressHUD showErrorWithStatus:errorMessage];
+        }
     }
 }
 
 + (void)handleNetworkFailure:(NSError *)error {
-    [SVProgressHUD showErrorWithStatus:error.description];
+    if (error.description.length) {
+        [SVProgressHUD showErrorWithStatus:error.description];
+    }
 }
 
 @end

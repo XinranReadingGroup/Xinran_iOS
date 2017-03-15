@@ -31,7 +31,10 @@
 		723491E59D0C39670D9238B0 /* XRUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349577E7C2340F253B4DBB /* XRUserProfile.m */; };
 		723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 723493823B37038BD12BD629 /* XRNetwork+Token.m */; };
 		72349AABBDE4A909A565D634 /* XRTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D7B0E9E480D7B52EFF4 /* XRTools.m */; };
-		7891585EFE832474BD8026FB /* libPods-XinranReadingGroup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A7825FC0CCCB556B087379 /* libPods-XinranReadingGroup.a */; };
+		7CF3C4535AE375CD96764D3D /* libPods-XinranReadingGroup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EF959282314C97A2C20593 /* libPods-XinranReadingGroup.a */; };
+		81F2D6201E69930C00534C24 /* XRBookDetailLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F2D61F1E69930C00534C24 /* XRBookDetailLocationCell.m */; };
+		81F2D6231E699C9100534C24 /* XRBookDetailLocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F2D6221E699C9100534C24 /* XRBookDetailLocationEntity.m */; };
+		81FE73101E66F3320002A5C0 /* register.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FE730F1E66F3320002A5C0 /* register.txt */; };
 		9870E0601DA24E29004F31EE /* XRDonateRelationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870E05F1DA24E29004F31EE /* XRDonateRelationViewController.m */; };
 		9879A6CD1DEA8F2A00645583 /* XRProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9879A6CB1DEA8F2A00645583 /* XRProfileEditViewController.m */; };
 		9879A6CE1DEA8F2A00645583 /* XRProfileEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9879A6CC1DEA8F2A00645583 /* XRProfileEditViewController.xib */; };
@@ -161,7 +164,13 @@
 		72349D7B0E9E480D7B52EFF4 /* XRTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRTools.m; sourceTree = "<group>"; };
 		72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XRSetup.m"; sourceTree = "<group>"; };
 		72349E888B55E3230AF52AFA /* XRNetworkErrorAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNetworkErrorAssistant.m; sourceTree = "<group>"; };
-		7CD61AF8E93BF66FB8CCC5E1 /* Pods-XinranReadingGroup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XinranReadingGroup.release.xcconfig"; path = "Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup.release.xcconfig"; sourceTree = "<group>"; };
+		77F3F7516CA8C933A1552A9C /* Pods-XinranReadingGroup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XinranReadingGroup.release.xcconfig"; path = "Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup.release.xcconfig"; sourceTree = "<group>"; };
+		81F2D61E1E69930C00534C24 /* XRBookDetailLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailLocationCell.h; sourceTree = "<group>"; };
+		81F2D61F1E69930C00534C24 /* XRBookDetailLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailLocationCell.m; sourceTree = "<group>"; };
+		81F2D6211E699C9100534C24 /* XRBookDetailLocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailLocationEntity.h; sourceTree = "<group>"; };
+		81F2D6221E699C9100534C24 /* XRBookDetailLocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailLocationEntity.m; sourceTree = "<group>"; };
+		81FE730F1E66F3320002A5C0 /* register.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = register.txt; sourceTree = "<group>"; };
+		89EF959282314C97A2C20593 /* libPods-XinranReadingGroup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XinranReadingGroup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9870E05E1DA24E29004F31EE /* XRDonateRelationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRDonateRelationViewController.h; sourceTree = "<group>"; };
 		9870E05F1DA24E29004F31EE /* XRDonateRelationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRDonateRelationViewController.m; sourceTree = "<group>"; };
 		9879A6CA1DEA8F2A00645583 /* XRProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRProfileEditViewController.h; sourceTree = "<group>"; };
@@ -313,8 +322,7 @@
 		BDFB0ABD1AFA58F800F2C738 /* XRBookDetailBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailBaseViewController.m; sourceTree = "<group>"; };
 		BDFB0ABF1AFA595300F2C738 /* XRBookDetailBiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailBiz.h; sourceTree = "<group>"; };
 		BDFB0AC01AFA595300F2C738 /* XRBookDetailBiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailBiz.m; sourceTree = "<group>"; };
-		D3A7825FC0CCCB556B087379 /* libPods-XinranReadingGroup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XinranReadingGroup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F41BA72A99A70302AD384C7A /* Pods-XinranReadingGroup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XinranReadingGroup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup.debug.xcconfig"; sourceTree = "<group>"; };
+		FF5B8A6D88FEAD5BEDF34629 /* Pods-XinranReadingGroup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XinranReadingGroup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,7 +332,7 @@
 			files = (
 				09060F8B1B088CE9003C69EF /* AVFoundation.framework in Frameworks */,
 				BD1D64051AE006D200CCE363 /* libUMSocial_Sdk_4.2.2.a in Frameworks */,
-				7891585EFE832474BD8026FB /* libPods-XinranReadingGroup.a in Frameworks */,
+				7CF3C4535AE375CD96764D3D /* libPods-XinranReadingGroup.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +379,7 @@
 		09DC13331AD39D7700CE8277 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81FE730F1E66F3320002A5C0 /* register.txt */,
 				09DC13341AD39D7700CE8277 /* AppDelegate.h */,
 				09DC13351AD39D7700CE8277 /* AppDelegate.m */,
 				09DC13361AD39D7700CE8277 /* Info.plist */,
@@ -395,7 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				09060F8A1B088CE9003C69EF /* AVFoundation.framework */,
-				D3A7825FC0CCCB556B087379 /* libPods-XinranReadingGroup.a */,
+				89EF959282314C97A2C20593 /* libPods-XinranReadingGroup.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -407,7 +416,7 @@
 				BD1AD3E01A98398F009CD8EF /* XinranReadingGroupTests */,
 				BD1AD3C21A98398F009CD8EF /* Products */,
 				7A6AAC1FE59086D8F8088ECA /* Frameworks */,
-				C19E120D9BF3CA1CDD7A8D68 /* Pods */,
+				E25E6AB853645DC8675131D9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -559,6 +568,8 @@
 				BD72727A1C107A0B00509D4D /* XRBookDetailHeaderView.h */,
 				BD72727B1C107A0B00509D4D /* XRBookDetailHeaderView.m */,
 				BD72727D1C107A1800509D4D /* XRBookDetailHeaderView.xib */,
+				81F2D61E1E69930C00534C24 /* XRBookDetailLocationCell.h */,
+				81F2D61F1E69930C00534C24 /* XRBookDetailLocationCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -779,6 +790,8 @@
 				0992FA741B0E1119009CD369 /* XRBookDetailEntity.m */,
 				BDAD88301E0C15EF00A5257D /* XRAddressEntity.h */,
 				BDAD88311E0C15EF00A5257D /* XRAddressEntity.m */,
+				81F2D6211E699C9100534C24 /* XRBookDetailLocationEntity.h */,
+				81F2D6221E699C9100534C24 /* XRBookDetailLocationEntity.m */,
 			);
 			name = Biz;
 			sourceTree = "<group>";
@@ -794,11 +807,11 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		C19E120D9BF3CA1CDD7A8D68 /* Pods */ = {
+		E25E6AB853645DC8675131D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F41BA72A99A70302AD384C7A /* Pods-XinranReadingGroup.debug.xcconfig */,
-				7CD61AF8E93BF66FB8CCC5E1 /* Pods-XinranReadingGroup.release.xcconfig */,
+				FF5B8A6D88FEAD5BEDF34629 /* Pods-XinranReadingGroup.debug.xcconfig */,
+				77F3F7516CA8C933A1552A9C /* Pods-XinranReadingGroup.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -810,14 +823,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD1AD3E71A98398F009CD8EF /* Build configuration list for PBXNativeTarget "XinranReadingGroup" */;
 			buildPhases = (
-				D2DE6BFAEE9DF83F5967A78F /* [CP] Check Pods Manifest.lock */,
+				BC30C82A6FD0D043BED0DD34 /* [CP] Check Pods Manifest.lock */,
 				BD1AD3BD1A98398F009CD8EF /* Sources */,
 				BD1AD3BE1A98398F009CD8EF /* Frameworks */,
 				BD1AD3BF1A98398F009CD8EF /* Resources */,
 				BD91CF991C0760FC0033DEE4 /* ShellScript */,
-				A5854DB7C1294FA421308946 /* [CP] Embed Pods Frameworks */,
-				7972A720C418AF913610C2F5 /* [CP] Copy Pods Resources */,
-				2E4D3DEBF31BCDEFC0C92345 /* Embed Pods Frameworks */,
+				66059F3BFED0939E65C5D091 /* [CP] Embed Pods Frameworks */,
+				E91D737337938737E6EB1839 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -858,7 +870,7 @@
 				TargetAttributes = {
 					BD1AD3C01A98398F009CD8EF = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = FM4A2EYEUJ;
+						DevelopmentTeam = LMU58WLMLD;
 					};
 					BD1AD3DC1A98398F009CD8EF = {
 						CreatedOnToolsVersion = 6.1;
@@ -907,6 +919,7 @@
 				BD1D640D1AE006D300CCE363 /* UMSShareListController.xib in Resources */,
 				0988B4B61B0D9BC50004DFD8 /* XRBookInfoCell.xib in Resources */,
 				BD1D64041AE006D200CCE363 /* UMSocialLocalizable.strings in Resources */,
+				81FE73101E66F3320002A5C0 /* register.txt in Resources */,
 				9879A6CE1DEA8F2A00645583 /* XRProfileEditViewController.xib in Resources */,
 				BD1AD3D51A98398F009CD8EF /* Images.xcassets in Resources */,
 				09DC13321AD39BB500CE8277 /* Main.storyboard in Resources */,
@@ -924,37 +937,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E4D3DEBF31BCDEFC0C92345 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7972A720C418AF913610C2F5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5854DB7C1294FA421308946 /* [CP] Embed Pods Frameworks */ = {
+		66059F3BFED0939E65C5D091 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -967,6 +950,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC30C82A6FD0D043BED0DD34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BD91CF991C0760FC0033DEE4 /* ShellScript */ = {
@@ -982,19 +980,19 @@
 			shellPath = /bin/bash;
 			shellScript = "";
 		};
-		D2DE6BFAEE9DF83F5967A78F /* [CP] Check Pods Manifest.lock */ = {
+		E91D737337938737E6EB1839 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1044,6 +1042,7 @@
 				BD8E393D1B0226BD00AF1CFD /* XRBookDetailInfoCell.m in Sources */,
 				BDC7B8E31BB6D3EB00687B68 /* UIButton+XRButton.m in Sources */,
 				BDE692181AD963DF00F5E5AB /* XRSearchBiz.m in Sources */,
+				81F2D6201E69930C00534C24 /* XRBookDetailLocationCell.m in Sources */,
 				BD8DFE131AE00E60003FAF06 /* XRMoreTableViewController.m in Sources */,
 				98ABCC9D1E59B6680067303A /* XRActivityListEntity.m in Sources */,
 				BDB1AD261BC2131E009BB273 /* XRMyProfileCell.m in Sources */,
@@ -1079,6 +1078,7 @@
 				BDC7B8F11BBA747400687B68 /* XREditBookInfoViewController.m in Sources */,
 				72349AABBDE4A909A565D634 /* XRTools.m in Sources */,
 				723490C7CD67731F0837F029 /* XRNetworkErrorAssistant.m in Sources */,
+				81F2D6231E699C9100534C24 /* XRBookDetailLocationEntity.m in Sources */,
 				7234919271CA1F3253A64FAE /* AppDelegate+XRSetup.m in Sources */,
 				723491E59D0C39670D9238B0 /* XRUserProfile.m in Sources */,
 			);
@@ -1192,12 +1192,12 @@
 		};
 		BD1AD3E81A98398F009CD8EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F41BA72A99A70302AD384C7A /* Pods-XinranReadingGroup.debug.xcconfig */;
+			baseConfigurationReference = FF5B8A6D88FEAD5BEDF34629 /* Pods-XinranReadingGroup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = FM4A2EYEUJ;
+				DEVELOPMENT_TEAM = LMU58WLMLD;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
@@ -1216,12 +1216,12 @@
 		};
 		BD1AD3E91A98398F009CD8EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CD61AF8E93BF66FB8CCC5E1 /* Pods-XinranReadingGroup.release.xcconfig */;
+			baseConfigurationReference = 77F3F7516CA8C933A1552A9C /* Pods-XinranReadingGroup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = FM4A2EYEUJ;
+				DEVELOPMENT_TEAM = LMU58WLMLD;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";

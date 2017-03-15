@@ -19,7 +19,7 @@
 }
 
 - (NSString *)addressTitle {
-    return [NSString stringWithFormat:@"%@ %@ %@", self.province, self.city, self.county];
+    return [NSString stringWithFormat:@"%@ %@ %@ %@", self.province, self.city, self.county, self.detail];
 }
 
 @end

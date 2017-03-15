@@ -20,6 +20,12 @@
 #import "XRBookRecordEntity.h"
 #import "XRBookDetailEntity.h"
 #import "XRBookDetailHeaderView.h"
+#import "SVProgressHUD.h"
+#import "XRBorrowBookQRViewController.h"
+#import "XRBookDetailLocationCell.h"
+#import "XRBookDetailEntity.h"
+#import "XRBookRecordEntity.h"
+#import "XRBookDetailLocationEntity.h"
 
 @interface XRBookDetailBaseViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -63,17 +69,18 @@
 	[self updateBorrowButton];
 	
 	self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 63, 0);
-	[self.biz fetchBookDetail: ^{
-	    [self.tableView reloadData];
-	    [self updateBorrowButton];
-	} failure: ^(NSError *error) {
-	    //TODO 获取书籍信息失败处理
-	}];
 }
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [SVProgressHUD showWithStatus:LOCALSTRING(@"书籍信息获取中")];
+    [self.biz fetchBookDetail: ^{
+        [self.tableView reloadData];
+        [self updateBorrowButton];
+        [SVProgressHUD dismiss];
+    } failure: ^(NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
 }
 
 #pragma mark - borrow button
@@ -96,21 +103,19 @@
 - (IBAction)borrowButtonTapped:(UIButton *)sender {
 	if (self.biz.bookData.onOffStockRecord.bookType == kBookTypeBorrow) {
 		//借书
-		[self.biz borrowBook: ^{
-		    //TODO 借阅成功提示
-		} failure: ^(NSError *error) {
-		    //TODO 借阅失败提示
-		}];
+        XRBorrowBookQRViewController *qrViewController = [[XRBorrowBookQRViewController alloc] init];
+        qrViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:qrViewController animated:YES];
 	}
 }
 
 + (NSArray *)sectionTitles {
-    return @[@"内容简介",@"出版信息",@"捐书人"];
+    return @[@"位置",@"内容简介",@"出版信息",@"捐书人"];
 }
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 4;
+	return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -146,20 +151,26 @@
 			return [XRBookDetailInfoCell cellHeight];
 		}
 		break;
+            
+        case 1:
+        {
+            return 50;
+        }
+            break;
 		
-		case 1:
+		case 2:
 		{
 			return [XRBookDetailContentCell cellHeight:self.biz.bookData];
 		}
 		break;
 		
-		case 2:
+		case 3:
 		{
 			return [XRBookDetailPublisherCell cellHeight];
 		}
 		break;
 		
-		case 3:
+		case 4:
 		{
 			return [XRBookDetailDonatorCell cellHeight];
 		}
@@ -178,20 +189,26 @@
 			return nil;
 		}
 		break;
+        
+        case 1:
+        {
+            return @"位置";
+        }
+            break;
 		
-		case 1:
+		case 2:
 		{
 			return @"内容简介";
 		}
 		break;
 		
-		case 2:
+		case 3:
 		{
 			return @"出版信息";
 		}
 		break;
 		
-		case 3:
+		case 4:
 		{
 			return @"捐书人";
 		}
@@ -212,8 +229,16 @@
 			return cell;
 		}
 		break;
-		
-		case 1:
+            
+        case 1:
+        {
+            XRBookDetailLocationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailLocationCell" forIndexPath:indexPath];
+            cell.location = self.biz.bookData.bookLocationVO.locationString;
+            return cell;
+        }
+            break;
+            
+		case 2:
 		{
 			XRBookDetailContentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailContentCell" forIndexPath:indexPath];
 			cell.data = self.biz.bookData;
@@ -221,7 +246,7 @@
 		}
 		break;
 		
-		case 2:
+		case 3:
 		{
 			XRBookDetailPublisherCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailPublisherCell" forIndexPath:indexPath];
 			cell.data = self.biz.bookData.book;
@@ -229,7 +254,7 @@
 		}
 		break;
 		
-		case 3:
+		case 4:
 		{
 			XRBookDetailDonatorCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XRBookDetailDonatorCell" forIndexPath:indexPath];
             cell.data = self.biz.bookData;

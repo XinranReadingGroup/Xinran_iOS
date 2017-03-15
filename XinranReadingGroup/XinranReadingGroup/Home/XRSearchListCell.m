@@ -20,10 +20,6 @@
 	[self reloadCell];
 }
 
-- (void)awakeFromNib {
-	// Initialization code
-}
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
 	[super setSelected:selected animated:animated];
 	
@@ -33,12 +29,12 @@
 - (void)reloadCell {
 	self.title.text = self.data.book.title;
 	self.detail.text = [self jointDetail];
-	[self.type setTitle:[self bookType:self.data.onOffStockRecord.bookType] forState:UIControlStateNormal];
-	[self.type setTitle:[self bookType:self.data.onOffStockRecord.bookType] forState:UIControlStateSelected];
-	[self.type setTitle:[self bookType:self.data.onOffStockRecord.bookType] forState:UIControlStateHighlighted];
-	[self.type setBackgroundImage:[self bookTypeImage:self.data.onOffStockRecord.bookType] forState:UIControlStateNormal];
-	[self.type setBackgroundImage:[self bookTypeSelectImage:self.data.onOffStockRecord.bookType] forState:UIControlStateSelected];
-	[self.type setBackgroundImage:[self bookTypeSelectImage:self.data.onOffStockRecord.bookType] forState:UIControlStateHighlighted];
+	[self.type setTitle:[self bookType:self.data.onOffStockRecord.borrowStatus] forState:UIControlStateNormal];
+	[self.type setTitle:[self bookType:self.data.onOffStockRecord.borrowStatus] forState:UIControlStateSelected];
+	[self.type setTitle:[self bookType:self.data.onOffStockRecord.borrowStatus] forState:UIControlStateHighlighted];
+	[self.type setBackgroundImage:[self bookTypeImage:self.data.onOffStockRecord.borrowStatus] forState:UIControlStateNormal];
+	[self.type setBackgroundImage:[self bookTypeSelectImage:self.data.onOffStockRecord.borrowStatus] forState:UIControlStateSelected];
+	[self.type setBackgroundImage:[self bookTypeSelectImage:self.data.onOffStockRecord.borrowStatus] forState:UIControlStateHighlighted];
 }
 
 - (NSString *)jointDetail {
@@ -58,19 +54,19 @@
 	return detailString;
 }
 
-- (NSString *)bookType:(BookType)type {
+- (NSString *)bookType:(BookStatus)status {
 	NSString *bookType = @"";
 	
-	switch (type) {
-		case kBookTypeBorrow:
+	switch (status) {
+		case kBookStatusAvaliable:
 		{
-			bookType = LOCALSTRING(@"借阅");
+			bookType = LOCALSTRING(@"可借");
 		}
 		break;
 		
-		case kBookTypeShare:
+		case kBookStatusBorrowed:
 		{
-			bookType = LOCALSTRING(@"共享");
+			bookType = LOCALSTRING(@"已借");
 		}
 		break;
 		
@@ -84,17 +80,17 @@
 	return bookType;
 }
 
-- (UIImage *)bookTypeImage:(BookType)type {
+- (UIImage *)bookTypeImage:(BookStatus)status {
 	UIImage *bookTypeImage = [UIImage imageNamed:@"search_blue-btn-nor"];
-	if (type == kBookTypeShare) {
+	if (status == kBookStatusBorrowed) {
 		bookTypeImage = [UIImage imageNamed:@"search_red-btn-nor"];
 	}
 	return bookTypeImage;
 }
 
-- (UIImage *)bookTypeSelectImage:(BookType)type {
+- (UIImage *)bookTypeSelectImage:(BookStatus)status {
 	UIImage *bookTypeSelectImage = [UIImage imageNamed:@"search_blue-btn-chose"];
-	if (type == kBookTypeShare) {
+	if (status == kBookStatusBorrowed) {
 		bookTypeSelectImage = [UIImage imageNamed:@"search_red-btn-chose"];
 	}
 	return bookTypeSelectImage;

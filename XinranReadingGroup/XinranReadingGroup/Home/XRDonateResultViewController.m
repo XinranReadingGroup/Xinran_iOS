@@ -65,6 +65,13 @@
         make.top.mas_equalTo(resultIcon.mas_bottom).offset(27);
         make.centerX.equalTo(resultIcon);
     }];
+    
+    NSMutableArray *viewControllers = [[self.navigationController viewControllers] mutableCopy];
+    UIViewController *rootViewController = viewControllers.firstObject;
+    [viewControllers removeAllObjects];
+    [viewControllers addObject:rootViewController];
+    [viewControllers addObject:self];
+    self.navigationController.viewControllers = [viewControllers copy];
 
     /**
     UIImage *QRImage = [DUQRAssistant createQRImage:self.donateBookDetail.bookID withWidth:150];

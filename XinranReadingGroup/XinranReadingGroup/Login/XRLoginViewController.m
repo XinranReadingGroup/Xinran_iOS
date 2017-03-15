@@ -15,6 +15,8 @@
 #import <UIViewController+ZYCore.h>
 #import <NSString+ZYCore.h>
 #import <ZYCoreHintAssistant.h>
+#import "NSString+ZYCore.h"
+#import "ZYCoreWebViewController.h"
 
 @interface XRLoginViewController ()
 
@@ -53,8 +55,9 @@
     
     self.loginButton.enabled = NO;
     [SVProgressHUD show];
-    NSString *userNameStr = self.userName.text;
-    NSString *passwordStr = self.password.text;
+    NSString *userNameStr = [self.userName.text trim];
+    NSString *passwordStr = [self.password.text trim];
+    
     [XRLoginBiz login:userNameStr password:passwordStr success:^{
         self.loginButton.enabled = YES;
         //跳转到主页
@@ -68,6 +71,13 @@
         [SVProgressHUD showErrorWithStatus:@"登录失败,请重试"];
         self.loginButton.enabled = YES;
     }];
+}
+
+- (IBAction)forgetPasswordTapped:(id)sender {
+    ZYCoreWebViewController *webViewController = [ZYCoreWebViewController new];
+    webViewController.targetUrl = @"https://xinrandushuba.com/user/password/reset";
+    webViewController.title = LOCALSTRING(@"忘记密码");
+    [self.navigationController pushViewController:webViewController animated:YES];
 }
 
 /*

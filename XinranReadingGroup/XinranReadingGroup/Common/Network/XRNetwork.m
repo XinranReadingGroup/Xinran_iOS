@@ -139,7 +139,7 @@ static BOOL const isTest = NO;
             }
         }
         else {
-            //[XRNetworkErrorAssistant handleErrorFromServer:responseObject];
+            [XRNetworkErrorAssistant handleErrorFromServer:responseObject];
             NSInteger code = [responseObject valueForKey:@"code"] ? [[responseObject valueForKey:@"code"] integerValue] : 0;
             NSError *error = [NSError errorWithDomain:operation.request.URL.host code:code userInfo:
                               @{KEY_NETWORK_ERROR_MESSAGE:

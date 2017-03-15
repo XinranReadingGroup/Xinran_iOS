@@ -13,6 +13,8 @@
 #import <ZYCoreHintAssistant.h>
 #import "XRUser.h"
 #import "XRTools.h"
+#import "NSString+ZYCore.h"
+#import "XRAboutViewController.h"
 
 @interface XRRegisterViewController ()
 
@@ -37,8 +39,16 @@
 }
 
 - (IBAction)registerButtonTapped:(UIButton *)sender {
+    NSString *userName = [self.userName.text trim];
     if (![self.password.text isEqualToString:self.confirmPassword.text]) {
         [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"确认密码的内容与密码不一致哟")];
+        return;
+    }
+    NSString *emailRegular = @"/^\\w*@\\w*\\.\\w*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegular];
+    if (![predicate evaluateWithObject:userName]) {
+        //用户名不合法
+        [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"用户名不合法，请填入正确的电子邮箱")];
         return;
     }
     self.registerButton.enabled = NO;
@@ -56,6 +66,18 @@
             [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"注册失败啦")];
         });
     }];
+}
+
+- (IBAction)registerAgreementTapped:(id)sender {
+    NSString *registerFileUrl = [[NSBundle mainBundle] pathForResource:@"register" ofType:@"txt"];
+    if (registerFileUrl) {
+        NSError *error;
+        NSString *registerText = [NSString stringWithContentsOfFile:registerFileUrl encoding:NSUTF8StringEncoding error:&error];
+        XRAboutViewController *textViewController = (XRAboutViewController *)[XRAboutViewController viewControllerWithIdentifer:@"XRAboutViewController" withStoryboardName:@"Main"];
+        textViewController.title = LOCALSTRING(@"注册协议");
+        textViewController.text = registerText;
+        [self.navigationController pushViewController:textViewController animated:YES];
+    }
 }
 
 /*
