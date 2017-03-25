@@ -69,6 +69,7 @@
     aboutInfo.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     self.tableViewData = @[@[shareInfo,feedbackInfo,aboutInfo]];
+    self.tableView.tableFooterView = [UIView new];
 }
 
 @end
