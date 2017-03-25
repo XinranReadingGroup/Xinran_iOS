@@ -1,3 +1,4 @@
+source 'git@gitlab.alibaba-inc.com:alipods/specs-mirror.git'
 platform :ios, '8.0'
 
 xcodeproj 'XinranReadingGroup'
@@ -20,8 +21,6 @@ target 'XinranReadingGroup' do
     pod 'UMengFeedback', '~> 2.3.4'
     pod 'TZImagePickerController'
     
-    pod 'Reveal-iOS-SDK', :configurations => ['Debug']
-
     pod 'ZYCoreFramework',:git=>'git@github.com:zengyun-programmer/ZYCoreFramework.git',:tag=>'0.1'
     pod 'DUQRAssistant',:git=>'git@github.com:zengyun-programmer/DUQRAssistant.git',:branch=>'develop'
 end
