@@ -15,6 +15,7 @@
 #import "XRSearchListCell.h"
 #import <UIViewController+ZYCore.h>
 #import "XRBookDetailBaseViewController.h"
+#import "SVProgressHUD.h"
 #import <UIViewController+ZYCore.h>
 #import <ZYCoreDefine.h>
 
@@ -91,7 +92,7 @@
 	        [self.tableView reloadData];
 		}
 	} failure: ^(NSError *error) {
-	    //TODO 搜索失败
+        [SVProgressHUD showErrorWithStatus:LOCALSTRING(@"获取搜索结果失败")];
 	}];
 }
 
