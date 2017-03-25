@@ -10,6 +10,7 @@
 #import "XRUserService.h"
 #import "XRBookListEntity.h"
 #import <UIViewController+ZYCore.h>
+#import "ZYCoreDefine.h"
 
 @interface XRDonateBookCollectionViewController ()
 
@@ -25,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = LOCALSTRING(@"捐书记录");
     //self.infoLabel.text = @"您捐赠了0本书";
     [self fetchData];
 }

@@ -9,6 +9,7 @@
 #import "XRShareBookCollectionViewController.h"
 #import "XRUserService.h"
 #import "XRBookListEntity.h"
+#import "ZYCoreDefine.h"
 
 @interface XRShareBookCollectionViewController ()
 
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.infoLabel.text = @"您共享了0本书";
+    self.title = LOCALSTRING(@"共享记录");
     [self fetchData];
 }
 

@@ -14,6 +14,7 @@
 #import "XRActivityListEntity.h"
 #import "ZYCoreCellInfo.h"
 #import "XRPointExchangeCell.h"
+#import "ZYCoreDefine.h"
 
 @interface XRMemberPointViewController ()
 
@@ -31,6 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //[self fetchData];
+    self.title = LOCALSTRING(@"公益积分");
     self.tableView.tableFooterView = [UIView new];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fetchData) name:XRMemberPointRefreshNotification object:nil];
