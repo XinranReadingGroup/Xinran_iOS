@@ -14,6 +14,7 @@
 #import "XRBookRecordEntity.h"
 #import "UIButton+XRButton.h"
 #import "XRQRViewController.h"
+#import "XRDonateViewController.h"
 #import <DUQRAssistant.h>
 #import <Masonry/View+MASAdditions.h>
 #import <UIView+ZYCore.h>
@@ -126,14 +127,21 @@
 }
 
 - (void)continueDonateBookTapped:(UIButton *)button {
-    __block UIViewController *QRViewController = nil;
-    [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[XRQRViewController class]]) {
-            QRViewController = obj;
-            *stop = YES;
-        }
-    }];
-    [self.navigationController popToViewController:QRViewController animated:YES];
+    XRDonateViewController *donateViewController = [[XRDonateViewController alloc] init];
+    donateViewController.view.backgroundColor = [UIColor whiteColor];
+    donateViewController.title = LOCALSTRING(@"捐书");
+    donateViewController.hidesBottomBarWhenPushed = YES;
+    donateViewController.sumitCallBack = ^(XRBookEntity *bookData) {
+        //捐书之后
+        XRDonateResultViewController *donateResultViewController = [XRDonateResultViewController new];
+        dispatch_async(dispatch_get_main_queue(),^{
+            [self.navigationController pushViewController:donateResultViewController animated:YES];
+        });
+    };
+    [self.navigationController pushViewController:donateViewController animated:YES];
+    NSMutableArray *viewControllers = [self.navigationController.viewControllers mutableCopy];
+    [viewControllers removeObject:self];
+    self.navigationController.viewControllers = [viewControllers copy];
 }
 
 @end
