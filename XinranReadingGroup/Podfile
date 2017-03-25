@@ -1,8 +1,6 @@
 source 'git@gitlab.alibaba-inc.com:alipods/specs-mirror.git'
 platform :ios, '8.0'
 
-xcodeproj 'XinranReadingGroup'
-
 target 'XinranReadingGroup' do
     pod 'AFNetworking','2.6.0'
     pod 'JSONModel', '~> 1.1.0'
@@ -11,7 +9,6 @@ target 'XinranReadingGroup' do
     pod 'BlocksKit','2.2.5'
     pod 'SVProgressHUD'
     pod 'Masonry','0.6.3'
-    pod 'Reveal-iOS-SDK', :configurations => ['Debug']
     pod 'OAStackView','0.1.0'
     pod 'FDStackView','1.0-alpha'
     pod 'CocoaLumberjack','2.2.0'
