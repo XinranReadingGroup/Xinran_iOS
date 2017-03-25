@@ -43,16 +43,12 @@
 
 - (void)scanFinish:(NSString *)result {
     if (!result) {
-        UIAlertView *alertView = [UIAlertView bk_showAlertViewWithTitle:@"扫描失败" message:nil cancelButtonTitle:@"重新扫描" otherButtonTitles:@[@"手动输入"] handler:^(UIAlertView *alertView, NSInteger integer) {
-            if (integer == 1) {
-                //手动输入
-                [self pushToViewControllerWithStoryboardName:@"Main" viewController:@"XREditBookInfoViewController"];
-            }
-            else if (integer == 0) {
-                [self startReading];
-            }
-        }];
-        [alertView show];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"扫描失败" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"重新扫描" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self startReading];
+        }]];
+        [self presentViewController:alertController animated:YES completion:NULL];
+        return;
     }
     //关联二维码
     [SVProgressHUD showWithStatus:LOCALSTRING(@"扫描成功，正在关联二维码")];
