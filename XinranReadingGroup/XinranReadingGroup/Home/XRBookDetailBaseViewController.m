@@ -38,6 +38,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *donatorAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *donatorName;
 @property (weak, nonatomic) IBOutlet UILabel *donateDate;
+@property (weak, nonatomic) IBOutlet UIView *borrowBaseView;
 
 @end
 
@@ -65,10 +66,16 @@
 	[super viewDidLoad];
 
 	self.title = self.bookData.book.title;
-
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.borrowBaseView.bounds;
+    gradient.colors = @[(__bridge id)[UIColor colorWithWhite:1 alpha:0].CGColor, (__bridge id)[UIColor whiteColor].CGColor, (__bridge id)[UIColor whiteColor].CGColor];
+    gradient.locations = @[@0, @0.5, @1];
+    gradient.startPoint = CGPointMake(0, 0);
+    gradient.endPoint = CGPointMake(0, 1);
+    [self.borrowBaseView.layer addSublayer:gradient];
 	[self updateBorrowButton];
 	
-	self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 63, 0);
+	self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 84, 0);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -81,6 +88,11 @@
     } failure: ^(NSError *error) {
         [SVProgressHUD dismiss];
     }];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [SVProgressHUD dismiss];
 }
 
 #pragma mark - borrow button

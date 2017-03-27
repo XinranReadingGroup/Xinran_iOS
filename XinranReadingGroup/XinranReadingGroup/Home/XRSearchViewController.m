@@ -84,14 +84,16 @@
 	//清空上一次的搜索结果
 	self.biz.bookList = [[XRBookListEntity alloc] init];
 	[self.tableView reloadData];
-	
+    [SVProgressHUD show];
 	NSString *keyword = searchBar.text;
 	[self.biz fetchSearchResult:keyword success: ^{
+        [SVProgressHUD dismiss];
 	    if (self.biz.bookList.bookList.count > 0) {
 	        self.tableView.hidden = NO;
 	        [self.tableView reloadData];
 		}
 	} failure: ^(NSError *error) {
+        [SVProgressHUD dismiss];
         [SVProgressHUD showErrorWithStatus:LOCALSTRING(@"获取搜索结果失败")];
 	}];
 }

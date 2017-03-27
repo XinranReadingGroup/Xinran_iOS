@@ -15,6 +15,8 @@ static NSString * const KEY_NETWORK_ERROR_MESSAGE = @"key_network_error_mesage";
 
 @property (nonatomic, strong) NSString *baseURL;
 
+@property (nonatomic, copy) NSString *baseImageUrlString;
+
 + (XRNetwork *)sharedXRNetwork;
 
 + (XRNetwork *)sharedDoubanNetwork;

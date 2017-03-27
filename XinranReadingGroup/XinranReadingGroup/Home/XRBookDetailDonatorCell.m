@@ -31,11 +31,8 @@
 }
 
 - (void)updateUI {
-	//TODO 用户图片的信息也木有
-	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:@"http://fd.topitme.com/d/8b/d4/1187454768482d48bdo.jpg"]];
-//	[_donatorAvatar sd_setImageWithURL:[NSURL URLWithString:self.data.offStockDate.]]
+    [_donatorAvatar sd_setImageWithURL:self.data.ownerUserVO.avatarURL];
 	_donatorName.text = self.data.ownerUserVO.nickName;
-	//TODO 日期数据还没有
 	_donateDate.text = [self.data.onOffStockRecord.onStockDate toDefaultDataString];
 
 }

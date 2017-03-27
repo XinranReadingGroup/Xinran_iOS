@@ -9,10 +9,12 @@
 #import "XRSetupAssistant.h"
 #import "XRShareAssistant.h"
 #import "SVProgressHUD.h"
+#import "XRNetwork.h"
 
 @implementation XRSetupAssistant
 
 + (void)setup {
+    [XRNetwork sharedXRNetwork].baseImageUrlString = @"http://www.xinrandushuba.com";
     [XRShareAssistant setup];
     [[self class] setupNavigationBar];
     [[self class] setupCocoaLumberjack];
