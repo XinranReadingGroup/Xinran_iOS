@@ -10,15 +10,26 @@
 #import "XRShareAssistant.h"
 #import "SVProgressHUD.h"
 #import "XRNetwork.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import <JSPatchPlatform/JSPatch.h>
 
 @implementation XRSetupAssistant
 
 + (void)setup {
+    //JSPatch
+    [JSPatch startWithAppKey:@"db0ec829a4b36936"];
+    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMhl7LxZImfhcm4TBIEwYA0cv/\nikLm4DAl9+0HdGqH/aPTNNSrRbVnn9FLFSXGca9lkdPSzINCFwB6IMmuA+fhTJXD\n4BvuDO+8mVLJkNLqJ5KmKD3Qf3PM4Mxf1i6Q6+KdidlSB4B9ax635ong9S6rffXa\n2srcq7YPGWqRLAyIrQIDAQAB\n-----END PUBLIC KEY-----"];
+    [JSPatch sync];
+    
     [XRNetwork sharedXRNetwork].baseImageUrlString = @"http://www.xinrandushuba.com";
     [XRShareAssistant setup];
     [[self class] setupNavigationBar];
     [[self class] setupCocoaLumberjack];
     [SVProgressHUD setMinimumDismissTimeInterval:2];
+    
+    //crash 日志
+    [Fabric with:@[[Crashlytics class]]];
 }
 
 + (void)setupNavigationBar {

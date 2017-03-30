@@ -1,4 +1,7 @@
+source 'git@github.com:CocoaPods/Specs.git'
 platform :ios, '8.0'
+
+#use_frameworks!
 
 target 'XinranReadingGroup' do
     pod 'AFNetworking','2.6.0'
@@ -16,6 +19,8 @@ target 'XinranReadingGroup' do
     pod 'PINCache'
     pod 'UMengFeedback', '~> 2.3.4'
     pod 'TZImagePickerController'
+    pod 'Fabric'
+    pod 'Crashlytics'
     
     pod 'ZYCoreFramework',:git=>'git@github.com:zengyun-programmer/ZYCoreFramework.git',:tag=>'0.1'
     pod 'DUQRAssistant',:git=>'git@github.com:zengyun-programmer/DUQRAssistant.git',:branch=>'develop'

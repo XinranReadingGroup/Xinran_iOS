@@ -31,7 +31,9 @@
 		723491E59D0C39670D9238B0 /* XRUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349577E7C2340F253B4DBB /* XRUserProfile.m */; };
 		723497AD33EC6F46277486D1 /* XRNetwork+Token.m in Sources */ = {isa = PBXBuildFile; fileRef = 723493823B37038BD12BD629 /* XRNetwork+Token.m */; };
 		72349AABBDE4A909A565D634 /* XRTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 72349D7B0E9E480D7B52EFF4 /* XRTools.m */; };
-		7CF3C4535AE375CD96764D3D /* libPods-XinranReadingGroup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EF959282314C97A2C20593 /* libPods-XinranReadingGroup.a */; };
+		8139A77E1E8D6FEE005F417F /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8139A77D1E8D6FEE005F417F /* JSPatchPlatform.framework */; };
+		8139A7801E8D701A005F417F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8139A77F1E8D701A005F417F /* libz.tbd */; };
+		8139A7821E8D7020005F417F /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8139A7811E8D7020005F417F /* JavaScriptCore.framework */; };
 		81F2D6201E69930C00534C24 /* XRBookDetailLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F2D61F1E69930C00534C24 /* XRBookDetailLocationCell.m */; };
 		81F2D6231E699C9100534C24 /* XRBookDetailLocationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 81F2D6221E699C9100534C24 /* XRBookDetailLocationEntity.m */; };
 		81FE73101E66F3320002A5C0 /* register.txt in Resources */ = {isa = PBXBuildFile; fileRef = 81FE730F1E66F3320002A5C0 /* register.txt */; };
@@ -109,6 +111,7 @@
 		BDF1E7C81BDCCDD0004730B7 /* BookCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF1E7C71BDCCDD0004730B7 /* BookCollectionView.xib */; };
 		BDFB0ABE1AFA58F800F2C738 /* XRBookDetailBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB0ABD1AFA58F800F2C738 /* XRBookDetailBaseViewController.m */; };
 		BDFB0AC11AFA595300F2C738 /* XRBookDetailBiz.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFB0AC01AFA595300F2C738 /* XRBookDetailBiz.m */; };
+		C4DE3A7A72D6A2AC6ADF6ED0 /* libPods-XinranReadingGroup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E235B4C050242929FF650B /* libPods-XinranReadingGroup.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +157,7 @@
 		09DC13421AD39F4A00CE8277 /* XRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRegisterViewController.m; sourceTree = "<group>"; };
 		09E39C921B089F8700A443AC /* XRBookQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookQRViewController.h; sourceTree = "<group>"; };
 		09E39C931B089F8700A443AC /* XRBookQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookQRViewController.m; sourceTree = "<group>"; };
+		27E235B4C050242929FF650B /* libPods-XinranReadingGroup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XinranReadingGroup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		723493823B37038BD12BD629 /* XRNetwork+Token.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XRNetwork+Token.m"; sourceTree = "<group>"; };
 		723493C508AD77EF7F443977 /* XRNetwork+Token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XRNetwork+Token.h"; sourceTree = "<group>"; };
 		72349446914F6F8E8E400166 /* XRNetworkErrorAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRNetworkErrorAssistant.h; sourceTree = "<group>"; };
@@ -165,12 +169,15 @@
 		72349D99E2FD9E76AEC99DF6 /* AppDelegate+XRSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+XRSetup.m"; sourceTree = "<group>"; };
 		72349E888B55E3230AF52AFA /* XRNetworkErrorAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRNetworkErrorAssistant.m; sourceTree = "<group>"; };
 		77F3F7516CA8C933A1552A9C /* Pods-XinranReadingGroup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XinranReadingGroup.release.xcconfig"; path = "Pods/Target Support Files/Pods-XinranReadingGroup/Pods-XinranReadingGroup.release.xcconfig"; sourceTree = "<group>"; };
+		8139A77D1E8D6FEE005F417F /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
+		8139A77F1E8D701A005F417F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		8139A7811E8D7020005F417F /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		8139A7831E8D71ED005F417F /* XinranReadingGroup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XinranReadingGroup.entitlements; sourceTree = "<group>"; };
 		81F2D61E1E69930C00534C24 /* XRBookDetailLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailLocationCell.h; sourceTree = "<group>"; };
 		81F2D61F1E69930C00534C24 /* XRBookDetailLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailLocationCell.m; sourceTree = "<group>"; };
 		81F2D6211E699C9100534C24 /* XRBookDetailLocationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRBookDetailLocationEntity.h; sourceTree = "<group>"; };
 		81F2D6221E699C9100534C24 /* XRBookDetailLocationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRBookDetailLocationEntity.m; sourceTree = "<group>"; };
 		81FE730F1E66F3320002A5C0 /* register.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = register.txt; sourceTree = "<group>"; };
-		89EF959282314C97A2C20593 /* libPods-XinranReadingGroup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XinranReadingGroup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9870E05E1DA24E29004F31EE /* XRDonateRelationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRDonateRelationViewController.h; sourceTree = "<group>"; };
 		9870E05F1DA24E29004F31EE /* XRDonateRelationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRDonateRelationViewController.m; sourceTree = "<group>"; };
 		9879A6CA1DEA8F2A00645583 /* XRProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRProfileEditViewController.h; sourceTree = "<group>"; };
@@ -330,9 +337,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8139A7821E8D7020005F417F /* JavaScriptCore.framework in Frameworks */,
+				8139A7801E8D701A005F417F /* libz.tbd in Frameworks */,
 				09060F8B1B088CE9003C69EF /* AVFoundation.framework in Frameworks */,
 				BD1D64051AE006D200CCE363 /* libUMSocial_Sdk_4.2.2.a in Frameworks */,
-				7CF3C4535AE375CD96764D3D /* libPods-XinranReadingGroup.a in Frameworks */,
+				C4DE3A7A72D6A2AC6ADF6ED0 /* libPods-XinranReadingGroup.a in Frameworks */,
+				8139A77E1E8D6FEE005F417F /* JSPatchPlatform.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,8 +413,11 @@
 		7A6AAC1FE59086D8F8088ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8139A7811E8D7020005F417F /* JavaScriptCore.framework */,
+				8139A77F1E8D701A005F417F /* libz.tbd */,
+				8139A77D1E8D6FEE005F417F /* JSPatchPlatform.framework */,
 				09060F8A1B088CE9003C69EF /* AVFoundation.framework */,
-				89EF959282314C97A2C20593 /* libPods-XinranReadingGroup.a */,
+				27E235B4C050242929FF650B /* libPods-XinranReadingGroup.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -432,6 +445,7 @@
 		BD1AD3C31A98398F009CD8EF /* XinranReadingGroup */ = {
 			isa = PBXGroup;
 			children = (
+				8139A7831E8D71ED005F417F /* XinranReadingGroup.entitlements */,
 				09DC13441AD39FBA00CE8277 /* Tabbar */,
 				09DC13271AD39B7100CE8277 /* Home */,
 				BDB1AD1E1BC2121B009BB273 /* My */,
@@ -870,7 +884,12 @@
 				TargetAttributes = {
 					BD1AD3C01A98398F009CD8EF = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = FM4A2EYEUJ;
+						DevelopmentTeam = LMU58WLMLD;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					BD1AD3DC1A98398F009CD8EF = {
 						CreatedOnToolsVersion = 6.1;
@@ -978,7 +997,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 09f8cacc9230322ac15f4c35f65820fdca617a74 b3bedbff357863f09fe73c4fec3f4d508c4ee0a397758d9b97de74a17c6971fd";
 		};
 		E91D737337938737E6EB1839 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1195,10 +1214,15 @@
 			baseConfigurationReference = FF5B8A6D88FEAD5BEDF34629 /* Pods-XinranReadingGroup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XinranReadingGroup/XinranReadingGroup.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = FM4A2EYEUJ;
+				DEVELOPMENT_TEAM = LMU58WLMLD;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1219,10 +1243,15 @@
 			baseConfigurationReference = 77F3F7516CA8C933A1552A9C /* Pods-XinranReadingGroup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XinranReadingGroup/XinranReadingGroup.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = FM4A2EYEUJ;
+				DEVELOPMENT_TEAM = LMU58WLMLD;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "XinranReadingGroup/Supporting Files/XinranReadingGroup.pch";
 				INFOPLIST_FILE = "XinranReadingGroup/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
