@@ -26,7 +26,9 @@
     [XRShareAssistant setup];
     [[self class] setupNavigationBar];
     [[self class] setupCocoaLumberjack];
+    
     [SVProgressHUD setMinimumDismissTimeInterval:2];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     
     //crash 日志
     [Fabric with:@[[Crashlytics class]]];
