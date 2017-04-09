@@ -40,11 +40,16 @@
 
 - (IBAction)registerButtonTapped:(UIButton *)sender {
     NSString *userName = [self.userName.text trim];
+    if ([self.password.text trim].length == 0) {
+        [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"请输入密码")];
+        return;
+    }
     if (![self.password.text isEqualToString:self.confirmPassword.text]) {
         [ZYCoreHintAssistant showAlertViewWithTitle:LOCALSTRING(@"确认密码的内容与密码不一致哟")];
         return;
     }
-    NSString *emailRegular = @"/^\\w*@\\w*\\.\\w*";
+    
+    NSString *emailRegular = @".*@.*\..*";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegular];
     if (![predicate evaluateWithObject:userName]) {
         //用户名不合法
