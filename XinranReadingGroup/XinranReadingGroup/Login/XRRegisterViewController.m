@@ -15,6 +15,7 @@
 #import "XRTools.h"
 #import "NSString+ZYCore.h"
 #import "XRAboutViewController.h"
+#import "SVProgressHUD.h"
 
 @interface XRRegisterViewController ()
 
@@ -60,6 +61,7 @@
     [XRLoginBiz registerUser:self.userName.text password:self.password.text nickName:self.nickName.text success:^{
         //跳到主页
         self.registerButton.enabled = YES;
+        [SVProgressHUD showWithStatus:LOCALSTRING(@"注册成功~")];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.view endEditing:YES];
             [XRTools showTabbarViewController:self animated:NO];
