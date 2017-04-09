@@ -15,6 +15,7 @@
 #import "ZYCoreCellInfo.h"
 #import "XRPointExchangeCell.h"
 #import "ZYCoreDefine.h"
+#import "SVProgressHUD.h"
 
 @interface XRMemberPointViewController ()
 
@@ -45,6 +46,7 @@
 }
 
 - (void)fetchData {
+    [SVProgressHUD showWithStatus:nil];
     [XRLoginBiz refreshUserProfile:^{
         if ([[XRUser sharedXRUser].profile.score integerValue] > 0) {
             self.pointSum.text = [NSString stringWithFormat:@"亲，您当前的公益积分为%@",[XRUser sharedXRUser].profile.score];
@@ -52,8 +54,9 @@
             self.pointSum.text = [NSString stringWithFormat:@"亲，您当前的公益积分为0"];
         }
     }];
+    
     [XRUserService fetchActivity:^(XRActivityListEntity *activityList) {
-        
+        [SVProgressHUD dismiss];
         NSMutableArray *sectionInfo = [NSMutableArray array];
         [activityList.activityList enumerateObjectsUsingBlock:^(XRActivityEntity *obj, NSUInteger idx, BOOL *stop) {
             ZYCoreCellInfo *cellInfo = [[ZYCoreCellInfo alloc] initWithCellClass:[XRPointExchangeCell class] withCellHeight:120 withCellData:obj withDidSelectedCallBack:^(UITableView *tableView, ZYCoreTableViewCell *cell, NSIndexPath *indexPath, id cellData) {
@@ -63,7 +66,9 @@
             [sectionInfo addObject:cellInfo];
         }];
         self.tableViewData = @[[sectionInfo copy]];
-    } failure:nil];
+    } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
 }
 
 @end

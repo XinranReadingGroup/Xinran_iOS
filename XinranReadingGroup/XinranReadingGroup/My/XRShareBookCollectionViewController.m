@@ -10,6 +10,7 @@
 #import "XRUserService.h"
 #import "XRBookListEntity.h"
 #import "ZYCoreDefine.h"
+#import "SVProgressHUD.h"
 
 @interface XRShareBookCollectionViewController ()
 
@@ -29,11 +30,15 @@
 }
 
 - (void)fetchData {
+    [SVProgressHUD showWithStatus:nil];
     [XRUserService fetchShareBook:^(id param) {
         self.bookList = param;
         self.infoLabel.text = [NSString stringWithFormat:@"您共享了%lu本书",(unsigned long)self.bookList.bookList.count];
         [self.collectionView reloadData];
-    } failure:nil];
+        [SVProgressHUD dismiss];
+    } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
 }
 
 @end

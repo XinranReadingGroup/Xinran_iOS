@@ -11,6 +11,7 @@
 #import "XRBookListEntity.h"
 #import <UIViewController+ZYCore.h>
 #import "ZYCoreDefine.h"
+#import "SVProgressHUD.h"
 
 @interface XRDonateBookCollectionViewController ()
 
@@ -32,13 +33,17 @@
 }
 
 - (void)fetchData {
+    [SVProgressHUD showWithStatus:nil];
     [XRUserService fetchDonateRecord:^(id param) {
+        [SVProgressHUD dismiss];
         self.bookList = param;
         dispatch_async(dispatch_get_main_queue(),^{
             self.infoLabel.text = [NSString stringWithFormat:@"您捐赠了%lu本书",(unsigned long)self.bookList.bookList.count];
             [self.collectionView reloadData];
         });
-    } failure:nil];
+    } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];
+    }];
 }
 
 @end

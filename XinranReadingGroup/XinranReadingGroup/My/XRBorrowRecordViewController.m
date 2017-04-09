@@ -15,6 +15,7 @@
 #import "UIViewController+navigationBarItem.h"
 #import "XRBookDetailBaseViewController.h"
 #import "UIViewController+ZYCore.h"
+#import "SVProgressHUD.h"
 
 @interface XRBorrowRecordViewController ()
 
@@ -30,6 +31,7 @@
 
 - (void)fetchData {
     __weak typeof(self) weakSelf = self;
+    [SVProgressHUD showWithStatus:nil];
     [XRUserService fetchBorrowBookWithPath:self.urlPath success:^(id param) {
         __strong typeof(self) self = weakSelf;
         [self setupTableViewData:param];
@@ -38,7 +40,14 @@
         if (self.fetchDataSuccess) {
             self.fetchDataSuccess(books);
         }
-    } failure:NULL];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    } failure:^(NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+    }];
 }
 
 - (void)setupTableViewData:(XRBookListEntity *)bookListEntity {
